@@ -49,8 +49,8 @@ class TrainValTensorBoard(TensorBoard):
         # `self.val_writer`. Also rename the keys so that they can
         # be plotted on the same figure with the training metrics
         logs = logs or {}
-        val_logs = {k.replace('val_', ''): v for k, v in logs.items() if k.startswith('val_')}
-        for name, value in val_logs.items():
+        val_logs = {k.replace('val_', ''): v for k, v in list(logs.items()) if k.startswith('val_')}
+        for name, value in list(val_logs.items()):
             summary = tf.Summary()
             summary_value = summary.value.add()
             summary_value.simple_value = value.item()
@@ -59,7 +59,7 @@ class TrainValTensorBoard(TensorBoard):
         self.val_writer.flush()
 
         # Pass the remaining logs to `TensorBoard.on_epoch_end`
-        logs = {k: v for k, v in logs.items() if not k.startswith('val_')}
+        logs = {k: v for k, v in list(logs.items()) if not k.startswith('val_')}
         super(TrainValTensorBoard, self).on_epoch_end(epoch, logs)
 
     def on_train_end(self, logs=None):
@@ -68,7 +68,7 @@ class TrainValTensorBoard(TensorBoard):
 
 def check_file_exists(file_path):
     if os.path.exists(file_path) == False:
-        print("Error: provided file path '%s' does not exist!" % file_path)
+        print(("Error: provided file path '%s' does not exist!" % file_path))
         sys.exit(-1)
     return
 
@@ -92,38 +92,38 @@ def cnn_ascad(classes=256):
 	img_input = Input(shape=input_shape)
 	# Block 1
 	x = Conv1D(64, 11, activation='relu', padding='same', name='block1_conv1')(img_input)
-	print x.get_shape()
+	print(x.get_shape())
 	x = AveragePooling1D(2, strides=2, name='block1_pool')(x)
-	print x.get_shape()
+	print(x.get_shape())
 	# Block 2
 	x = Conv1D(128, 11, activation='relu', padding='same', name='block2_conv1')(x)
-	print x.get_shape()
+	print(x.get_shape())
 	x = AveragePooling1D(2, strides=2, name='block2_pool')(x)
-	print x.get_shape()
+	print(x.get_shape())
 	# Block 3
 	x = Conv1D(256, 11, activation='relu', padding='same', name='block3_conv1')(x)
-	print x.get_shape()
+	print(x.get_shape())
 	x = AveragePooling1D(2, strides=2, name='block3_pool')(x)
-	print x.get_shape()
+	print(x.get_shape())
 	# Block 4
 	x = Conv1D(512, 11, activation='relu', padding='same', name='block4_conv1')(x)
-	print x.get_shape()
+	print(x.get_shape())
 	x = AveragePooling1D(2, strides=2, name='block4_pool')(x)
-	print x.get_shape()
+	print(x.get_shape())
 	# Block 5
 	x = Conv1D(512, 11, activation='relu', padding='same', name='block5_conv1')(x)
-	print x.get_shape()
+	print(x.get_shape())
 	x = AveragePooling1D(2, strides=2, name='block5_pool')(x)
-	print x.get_shape()
+	print(x.get_shape())
 	# Classification block
 	x = Flatten(name='flatten')(x)
-	print x.get_shape()
+	print(x.get_shape())
 	x = Dense(4096, activation='relu', name='fc1')(x)
-	print x.get_shape()
+	print(x.get_shape())
 	x = Dense(4096, activation='relu', name='fc2')(x)
-	print x.get_shape()
+	print(x.get_shape())
 	x = Dense(classes, activation='softmax', name='predictions')(x)
-	print x.get_shape()
+	print(x.get_shape())
 
 	inputs = img_input
 	# Create model.
@@ -146,7 +146,7 @@ def mlp_weighted_bit(mlp_nodes=200,layer_nb=6, input_length=700, learning_rate=0
     try:
         model.compile(loss=loss_function, optimizer=optimizer, metrics=['accuracy'])
     except ValueError:
-        print "!!! Loss Function '{}' not recognised, aborting\n".format(loss_function)
+        print("!!! Loss Function '{}' not recognised, aborting\n".format(loss_function))
         raise
     return model
 
@@ -173,7 +173,7 @@ def mlp_best(mlp_nodes=200,layer_nb=6, input_length=700, learning_rate=0.00001, 
         try:
             model.compile(loss=loss_function, optimizer=optimizer, metrics=['accuracy'])
         except ValueError:
-            print "!!! Loss Function '{}' not recognised, aborting\n".format(loss_function)
+            print("!!! Loss Function '{}' not recognised, aborting\n".format(loss_function))
             raise
     return model
 
@@ -321,7 +321,7 @@ def load_sca_model(model_file):
     try:
             model = load_model(model_file)
     except:
-        print("Error: can't load Keras model file '%s'" % model_file)
+        print(("Error: can't load Keras model file '%s'" % model_file))
         sys.exit(-1)
     return model
 
@@ -337,7 +337,7 @@ def train_model(X_profiling, Y_profiling, model, save_file_name, epochs=150, bat
     input_layer_shape = model.get_layer(index=0).input_shape
     # Sanity check
     if input_layer_shape[1] != len(X_profiling[0]):
-        print("Error: model input shape %d instead of %d is not expected ..." % (input_layer_shape[1], len(X_profiling[0])))
+        print(("Error: model input shape %d instead of %d is not expected ..." % (input_layer_shape[1], len(X_profiling[0]))))
         sys.exit(-1)
     # Adapt the data shape according our model input
     if len(input_layer_shape) == 2:
@@ -349,7 +349,7 @@ def train_model(X_profiling, Y_profiling, model, save_file_name, epochs=150, bat
         Reshaped_X_profiling = X_profiling.reshape((X_profiling.shape[0], X_profiling.shape[1], 1))
         Reshaped_validation_data = validation_data[0].reshape((validation_data[0].shape[0], validation_data[0].shape[1], 1))
     else:
-        print("Error: model input shape length %d is not expected ..." % len(input_layer_shape))
+        print(("Error: model input shape length %d is not expected ..." % len(input_layer_shape)))
         sys.exit(-1)
 
     # Split up for debug
@@ -565,20 +565,20 @@ if __name__ == "__main__":
     USE_ASCAD = args.USE_ASCAD
 
     if not USE_MLP and not USE_CNN and not USE_CNN_PRETRAINED and not USE_LSTM:
-        print "|| No models set to run - setting USE_MLP to True"
+        print("|| No models set to run - setting USE_MLP to True")
         USE_MLP = True
 
     PROGRESS_BAR = 1 if args.PROGRESS_BAR else 0
 
     # Handle dodgy input
     if (INPUT_LENGTH % 2) and INPUT_LENGTH != 1 and INPUT_LENGTH != -1:
-        print "|| Error: input length must be even, adding 1 to fix ({} -> {})".format(INPUT_LENGTH, INPUT_LENGTH+1)
+        print("|| Error: input length must be even, adding 1 to fix ({} -> {})".format(INPUT_LENGTH, INPUT_LENGTH+1))
         INPUT_LENGTH += 1
 
     # Handle ASCAD Defaults
     if USE_ASCAD:
-        print "|| Setting to ASCAD Default Values (epochs etc):"
-        print "|| * INPUT_LENGTH {} -> 700".format(INPUT_LENGTH)
+        print("|| Setting to ASCAD Default Values (epochs etc):")
+        print("|| * INPUT_LENGTH {} -> 700".format(INPUT_LENGTH))
         INPUT_LENGTH = 700
 
 
@@ -596,8 +596,8 @@ if __name__ == "__main__":
 
     for variable in variable_list:
 
-        print "$$$ Training Neural Networks $$$\nVariable {}, Hamming Weight {} Hamming Distance Encoding {}, MLP {} ({} layers, {} nodes per layer), CNN {} (Pretrained {}), LSTM {} ({} layers, {} nodes per layer), Input Length {}, Learning Rate {}, Noise {}, Jitter {}, Normalising {}\n{} Epochs, Batch Size {}, Training Traces {}, Validation Traces {}, ASCAD {}".format(
-            variable, HAMMINGWEIGHT, HAMMING_DISTANCE_ENCODING, USE_MLP, MLP_LAYERS, MLP_NODES, USE_CNN, USE_CNN_PRETRAINED, USE_LSTM, LSTM_LAYERS, LSTM_NODES, INPUT_LENGTH, LEARNING_RATE, ADD_NOISE, JITTER, NORMALISE, EPOCHS, BATCH_SIZE, TRAINING_TRACES, VALIDATION_TRACES, USE_ASCAD)
+        print("$$$ Training Neural Networks $$$\nVariable {}, Hamming Weight {} Hamming Distance Encoding {}, MLP {} ({} layers, {} nodes per layer), CNN {} (Pretrained {}), LSTM {} ({} layers, {} nodes per layer), Input Length {}, Learning Rate {}, Noise {}, Jitter {}, Normalising {}\n{} Epochs, Batch Size {}, Training Traces {}, Validation Traces {}, ASCAD {}".format(
+            variable, HAMMINGWEIGHT, HAMMING_DISTANCE_ENCODING, USE_MLP, MLP_LAYERS, MLP_NODES, USE_CNN, USE_CNN_PRETRAINED, USE_LSTM, LSTM_LAYERS, LSTM_NODES, INPUT_LENGTH, LEARNING_RATE, ADD_NOISE, JITTER, NORMALISE, EPOCHS, BATCH_SIZE, TRAINING_TRACES, VALIDATION_TRACES, USE_ASCAD))
 
         # Load the profiling traces and the attack traces
         (X_profiling, Y_profiling), (X_attack, Y_attack) = load_bpann(variable, normalise_traces=NORMALISE,
@@ -608,7 +608,7 @@ if __name__ == "__main__":
         # Handle Input Length of -1
         if INPUT_LENGTH < 0:
             # Set to length of X_profiling
-            print "|| Changing Input Length from {} to {} (max samples)".format(INPUT_LENGTH, X_profiling.shape[1])
+            print("|| Changing Input Length from {} to {} (max samples)".format(INPUT_LENGTH, X_profiling.shape[1]))
             INPUT_LENGTH = X_profiling.shape[1]
 
         train_variable_model(variable, X_profiling, Y_profiling, X_attack, Y_attack, mlp=USE_MLP, cnn=USE_CNN, cnn_pre=USE_CNN_PRETRAINED, lstm=USE_LSTM, input_length=INPUT_LENGTH, add_noise=ADD_NOISE, epochs=EPOCHS,
@@ -623,4 +623,4 @@ if __name__ == "__main__":
     #                                                                                                  USE_CNN, INPUT_LENGTH, ADD_NOISE)
     #         train_variable_model(VARIABLE, mlp=USE_MLP, cnn=USE_CNN, input_length=INPUT_LENGTH, add_noise=ADD_NOISE)
 
-    print "$ Done!"
+    print("$ Done!")
