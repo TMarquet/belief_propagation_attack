@@ -168,8 +168,8 @@ class FactorGraphAES:
 
         self.erroneous_badleakage   = erroneous_badleakage
 
-        self.badly_leaking_nodes = None if badly_leaking_nodes is None else get_all_variables_that_match(self.variables, self.badly_leaking_nodes)
-        self.no_noise_nodes = None if no_noise_nodes is None else get_all_variables_that_match(self.variables, self.no_noise_nodes)
+        # self.badly_leaking_nodes = None if badly_leaking_nodes is None else get_all_variables_that_match(self.variables, self.badly_leaking_nodes)
+        # self.no_noise_nodes = None if no_noise_nodes is None else get_all_variables_that_match(self.variables, self.no_noise_nodes)
 
         # print 'Badly Leaking Nodes: {}'.format(self.badly_leaking_nodes)
 
@@ -578,8 +578,8 @@ class FactorGraphAES:
         print("Unique Leaves: {:22} ({})".format(len(unique_leaves), unique_leaves))
 
 
-    # def update_edge(self, src, dst, np.ndarray val):
-        # self.G.edge[src][dst] = val
+    def update_edge(self, src, dst, np.ndarray val):
+        self.G.edge[src][dst] = val
 
     def update_edge_list_inner(self, l):
         for a, b, c in l:
