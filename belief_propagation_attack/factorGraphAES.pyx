@@ -56,7 +56,7 @@ class FactorGraphAES:
         furious_string = ""
         round_string = str(rounds_of_aes)
         if my_print:
-            print "Rounds of AES: {}".format(rounds_of_aes)
+            print("Rounds of AES: {}".format(rounds_of_aes))
         remove_cycle_string = ""
         if furious:
             furious_string = "Furious"
@@ -64,18 +64,18 @@ class FactorGraphAES:
             remove_cycle_string = "RemovedCycle"
 
         if my_print:
-            print "Remove Cycle: {}".format(remove_cycle)
+            print("Remove Cycle: {}".format(remove_cycle))
 
         if FORCE_GRAPH_CREATION:
             # TEST: Force Create Graph
             if my_print:
-                print "Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling)
+                print("Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling))
             if furious:
                 gexf_graphCreator.create_factor_graph_full_aes_furious(traces, removed_nodes, key_scheduling, rounds_of_aes, remove_cycle)
             else:
                 gexf_graphCreator.create_factor_graph_full_aes(traces, removed_nodes, key_scheduling, rounds_of_aes)
             if my_print:
-                print "...finished creating!"
+                print("...finished creating!")
                 print_new_line()
         else:
             try:
@@ -87,17 +87,17 @@ class FactorGraphAES:
                                                                                              removed_nodes),
                                                                                          key_scheduling))
                 if my_print:
-                    print "Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling)
+                    print("Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling))
             except IOError:
                 # TEST: Force Create Graph
                 if my_print:
-                    print "- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling)
+                    print("- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling))
                 if furious:
                     gexf_graphCreator.create_factor_graph_full_aes_furious(traces, removed_nodes, key_scheduling, rounds_of_aes, remove_cycle)
                 else:
                     gexf_graphCreator.create_factor_graph_full_aes(traces, removed_nodes, key_scheduling, rounds_of_aes)
                 if my_print:
-                    print "...finished creating!"
+                    print("...finished creating!")
                     print_new_line()
 
         self.G = nx.read_gexf(
