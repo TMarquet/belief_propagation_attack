@@ -65,12 +65,12 @@ try:
     with open("PATH_FILE.txt","r") as f:
         content = f.readlines()
 except IOError:
-    print "! Can't find PATH_FILE.txt, checking outer directory..."
+    print("! Can't find PATH_FILE.txt, checking outer directory...")
     try:
         with open("../PATH_FILE.txt","r") as f:
             content = f.readlines()
     except IOError:
-        print "! No luck finding PATH_FILE.txt"
+        print("! No luck finding PATH_FILE.txt")
         raise IOError
 
 PATH_DICT = dict([i.replace('\n','').strip("=").split("=")
@@ -283,8 +283,8 @@ def get_elmo_leakage_value(value, instruction_category):
     """Return the elmo leakage value given a value and an instruction category,
     see ELMO for more details"""
     if instruction_category < 1 or instruction_category > 5:
-        print "ERROR: instruction_category must be with 1 and 5 (currently \
-            {})".format(instruction_category)
+        print("ERROR: instruction_category must be with 1 and 5 (currently \
+            {})".format(instruction_category))
         raise ValueError
     bin_rep = pad_string_zeros(bin(value).replace('0b',''), 8)
     # print "Value {} -> {}".format(valu
@@ -300,8 +300,8 @@ def clear_screen(n = 50):
     s1 = "* " * 80
     s2 = " " + s1
     for i in range (n):
-        print s1
-        print s2
+        print(s1)
+        print(s2)
     print_new_line()
 
 def pad_string_zeros(string, pad_length = 3):
@@ -406,7 +406,7 @@ def smallest_power_of_two(int x):
     for i in range(1000):
         if (2**-i) < x:
             return -i
-    print "ERROR: Could not find lower power of two for {}\n".format(x)
+    print("ERROR: Could not find lower power of two for {}\n".format(x))
     raise ValueError
 
 def get_round_of_variable(var):
@@ -415,7 +415,7 @@ def get_round_of_variable(var):
     if var_name != 'h':
         return get_round_from_number(var_number)
     else:
-        print "TODO: Handle getting round of h variables"
+        print("TODO: Handle getting round of h variables")
         exit(1)
 
 def get_round_from_number(int var_number):
@@ -471,13 +471,13 @@ def array_max(np.ndarray v):
         try:
             return np.max(v[v>0])
         except ValueError:
-            print "!!! Value Error in array_max, v:\n{}\n".format(v)
+            print("!!! Value Error in array_max, v:\n{}\n".format(v))
             raise ValueError
 
 def array_divide_float(np.ndarray v, double x):
     if x > 0.0:
         return v / x
-    print "array_divide_float, trying to divide by {}:\n{}\n".format(x, v)
+    print("array_divide_float, trying to divide by {}:\n{}\n".format(x, v))
     raise ValueError
 
 def array_add(np.ndarray v1, np.ndarray v2):
@@ -632,15 +632,15 @@ def normalise_array(v):
     norm = array_divide_float(divided, np.sum(divided))
 
     if len(norm[norm < 0]) > 0 or len(norm[norm > 2]) > 0:
-        print "Negative / Over 2 here!"
-        print "v:\n{}\n".format(v)
-        print "Max: {}, Min: {}".format(np.max(v), np.min(v))
-        print "divided:\n{}\n".format(divided)
-        print "Max: {}, Min: {}".format(np.max(divided), np.min(divided))
+        print("Negative / Over 2 here!")
+        print("v:\n{}\n".format(v))
+        print("Max: {}, Min: {}".format(np.max(v), np.min(v)))
+        print("divided:\n{}\n".format(divided))
+        print("Max: {}, Min: {}".format(np.max(divided), np.min(divided)))
         # print "wiped:\n{}\n".format(wiped)
         # print "Max: {}, Min: {}".format(np.max(wiped), np.min(wiped))
-        print "norm:\n{}\n".format(norm)
-        print "Max: {}, Min: {}".format(np.max(norm), np.min(norm))
+        print("norm:\n{}\n".format(norm))
+        print("Max: {}, Min: {}".format(np.max(norm), np.min(norm)))
         raise ValueError
 
     return norm
@@ -815,7 +815,7 @@ def array_xor_permutate(v, x):
 
 def linear_xor(np.ndarray v1, np.ndarray v2):
     if len(v1) != len(v2):
-        print "Error in linear_xor; v1 and v2 must be same size! v1: {}, v2: {}".format(v1, v2)
+        print("Error in linear_xor; v1 and v2 must be same size! v1: {}, v2: {}".format(v1, v2))
         raise AssertionError
     return v1 ^ v2
 
@@ -940,7 +940,7 @@ def is_xor_xtimes_node(string):
     return string_contains(string, '_XorXtimes_')
 
 def print_new_line():
-    print ""
+    print("")
 
 def get_average(l):
     return sum(l) / float(len(l))
@@ -960,29 +960,29 @@ def pad_string(string, length = 3):
     return out
 
 def print_length(string, length):
-    print pad_string(string, length)
+    print(pad_string(string, length))
 
 def print_length_append(str1, str2, length):
-    print pad_string(str1, length), str2
+    print(pad_string(str1, length), str2)
 
 def print_dictionary(my_dict, get_len = False):
     if get_len:
-        for k, v in my_dict.iteritems():
-            print "{} ({}):\n{}\n".format(k, len(v), v)
+        for k, v in my_dict.items():
+            print("{} ({}):\n{}\n".format(k, len(v), v))
     else:
-        for k, v in my_dict.iteritems():
-            print "{}:\n{}\n".format(k, v)
+        for k, v in my_dict.items():
+            print("{}:\n{}\n".format(k, v))
 
 def print_list_of_lists(lst):
     for i in range(len(lst)):
-        print "i = {}:\n{}\n".format(i, lst[i])
+        print("i = {}:\n{}\n".format(i, lst[i]))
 
 def print_list_as_hex_list(lst, chunks = None):
     if chunks is None:
         out = "["
         for i in range(len(lst)):
             out += hex(lst[i]) + ", "
-        print out[:-2] + "]"
+        print(out[:-2] + "]")
     else:
         out = ""
         for i in range(len(lst)):
@@ -990,7 +990,7 @@ def print_list_as_hex_list(lst, chunks = None):
                 out = "i = {}: [".format(i // chunks)
             out += hex(lst[i]) + ", "
             if ((i+1) % chunks) == 0:
-                print out[:-2] + "]"
+                print(out[:-2] + "]")
                 out = ""
 
 def get_list_as_hex_string(lst, little_endian = False):
@@ -1101,7 +1101,7 @@ def load_sca_model(model_file):
         else:
             model = load_model(model_file)
     except:
-        print("Error: can't load Keras model file '%s'" % model_file)
+        print(("Error: can't load Keras model file '%s'" % model_file))
         raise
     return model
 
@@ -1138,7 +1138,7 @@ def get_rank_from_index_list(lst, index):
     for i in range(len(lst)):
         if (type(lst[i]) == int and lst[i] == index) or (type(lst[i]) == list and index in lst[i]):
             return i + 1
-    print "ERROR: Could not find index {} in list {}".format(index, lst)
+    print("ERROR: Could not find index {} in list {}".format(index, lst))
     raise IndexError
 
 
@@ -1230,7 +1230,7 @@ def get_template(template_id):
         template = ast.literal_eval(line)
     except ValueError:
         f.close()
-        print "*** ValueError evaluating line: {}".format(line)
+        print("*** ValueError evaluating line: {}".format(line))
         raise
     f.close()
     return template
@@ -1244,16 +1244,16 @@ def template_match(var, target_value, snr, bits = 8, normalise = True):
     std = get_sigma(snr, hw = False, category = category)
 
     if var in myvar_list:
-        print "Template Matching Here! Variable {}, Target Value {} (Category {}, SNR {}, std = {})".format(var, target_value, category, snr, std)
+        print("Template Matching Here! Variable {}, Target Value {} (Category {}, SNR {}, std = {})".format(var, target_value, category, snr, std))
 
     for i in range(2**bits):
         mean = get_elmo_leakage_value(i, category)
         probdist[i] = gaussian_probability_density(target_value, mean, std)
         if var in myvar_list:
-            print "Mean for Value {}: {} (probability = {})".format(i, mean, probdist[i])
+            print("Mean for Value {}: {} (probability = {})".format(i, mean, probdist[i]))
 
     if var in myvar_list:
-        print "MOST LIKELY VALUE: {}".format(max_index(probdist))
+        print("MOST LIKELY VALUE: {}".format(max_index(probdist)))
 
     if is_zeros_array(probdist):
         return get_no_knowledge_array()
@@ -1316,7 +1316,7 @@ def brute_force_elmo_value(value, chosen_category = None):
                 closest_difference = abs(value - testval)
                 closest_category = chosen_category
                 closest_elmo = testval
-    print "Brute Force Unsuccessful. Closest Value {}, Category {} (Val {}, Difference {})".format(closest_val, closest_category, closest_elmo, closest_difference)
+    print("Brute Force Unsuccessful. Closest Value {}, Category {} (Val {}, Difference {})".format(closest_val, closest_category, closest_elmo, closest_difference))
     return closest_val, closest_category
 
 def get_category_bf(value):
@@ -1338,7 +1338,7 @@ def strip_list(lst):
                 return lst
         except TypeError:
             lst.pop()
-    print "oh no, strip list did a bad"
+    print("oh no, strip list did a bad")
     return lst
 
 def mad_based_outlier(lst, thresh=3.5):
@@ -1381,7 +1381,7 @@ def martin_rank(big_w, int m = 16, int n = 256, int big_w1 = 0, factor = 100000)
     count = [0] * big_w2
     old_count = [0] * big_w2
     for j in range(m - 1, -1, -1):
-        print "Outer j: {}".format(j)
+        print("Outer j: {}".format(j))
         for w in range(big_w2):
             for i in range(n - 1, -1, -1):
                 child = martin_rc(j, little_w, i, m, big_w1, big_w2, big_w[j][i])
@@ -1464,9 +1464,9 @@ def get_statistics_string(l, log = False):
     min_l = min(l)
     avg_l = get_average(l)
     med_l = array_median(l)
-    if type(max_l) is not long and np.isinf(max_l):
+    if type(max_l) is not int and np.isinf(max_l):
         range_l = np.inf
-    elif type(min_l) is not long and np.isnan(min_l):
+    elif type(min_l) is not int and np.isnan(min_l):
         range_l = np.nan
     else:
         range_l = max_l - min_l
@@ -1491,16 +1491,16 @@ def percentage(part, whole):
 def print_statistics(l, log = False, top = False, mode=True):
     l = np.array(l)
     if len(l) == 0:
-        print "List l is empty!"
+        print("List l is empty!")
     else:
         # Max, Min, Average, Median, Range, Variance
         max_l = max(l)
         min_l = min(l)
         avg_l = get_average(l)
         med_l = array_median(l)
-        if type(max_l) is not long and np.isinf(max_l):
+        if type(max_l) is not int and np.isinf(max_l):
             range_l = np.inf
-        elif type(min_l) is not long and np.isnan(min_l):
+        elif type(min_l) is not int and np.isnan(min_l):
             range_l = np.nan
         else:
             range_l = max_l - min_l
@@ -1531,32 +1531,32 @@ def print_statistics(l, log = False, top = False, mode=True):
             top_list = [1,5,10,20]
             for t in top_list:
                 top_1 = ((np.where(l<=t)[0].size) / (l.size + 0.0)) * 100
-                print "Top{:2}:{:40}%".format(t, top_1)
-        print "Max:  {:40} {}".format(max_l, max_l_log)
-        print "Min:  {:40} {}".format(min_l, min_l_log)
-        print "AriM: {:40} {}".format(avg_l, avg_l_log)
+                print("Top{:2}:{:40}%".format(t, top_1))
+        print("Max:  {:40} {}".format(max_l, max_l_log))
+        print("Min:  {:40} {}".format(min_l, min_l_log))
+        print("AriM: {:40} {}".format(avg_l, avg_l_log))
         if log:
-            print "GeoM: {:40} {}".format(geo_average2, geo_l_log)
-        print "Med:  {:40} {}".format(med_l, med_l_log)
-        print "Rng:  {:40} {}".format(range_l, range_l_log)
-        print "Var:  {:40} {}".format(var_l, var_l_log)
+            print("GeoM: {:40} {}".format(geo_average2, geo_l_log))
+        print("Med:  {:40} {}".format(med_l, med_l_log))
+        print("Rng:  {:40} {}".format(range_l, range_l_log))
+        print("Var:  {:40} {}".format(var_l, var_l_log))
         if mode:
-            print "Mode: {:40} ({}/{} occurrences ({}%))".format(mode_l, mode_l_occ, len(l), percentage(mode_l_occ, len(l)))
+            print("Mode: {:40} ({}/{} occurrences ({}%))".format(mode_l, mode_l_occ, len(l), percentage(mode_l_occ, len(l))))
         print_new_line()
 
 def save_statistics(name, l):
     l = np.array(l)
     if len(l) == 0:
-        print "List l is empty!"
+        print("List l is empty!")
     else:
         # Max, Min, Average, Median, Range, Variance
         max_l = max(l)
         min_l = min(l)
         avg_l = get_average(l)
         med_l = array_median(l)
-        if type(max_l) is not long and np.isinf(max_l):
+        if type(max_l) is not int and np.isinf(max_l):
             range_l = np.inf
-        elif type(min_l) is not long and np.isnan(min_l):
+        elif type(min_l) is not int and np.isnan(min_l):
             range_l = np.nan
         else:
             range_l = max_l - min_l
@@ -1579,7 +1579,7 @@ def clear_statistics():
 
 def hex_string_to_int_array(hex_string):
     if (len(hex_string) % 2) == 1:
-        print "Hex String {} has {} characters, must be even".format(hex_string, len(hex_string))
+        print("Hex String {} has {} characters, must be even".format(hex_string, len(hex_string)))
         raise ValueError
     out = [0] * (len(hex_string)/2)
     for i in range(0, len(hex_string), 2):
@@ -1587,7 +1587,7 @@ def hex_string_to_int_array(hex_string):
         try:
             hexbyte = eval('0x'+hexbyte_str)
         except NameError:
-            print "Can't evaluate byte {}".format(hexbyte_str)
+            print("Can't evaluate byte {}".format(hexbyte_str))
             raise
         out[i/2] = hexbyte
     return out
@@ -1628,10 +1628,10 @@ def printProgressBar(iteration, total, prefix = 'Progress:', suffix = 'Complete'
     percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
     filledLength = int(length * iteration // total)
     bar = fill * filledLength + '-' * (length - filledLength)
-    print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix)),'\r'
+    print(('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix)),'\r')
     # Print New Line on Complete
     if iteration == total:
-        print ""
+        print("")
 
 def fun(f, q_in, q_out):
     while True:
@@ -1663,13 +1663,13 @@ def load_trace_data(filepath=TRACEDATA_FILEPATH, memory_mapped=True, no_print=Tr
         profile_traces, attack_traces, samples, coding = load_meta()
         used_traces = attack_traces if string_contains(filepath, 'extra') else profile_traces
         if not no_print:
-            print ">>> Loading Trace Data, used_traces = {}, memory_mapped: {}".format(used_traces, memory_mapped)
+            print(">>> Loading Trace Data, used_traces = {}, memory_mapped: {}".format(used_traces, memory_mapped))
         return np.memmap(filepath, dtype=coding, mode='r+', shape=(used_traces, samples))
     else:
         return np.load(filepath, mmap_mode='r', allow_pickle=True)
 
 def print_details(x):
-    print "Type: {}, Contents: {}".format(type(x), x)
+    print("Type: {}, Contents: {}".format(type(x), x))
 
 
 
@@ -1725,7 +1725,7 @@ def load_bpann(variable, load_metadata=True, normalise_traces=True, input_length
     real_values = np.load('{}{}.npy'.format(REALVALUES_FOLDER, var_name), allow_pickle=True)[var_number-1,:]
 
     if training_traces > traces:
-        print 'Augmenting {} Traces!'.format(training_traces - traces)
+        print('Augmenting {} Traces!'.format(training_traces - traces))
 
         # X_profiling = np.empty((training_traces, data_length), dtype=type)
         X_profiling = np.memmap('{}tmp_{}_{}_sd{}_window{}_aug{}.mmap'.format(TRACE_FOLDER, variable, training_traces, sd, input_length, augment_method), shape=(training_traces, data_length), mode='w+', dtype=type)
@@ -1761,7 +1761,7 @@ def load_bpann(variable, load_metadata=True, normalise_traces=True, input_length
                 random_shift = 0
                 while random_shift == 0:
                     random_shift = np.random.randint(-MAX_SHIFT, MAX_SHIFT)
-                    print random_shift
+                    print(random_shift)
 
                 X_profiling[train_trace] = roll_and_pad(trace_data[random_number], random_shift)
 
@@ -1852,17 +1852,17 @@ def shift_traces(extra=True, shifted=2):
     traces, samples = trace_data.shape
     _, _, _, coding = load_meta()
     shifted_filepath = get_shifted_tracedata_filepath(extra=extra, shifted=shifted)
-    print "Extra: {}, Shifted: {}, Filepath: {}".format(extra, shifted, shifted_filepath)
+    print("Extra: {}, Shifted: {}, Filepath: {}".format(extra, shifted, shifted_filepath))
     # New path
     shifted_data = np.memmap(shifted_filepath, shape=(traces, samples), mode='w+', dtype=coding)
     for t in range(traces):
         if ((t % (traces/100)) == 0):
-            print "{}% Complete".format(t*100 / (traces + 0.0))
+            print("{}% Complete".format(t*100 / (traces + 0.0)))
         randint = np.random.randint(-shifted/2, shifted/2)
         if t>0 and t<10:
-            print '{}: {}'.format(t, randint)
-            print "WAS: {}".format(trace_data[t][:10])
-            print "NOW: {}".format(roll_and_pad(trace_data[t], randint)[:10])
+            print('{}: {}'.format(t, randint))
+            print("WAS: {}".format(trace_data[t][:10]))
+            print("NOW: {}".format(roll_and_pad(trace_data[t], randint)[:10]))
 
         if t>0:
             shifted_data[t] = roll_and_pad(trace_data[t], randint)
@@ -1901,19 +1901,19 @@ def realign_trace(base_trace,target_trace):
 
 def realign_traces(extra=True, shifted=2):
     # Load original trace data and shifted trace data
-    print "REALIGNING!"
+    print("REALIGNING!")
     single_nonjitter_trace_data = load_trace_data(filepath=TRACEDATA_FILEPATH if not extra else TRACEDATA_EXTRA_FILEPATH)[0]
     jittery_trace_data = load_trace_data(filepath=get_shifted_tracedata_filepath(extra=extra, shifted=shifted))
     traces, samples = jittery_trace_data.shape
     _, _, _, coding = load_meta()
     realigned_filepath = get_realigned_tracedata_filepath(extra=extra, shifted=shifted)
     realigned_data = np.memmap(realigned_filepath, shape=(traces, samples), mode='w+', dtype=coding)
-    print "Extra: {}, Shifted: {}, Filepath: {}".format(extra, shifted, realigned_filepath)
+    print("Extra: {}, Shifted: {}, Filepath: {}".format(extra, shifted, realigned_filepath))
     for t in range(traces):
         if ((t % (traces/100)) == 0):
-            print "{}% Complete".format(t*100 / (traces + 0.0))
+            print("{}% Complete".format(t*100 / (traces + 0.0)))
         if t<10:
-            print 'Trace {} Realigned!'.format(t)
+            print('Trace {} Realigned!'.format(t))
         realigned_data[t] = realign_trace(single_nonjitter_trace_data, jittery_trace_data[t])
     del realigned_data
 
@@ -1933,7 +1933,7 @@ def handle_variable_string_list(s):
     # e.g. '[k,t,s]' -> ['k','t','s']
     # Ensure first character '['
     if s[0] != '[':
-        print "!!! Error, {} not a variable string list".format(s)
+        print("!!! Error, {} not a variable string list".format(s))
         raise
     # Loop through and append to out
     out = list()
@@ -2025,8 +2025,8 @@ def tf_rank_loss(y_true, y_pred):
     # Take the mean of these ranks (float value)
     mean = tf.cast(tf.reduce_mean(gathered), tf.float32)
 
-    print "Our Rank Mean:\ntype {} ({}), shape {}".format(type(mean), mean.dtype, mean.get_shape())
-    print "Cross Entropy:\ntype {} ({}), shape {}".format(type(return_val), return_val.dtype, return_val.get_shape())
+    print("Our Rank Mean:\ntype {} ({}), shape {}".format(type(mean), mean.dtype, mean.get_shape()))
+    print("Cross Entropy:\ntype {} ({}), shape {}".format(type(return_val), return_val.dtype, return_val.get_shape()))
     return return_val + mean
 
 def tf_median_probability_loss(y_true, y_pred):
@@ -2048,7 +2048,7 @@ def tf_median_probability_loss(y_true, y_pred):
     return median
 
 def get_variable_list():
-    return ['{}{}'.format(k, pad_string_zeros(i+1)) for k, v in variable_dict.iteritems() for i in range(v)]
+    return ['{}{}'.format(k, pad_string_zeros(i+1)) for k, v in variable_dict.items() for i in range(v)]
 
 # variable_list = ['{}{}'.format(k, pad_string_zeros(i+1)) for k, v in variable_dict.iteritems() for i in range(v)]
 # variable_list = ['{}{}'.format(vk, vi) for vi in range(vv) for vk,vv in variable_dict.iteritems()]

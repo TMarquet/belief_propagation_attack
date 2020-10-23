@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 import linecache
 from utility import *
-cimport numpy as np
+#cimport numpy as np
 
 shift_rows_s = list([
     0, 5, 10, 15, 4, 9, 14, 3, 8, 13, 2, 7, 12, 1, 6, 11
@@ -28,7 +28,7 @@ class LeakageSimulatorAESFurious:
 
     def fix_plaintext(self, plaintext):
         if len(plaintext) != 16:
-            print "!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext))
+            print("!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext)))
             raise IndexError
         self.plaintext = plaintext
 
@@ -132,7 +132,7 @@ class LeakageSimulatorAESFurious:
                         #print 'i = {}, val = 0x{} ({})'.format(i, line, eval('0x' + line))
                         p_backup[i-1] = eval('0x' + line)
                 except (IndexError, SyntaxError) as e:
-                    print "Caught Error in leakageSimulatorAESFurious: {}".format(e)
+                    print("Caught Error in leakageSimulatorAESFurious: {}".format(e))
                     raise
             elif random_plaintexts:
                 p_backup = get_random_bytes()
@@ -149,7 +149,7 @@ class LeakageSimulatorAESFurious:
 
             p[:len(self.plaintext)] = p_backup
             if print_all:
-                print "* Trace {:3}, Plaintext: {}".format(trace, p_backup)
+                print("* Trace {:3}, Plaintext: {}".format(trace, p_backup))
 
             # TEST TODO
             # p[:len(self.plaintext)] = hexStringToIntArray('6bc1bee22e409f96e93d7e117393172a')
@@ -206,13 +206,13 @@ class LeakageSimulatorAESFurious:
                         p[i+16] = shift[i] ^ k[i+16]
 
             if print_all:
-                print "Key:         {}".format(k[:16])
-                print "Plaintext:   {}".format(p[:16])
-                print "Ciphertext:  {}".format(p[-16:])
+                print("Key:         {}".format(k[:16]))
+                print("Plaintext:   {}".format(p[:16]))
+                print("Ciphertext:  {}".format(p[-16:]))
                 print_new_line()
-                print "Key:         {}".format(get_list_as_hex_string(k[:16]))
-                print "Plaintext:   {}".format(get_list_as_hex_string(p[:16]))
-                print "Ciphertext:  {}".format(get_list_as_hex_string(p[-16:]))
+                print("Key:         {}".format(get_list_as_hex_string(k[:16])))
+                print("Plaintext:   {}".format(get_list_as_hex_string(p[:16])))
+                print("Ciphertext:  {}".format(get_list_as_hex_string(p[-16:])))
                 # print "expected: {}".format(hexStringToIntArray('3ad77bb40d7a3660a89ecaf32466ef97'))
 
             # TODO
@@ -375,8 +375,8 @@ class LeakageSimulatorAESFurious:
                 # print "Path to Trace File {}: {}".format(trace, trace_path)
                 f = open(trace_path)
             except IOError:
-                print "IOError: Can't open file named {}".format(
-                    'Leakage/trace{}.trc'.format(pad_string_zeros(trace + 1 + offset, 5)))
+                print("IOError: Can't open file named {}".format(
+                    'Leakage/trace{}.trc'.format(pad_string_zeros(trace + 1 + offset, 5))))
                 raise
 
             hw_leaks = dict()
@@ -442,7 +442,7 @@ class LeakageSimulatorAESFurious:
                         #print 'i = {}, val = 0x{} ({})'.format(i, line, eval('0x' + line))
                         p_backup[i-1] = eval('0x' + line)
                 except (IndexError, SyntaxError) as e:
-                    print "Caught Error in leakageSimulatorAES: {}".format(e)
+                    print("Caught Error in leakageSimulatorAES: {}".format(e))
                     raise
             else:
                 p_backup = self.plaintext
@@ -546,7 +546,7 @@ class LeakageSimulatorAESFurious:
         # print "In Leakage Simulator AES Furious, badly_leaking_traces = {}, badly_leaking_nodes: {}".format(badly_leaking_traces, badly_leaking_nodes)
 
         if len(badly_leaking_nodes) > 0 and len(badly_leaking_traces) == 0:
-            print "! As bl nodes set but blt not, setting all traces to badly leak"
+            print("! As bl nodes set but blt not, setting all traces to badly leak")
             badly_leaking_traces = range(traces)
 
         # Non-key bytes
@@ -555,20 +555,20 @@ class LeakageSimulatorAESFurious:
             print_out = False
 
             if print_out:
-                print "Leakage Simulator: Adding Noise to Trace {}".format(trace)
+                print("Leakage Simulator: Adding Noise to Trace {}".format(trace))
 
             for variable in variables:
 
                 if variable in no_noise_nodes:
                     if print_out:
-                        print "+++ NO NOISE for Variable {}".format(variable)
+                        print("+++ NO NOISE for Variable {}".format(variable))
                     pass
                 else:
 
                     if print_out:
                         print_new_line()
                         print_new_line()
-                        print "*** NOISE FOR VARIABLE {}".format(variable)
+                        print("*** NOISE FOR VARIABLE {}".format(variable))
                         print_new_line()
                         print_new_line()
 
@@ -624,10 +624,10 @@ class LeakageSimulatorAESFurious:
     def affect_array_with_noise(self, array, float snr, threshold = None, hw_leakage_model = True, category = 1, print_out = False, bad_leak = False, badly_leaking_snr = 0.1, erroneous_badleakage = False):
         # cdef DTYPE_t i
         if hw_leakage_model:
-            print "!!! Removed support for hw_leakage_model in array noise!"
+            print("!!! Removed support for hw_leakage_model in array noise!")
             raise ValueError
         if print_out:
-            print "Affecting Array with Noise"
+            print("Affecting Array with Noise")
         return np.array([self.affect_elmo_value_with_noise(i, snr, category = category, threshold = threshold, print_out = print_out, bad_leak = bad_leak, badly_leaking_snr = badly_leaking_snr, erroneous_badleakage=erroneous_badleakage) for i in array])
 
     def affect_hw_value_with_noise(self, int value, float snr, threshold = None, bad_leak = False, badly_leaking_snr = 0.1, erroneous_badleakage = False):
@@ -651,12 +651,12 @@ class LeakageSimulatorAESFurious:
 
             return temp
         except ValueError:
-            print "Error with affect_hw_value_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma, threshold)
+            print("Error with affect_hw_value_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma, threshold))
             raise
 
     def affect_elmo_value_with_noise(self, float value, float snr, int category, threshold = None, print_out = False, bad_leak = False, badly_leaking_snr = 0.1, average = 1, erroneous_badleakage=False):
         if category > 4:
-            print "ERROR: Category must be between 0 and 4, cannot be {}!".format(category)
+            print("ERROR: Category must be between 0 and 4, cannot be {}!".format(category))
             raise ValueError
         cdef float noise, temp, sigma
         sigma = get_sigma(snr, hw = False, category = category)
@@ -683,9 +683,9 @@ class LeakageSimulatorAESFurious:
                 # print "Now adding noise to a key var\nNoisyBits: {}\nMean: {}\nso {} + {} = {}".format(noisy_bits, noise, value, noise, temp)
 
             if print_out:
-                print "--------> noise {} + value {} = {}".format(noise, value, temp)
+                print("--------> noise {} + value {} = {}".format(noise, value, temp))
                 if bad_leak and erroneous_badleakage:
-                    print "--------> ! bad leak so just {}".format(noise)
+                    print("--------> ! bad leak so just {}".format(noise))
 
 
             if threshold is not None and (abs(noise) > threshold):
@@ -697,7 +697,7 @@ class LeakageSimulatorAESFurious:
             return temp
 
         except ValueError:
-            print "Error with affect_elmo_value_with_noise: value = {}, sigma = {}, category = {}, threshold = {}".format(value, sigma, category, threshold)
+            print("Error with affect_elmo_value_with_noise: value = {}, sigma = {}, category = {}, threshold = {}".format(value, sigma, category, threshold))
             raise
 
     def get_leakage_dictionary(self):

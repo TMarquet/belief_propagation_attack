@@ -166,12 +166,12 @@ class leakageSimulatorAES:
                         #print 'i = {}, val = 0x{} ({})'.format(i, line, eval('0x' + line))
                         p_backup[i-1] = eval('0x' + line)
                 except (IndexError, SyntaxError) as e:
-                    print "Caught Error in leakageSimulatorAES: {}".format(e)
+                    print("Caught Error in leakageSimulatorAES: {}".format(e))
                     raise
             else:
                 p_backup = get_random_bytes()
 
-            print "* Trace {:3}, Plaintext: {}".format(trace, p_backup)
+            print("* Trace {:3}, Plaintext: {}".format(trace, p_backup))
 
             # Plaintext
             if read_plaintexts:
@@ -381,8 +381,8 @@ class leakageSimulatorAES:
                 else:
                     f = open(PATH_TO_ELMO + 'output/traces/trace{}.trc'.format(pad_string_zeros(trace + 1, 5)))
             except IOError:
-                print "IOError: Can't open file named {}".format(
-                    'Leakage/trace{}.trc'.format(pad_string_zeros(trace, 5)))
+                print("IOError: Can't open file named {}".format(
+                    'Leakage/trace{}.trc'.format(pad_string_zeros(trace, 5))))
                 raise
 
             hw_leaks = dict()
@@ -445,7 +445,7 @@ class leakageSimulatorAES:
                         #print 'i = {}, val = 0x{} ({})'.format(i, line, eval('0x' + line))
                         p_backup[i-1] = eval('0x' + line)
                 except (IndexError, SyntaxError) as e:
-                    print "Caught Error in leakageSimulatorAES: {}".format(e)
+                    print("Caught Error in leakageSimulatorAES: {}".format(e))
                     raise
             else:
                 p_backup = self.plaintext
@@ -563,8 +563,8 @@ class leakageSimulatorAES:
             temp = value + np.random.normal(0, sigma, 1)[0]
             return temp
         except ValueError:
-            print "Error with affect_elmo_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma,
-                                                                                                     threshold)
+            print("Error with affect_elmo_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma,
+                                                                                                     threshold))
             raise
 
     def affect_hw_with_noise(self, int value, float sigma, threshold = None):
@@ -580,9 +580,9 @@ class leakageSimulatorAES:
                 return -1
             return temp
         except ValueError:
-            print "Error with affect_hw_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma,
-                                                                                                   threshold)
-            raise
+            print("Error with affect_hw_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma,
+                                                                                                   threshold))
+           raise
 
     def getLeakageDictionary(self):
         return self.simulatedDictionary
