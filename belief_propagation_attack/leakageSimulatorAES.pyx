@@ -580,8 +580,7 @@ class leakageSimulatorAES:
                 return -1
             return temp
         except ValueError:
-            print("Error with affect_hw_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma,
-                                                                                                   threshold))
+            print("Error with affect_hw_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma,threshold))                                                                                                   
             raise
 
     def getLeakageDictionary(self):
