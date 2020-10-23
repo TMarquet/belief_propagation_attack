@@ -12,8 +12,8 @@ import sys
 # import dill
 # import multiprocessing as mp
 
- DTYPE = np.float32
- ctypedef np.float32_t DTYPE_t
+DTYPE = np.float32
+ctypedef np.float32_t DTYPE_t
 
 FORCE_GRAPH_CREATION                = False
 CONVERGENCE_LENGTH                  = 500
