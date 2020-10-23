@@ -39,6 +39,8 @@ shift = list([0,
 
 def check_variable_factor_edge_match(variables, factors, edges):
     error = False
+    print(variables)
+    print(factors)
     for edge in edges:
         if edge[0] not in variables:
             if DEBUG: print("!!! Edge {}, Variable {} not previously defined".format(edge, edge[0]))
