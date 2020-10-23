@@ -41,9 +41,11 @@ def check_variable_factor_edge_match(variables, factors, edges):
     error = False
     for edge in edges:
         if edge[0] not in variables:
+            print('HERE1')
             if DEBUG: print("!!! Edge {}, Variable {} not previously defined".format(edge, edge[0]))
             error = True
         elif edge[1] not in factors:
+            print('HERE2')
             if DEBUG: print("!!! Edge {}, Factor {} not previously defined".format(edge, edge[1]))
             error = True
     if error:
