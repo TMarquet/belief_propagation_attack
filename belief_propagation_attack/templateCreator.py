@@ -25,7 +25,7 @@ targets = [('111', 20), ('131', 31), ('134', 42), ('144', 53), ('431', 64), ('44
 # target_line = 37 # With, 2
 
 for target in targets:
-    print "Target Name: {}, Target Line: {}".format(target[0], target[1])
+    print("Target Name: {}, Target Line: {}".format(target[0], target[1]))
 
     template = list()
 
@@ -33,7 +33,7 @@ for target in targets:
     for template_index in range(1, (n * 256) + 1, n):
 
         if DEBUG:
-            print "Template for {}".format(template_index // n)
+            print("Template for {}".format(template_index // n))
 
         # Only use a set number of templates
         current_lst = list()
@@ -46,7 +46,7 @@ for target in targets:
                     '../ELMO/output/traces/trace{}.trc'.format(padStringZeroes(template_index + i, 5)),
                     target[1]).strip())
             except ValueError:
-                print "ERROR: Value Error"
+                print("ERROR: Value Error")
                 raise
 
             current_lst.append(value)

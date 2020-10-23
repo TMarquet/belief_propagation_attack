@@ -41,10 +41,10 @@ def check_variable_factor_edge_match(variables, factors, edges):
     error = False
     for edge in edges:
         if edge[0] not in variables:
-            if DEBUG: print "!!! Edge {}, Variable {} not previously defined".format(edge, edge[0])
+            if DEBUG: print("!!! Edge {}, Variable {} not previously defined".format(edge, edge[0]))
             error = True
         elif edge[1] not in factors:
-            if DEBUG: print "!!! Edge {}, Factor {} not previously defined".format(edge, edge[1])
+            if DEBUG: print("!!! Edge {}, Factor {} not previously defined".format(edge, edge[1]))
             error = True
     if error:
         print_new_line()
@@ -60,7 +60,7 @@ def check_unconnected_nodes(variables, factors, edges):
             if edge[0] == node or edge[1] == node:
                 break
         else:
-            if DEBUG: print "!!! {} is not connected to anything, removing".format(node)
+            if DEBUG: print("!!! {} is not connected to anything, removing".format(node))
             to_remove.append(node)
     for node in factors:
         # TODO
@@ -68,7 +68,7 @@ def check_unconnected_nodes(variables, factors, edges):
             if edge[0] == node or edge[1] == node:
                 break
         else:
-            if DEBUG: print "!!! {} is not connected to anything, removing".format(node)
+            if DEBUG: print("!!! {} is not connected to anything, removing".format(node))
             to_remove.append(node)
     if error:
         print_new_line()
@@ -103,7 +103,7 @@ def match_nodes(variables, removed_nodes):
                 if len(r_node_matches) > 0:
                     r_node_all += r_node_matches
                 else:
-                    print "! Cannot find matching nodes for node {}".format(r_node)
+                    print("! Cannot find matching nodes for node {}".format(r_node))
             elif r_node_trace is None:
                 # Loop through variables
                 for variable in variables:
@@ -111,7 +111,7 @@ def match_nodes(variables, removed_nodes):
                     if v_name == r_node_name and v_number == r_node_number:
                         r_node_all.append(variable)
             else:
-                print "! Couldn't find node {} in graph".format(r_node)
+                print("! Couldn't find node {} in graph".format(r_node))
     return r_node_all
 
 
@@ -140,8 +140,8 @@ def remove_node(variables, factors, edges, current_node, variation=1):
                     edges.remove((current_node, child))
                     break
         else:
-            print "* Warning: Variable {} has parent {} and child {}. Cannot remove!".format(current_node, parent,
-                                                                                             child)
+            print("* Warning: Variable {} has parent {} and child {}. Cannot remove!".format(current_node, parent,
+                                                                                             child))
             pass
 
         # Only go on if both parent and child are present
@@ -168,8 +168,8 @@ def remove_node(variables, factors, edges, current_node, variation=1):
 
 
             else:
-                print "* Warning: Parent {} and Child {} not both XOR nodes. Cannot merge! (Work in Progress)".format(
-                    parent, child)
+                print("* Warning: Parent {} and Child {} not both XOR nodes. Cannot merge! (Work in Progress)".format(
+                    parent, child))
 
             # Get all edges coming in to the parent factor node (list of variables)
 
@@ -372,14 +372,14 @@ def create_factor_graph(number_of_traces, h_case=1, use_cm=True, use_mc=True):
                                                                                       use_mc))
         # print "{} Trace Graph Done!".format(number_of_traces)
     except IOError:
-        print "IOError Encountered when writing Factor Graph!"
+        print("IOError Encountered when writing Factor Graph!")
         raise
 
 
 def create_factor_graph_full_aes(number_of_traces, removed_nodes=None, key_scheduling=False):
 
     # TODO
-    print "!!! Need to implement for ARM AES in graph creator!"
+    print("!!! Need to implement for ARM AES in graph creator!")
     raise Exception
 
     if removed_nodes is None:
@@ -664,17 +664,17 @@ def create_factor_graph_full_aes(number_of_traces, removed_nodes=None, key_sched
     # For each variable that we want to remove:
     for r_node in removed_nodes:
 
-        print "+=+ Removing {} +=+".format(r_node)
+        print("+=+ Removing {} +=+".format(r_node))
 
         # Get list of all variables that match the target name (e.g. cm -> [cm001-0, cm002-0, etc])
         r_node_all = get_variables_that_match(variables, r_node)
 
         # Sanity check: Make sure list isn't empty
         if len(r_node_all) == 0:
-            print "* Error: {} isn't a valid variable!".format(r_node)
+            print("* Error: {} isn't a valid variable!".format(r_node))
 
         else:
-            print "* Attempting to remove {} variables".format(len(r_node_all))
+            print("* Attempting to remove {} variables".format(len(r_node_all)))
 
             # For each of these nodes...
             for current_node in r_node_all:
@@ -700,8 +700,8 @@ def create_factor_graph_full_aes(number_of_traces, removed_nodes=None, key_sched
                             edges.remove((current_node, child))
                             break
                 else:
-                    print "* Warning: Variable {} has parent {} and child {}. Cannot remove!".format(current_node,
-                                                                                                     parent, child)
+                    print("* Warning: Variable {} has parent {} and child {}. Cannot remove!".format(current_node,
+                                                                                                     parent, child))
                     pass
 
                 # Only go on if both parent and child are present
@@ -728,8 +728,8 @@ def create_factor_graph_full_aes(number_of_traces, removed_nodes=None, key_sched
 
 
                     else:
-                        print "* Warning: Parent {} and Child {} not both XOR nodes. Cannot merge! (Work in Progress)".format(
-                            parent, child)
+                        print("* Warning: Parent {} and Child {} not both XOR nodes. Cannot merge! (Work in Progress)".format(
+                            parent, child))
 
                     # Get all edges coming in to the parent factor node (list of variables)
 
@@ -752,7 +752,7 @@ def create_factor_graph_full_aes(number_of_traces, removed_nodes=None, key_sched
 
 
     # Print number of variables / traces / edges
-    print "Variables: {}, Factors: {}, Edges: {}".format(len(variables), len(factors), len(edges))
+    print("Variables: {}, Factors: {}, Edges: {}".format(len(variables), len(factors), len(edges)))
 
     # Save to file
     try:
@@ -762,7 +762,7 @@ def create_factor_graph_full_aes(number_of_traces, removed_nodes=None, key_sched
                                                                                                  key_scheduling))
         # print "{} Trace Graph Done!".format(number_of_traces)
     except IOError:
-        print "IOError Encountered when writing Factor Graph!"
+        print("IOError Encountered when writing Factor Graph!")
         raise
 
 
@@ -1087,7 +1087,7 @@ def create_factor_graph_full_aes_furious(number_of_traces, removed_nodes=None, k
 
     if len(r_node_all) > 0:
 
-        print "* Attempting to remove {} nodes from the factor graph".format(len(r_node_all))
+        print("* Attempting to remove {} nodes from the factor graph".format(len(r_node_all)))
 
         # For each variable that we want to remove:
         for current_node in r_node_all:
@@ -1107,10 +1107,10 @@ def create_factor_graph_full_aes_furious(number_of_traces, removed_nodes=None, k
 
     # Print number of variables / traces / edges
     round_string = "{} ROUNDS ".format(rounds_of_aes)
-    print "AES FURIOUS GRAPH {}{} Traces, Removed Nodes: {}, Key Scheduling {}".format(round_string,
+    print("AES FURIOUS GRAPH {}{} Traces, Removed Nodes: {}, Key Scheduling {}".format(round_string,
                                                                                        number_of_traces, removed_nodes,
-                                                                                       key_scheduling)
-    print "Variables: {}, Factors: {}, Edges: {}".format(len(variables), len(factors), len(edges))
+                                                                                       key_scheduling))
+    print("Variables: {}, Factors: {}, Edges: {}".format(len(variables), len(factors), len(edges)))
 
     # print "TEST: len(factor_graph.edges()): {}".format(len(factor_graph.edges()))
     # print "TEST: set of edges: {}".format(len(set(edges)))
@@ -1141,7 +1141,7 @@ def create_factor_graph_full_aes_furious(number_of_traces, removed_nodes=None, k
                                                                                                 key_scheduling))
         # print "{} Trace Graph Done!".format(number_of_traces)
     except IOError:
-        print "IOError Encountered when writing Factor Graph!"
+        print("IOError Encountered when writing Factor Graph!")
         raise
 
     if EDGES_TO_FILE:
@@ -1154,6 +1154,6 @@ def create_factor_graph_full_aes_furious(number_of_traces, removed_nodes=None, k
 
 
 if __name__ == "__main__":
-    print "Hello World!"
+    print("Hello World!")
 
     create_factor_graph_full_aes_furious(1)

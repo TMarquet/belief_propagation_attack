@@ -48,7 +48,7 @@ def plot_results(testname='ranks_'):
     file_prefix = OUTPUT_FOLDER+'new_results/'
     results_files = get_files_in_folder(folder=file_prefix, substring=testname)
 
-    print 'Files:', results_files
+    print('Files:', results_files)
 
     plt.rc('text', usetex=True)
     plt.rc('font', family='serif')
@@ -74,7 +74,7 @@ def plot_results(testname='ranks_'):
 
         if testname == 'GraphStructure':
             for acyclic_i, acyclic_bool in enumerate([True, False]):
-                print ("\nSnr {}, Acyclic {}:").format(snr_bool, acyclic_bool)
+                print(("\nSnr {}, Acyclic {}:").format(snr_bool, acyclic_bool))
 
                 # LFG
                 lfg_x = list()
@@ -82,7 +82,7 @@ def plot_results(testname='ranks_'):
 
                 for result_file in [rfile for rfile in results_files if (string_contains(rfile, '-1') == snr_bool and (string_contains(rfile, 'G1A') == acyclic_bool)) and not string_contains(rfile, 'KEYAVG')]:
 
-                    print "> {}".format(result_file)
+                    print("> {}".format(result_file))
 
                     # LFG HANDLE
                     if get_graph_connection_method(result_file) == 'LFG':
@@ -90,13 +90,13 @@ def plot_results(testname='ranks_'):
 
                         try:
                             current_results = np.mean(np.load(file_prefix + result_file, allow_pickle=True), axis=0)
-                            print ("Plot for LFG {:3}: {}".format(lfg_traces, current_results))
+                            print(("Plot for LFG {:3}: {}".format(lfg_traces, current_results)))
                             # print 'LFG Shape: {}'.format(current_results.shape)
                             lfg_x.append(eval(lfg_traces))
                             lfg_y.append(current_results)
                             # axs[snr_i][acyclic_i].plot(lfg_traces, current_results, label=get_graph_connection_method(result_file))
                         except ValueError:
-                            print "Could not load file {}".format(result_file)
+                            print("Could not load file {}".format(result_file))
                         continue
                     else:
 
@@ -110,14 +110,14 @@ def plot_results(testname='ranks_'):
                             np.savetxt('output/{}_{}_acyclic{}_{}.csv'.format(testname, get_graph_connection_method(result_file), acyclic_bool, '-1' if snr_bool else '-7'), current_results, delimiter=",")
 
                         except ValueError:
-                            print "Could not load file {}".format(result_file)
+                            print("Could not load file {}".format(result_file))
 
                 # Finish with LFG Traces
                 lfg_x_sorted = sorted(lfg_x)
                 lfg_y_sorted = [x for _,x in sorted(zip(lfg_x,lfg_y))]
 
-                print lfg_x, lfg_y
-                print lfg_x_sorted, lfg_y_sorted
+                print(lfg_x, lfg_y)
+                print(lfg_x_sorted, lfg_y_sorted)
 
                 interpolated = np.interp(np.arange(1,101), lfg_x_sorted, lfg_y_sorted)
 
@@ -137,7 +137,7 @@ def plot_results(testname='ranks_'):
                 # plt.clf()
 
         elif testname == 'ReducedGraphs':
-            print ("\nSnr {}:".format(snr_bool))
+            print(("\nSnr {}:".format(snr_bool)))
             for result_file in [rfile for rfile in results_files if (string_contains(rfile, '-1') == snr_bool)]:
 
                 try:
@@ -152,7 +152,7 @@ def plot_results(testname='ranks_'):
                     np.savetxt('output/{}_{}_{}.csv'.format(testname, get_graph_size_and_structure(result_file), '-1' if snr_bool else '-7'), current_results, delimiter=",")
 
                 except ValueError:
-                    print "Could not load file {}".format(result_file)
+                    print("Could not load file {}".format(result_file))
             # axs[snr_i].legend()
 
     # try:
@@ -269,17 +269,17 @@ def tensors():
 
 def numpy_tests():
 
-    my_values = range(3) # 256
+    my_values = list(range(3)) # 256
     true_onehot = np.array([get_plaintext_array(i) for i in my_values])
     pred = np.array([get_hamming_weight_array(get_hw(i)) for i in my_values])
 
     for i, value in enumerate(zip(true_onehot, pred)):
 
-        print ("\n\n\ni: {}\n".format(i))
+        print(("\n\n\ni: {}\n".format(i)))
 
         # Step 1: Decode one hot
         decoded_onehot = np.argmax(value[0])
-        print ("Decoded One Hot: {}".format(decoded_onehot))
+        print(("Decoded One Hot: {}".format(decoded_onehot)))
 
         # Step 2: ???
         argsorted_pred = np.argsort(value[1])
@@ -301,7 +301,7 @@ def weighted_bits():
 
 def value_occurance_checker(var_name='s', var_num=1, randomkey_extra = False, extra_size = 10000, hw=False):
 
-    print ("* Value Occurance Checker, {} {} *".format(var_name, var_num))
+    print(("* Value Occurance Checker, {} {} *".format(var_name, var_num)))
 
     for extra_file in [False, True]:
         filename = '{}{}{}.npy'.format(REALVALUES_FOLDER, 'extra_' if extra_file and not randomkey_extra else '', var_name)
@@ -318,12 +318,12 @@ def value_occurance_checker(var_name='s', var_num=1, randomkey_extra = False, ex
 
         unique, counts = np.unique(real_values, return_counts=True)
         if unique.shape[0] != (9 if hw else 256) and not (var_name == 'k' and unique.shape[0] == 1):
-            print ("GOTCHA! Unique is only size {}:\n{}\n".format(unique.shape[0], unique))
+            print(("GOTCHA! Unique is only size {}:\n{}\n".format(unique.shape[0], unique)))
             raise
-        print ("> {} Values ({}):".format('Attack' if extra_file else 'Profile', real_values.shape[0]))
+        print(("> {} Values ({}):".format('Attack' if extra_file else 'Profile', real_values.shape[0])))
         print_statistics(real_values, mode=True)
         if hw:
-            print (">> Counts: {}".format(counts))
+            print((">> Counts: {}".format(counts)))
 
 def stretch_and_shrink(vector, start, length=300, stretch_length=20):
     section = vector[start:start+length]
@@ -366,8 +366,8 @@ def latexify(fig_width=None, fig_height=None, columns=1):
 
     MAX_HEIGHT_INCHES = 8.0
     if fig_height > MAX_HEIGHT_INCHES:
-        print("WARNING: fig_height too large:" + fig_height +
-              "so will reduce to" + MAX_HEIGHT_INCHES + "inches.")
+        print(("WARNING: fig_height too large:" + fig_height +
+              "so will reduce to" + MAX_HEIGHT_INCHES + "inches."))
         fig_height = MAX_HEIGHT_INCHES
 
     print ("TODO: Fix latexify for python3")
@@ -444,8 +444,8 @@ def timepoint_plot():
     plt.rc('text', usetex=True)
     plt.rc('font', family='serif')
 
-    for var, length in variable_dict.iteritems():
-        print ("\n* Var {}".format(var))
+    for var, length in variable_dict.items():
+        print(("\n* Var {}".format(var)))
         timepoint = np.load("{}{}.npy".format(TIMEPOINTS_FOLDER, var), allow_pickle=True)
         # ax.scatter(var, timepoint, label=var)
         var_l = [var for i in range(len(timepoint))]
@@ -502,7 +502,7 @@ def get_best_templates():
 
     template_dict = dict()
 
-    variables = ['{}{}'.format(k, pad_string_zeros(i+1)) for k, v in variable_dict.iteritems() for i in range(v)]
+    variables = ['{}{}'.format(k, pad_string_zeros(i+1)) for k, v in variable_dict.items() for i in range(v)]
 
     my_csv = 'output/template_results.csv'
     clear_csv(my_csv)
@@ -510,7 +510,7 @@ def get_best_templates():
 
     for var in variables:
 
-        print ("\n\n\n*** VARIABLE {} ***".format(var))
+        print(("\n\n\n*** VARIABLE {} ***".format(var)))
 
         ranklist_uni, problist_uni = rtrace_uni.get_performance_of_handler(var)
         ranklist_lda, problist_lda = rtrace_lda.get_performance_of_handler(var)
@@ -548,9 +548,9 @@ def timepoint_test(tp_threshold = 100):
 
     count = 0
 
-    for variable, length in variable_dict.iteritems():
+    for variable, length in variable_dict.items():
 
-        print "* variable {} ({}) *".format(variable, length)
+        print("* variable {} ({}) *".format(variable, length))
 
         id_timepoints = np.load('{}{}{}.npy'.format(TRACE_FOLDER, 'identity_timepoints/', variable))
         hw_timepoints = np.load('{}{}{}.npy'.format(TRACE_FOLDER, 'timepoints/', variable))
@@ -563,12 +563,12 @@ def timepoint_test(tp_threshold = 100):
 
             if abs(id_tp - hw_tp) > tp_threshold:
 
-                print "n: {:3}, diff: {:4} HW {:6} ID {:6}".format(i+1, diff, hw_tp, id_tp)
+                print("n: {:3}, diff: {:4} HW {:6} ID {:6}".format(i+1, diff, hw_tp, id_tp))
 
                 count += 1
 
 
-    print "Total: {}".format(count)
+    print("Total: {}".format(count))
 
 
 def get_best_models():
@@ -586,21 +586,21 @@ def get_best_models():
                 variable = re.search('models\/([a-z]+[0-9]+).*', model_name).group(1)
                 source = re.search('.*loss_([a-z]+[0-9]*).h5', model_name).group(1)
                 model_name_stripped = re.search('models\/(.*)_.*.h5', model_name).group(1)
-                print variable, source, median_prob
+                print(variable, source, median_prob)
 
                 if source == 'bcp4':
                     current_probability = median_prob
                 else:
                     model_name_remove = '{}_{}.h5'.format(model_name_stripped, 'mig' if median_prob < current_probability else 'bcp4')
                     if median_prob < current_probability:
-                        print "Variable {:5}: REMOVE MIG".format(variable)
+                        print("Variable {:5}: REMOVE MIG".format(variable))
                     else:
-                        print "Variable {:5}: REMOVE BCP4".format(variable)
-                    print "> removing {}".format(model_name_remove)
+                        print("Variable {:5}: REMOVE BCP4".format(variable))
+                    print("> removing {}".format(model_name_remove))
                     # os.remove(NEURAL_MODEL_FOLDER + model_name_remove)
 
             except AttributeError:
-                print "! Ignoring model '{}'".format(model_name)
+                print("! Ignoring model '{}'".format(model_name))
 
 def load_new_result(filename, file_prefix = OUTPUT_FOLDER+'new_results/'):
     return np.load('{}{}'.format(file_prefix, filename), allow_pickle=True)
@@ -610,7 +610,7 @@ def load_new_result(filename, file_prefix = OUTPUT_FOLDER+'new_results/'):
 def dpa(traces = 200, repeats = 2, window = 10, use_random_traces = True, no_print = False):
 
     if traces < 1:
-        print "!!! Cannot run DPA with {} Traces!".format(traces)
+        print("!!! Cannot run DPA with {} Traces!".format(traces))
         return None
 
     np.random.seed(0)
@@ -675,7 +675,7 @@ def dpa(traces = 200, repeats = 2, window = 10, use_random_traces = True, no_pri
         rank_list.append(final_key_rank)
 
     if not no_print:
-        print "* DPA Results, {} Traces, {} Repeats, {} Window *".format(traces, repeats, window)
+        print("* DPA Results, {} Traces, {} Repeats, {} Window *".format(traces, repeats, window))
         print_statistics(rank_list, log=True)
 
     return rank_list
@@ -697,7 +697,7 @@ def dpa_runner():
             median_ranks.append(rank)
             # x_axis.append(i)
         else:
-            print "! Not enough traces to run DPA ({} traces)".format(i)
+            print("! Not enough traces to run DPA ({} traces)".format(i))
             median_ranks.append(256)
 
     # STORE!
@@ -732,7 +732,7 @@ def timer():
 
     # Find All Trace Values for this Time Point
     trace_values = trace_data[poi, :-validation_traces]
-    print trace_values.shape, trace_values
+    print(trace_values.shape, trace_values)
 
     # Save Mean and Sigma
     var_string = "{}{}".format(var, pad_string_zeros(j + 1))
@@ -740,14 +740,14 @@ def timer():
 
     # Save Mean and Sigma for Each Hamming Weight
     if PRINT:
-        print "For Variable {}:".format(var_string)
+        print("For Variable {}:".format(var_string))
     for value in range(NUMBER_OF_TEMPLATES):
         # Get list of traces where hw is used
         target_traces = get_list_of_value_matches(var_array[j], value)
-        print value, target_traces
+        print(value, target_traces)
         if len(target_traces) == 0:
             print_new_line()
-            print "ERROR: No Traces found where Variable {} has Value {}!".format(var_string, value)
+            print("ERROR: No Traces found where Variable {} has Value {}!".format(var_string, value))
             print_new_line()
             # raise IOError
             pass
@@ -771,16 +771,16 @@ def timer():
         numpy_array[value] = (mu, sigma)
 
         if PRINT:
-            print "Value {}: {}".format(value, (mu, sigma))
+            print("Value {}: {}".format(value, (mu, sigma)))
 
 
 
     # Save
-    print numpy_array
+    print(numpy_array)
 
     elapsed_time = time.time() - start_time
 
-    print "Elapsed Time: {} seconds".format(elapsed_time)
+    print("Elapsed Time: {} seconds".format(elapsed_time))
 
 if __name__ == "__main__":
 
@@ -803,7 +803,7 @@ if __name__ == "__main__":
         plt.plot(mean, label=label)
         np.savetxt('output/{}.csv'.format(label), mean, delimiter=",")
 
-    cpa_x = range(10,100)
+    cpa_x = list(range(10,100))
     cpa_y = savgol_filter(cpa[10:], 21, 2)
     plt.plot(cpa_x, cpa_y, label='HW Based CPA')
     np.savetxt('output/{}.csv'.format('cpa'), cpa_y, delimiter=",")
@@ -823,7 +823,7 @@ if __name__ == "__main__":
 
     for extra in extra_l:
         for shifted in shifted_l:
-            print "*** Shifting {} extra {}".format(shifted, extra)
+            print("*** Shifting {} extra {}".format(shifted, extra))
             shift_traces(extra=extra, shifted=shifted)
 
     exit(1)
@@ -852,7 +852,7 @@ if __name__ == "__main__":
                 plt.plot(load_plot, label='{} {}'.format('Uni' if classifier is '' else classifier, graph))
                 np.savetxt('output/bpacomp_{}.csv'.format('Uni' if classifier is '' else classifier, graph), load_plot, delimiter=",")
             except:
-                print "!! No plot called {}".format(plot_name)
+                print("!! No plot called {}".format(plot_name))
                 raise
 
 
@@ -900,9 +900,9 @@ if __name__ == "__main__":
 
     exit(1)
 
-    for var, length in variable_dict.iteritems():
-        print ("\n* Var {}".format(var))
+    for var, length in variable_dict.items():
+        print(("\n* Var {}".format(var)))
         for j in range(length):
             timepoint = np.load("{}{}.npy".format(TIMEPOINTS_FOLDER, var), allow_pickle=True)[j]
             hw_timepoint = np.argmax(np.load("{}{}_{}_HW.npy".format(COEFFICIENT_FOLDER, var, j), allow_pickle=True))
-            print ("TP: {:6} HWTP: {:6} RANGE: {:6}".format(timepoint, hw_timepoint, np.abs(timepoint - hw_timepoint)))
+            print(("TP: {:6} HWTP: {:6} RANGE: {:6}".format(timepoint, hw_timepoint, np.abs(timepoint - hw_timepoint))))

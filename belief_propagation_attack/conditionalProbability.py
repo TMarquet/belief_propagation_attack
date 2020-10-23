@@ -96,25 +96,25 @@ leakage_dict = sim.get_leakage_dictionary()
 # Get Default Key Distribtion
 key_file = [k_file for k_file in marginal_distributions_files if '_K_' in k_file]
 if len(key_file) > 1:
-    print "TODO: Handle multiple key files: {}".format(key_file)
+    print("TODO: Handle multiple key files: {}".format(key_file))
     exit(1)
 elif len(key_file) < 1:
-    print "!!! Error: No Key File Found! List of possible files:\n\n{}\n".format(marginal_distributions_files)
+    print("!!! Error: No Key File Found! List of possible files:\n\n{}\n".format(marginal_distributions_files))
     exit(1)
 
 default_key_distribution = np.load("{}{}.npy".format(PATH_TO_MARGDISTS, key_file[0]))
 
 # CHECK FIRST
 if CHECK_KEY:
-    print "Checking Key..."
+    print("Checking Key...")
     check_key = default_key_distribution
     checked = np.argmax(check_key, axis=1)
-    print "KEY:\n{}".format(KEY)
-    print "GOT:\n{}".format(checked)
-    print "MATCH: {}".format(np.array_equal(KEY, checked))
-    print ""
+    print("KEY:\n{}".format(KEY))
+    print("GOT:\n{}".format(checked))
+    print("MATCH: {}".format(np.array_equal(KEY, checked)))
+    print("")
 
-for distance_metric, axes_minmax in distance_metrics.iteritems():
+for distance_metric, axes_minmax in distance_metrics.items():
 
     max_values = list()
 
@@ -123,7 +123,7 @@ for distance_metric, axes_minmax in distance_metrics.iteritems():
         seed = 0
 
         if PRINT:
-            print "*** Seed {} ***".format(seed)
+            print("*** Seed {} ***".format(seed))
 
         if PLOT:
             fig = plt.figure()
@@ -141,7 +141,7 @@ for distance_metric, axes_minmax in distance_metrics.iteritems():
             else:
 
                 if PRINT:
-                    print "*** k{} ***".format(pad_string_zeros(key_byte + 1))
+                    print("*** k{} ***".format(pad_string_zeros(key_byte + 1)))
 
                 variable_nodes = dict()
 
@@ -151,23 +151,23 @@ for distance_metric, axes_minmax in distance_metrics.iteritems():
                         if seed == int(file_seed) and file_snr == fsnrexp:
                             variable_nodes[file_variable] = filename
                     except IndexError:
-                        print "Ignoring IndexError on file {}".format(filename)
+                        print("Ignoring IndexError on file {}".format(filename))
                         pass
                     except ValueError:
-                        print "Splitting the file name throws an error: filename {} splits to {} (expected length 5)".format(
-                            filename, filename.split('_'))
+                        print("Splitting the file name throws an error: filename {} splits to {} (expected length 5)".format(
+                            filename, filename.split('_')))
                         raise ValueError
 
                 # Now we have variable nodes, get max and min
-                for variable, filename in sorted(variable_nodes.iteritems()):
+                for variable, filename in sorted(variable_nodes.items()):
 
                     if string_starts_with(variable, target_variable):
 
                         if PRINT:
-                            print "**************** Variable {} ****************\n".format(variable)
+                            print("**************** Variable {} ****************\n".format(variable))
 
                         if string_contains(variable, '65') or string_contains(variable, '81'):
-                            print "...ignoring"
+                            print("...ignoring")
                             continue
 
                         # Swap axes from margdist[keynode][fixedval] to margdist[keynode][node]
@@ -177,8 +177,8 @@ for distance_metric, axes_minmax in distance_metrics.iteritems():
                         for i_count in range(numpyfile.shape[0]):
                             for j_count in range(numpyfile.shape[1]):
                                 if is_zeros_array(numpyfile[i_count][j_count]):
-                                    print "!!! In Checking file {}, Zeros array found: {} {}\n{}".format(filename, i_count, j_count,
-                                                                                    numpyfile[i_count][j_count])
+                                    print("!!! In Checking file {}, Zeros array found: {} {}\n{}".format(filename, i_count, j_count,
+                                                                                    numpyfile[i_count][j_count]))
                                     exit(1)
 
                         if CHECK_KEY:
@@ -189,9 +189,9 @@ for distance_metric, axes_minmax in distance_metrics.iteritems():
                                 if not np.array_equal(KEY, estimated_key):
                                     failed_fixed_values.append(fixed_value)
                             if len(failed_fixed_values) > 0:
-                                print "Failed Fixed Values:\n{}\nTotal Failed: {}\nPercentage Failed: {}%\n".format(failed_fixed_values, len(failed_fixed_values), (len(failed_fixed_values) / 256.0 * 100))
+                                print("Failed Fixed Values:\n{}\nTotal Failed: {}\nPercentage Failed: {}%\n".format(failed_fixed_values, len(failed_fixed_values), (len(failed_fixed_values) / 256.0 * 100)))
                             else:
-                                print "Success on all fixed values."
+                                print("Success on all fixed values.")
 
                         # If entropy, do something different!!!
                         # numpyfile is shape (16, 256, 256) -> (key_byte, fixed_value, index_of_marginal)
@@ -201,7 +201,7 @@ for distance_metric, axes_minmax in distance_metrics.iteritems():
                             for i_count in range(numpyfile.shape[0]):
                                 for j_count in range(numpyfile.shape[1]):
                                     if is_zeros_array(numpyfile[i_count][j_count]):
-                                        print "!!! Zeros array found, {} {}\n{}".format(i_count, j_count, numpyfile[i_count][j_count])
+                                        print("!!! Zeros array found, {} {}\n{}".format(i_count, j_count, numpyfile[i_count][j_count]))
                                         exit(1)
                                     current_entropy = np.abs(entropy(numpyfile[i_count][j_count]))
                                     if np.isnan(current_entropy) or np.isinf(current_entropy):
@@ -226,7 +226,7 @@ for distance_metric, axes_minmax in distance_metrics.iteritems():
                                         current_distance = 0.0
                                     our_results[i_count][j_count] = current_distance
                                     # print our_results
-                            print our_results
+                            print(our_results)
 
                         elif distance_metric == 'probability of key':
                             numpyfile = np.swapaxes(numpyfile, 1, 2)
@@ -239,7 +239,7 @@ for distance_metric, axes_minmax in distance_metrics.iteritems():
                                     current_distance = np.linalg.norm(numpyfile[i_count][j_count] - default_key_distribution[i_count]) # Do the thing here
                                     our_results[i_count][j_count] = current_distance
                         else:
-                            print "!!! Unknown Distance Metric: {}".format(distance_metric)
+                            print("!!! Unknown Distance Metric: {}".format(distance_metric))
                             break
                             # exit(1)
 
@@ -279,7 +279,7 @@ for distance_metric, axes_minmax in distance_metrics.iteritems():
                                     # print "+ NO CHANGE IN PROBABILITIES (all values {})\n".format(np.min(key_node))
                                     pass
                                 else:
-                                    print "-> Key node k{}-K".format(pad_string_zeros(i + 1))
+                                    print("-> Key node k{}-K".format(pad_string_zeros(i + 1)))
                                     print_array = key_node
                                     if NORMALISE:
                                         print_array = normalise_array(print_array)
@@ -306,8 +306,8 @@ for distance_metric, axes_minmax in distance_metrics.iteritems():
         if not FIRST_KEYBYTE:
             plt.rcParams.update({'font.size': 5})
         handles, labels = plt.gca().get_legend_handles_labels()
-        by_label = OrderedDict(zip(labels, handles))
-        fig.legend(by_label.values(), by_label.keys())
+        by_label = OrderedDict(list(zip(labels, handles)))
+        fig.legend(list(by_label.values()), list(by_label.keys()))
         plt.tight_layout()
         plt.subplots_adjust(top=0.85)
         file_format = 'eps'
@@ -317,4 +317,4 @@ for distance_metric, axes_minmax in distance_metrics.iteritems():
             plt.savefig('Output/{}_fixing_{}.{}'.format(distance_metric.replace(" ", ""), target_variable, file_format), format=file_format, dpi=1200)
         plt.show()
 
-    print "Max Value for Metric {}: {}".format(distance_metric, max(max_values))
+    print("Max Value for Metric {}: {}".format(distance_metric, max(max_values)))

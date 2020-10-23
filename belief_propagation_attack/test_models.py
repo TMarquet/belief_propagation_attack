@@ -76,7 +76,7 @@ class TestModels:
                     key_bytes_proba[i] += np.log(min_proba**2)
         # Now we find where our real key candidate lies in the estimation.
         # We do this by sorting our estimates and find the rank in the sorted array.
-        sorted_proba = np.array(list(map(lambda a : key_bytes_proba[a], key_bytes_proba.argsort()[::-1])))
+        sorted_proba = np.array(list([key_bytes_proba[a] for a in key_bytes_proba.argsort()[::-1]]))
         real_key_rank = np.where(sorted_proba == key_bytes_proba[real_key])[0][0]
         return (real_key_rank, key_bytes_proba)
 
@@ -88,18 +88,18 @@ class TestModels:
         real_key = np.load('{}extra_k.npy'.format(REALVALUES_FOLDER))[var_number-1]
         real_p = np.load('{}extra_p.npy'.format(REALVALUES_FOLDER))[var_number-1]
 
-        print 'Real Key: {}\nReal Ptx: {}\n'.format(real_key, real_p)
+        print('Real Key: {}\nReal Ptx: {}\n'.format(real_key, real_p))
 
 
         # Check for overflow
         if max_trace_idx > dataset.shape[0]:
-            print("Error: asked trace index %d overflows the total traces number %d" % (max_trace_idx, dataset.shape[0]))
+            print(("Error: asked trace index %d overflows the total traces number %d" % (max_trace_idx, dataset.shape[0])))
             sys.exit(-1)
         # Get the input layer shape
         input_layer_shape = model.get_layer(index=0).input_shape
         # Sanity check
         if input_layer_shape[1] != len(dataset[0, :]):
-            print("Error: model input shape %d instead of %d is not expected ..." % (input_layer_shape[1], len(dataset[0, :])))
+            print(("Error: model input shape %d instead of %d is not expected ..." % (input_layer_shape[1], len(dataset[0, :]))))
             sys.exit(-1)
         # Adapt the data shape according our model input
         if len(input_layer_shape) == 2:
@@ -110,14 +110,14 @@ class TestModels:
             input_data = dataset[min_trace_idx:max_trace_idx, :]
             input_data = input_data.reshape((input_data.shape[0], input_data.shape[1], 1))
         else:
-            print("Error: model input shape length %d is not expected ..." % len(input_layer_shape))
+            print(("Error: model input shape length %d is not expected ..." % len(input_layer_shape)))
             sys.exit(-1)
 
         predictions = model.predict(input_data) #TODO: Use this!!
 
         if len(np.unique(predictions, axis=0)) < 3:
             # print len(np.unique(predictions, axis=0))
-            print "! All attack traces predicted same value {}".format(get_value_from_plaintext_array(predictions[0]))
+            print("! All attack traces predicted same value {}".format(get_value_from_plaintext_array(predictions[0])))
         else:
 
             # Loop and check
@@ -128,14 +128,14 @@ class TestModels:
                 try:
                     predicted = np.argmax(prediction_vector)
                 except IndexError:
-                    print "! Error: can't get argmax of {}".format(predicted)
+                    print("! Error: can't get argmax of {}".format(predicted))
                     exit(1)
                 # Get rank
 
                 if template_attack:
 
                     if var_name not in ['k','t','s']:
-                        print "! Error: Can't perform Template Attack on unkown varname {}".format(var_name)
+                        print("! Error: Can't perform Template Attack on unkown varname {}".format(var_name))
                         raise
                     # if s001
                     temp = prediction_vector
@@ -177,7 +177,7 @@ class TestModels:
                     solved_placeholder = 0
 
                     # Get random order
-                    order = range(len(predictions))
+                    order = list(range(len(predictions)))
                     shuffle(order)
 
                     for i, t in enumerate(order):
@@ -209,12 +209,12 @@ class TestModels:
                             failed_traces += 1
                             break
 
-                print "* Percentage Success within {} traces: {}%".format(max_traces_required, ((max_repeats - failed_traces) * 100) / (max_repeats + 0.0))
-                print "* Traces Required for First Order Template Attack *"
+                print("* Percentage Success within {} traces: {}%".format(max_traces_required, ((max_repeats - failed_traces) * 100) / (max_repeats + 0.0)))
+                print("* Traces Required for First Order Template Attack *")
                 print_statistics(traces_required)
 
             else:
-                print "* Printing Classification Rank Statistics *"
+                print("* Printing Classification Rank Statistics *")
                 print_statistics(total_ranks, top=True)
                 if SAVE:
                     save_statistics(model_name, total_ranks)
@@ -281,18 +281,18 @@ class TestModels:
         rank_list, prob_list, predicted_values = self.real_trace_handler.get_leakage_rank_list_with_specific_model(model_file, traces=num_traces, from_end=random_key)
         if rank_list is not None:
 
-            print "\n\nModel: {}".format(model_file)
+            print("\n\nModel: {}".format(model_file))
 
             if self.verbose:
-                print "> Rank List:"
+                print("> Rank List:")
                 print_statistics(rank_list, mode=False)
-                print "> Probability List:"
+                print("> Probability List:")
                 print_statistics(prob_list, mode=False)
-                print "> Top Predicted Indices:"
+                print("> Top Predicted Indices:")
                 print_statistics(predicted_values)
             else:
-                print "> Median Rank: {}".format(np.median(rank_list))
-                print "> Median Prob: {}".format(np.median(prob_list))
+                print("> Median Rank: {}".format(np.median(rank_list)))
+                print("> Median Prob: {}".format(np.median(prob_list)))
 
             if SAVE:
                 save_statistics(model_file, prob_list)
@@ -428,7 +428,7 @@ if __name__ == "__main__":
     else:
         # Check specific model
         # TODO
-        print "Todo: Check specific model"
+        print("Todo: Check specific model")
         pass
 
 # # No argument: check all the trained models

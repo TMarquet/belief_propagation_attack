@@ -41,15 +41,15 @@ def read_to_list(start, length, number_of_bytes=1, signedint=False, float_coding
             try:
                 data[i] = val
             except OverflowError:
-                print "!! Overflow Error: \ni = {}\nNumber of Bytes: {}\nByte: {}\nint_val = {}".format(i,
+                print("!! Overflow Error: \ni = {}\nNumber of Bytes: {}\nByte: {}\nint_val = {}".format(i,
                                                                                                         number_of_bytes,
-                                                                                                        byte, val)
+                                                                                                        byte, val))
                 exit(0)
     return data
 
 
 def raise_trigger(name, expected, got):
-    print "{} Trigger not correct, expected {}, got {}".format(name, expected, got)
+    print("{} Trigger not correct, expected {}, got {}".format(name, expected, got))
     raise IndexError
 
 
@@ -104,12 +104,12 @@ def parse_header():
     check_sampleval = samplespace_val & 224
 
     if check_sampleval > 0:
-        print "!! Error: Samplespace Value must have first three bits 0. Found to be {}".format(samplespace_val)
+        print("!! Error: Samplespace Value must have first three bits 0. Found to be {}".format(samplespace_val))
         exit(1)
 
     # Make sure samplespace is 1, 2, or 4!
     if samplespace != 1 and samplespace != 2 and samplespace != 4:
-        print "!! Error: Samplespace can only be 1, 2, or 4. Found to be {}".format(samplespace)
+        print("!! Error: Samplespace can only be 1, 2, or 4. Found to be {}".format(samplespace))
         exit(1)
 
     # Next, SampleSpace
@@ -132,7 +132,7 @@ def parse_header():
 
 def get_and_save_meta():
 
-    print "+ Trace File: {}\n+ Size: {} bytes\n".format(TRACE_FILE, os.path.getsize(TRACE_FILE))
+    print("+ Trace File: {}\n+ Size: {} bytes\n".format(TRACE_FILE, os.path.getsize(TRACE_FILE)))
 
     traces, samples, samplespace, float_coding, data_space, start_offset = parse_header()
 
@@ -148,14 +148,14 @@ def get_and_save_meta():
 
 def get_trace_data_and_plaintexts(just_keys_and_plaintexts=False):
 
-    print "+ Trace File: {}\n+ Size: {} bytes\n".format(TRACE_FILE, os.path.getsize(TRACE_FILE))
+    print("+ Trace File: {}\n+ Size: {} bytes\n".format(TRACE_FILE, os.path.getsize(TRACE_FILE)))
 
     traces, samples, samplespace, float_coding, data_space, start_offset = parse_header()
 
     profile_traces, attack_traces, _, _ = load_meta()
 
     bytes_in_trace = (samples * samplespace) + data_space
-    print "Traces: {}\nSamples: {}\nSample Space: {}\nData Space: {}\nFloat Coding: {}\nStart Offset: {}\n".format(traces, samples, samplespace, data_space, float_coding, start_offset)
+    print("Traces: {}\nSamples: {}\nSample Space: {}\nData Space: {}\nFloat Coding: {}\nStart Offset: {}\n".format(traces, samples, samplespace, data_space, float_coding, start_offset))
     offset = start_offset
 
     coding = np.float32 if float_coding else np.int16
@@ -180,14 +180,14 @@ def get_trace_data_and_plaintexts(just_keys_and_plaintexts=False):
     for t in range(traces):
 
         if PRINT:
-            print "*** Trace {} ***".format(t)
+            print("*** Trace {} ***".format(t))
 
         if PRINT:
-            print "Length of File: {}".format(os.path.getsize(TRACE_FILE))
-            print "Offset: {}".format(offset)
+            print("Length of File: {}".format(os.path.getsize(TRACE_FILE)))
+            print("Offset: {}".format(offset))
             final_byte = offset + data_space + (samples * samplespace)
-            print "Final Byte: {}".format(final_byte)
-            print "Is this ok: {}".format(final_byte <= os.path.getsize(TRACE_FILE))
+            print("Final Byte: {}".format(final_byte))
+            print("Is this ok: {}".format(final_byte <= os.path.getsize(TRACE_FILE)))
         title_data = read_to_list(offset, data_space)
 
         if not just_keys_and_plaintexts:
@@ -195,7 +195,7 @@ def get_trace_data_and_plaintexts(just_keys_and_plaintexts=False):
                                       float_coding=float_coding)
 
         if PRINT:
-            print "First 100 values of trace data:\n{}\n".format(list(trace_data[:100]))
+            print("First 100 values of trace data:\n{}\n".format(list(trace_data[:100])))
 
         if data_space == 32:
             plaintext = title_data[:16]
@@ -210,9 +210,9 @@ def get_trace_data_and_plaintexts(just_keys_and_plaintexts=False):
             ciphertext = title_data[32:48]
 
         if PRINT:
-            print "Key:        {}".format(key)
-            print "Plaintext:  {}".format(plaintext)
-            print "Ciphertext: {}".format(ciphertext)
+            print("Key:        {}".format(key))
+            print("Plaintext:  {}".format(plaintext))
+            print("Ciphertext: {}".format(ciphertext))
             print_new_line()
 
         # Simulate
@@ -228,12 +228,12 @@ def get_trace_data_and_plaintexts(just_keys_and_plaintexts=False):
         simulated_end_of_g2 = leakage_dict['t'][0][32:48]
 
         if PRINT:
-            print "* SIMULATED *"
-            print "Key:        {}".format(leakage_dict['k'][:16])
-            print "Plaintext:  {}".format(leakage_dict['p'][0][:16])
-            print "Ciphertext: {}".format(simulated_ciphertext)
-            print "Eof Round1: {}".format(simulated_end_of_round_one)
-            print "End of G2:  {}".format(simulated_end_of_g2)
+            print("* SIMULATED *")
+            print("Key:        {}".format(leakage_dict['k'][:16]))
+            print("Plaintext:  {}".format(leakage_dict['p'][0][:16]))
+            print("Ciphertext: {}".format(simulated_ciphertext))
+            print("Eof Round1: {}".format(simulated_end_of_round_one))
+            print("End of G2:  {}".format(simulated_end_of_g2))
 
             print_new_line()
 
@@ -241,10 +241,10 @@ def get_trace_data_and_plaintexts(just_keys_and_plaintexts=False):
         if CHECK_CORRECTNESS and not ((ciphertext == simulated_ciphertext).all()
                                       or (ciphertext == simulated_end_of_round_one).all()
                                       or (ciphertext == simulated_end_of_g2).all()):
-            print "*** Error in Trace {}: Did not Match!".format(t)
+            print("*** Error in Trace {}: Did not Match!".format(t))
             raise ValueError
         elif PRINT:
-            print "+ Checked: Correct!"
+            print("+ Checked: Correct!")
 
         # Add Trace Data to all_data
 
@@ -260,10 +260,10 @@ def get_trace_data_and_plaintexts(just_keys_and_plaintexts=False):
             extra_keys[t - profile_traces] = np.array(key)
 
         if (t % percent) == 0:
-            print "{}% Complete".format(t / percent)
+            print("{}% Complete".format(t / percent))
 
         if PRINT:
-            print "This is what we stored:\n{}\n".format(all_data[t])
+            print("This is what we stored:\n{}\n".format(all_data[t]))
             print_new_line()
 
         # exit(1)
@@ -297,7 +297,7 @@ def get_trace_data_and_plaintexts(just_keys_and_plaintexts=False):
 
 
 
-    print "Saved and Completed!"
+    print("Saved and Completed!")
     print_new_line()
 
 
@@ -338,7 +338,7 @@ def simulate_data_from_plaintexts():
         for i, (plaintext, key) in enumerate(zip(plaintexts, keys)):
 
             if PRINT:
-                print "Trace {}\nPlaintext: {}\nKey: {}".format(i, plaintext, key)
+                print("Trace {}\nPlaintext: {}\nKey: {}".format(i, plaintext, key))
 
             sim = lSimF.LeakageSimulatorAESFurious()
             sim.fix_key(key)
@@ -377,9 +377,9 @@ def simulate_data_from_plaintexts():
                                 xk[j][i] = leakage_dict['xk'][j]
 
             if traces < 100:
-                print "Finished Trace {}".format(i)
+                print("Finished Trace {}".format(i))
             elif i % (traces // 100) == 0:
-                print "{}% Complete".format(i / (traces // 100))
+                print("{}% Complete".format(i / (traces // 100)))
 
         # Save to files!
         extra_string = "extra_" if use_extra_data == 1 else ""
@@ -394,7 +394,7 @@ def simulate_data_from_plaintexts():
         np.save(REALVALUES_FOLDER + extra_string + 'sk.npy', sk)
         np.save(REALVALUES_FOLDER + extra_string + 'xk.npy', xk)
 
-        print "Saved and Completed!"
+        print("Saved and Completed!")
         print_new_line()
 
 
@@ -405,15 +405,15 @@ def point_of_interest_detection(save_file=True, hw=True, variables=None):
     # then load matrix trace_data
     # For each time point in trace_data (loop through), perform correlation and keep track of max (absolute)
 
-    print "Loading Matrix trace_data, may take a while..."
+    print("Loading Matrix trace_data, may take a while...")
     # trace_data = np.load(TRACEDATA_FILEPATH, mmap_mode='r')
     trace_data = np.transpose(load_trace_data(memory_mapped = MEMORY_MAPPED))[:, :POI_CAP]
-    print "...done!"
+    print("...done!")
     print_new_line()
 
     samples, traces = trace_data.shape
 
-    for var, number_of_nodes in variable_dict.iteritems():
+    for var, number_of_nodes in variable_dict.items():
 
         var_array_real = np.load(REALVALUES_FOLDER + var + '.npy', mmap_mode='r')
 
@@ -422,12 +422,12 @@ def point_of_interest_detection(save_file=True, hw=True, variables=None):
         else:
             var_array = np.copy(var_array_real)
 
-        print "Variable {:3} ({}):\n{}".format(var, var_array.shape, var_array)
+        print("Variable {:3} ({}):\n{}".format(var, var_array.shape, var_array))
 
         for j in range(number_of_nodes):
 
             if np.std(var_array[j]) == 0.0:
-                print "Standard Deviation of Variable {}[{}] is 0, cannot find trace point!".format(var, j)
+                print("Standard Deviation of Variable {}[{}] is 0, cannot find trace point!".format(var, j))
             else:
 
                 MAX_ = samples
@@ -459,11 +459,11 @@ def point_of_interest_detection(save_file=True, hw=True, variables=None):
                 coeff_array = np.array([np.abs(np.corrcoef(var_array[j][:POI_CAP], timeslice))[0, 1] for timeslice in trace_data])
 
                 top_n = coeff_array.argsort()[-TOP_N:][::-1]
-                print "Top {} Coefficient Indexes for Variable {}[{}]:".format(TOP_N, var, j)
+                print("Top {} Coefficient Indexes for Variable {}[{}]:".format(TOP_N, var, j))
                 for c, index in enumerate(top_n):
-                    print "Rank {}: Time Point {} ({})".format(c, index, coeff_array[index])
-                print "-> Average Time Point: {}".format(int(round(np.mean(top_n))))
-                print "-> Median Time Point:  {}".format(np.median(top_n))
+                    print("Rank {}: Time Point {} ({})".format(c, index, coeff_array[index]))
+                print("-> Average Time Point: {}".format(int(round(np.mean(top_n)))))
+                print("-> Median Time Point:  {}".format(np.median(top_n)))
                 print_new_line()
 
                 # Store!
@@ -478,7 +478,7 @@ def point_of_interest_detection(save_file=True, hw=True, variables=None):
         # Just p for now
         # break
 
-    print "Saved and Completed!"
+    print("Saved and Completed!")
     print_new_line()
 
 
@@ -491,10 +491,10 @@ def get_time_points_for_each_node(hw=True):
 
     # samples, traces = trace_data.shape
 
-    for var, number_of_nodes in variable_dict.iteritems():
+    for var, number_of_nodes in variable_dict.items():
 
         if PRINT:
-            print "* Variable {}".format(var)
+            print("* Variable {}".format(var))
 
         var_array_real = np.load(REALVALUES_FOLDER + var + '.npy', mmap_mode='r')
         # if hw_method:
@@ -513,13 +513,13 @@ def get_time_points_for_each_node(hw=True):
 
             time_points[j] = poi
 
-        print "Variable {}:\n{}\n\n".format(var, time_points)
+        print("Variable {}:\n{}\n\n".format(var, time_points))
 
         # Save
         if save:
             np.save("{}{}.npy".format(TIMEPOINTS_FOLDER, var), time_points)
 
-    print "Saved and Completed!"
+    print("Saved and Completed!")
     print_new_line()
 
 
@@ -561,23 +561,23 @@ def get_time_points_for_each_node(hw=True):
 
 def elastic_alignment(start_trace=0):
     # Load the traces
-    print "Loading Matrix trace_data (and transposing), may take a while..."
+    print("Loading Matrix trace_data (and transposing), may take a while...")
     # trace_data = np.transpose(np.load(TRACEDATA_FILEPATH))
     trace_data = np.transpose(load_trace_data(memory_mapped = MEMORY_MAPPED))
-    print "...done!"
+    print("...done!")
     print_new_line()
-    print "Loading Matrix extra_trace_data (and transposing), may take a while..."
+    print("Loading Matrix extra_trace_data (and transposing), may take a while...")
     extra_trace_data = np.transpose(load_trace_data(filepath=TRACEDATA_EXTRA_FILEPATH, memory_mapped = MEMORY_MAPPED))
-    print "...done!"
+    print("...done!")
     print_new_line()
 
     # Set up Reference Trace
     reference_trace = trace_data[0]
 
     if PRINT:
-        print "Reference Trace:"
-        print reference_trace
-        print ""
+        print("Reference Trace:")
+        print(reference_trace)
+        print("")
 
     # BOTH TRACE SETS
     # for set_i, trace_set in enumerate([trace_data, extra_trace_data]):
@@ -585,7 +585,7 @@ def elastic_alignment(start_trace=0):
     for set_i, trace_set in enumerate([extra_trace_data]):
 
         if PRINT:
-            print "Generating Traces for Set {}...\n".format(set_i)
+            print("Generating Traces for Set {}...\n".format(set_i))
 
         traces, samples = trace_set.shape
 
@@ -604,7 +604,7 @@ def elastic_alignment(start_trace=0):
                 new_trace = np.empty(samples)
 
                 if PRINT:
-                    print "FastDTW for Trace {}...".format(trace_index)
+                    print("FastDTW for Trace {}...".format(trace_index))
                 current_trace = trace_set[trace_index]
                 distance, path = fastdtw(reference_trace, current_trace, dist=euclidean)
                 for sample_i in range(samples):
@@ -613,13 +613,13 @@ def elastic_alignment(start_trace=0):
                 # Dump to fastdtw/
 
                 if PRINT:
-                    print "...done!\nDistance: {}\nPath:\n{}\nNew Trace:\n{}\n".format(distance, path, new_trace)
+                    print("...done!\nDistance: {}\nPath:\n{}\nNew Trace:\n{}\n".format(distance, path, new_trace))
 
                 pickle.dump(new_trace, open(ELASTIC_FOLDER + '{}.npy'.format(trace_index), 'wb'))
 
             else:
                 if PRINT:
-                    print "Detected file for FastDTW Trace {}, skipping".format(trace_index)
+                    print("Detected file for FastDTW Trace {}, skipping".format(trace_index))
 
         # # Save
         # if set_i == 0:
@@ -639,22 +639,22 @@ def combine_elastic_alignment(my_traces=10000):
 
 
 def dimensionality_reduction(tprange=200):
-    print "Dimensionality Reduction!"
+    print("Dimensionality Reduction!")
 
     # Need: trace_data for samples, Actual Values of each node
 
-    print "Loading Matrix trace_data, may take a while..."
+    print("Loading Matrix trace_data, may take a while...")
     trace_data = np.transpose(load_trace_data(memory_mapped = MEMORY_MAPPED))
-    print "...done!"
+    print("...done!")
     print_new_line()
     samples, traces = trace_data.shape
 
     # profile_traces = int(traces * 0.8)
 
-    for variable, length in variable_dict.iteritems():
+    for variable, length in variable_dict.items():
 
         # if PRINT:
-        print "Generating Template for Variable {}, Length {}".format(variable, length)
+        print("Generating Template for Variable {}, Length {}".format(variable, length))
 
         real_values = np.load("{}{}.npy".format(REALVALUES_FOLDER, variable))
         time_points = np.load("{}{}.npy".format(TIMEPOINTS_FOLDER, variable))
@@ -662,18 +662,18 @@ def dimensionality_reduction(tprange=200):
         for i in range(length):
 
             if PRINT:
-                print "Template for {}{}".format(variable, pad_string_zeros(i))
+                print("Template for {}{}".format(variable, pad_string_zeros(i)))
 
             y = real_values[i, :traces]
             X = trace_data[:, time_points[i] - (tprange / 2):time_points[i] + (tprange / 2)]
 
             if PRINT:
-                print "Real Values: {}".format(y)
-                print "Traces Range: {}".format(X)
+                print("Real Values: {}".format(y))
+                print("Traces Range: {}".format(X))
 
             # Quick check
             if y.shape[0] != X.shape[0]:
-                print "Different shapes encountered, can't fit together! X is {}, y is {}".format(X.shape, y.shape)
+                print("Different shapes encountered, can't fit together! X is {}, y is {}".format(X.shape, y.shape))
                 exit(1)
 
             test_x = np.array([np.arange(200)])
@@ -694,26 +694,26 @@ def dimensionality_reduction(tprange=200):
 
 
 def lda_templates(tprange=200, validation_traces=10000):
-    print "linDisAnalysis Templates!"
+    print("linDisAnalysis Templates!")
 
     # Need: trace_data for samples, Actual Values of each node
 
-    print "Loading Matrix trace_data, may take a while..."
+    print("Loading Matrix trace_data, may take a while...")
     trace_data = load_trace_data(memory_mapped = MEMORY_MAPPED)
-    print "...done!"
+    print("...done!")
     print_new_line()
     traces, samples = trace_data.shape
 
     # profile_traces = int(traces * 0.8)
 
-    for variable, length in variable_dict.iteritems():
+    for variable, length in variable_dict.items():
 
         if variable in ['xk','sk']:
-            print "DEBUG: Skipping {}".format(variable)
+            print("DEBUG: Skipping {}".format(variable))
             continue
 
         # if PRINT:
-        print "Generating Template for Variable {}, Length {}".format(variable, length)
+        print("Generating Template for Variable {}, Length {}".format(variable, length))
 
         real_values = np.load("{}{}.npy".format(REALVALUES_FOLDER, variable))
         time_points = np.load("{}{}.npy".format(TIMEPOINTS_FOLDER, variable))
@@ -721,23 +721,23 @@ def lda_templates(tprange=200, validation_traces=10000):
         for i in range(length):
 
             if PRINT:
-                print "Template for {}{}".format(variable, pad_string_zeros(i))
+                print("Template for {}{}".format(variable, pad_string_zeros(i)))
 
             y = real_values[i, :traces-validation_traces]
             X = trace_data[:-validation_traces, time_points[i] - (tprange / 2):time_points[i] + (tprange / 2)]
 
             if PRINT:
-                print "Real Values: {}".format(y)
-                print "Traces Range: {}".format(X)
+                print("Real Values: {}".format(y))
+                print("Traces Range: {}".format(X))
 
             # Quick check
             if y.shape[0] != X.shape[0]:
-                print "Different shapes encountered, can't fit together! X is {}, y is {}".format(X.shape, y.shape)
+                print("Different shapes encountered, can't fit together! X is {}, y is {}".format(X.shape, y.shape))
                 exit(1)
 
             # Set up linDisAnalysis
             lda = linDisAnalysis()
-            print "> Fitting for {}...".format(i)
+            print("> Fitting for {}...".format(i))
             lda.fit(X, y)
 
             # Save
@@ -755,19 +755,19 @@ def get_mean_and_sigma_for_each_node(hw_musig=False, hw_tp=True, save=True, vali
 
     # Get Mean and Sigma for each node
 
-    print "Loading Matrix trace_data, may take a while..."
+    print("Loading Matrix trace_data, may take a while...")
     trace_data = np.transpose(load_trace_data(memory_mapped = MEMORY_MAPPED))
-    print "...done!"
+    print("...done!")
     print_new_line()
 
     time_list = list()
 
     # samples, traces = trace_data.shape
 
-    for var, number_of_nodes in variable_dict.iteritems():
+    for var, number_of_nodes in variable_dict.items():
 
         if PRINT:
-            print "* Variable {}".format(var)
+            print("* Variable {}".format(var))
 
         var_array = np.load(REALVALUES_FOLDER + var + '.npy')[:, :-validation_traces]
         if hw_musig:
@@ -795,7 +795,7 @@ def get_mean_and_sigma_for_each_node(hw_musig=False, hw_tp=True, save=True, vali
 
             # Save Mean and Sigma for Each Hamming Weight
             if PRINT:
-                print "For Variable {}:".format(var_string)
+                print("For Variable {}:".format(var_string))
 
             partitioned_list = [list() for i in range(NUMBER_OF_TEMPLATES)]
             for i, identity in enumerate(var_array[j]):
@@ -855,12 +855,12 @@ def get_mean_and_sigma_for_each_node(hw_musig=False, hw_tp=True, save=True, vali
 
 
 
-    for key, val in musig_dict.iteritems():
-        print "* {} *\n\n{}\n\n".format(key, val)
+    for key, val in musig_dict.items():
+        print("* {} *\n\n{}\n\n".format(key, val))
 
     if save:
         pickle.dump(musig_dict, open(musig_dict_path, 'wb'))
-        print "Saved and Completed!"
+        print("Saved and Completed!")
         print_new_line()
 
 
@@ -875,11 +875,11 @@ def get_snrs():
     snr_log_list = [[] for i in range(30)]
     count = 0
 
-    for var_name, musigma_array in musigma_dict.iteritems():
+    for var_name, musigma_array in musigma_dict.items():
 
         snr = np.var(musigma_array[0]) / np.mean(musigma_array[1] ** 2)
 
-        print "Variable {:5}: 2^{:2} ({})".format(var_name, smallest_power_of_two(snr), snr)
+        print("Variable {:5}: 2^{:2} ({})".format(var_name, smallest_power_of_two(snr), snr))
 
         snr_list[count] = smallest_power_of_two(snr)
         snr_real_list[count] = snr
@@ -889,10 +889,10 @@ def get_snrs():
 
     print_statistics(list(snr_list))
 
-    print "Sorted by Best to Worst (logs):\n"
+    print("Sorted by Best to Worst (logs):\n")
     for i, lst in enumerate(snr_log_list):
         if len(lst) > 0:
-            print "2^-{}:\n{}\n".format(i, lst)
+            print("2^-{}:\n{}\n".format(i, lst))
     print_new_line()
 
     np.save('{}snrlist.npy'.format(TRACE_FOLDER), snr_real_list)
@@ -910,7 +910,7 @@ def matching_performance():
 
     # Containers to hold ranks
     rank_dict = {}
-    for v, length in variable_dict.iteritems():
+    for v, length in variable_dict.items():
         rank_dict[v] = [[] for _ in range(length)]
     all_ranks = []
     trace_average_rank_holder = []
@@ -919,7 +919,7 @@ def matching_performance():
 
         for i, (plaintext, key) in enumerate(zip(extra_plaintexts, extra_keys)):
 
-            print "Trace {:5}: {}".format(i, plaintext)
+            print("Trace {:5}: {}".format(i, plaintext))
 
             # Simulate actual values
             sim = lSimF.LeakageSimulatorAESFurious()
@@ -939,7 +939,7 @@ def matching_performance():
 
             trace_average_rank_list = []
 
-            for var, musigma_array in sorted(musig_dict.iteritems()):
+            for var, musigma_array in sorted(musig_dict.items()):
                 # Get var name and var number
                 var_name, var_number, _ = split_variable_name(var)
 
@@ -986,16 +986,16 @@ def matching_performance():
     finally:
 
         # Print Statistics
-        for v, l in rank_dict.iteritems():
+        for v, l in rank_dict.items():
             for i, lst in enumerate(l):
-                print "{}{}:\n".format(v, pad_string_zeros(i + 1))
+                print("{}{}:\n".format(v, pad_string_zeros(i + 1)))
                 print_statistics(lst)
 
         # ALL
-        print "* ALL NODES RANK STATISTICS *"
+        print("* ALL NODES RANK STATISTICS *")
         print_statistics(all_ranks)
 
-        print "* AVERAGE RANK PER TRACE STATISTICS *"
+        print("* AVERAGE RANK PER TRACE STATISTICS *")
         print_statistics(trace_average_rank_holder)
 
 
@@ -1005,11 +1005,11 @@ def lda_matching_performance(tprange=200):
     extra_plaintexts = np.load(NUMPY_EXTRA_PLAINTEXT_FILE)
     extra_traces = np.transpose(load_trace_data(filepath = NUMPY_EXTRA_TRACE_FILE, memory_mapped = MEMORY_MAPPED))
 
-    print extra_traces.shape
+    print(extra_traces.shape)
 
     # Containers to hold ranks
     rank_dict = {}
-    for v, length in variable_dict.iteritems():
+    for v, length in variable_dict.items():
         rank_dict[v] = [[] for x in range(length)]
     all_ranks = []
     trace_average_rank_holder = []
@@ -1018,11 +1018,11 @@ def lda_matching_performance(tprange=200):
 
         for i, plaintext in enumerate(extra_plaintexts):
 
-            print "Trace {:5}: {}".format(i, plaintext)
+            print("Trace {:5}: {}".format(i, plaintext))
 
             # Simulate actual values
             sim = lSimF.LeakageSimulatorAESFurious()
-            print "TODO"
+            print("TODO")
             break
             sim.fix_key(KEY)
             sim.fix_plaintext(plaintext)
@@ -1036,7 +1036,7 @@ def lda_matching_performance(tprange=200):
 
             trace_average_rank_list = []
 
-            for var_name, vlength in variable_dict.iteritems():
+            for var_name, vlength in variable_dict.items():
 
                 time_points = np.load("{}{}.npy".format(TIMEPOINTS_FOLDER, var_name))
 
@@ -1093,16 +1093,16 @@ def lda_matching_performance(tprange=200):
     finally:
 
         # Print Statistics
-        for v, l in rank_dict.iteritems():
+        for v, l in rank_dict.items():
             for i, lst in enumerate(l):
-                print "{}{}:\n".format(v, pad_string_zeros(i + 1))
+                print("{}{}:\n".format(v, pad_string_zeros(i + 1)))
                 print_statistics(lst)
 
         # ALL
-        print "* ALL NODES RANK STATISTICS *"
+        print("* ALL NODES RANK STATISTICS *")
         print_statistics(all_ranks)
 
-        print "* AVERAGE RANK PER TRACE STATISTICS *"
+        print("* AVERAGE RANK PER TRACE STATISTICS *")
         print_statistics(trace_average_rank_holder)
 
         pass
@@ -1162,47 +1162,47 @@ def ALL(skip_code = 0):
 
     # Always check file exists
     if not check_file_exists(TRACE_FILE):
-        print "!!! Trace file {} does not exist!".format(TRACE_FILE)
+        print("!!! Trace file {} does not exist!".format(TRACE_FILE))
         exit(1)
 
     # FIRST: Check and Set Up Folders!
     # Utility: Check to see what has not been done?
     if skip_code <= 0:
-        print "> Checking Directories..."
+        print("> Checking Directories...")
         check_directories()
-        print "> Getting and Setting Meta Data..."
+        print("> Getting and Setting Meta Data...")
         get_and_save_meta()
 
     # Get Trace Data!
     if skip_code <= 1:
-        print "> Getting trace_data and Plaintexts"
+        print("> Getting trace_data and Plaintexts")
         get_trace_data_and_plaintexts()
 
     # Simulates and Creates Arrays for each variable
     if skip_code <= 2:
-        print "> Simulating Data from Plaintexts"
+        print("> Simulating Data from Plaintexts")
         simulate_data_from_plaintexts()
 
     # Correlates hw Arrays to trace_data time points, stores each node
     if skip_code <= 3:
-        print "> Points of Interest Detection"
+        print("> Points of Interest Detection")
         point_of_interest_detection()
 
     # Stores Mean and Standard Deviation for each node
     if skip_code <= 4:
-        print "> Getting Mean and Sigma for Each Detected Point"
+        print("> Getting Mean and Sigma for Each Detected Point")
         get_mean_and_sigma_for_each_node()
 
     # Gets Time and Power Points
     if skip_code <= 5:
-        print "> Getting Time Points for Each Detected Point"
+        print("> Getting Time Points for Each Detected Point")
         get_time_points_for_each_node()
         # print "> Getting Power Values for Each Detected Time Point"
         # get_power_values_for_each_node()
 
     # Get linDisAnalysis Templates
     if skip_code <= 6:
-        print "> Getting linDisAnalysis Templates"
+        print("> Getting linDisAnalysis Templates")
         lda_templates()
 
     # # Prints out SNRs
@@ -1263,7 +1263,7 @@ if __name__ == "__main__":
 
     # matching_performance()
 
-    print "All Done! :)"
+    print("All Done! :)")
     exit(1)
 
 # Trace 0: [105 216 224  59 183  59  85 189 197  89  45 141 228  36 137 228]

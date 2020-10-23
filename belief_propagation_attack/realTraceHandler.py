@@ -15,7 +15,7 @@ class RealTraceHandler:
     def __init__(self, no_print = False, use_best = False, use_nn = False, use_lda = False, memory_mapped=True, tprange=200, debug=True, jitter = None, use_extra = True, auto_realign = False):
         self.no_print = no_print
         if not no_print:
-            print "Preloading Matrix real_trace_data, may take a while..."
+            print("Preloading Matrix real_trace_data, may take a while...")
 
         self.use_extra = use_extra
         self.auto_realign = auto_realign
@@ -40,7 +40,7 @@ class RealTraceHandler:
 
 
         if not no_print:
-            print "Preloading all timepoints, may take a while..."
+            print("Preloading all timepoints, may take a while...")
         self.timepoints = dict()
         for var in variable_dict:
             self.timepoints[var] = np.load('{}{}.npy'.format(TIMEPOINTS_FOLDER, var))
@@ -79,7 +79,7 @@ class RealTraceHandler:
         templates = self.best_templates[strip_off_trace(variable)]
         comp = 256 if rank else 0
         comp_type = 'uni'
-        for type, template in templates.iteritems():
+        for type, template in templates.items():
             if (rank and template[0] < comp) or (not rank and template[1] > comp):
                 comp = template[0] if rank else template[1]
                 comp_type = type
@@ -158,7 +158,7 @@ class RealTraceHandler:
             if ignore_bad and not self.check_template(variable):
                 out_distribution = get_no_knowledge_array()
                 if not self.no_print:
-                    print "> Ignoring NN for Variable {} as below threshold".format(variable)
+                    print("> Ignoring NN for Variable {} as below threshold".format(variable))
             else:
                 # Use neural network to predict value
                 try:
@@ -166,7 +166,7 @@ class RealTraceHandler:
                 except KeyError:
                     # Add to dict!
                     if not self.no_print:
-                        print "> Loading NN for Variable {}...".format(var_notrace)
+                        print("> Loading NN for Variable {}...".format(var_notrace))
                     # OLD: TODO FIX
                     # self.neural_network_dict[var_notrace] = load_sca_model('{}{}_mlp5_nodes200_window{}_epochs6000_batchsize200_sd100_traces200000_aug0.h5'.format(NEURAL_MODEL_FOLDER, var_notrace, tprange))
                     # NEW NEURAL NETWORKS 20/5/19
@@ -187,7 +187,7 @@ class RealTraceHandler:
                         tprange, var_name, var_number-1),'ro'))
                 except IOError:
                     if not self.no_print:
-                        print "! No LDA for Variable {} Window {}, creating now...".format(var_notrace, tprange)
+                        print("! No LDA for Variable {} Window {}, creating now...".format(var_notrace, tprange))
                 lda = self.lda_dict[var_notrace]
             out_distribution = (lda.predict_proba([power_value])).astype(np.float32)[0]
         else:
@@ -196,7 +196,7 @@ class RealTraceHandler:
                 musigma_array = self.musigma_dict[strip_off_trace(variable)]
             except IndexError:
                 if not self.no_print:
-                    print "! No Mu Sigma Pair found for Variable {}".format(var_notrace)
+                    print("! No Mu Sigma Pair found for Variable {}".format(var_notrace))
                 return get_no_knowledge_array()
 
             out_distribution = get_no_knowledge_array()
@@ -228,7 +228,7 @@ class RealTraceHandler:
     def get_performance_of_handler(self, variable, traces=10000, use_extra=False):
         # Sanity check
         if use_extra != self.use_extra:
-            print "! Can't get performance of Handler, we want extra {} but handler initialised as extra {}".format(use_extra, self.use_extra)
+            print("! Can't get performance of Handler, we want extra {} but handler initialised as extra {}".format(use_extra, self.use_extra))
             raise
         # Returns median rank and median probability of correct value
         var_name, var_number, _ = split_variable_name(variable)
@@ -262,10 +262,10 @@ class RealTraceHandler:
         model_name = model_file.replace(MODEL_FOLDER, '')
         variable = model_name.split('_')[0]
         if not self.no_print:
-            print "\n* Checking model {} (variable {}) {}*\n".format(model_name, variable, 'WITH VALIDATION TRACES' if from_end else '')
+            print("\n* Checking model {} (variable {}) {}*\n".format(model_name, variable, 'WITH VALIDATION TRACES' if from_end else ''))
         if not check_file_exists(model_file):
             if not self.no_print:
-                print "!!! Doesn't exist!"
+                print("!!! Doesn't exist!")
             return (None, None)
         else:
 
@@ -277,10 +277,10 @@ class RealTraceHandler:
             window_size = get_window_size_from_model(model_file)
 
             if not self.no_print:
-                print "Loading model..."
+                print("Loading model...")
             model = load_sca_model(model_file)
             if not self.no_print:
-                print "...loaded successfully!"
+                print("...loaded successfully!")
 
 
 
@@ -318,10 +318,10 @@ class RealTraceHandler:
                 ### IF CNN, NEED TO CHANGE INPUT SHAPE
                 if cnn:
                     if trace == 0 and not self.no_print:
-                        print "* CNN so reshaping: before {}...".format(new_input.shape)
+                        print("* CNN so reshaping: before {}...".format(new_input.shape))
                     new_input = new_input.reshape((new_input.shape[0], new_input.shape[1], 1))
                     if trace == 0 and not self.no_print:
-                        print "** ...after {}".format(new_input.shape)
+                        print("** ...after {}".format(new_input.shape))
 
                 leakage = model.predict(new_input)[0]
 

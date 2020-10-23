@@ -65,7 +65,7 @@ snr_path = csv_path + "snr{}/".format(snrexp)
 
 for seed in range(5):
 
-    print "+++ Seed {} +++".format(seed)
+    print("+++ Seed {} +++".format(seed))
     print_new_line()
 
     pr_k = genfromtxt(snr_path + 'marginaldist_K_{}_.csv'.format(seed), delimiter=',')
@@ -82,13 +82,13 @@ for seed in range(5):
         except IndexError:
             pass
 
-    print variable_nodes
+    print(variable_nodes)
 
     # For all target nodes
 
     for target_node in variable_nodes:
 
-        print "*** Computing Marginal Distances from node {} ***".format(target_node)
+        print("*** Computing Marginal Distances from node {} ***".format(target_node))
 
         # Store all csv data in list
         pr_node = [0] * 16
@@ -97,7 +97,7 @@ for seed in range(5):
             try:
                 pr_node[i] = genfromtxt(key_node_path, delimiter=',')
             except IOError:
-                print "!!! Error: Could not find file for key node {} at {}".format(key_node, key_node_path)
+                print("!!! Error: Could not find file for key node {} at {}".format(key_node, key_node_path))
                 raise
 
         # All Stored
@@ -130,7 +130,7 @@ for seed in range(5):
 
             # Print statistics
             if PRINT:
-                print "> Key Node {} to Node {}".format(key_node, target_node)
+                print("> Key Node {} to Node {}".format(key_node, target_node))
                 print_statistics(kldiv_list_keynode)
 
             if CSV:

@@ -4,7 +4,7 @@ import os.path
 import argparse
 import factorGraphAES as fG
 from utility import *
-import cPickle as Pickle
+import pickle as Pickle
 from datetime import datetime
 import timing
 import matplotlib.pyplot as plt
@@ -33,20 +33,20 @@ def run_belief_propagation_attack(margdist=None):
             directory = '$HOME/Desktop/ELMO/output/traces/'
 
         if not NO_PRINT:
-            print "Leakage Directory: {}".format(directory)
+            print("Leakage Directory: {}".format(directory))
 
         trace_files += len([name for name in os.listdir(directory) if os.path.isfile(os.path.join(directory, name))])
 
         trace_files_required = REPEAT * TRACES
 
         if trace_files_required > trace_files:
-            print "^^^ ERROR: {} Trace Files required ({} Traces * {} Repeats), " \
+            print("^^^ ERROR: {} Trace Files required ({} Traces * {} Repeats), " \
                   "but only found {}! Aborting. ^^^".format(
-                trace_files_required, TRACES, REPEAT, trace_files)
+                trace_files_required, TRACES, REPEAT, trace_files))
             exit(1)
 
         if not NO_PRINT:
-            print "> {} Trace Files Found, Using {}\n".format(trace_files, trace_files_required)
+            print("> {} Trace Files Found, Using {}\n".format(trace_files, trace_files_required))
 
     # else:
     #
@@ -86,32 +86,32 @@ def run_belief_propagation_attack(margdist=None):
     graph_string = 'G{}{}{}'.format(ROUNDS_OF_AES, 'A' if REMOVE_CYCLE else '', 'KS' if INCLUDE_KEY_SCHEDULING else '')
 
     if not NO_PRINT:
-        print "\nRunning BP on {}: {} Trace(s) and {} Round(s), Averaging over {} Pass(es)".format(graph_string, TRACES,
-                                                                                                   ROUNDS, REPEAT)
-        print "Key Scheduling: {}, Removed Nodes: {}, Not Leaking Nodes: {}, Badly Leaking Nodes: {} (Traces {}, SNR 2^{}, Erroneous {}), " \
+        print("\nRunning BP on {}: {} Trace(s) and {} Round(s), Averaging over {} Pass(es)".format(graph_string, TRACES,
+                                                                                                   ROUNDS, REPEAT))
+        print("Key Scheduling: {}, Removed Nodes: {}, Not Leaking Nodes: {}, Badly Leaking Nodes: {} (Traces {}, SNR 2^{}, Erroneous {}), " \
               "Left Out Nodes: {}, Not Noisy Nodes: {}".format(
             INCLUDE_KEY_SCHEDULING, REMOVED_NODES, NOT_LEAKING_NODES, BADLY_LEAKING_NODES, BADLY_LEAKING_TRACES,
             BADLY_LEAKING_SNR_exp, ERRONEOUS_BAD,
-            LEFT_OUT_NODES, NO_NOISE_NODES)
+            LEFT_OUT_NODES, NO_NOISE_NODES))
         if fixed_node_tuple is None:
-            print "No Fixed Node(s)."
+            print("No Fixed Node(s).")
         else:
-            print "Fixed Node: {}, Fixed Value: {}".format(FIXED_VALUE_NODE, fixed_node_tuple[1])
-        print "snr = 2^{} = {} (sigma = {}), Threshold: {}".format(SNR_exp, snr, sigma, THRESHOLD)
-        print "Epsilon = {}, Epsilon Successions: {}".format(EPSILON, EPSILON_S)
-        print "Using REAL TRACES: {} (Jitter {}, Auto Realign {})".format(REAL_TRACES, JITTER, AUTO_REALIGN)
-        print "Using LDA: {}, Using Neural Networks: {} (Window Size {}), Using Best Template: {}".format(USE_LDA, USE_NN, TPRANGE, USE_BEST)
+            print("Fixed Node: {}, Fixed Value: {}".format(FIXED_VALUE_NODE, fixed_node_tuple[1]))
+        print("snr = 2^{} = {} (sigma = {}), Threshold: {}".format(SNR_exp, snr, sigma, THRESHOLD))
+        print("Epsilon = {}, Epsilon Successions: {}".format(EPSILON, EPSILON_S))
+        print("Using REAL TRACES: {} (Jitter {}, Auto Realign {})".format(REAL_TRACES, JITTER, AUTO_REALIGN))
+        print("Using LDA: {}, Using Neural Networks: {} (Window Size {}), Using Best Template: {}".format(USE_LDA, USE_NN, TPRANGE, USE_BEST))
         if REAL_TRACES:
-            print "Correlation Threshold: {}".format(CORRELATION_THRESHOLD)
-        print "If Simulating Data, Using ELMO Power Model: {}, Leakage on the Fly: {}, Reading Plaintexts: {}".format(ELMO_POWER_MODEL,
+            print("Correlation Threshold: {}".format(CORRELATION_THRESHOLD))
+        print("If Simulating Data, Using ELMO Power Model: {}, Leakage on the Fly: {}, Reading Plaintexts: {}".format(ELMO_POWER_MODEL,
                                                                                                   LEAKAGE_ON_THE_FLY,
-                                                                                                  READ_PLAINTEXTS)
-        print "Seed: {}".format(SEED)
+                                                                                                  READ_PLAINTEXTS))
+        print("Seed: {}".format(SEED))
         print_new_line()
-        print "Key:\n{}\n".format(key)
-        print "Key Hex String:\n{}\n".format(get_list_as_hex_string(key))
-        print "No Noise Power Modelled Key Values:\n{}\n".format(
-            get_power_modelled_key_values(key, elmo=ELMO_POWER_MODEL))
+        print("Key:\n{}\n".format(key))
+        print("Key Hex String:\n{}\n".format(get_list_as_hex_string(key)))
+        print("No Noise Power Modelled Key Values:\n{}\n".format(
+            get_power_modelled_key_values(key, elmo=ELMO_POWER_MODEL)))
         # if REAL_TRACES:
         #     print "Observed Power Modelled Key Values: NONE, cannot get power values from Real Traces!\n"
         # else:
@@ -132,12 +132,12 @@ def run_belief_propagation_attack(margdist=None):
     connecting_dict = {"LFG": "Large Factor Graph", "SEQ": "Sequential Graphs", "IND": "Independent Graphs"}
 
     if len(connecting_methods) == 0:
-        print "!!! No connecting methods selecting, aborting"
+        print("!!! No connecting methods selecting, aborting")
         exit(1)
     for method in connecting_methods:
 
         if not NO_PRINT:
-            print print_fill_1, "Starting {}{}".format(connecting_dict[method], ', Key Averaging {}'.format(KEY_POWER_VALUE_AVERAGE) if (method == "IND" or method == "SEQ") else ''), print_fill_1
+            print(print_fill_1, "Starting {}{}".format(connecting_dict[method], ', Key Averaging {}'.format(KEY_POWER_VALUE_AVERAGE) if (method == "IND" or method == "SEQ") else ''), print_fill_1)
             print_new_line()
 
         final_key_ranks = []
@@ -176,7 +176,7 @@ def run_belief_propagation_attack(margdist=None):
         for rep in range(REPEAT):
 
             if PRINT_ALL_KEY_RANKS:
-                print ("-_-_-_-_-_-_- Repeat {} -_-_-_-_-_-_-".format(rep))
+                print(("-_-_-_-_-_-_- Repeat {} -_-_-_-_-_-_-".format(rep)))
 
             # Set Key and snr
             my_graph.set_key(key)
@@ -233,11 +233,11 @@ def run_belief_propagation_attack(margdist=None):
                                                        no_noise=NO_NOISE, offset=trace+(rep*TRACES), ignore_bad=IGNORE_BAD_TEMPLATES, trace_id = specific_trace)
 
                 if PRINT_ALL_KEY_RANKS:
-                    print "-~-~-~-~-~-~- Trace {} -~-~-~-~-~-~-".format(trace)
+                    print("-~-~-~-~-~-~- Trace {} -~-~-~-~-~-~-".format(trace))
                     # first_plaintext_bytes = all_values['p'][trace][:16].astype(int)
                     first_plaintext_bytes = my_graph.get_plaintext_values()
-                    print "Plaintext: {}".format(first_plaintext_bytes)
-                    print "Plaintext Hex String: {}".format(get_list_as_hex_string(first_plaintext_bytes))
+                    print("Plaintext: {}".format(first_plaintext_bytes))
+                    print("Plaintext Hex String: {}".format(get_list_as_hex_string(first_plaintext_bytes)))
 
                 # Check
                 if CHECK_LEAKAGE:
@@ -307,7 +307,7 @@ def run_belief_propagation_attack(margdist=None):
 
                 ################# PRINT FINAL KEY RANKS FOR CURRENT TRACE #################
                 if (method == "IND" or method == "SEQ") and PRINT_EVERY_TRACE and not NO_PRINT:
-                    print print_fill_2, "Final Key Ranks (Repeat {} Trace {})".format(rep, trace), print_fill_2
+                    print(print_fill_2, "Final Key Ranks (Repeat {} Trace {})".format(rep, trace), print_fill_2)
                     print_new_line()
                     my_graph.print_key_rank()
                 elif method == "LFG":
@@ -353,22 +353,22 @@ def run_belief_propagation_attack(margdist=None):
                     if BREAK_WHEN_FOUND and (method == "SEQ" or method == "IND") and my_graph.found_key(
                             supplied_dist=key_distributions):
                         if not NO_PRINT:
-                            print "+++++++ Found Key at the end of Trace {} +++++++".format(trace + 1)
+                            print("+++++++ Found Key at the end of Trace {} +++++++".format(trace + 1))
                         traces_required.append(trace + 1)
                         found_before_end = True
                         break
                 else:
                     # Print discounted
                     if not ONLY_END and not NO_PRINT:
-                        print "!+!+!+!+! Discounting Trace to avoid Error Propagation !+!+!+!+!"
+                        print("!+!+!+!+! Discounting Trace to avoid Error Propagation !+!+!+!+!")
                         print_new_line()
                     failed_traces += 1
                     total_failures += 1
                     failure_array[rep].append(trace)
 
                 if not ONLY_END and PRINT_EVERY_TRACE and not NO_PRINT and (method == "IND" or method == "SEQ"):
-                    print print_fill_2, "Current Computed Key Ranks (Repeat {}, after Trace {})".format(rep,
-                                                                                                        trace), print_fill_2
+                    print(print_fill_2, "Current Computed Key Ranks (Repeat {}, after Trace {})".format(rep,
+                                                                                                        trace), print_fill_2)
                     print_new_line()
                     my_graph.print_key_rank(supplied_dist=key_distributions)
 
@@ -395,7 +395,7 @@ def run_belief_propagation_attack(margdist=None):
             if failed_traces == TRACES:
                 # All traces failed!
                 if not ONLY_END and not NO_PRINT:
-                    print "!!!+!+!!! All Traces Failed in this Repeat, Not Adding to Statistic !!!+!+!!!"
+                    print("!!!+!+!!! All Traces Failed in this Repeat, Not Adding to Statistic !!!+!+!!!")
             else:
                 if method == "IND" or method == "SEQ":
                     final_key_ranks.append(my_graph.get_final_key_rank(supplied_dist=key_distributions))
@@ -417,7 +417,7 @@ def run_belief_propagation_attack(margdist=None):
 
             # Print Final Key Rank
             if PRINT_FINAL_KEY_RANK or REPEAT_ONLY:
-                print print_fill_2, "Final Key Ranks (Repeat {})".format(rep), print_fill_2
+                print(print_fill_2, "Final Key Ranks (Repeat {})".format(rep), print_fill_2)
                 print_new_line()
                 if method == "LFG":
                     my_graph.print_key_rank()
@@ -425,8 +425,8 @@ def run_belief_propagation_attack(margdist=None):
                     my_graph.print_key_rank(supplied_dist=key_distributions)
 
             if PRINT_FINAL_KEY_DISTRIBUTION:
-                print print_fill_2, "Final Key Distribution (Repeat {})".format(rep), print_fill_2
-                print key_distributions
+                print(print_fill_2, "Final Key Distribution (Repeat {})".format(rep), print_fill_2)
+                print(key_distributions)
 
             if REPEAT_CSV:
                 # Write csv after each repeat
@@ -458,38 +458,38 @@ def run_belief_propagation_attack(margdist=None):
         # Final Key Ranks
         if not NO_PRINT:
             OUTOF = REPEAT if method == "LFG" else TRACES * REPEAT
-            print "+++++++++ Key Rank Statistics +++++++++"
+            print("+++++++++ Key Rank Statistics +++++++++")
             print_statistics(final_key_ranks, log=True)
 
             if PRINT_AVERAGES:
-                print "+++++++++ Key Rank Statistics (Averaging Incoming Messages) +++++++++"
+                print("+++++++++ Key Rank Statistics (Averaging Incoming Messages) +++++++++")
                 print_statistics(final_key_ranks_averaged, log=True)
 
             # Convergence Statistics
-            print "+++++++ Stopping Criteria Statistics +++++++"
+            print("+++++++ Stopping Criteria Statistics +++++++")
             print_statistics(convergence_statistics)
-            print "Total Successes:  {:4}  ({:7}%)".format(successful_attacks,
-                                                           (successful_attacks / (REPEAT + 0.0) * 100))
-            print "Total Attacks:    {:4}".format(OUTOF)
-            print "Failures:         {:4}  ({:7}%)".format(total_failures, (total_failures / (OUTOF + 0.0) * 100))
-            print "Maxed Iterations: {:4}  ({:7}%)".format(total_maxed_iterations,
-                                                           (total_maxed_iterations / (OUTOF + 0.0) * 100))
-            print "Epsilon Exhaust:  {:4}  ({:7}%)".format(total_epsilon_exhaustion,
-                                                           (total_epsilon_exhaustion / (OUTOF + 0.0) * 100))
+            print("Total Successes:  {:4}  ({:7}%)".format(successful_attacks,
+                                                           (successful_attacks / (REPEAT + 0.0) * 100)))
+            print("Total Attacks:    {:4}".format(OUTOF))
+            print("Failures:         {:4}  ({:7}%)".format(total_failures, (total_failures / (OUTOF + 0.0) * 100)))
+            print("Maxed Iterations: {:4}  ({:7}%)".format(total_maxed_iterations,
+                                                           (total_maxed_iterations / (OUTOF + 0.0) * 100)))
+            print("Epsilon Exhaust:  {:4}  ({:7}%)".format(total_epsilon_exhaustion,
+                                                           (total_epsilon_exhaustion / (OUTOF + 0.0) * 100)))
 
-            print "+++++++ Key Finding Statistics +++++++"
+            print("+++++++ Key Finding Statistics +++++++")
             # print round_found_statistics
             print_statistics(round_found_statistics)
             print_new_line()
 
-            print "+++++++ Timing Statistics (per trace, in seconds) +++++++"
+            print("+++++++ Timing Statistics (per trace, in seconds) +++++++")
             print_statistics(timer_holder)
             print_new_line()
 
             if total_failures > 0:
-                print "+++++++ Erroneous Trace Detection Statistics +++++++"
+                print("+++++++ Erroneous Trace Detection Statistics +++++++")
                 for fail_repeat in range(REPEAT):
-                    print "Repeat {:3}: {}".format(fail_repeat, failure_array[fail_repeat])
+                    print("Repeat {:3}: {}".format(fail_repeat, failure_array[fail_repeat]))
                 print_new_line()
 
         if RANK_CSV:
@@ -599,7 +599,7 @@ def run_belief_propagation_attack(margdist=None):
             #     timer_holder_min,timer_holder_max,timer_holder_avg)
 
             csv_string = "{};".format(TEST_NAME)
-            for parakey, paravalue in args.__dict__.iteritems():
+            for parakey, paravalue in args.__dict__.items():
                 csv_string += str(paravalue) + ";"
             for value_to_store in [successful_attacks, ((successful_attacks / (REPEAT + 0.0)) * 100),
                 best_case, worst_case, median_case, total_epsilon_exhaustion, total_maxed_iterations,
@@ -611,7 +611,7 @@ def run_belief_propagation_attack(margdist=None):
 
             if not check_file_exists(dump_file):
                 header = "sep=;\nTestName;"
-                for parakey, paravalue in args.__dict__.iteritems():
+                for parakey, paravalue in args.__dict__.items():
                     header += str(parakey) + ";"
                 header += "SuccessfulAttacks;PercentageSuccess;BestCase;WorstCase;MedianCase;TotalEpsilonExhaustion;TotalTMax;TotalFailures;BestRoundFound;WorstRoundFound;AverageRoundFound;MinTraceTime;MaxTraceTime;AvgTraceTime;"
                 f = open(dump_file, 'a+')
@@ -626,13 +626,13 @@ def run_belief_propagation_attack(margdist=None):
         if MARTIN_RANK:
             avg_key_rank_martin = final_key_rank_martin / REPEAT
             if not NO_PRINT:
-                print "[[[ Martin Average Key Rank: {} (~2^{}) ]]]".format(avg_key_rank_martin,
-                                                                           bit_length(avg_key_rank_martin))
+                print("[[[ Martin Average Key Rank: {} (~2^{}) ]]]".format(avg_key_rank_martin,
+                                                                           bit_length(avg_key_rank_martin)))
 
         # Average Traces Needed
         if (method == "SEQ" or method == "IND") and (BREAK_WHEN_FOUND or BREAK_WHEN_PATTERN_MATCHED):
             if not NO_PRINT:
-                print "+++++++++ Trace Statistics +++++++++"
+                print("+++++++++ Trace Statistics +++++++++")
                 print_statistics(traces_required)
             if TRACE_CSV:
                 # Store as csv:
@@ -704,7 +704,7 @@ def run_belief_propagation_attack(margdist=None):
                     'Graph {} Plot, {} Traces, SNR '.format(graph_string, TRACES) + r'$2^{%d}$' % (int(float(SNR_exp))))
                 legend = ax1.legend(loc='best')
                 plt.show()
-                print "Finished Plotting!"
+                print("Finished Plotting!")
 
         # If Marginal Distance, return
         if margdist is not None:
@@ -1049,27 +1049,27 @@ if __name__ == "__main__":
 
     if USE_LDA and not REAL_TRACES:
         # if not NO_PRINT:
-        print "! Can't currently use LDA on simulated data."
+        print("! Can't currently use LDA on simulated data.")
         raise ValueError
 
     if USE_NN and not REAL_TRACES:
         # if not NO_PRINT:
-        print "! Can't currently use Neural Networks on simulated data."
+        print("! Can't currently use Neural Networks on simulated data.")
         raise ValueError
 
     if USE_BEST and not REAL_TRACES:
         # if not NO_PRINT:
-        print "! Can't currently use Best Templates on simulated data."
+        print("! Can't currently use Best Templates on simulated data.")
         raise ValueError
 
     if (USE_NN and USE_LDA) or (USE_NN and USE_BEST) or (USE_LDA and USE_BEST):
         if not NO_PRINT:
-            print "!! Can only use one (NN, LDA, or BEST)! Please specify which. Aborting..."
+            print("!! Can only use one (NN, LDA, or BEST)! Please specify which. Aborting...")
         exit(1)
 
     if TPRANGE > 1 and (not USE_LDA and not USE_NN):
         if not NO_PRINT:
-            print "|| If not using LDA or NN, range must be 1 - setting TPRANGE to 1"
+            print("|| If not using LDA or NN, range must be 1 - setting TPRANGE to 1")
         TPRANGE = 1
 
     # if USE_NN and TPRANGE != 700:
@@ -1079,62 +1079,62 @@ if __name__ == "__main__":
 
     if USE_NN and TPRANGE != 2000:
         if not NO_PRINT:
-            print "|| Neural Networks only uses window size 2000 - setting TPRANGE to 2000"
+            print("|| Neural Networks only uses window size 2000 - setting TPRANGE to 2000")
         TPRANGE = 2000
 
     if USE_LDA and TPRANGE == 1:
         if not NO_PRINT:
-            print "|| LDA doesn't like being set to 1 - setting TPRANGE to 200"
+            print("|| LDA doesn't like being set to 1 - setting TPRANGE to 200")
         TPRANGE = 200
 
     if REAL_TRACES:
         if not NO_PRINT:
-            print "|| Real Traces modelled around snr = 2**-7 - setting SNR_exp to -7"
+            print("|| Real Traces modelled around snr = 2**-7 - setting SNR_exp to -7")
         SNR_exp = -7
 
     # Handle ELMO Default
     if not HW_POWER_MODEL and not ELMO_POWER_MODEL:
         if not NO_PRINT:
-            print "|| Default Power Model: ELMO"
+            print("|| Default Power Model: ELMO")
         ELMO_POWER_MODEL = True
 
     if REAL_TRACES and not TRACE_NPY:
         if not NO_PRINT:
-            print "|| Real Traces usually need to be stored - setting TRACE_NPY to True"
+            print("|| Real Traces usually need to be stored - setting TRACE_NPY to True")
         TRACE_NPY = True
 
     if PLOT and not TRACE_NPY:
         if not NO_PRINT:
-            print "|| Need to store traces to plot them - setting TRACE_NPY to True"
+            print("|| Need to store traces to plot them - setting TRACE_NPY to True")
         TRACE_NPY = True
 
     if REAL_TRACES and ROUNDS_OF_AES > r_of_aes:
         if not NO_PRINT:
-            print "|| Selected Trace File can only handle up to {} AES Rounds - setting ROUNDS_OF_AES to {}".format(r_of_aes, r_of_aes)
+            print("|| Selected Trace File can only handle up to {} AES Rounds - setting ROUNDS_OF_AES to {}".format(r_of_aes, r_of_aes))
         ROUNDS_OF_AES = r_of_aes
 
     # Handle optional extra rounds for first round tree
     G0_ROUNDS = 2
     if ROUNDS_OF_AES == 0 and (ROUNDS > G0_ROUNDS):
         if not NO_PRINT:
-            print "|| Don't need {} Rounds for tree graph - setting to {}".format(ROUNDS, G0_ROUNDS)
+            print("|| Don't need {} Rounds for tree graph - setting to {}".format(ROUNDS, G0_ROUNDS))
         ROUNDS = G0_ROUNDS
     elif not LARGE_FACTOR_GRAPH and REMOVE_CYCLE and ROUNDS_OF_AES <= 2 and (ROUNDS > 16):
         new_rounds = ROUNDS_OF_AES * 8
         if not NO_PRINT:
-            print "|| Don't need {} Rounds for tree graph - setting to {} ({} Rounds of AES * 8)".format(ROUNDS,
+            print("|| Don't need {} Rounds for tree graph - setting to {} ({} Rounds of AES * 8)".format(ROUNDS,
                                                                                                          new_rounds,
-                                                                                                         ROUNDS_OF_AES)
+                                                                                                         ROUNDS_OF_AES))
         ROUNDS = new_rounds
 
     if 'p' in NOT_LEAKING_NODES and not IGNORE_GROUND_TRUTHS:
         if not NO_PRINT:
-            print "|| Can't use Ground Truths if not leaking on plaintext bytes: setting IGNORE_GROUND_TRUTHS to True"
+            print("|| Can't use Ground Truths if not leaking on plaintext bytes: setting IGNORE_GROUND_TRUTHS to True")
         IGNORE_GROUND_TRUTHS = True
 
     if NO_LEAK_KEY_SCHEDULE and not INCLUDE_KEY_SCHEDULING:
         if not NO_PRINT:
-            print "|| Must include key schedule to not leak on it: setting INCLUDE_KEY_SCHEDULING to True"
+            print("|| Must include key schedule to not leak on it: setting INCLUDE_KEY_SCHEDULING to True")
         INCLUDE_KEY_SCHEDULING
 
     if NO_LEAK_KEY_SCHEDULE:
