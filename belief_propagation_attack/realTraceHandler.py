@@ -59,10 +59,10 @@ class RealTraceHandler:
         # self.powervalues = dict()
         # for var in variable_dict:
         #     self.powervalues[var] = np.load('{}extra_{}.npy'.format(POWERVALUES_FOLDER, var))
-        self.musigma_dict = pickle.load(open(MUSIGMA_FILEPATH, 'rb'))
+        self.musigma_dict = pickle.load(open(MUSIGMA_FILEPATH, 'ro'))
 
         # TODO: CURRENTLY IN DEVELOPMENT
-        self.best_templates = pickle.load(open(BEST_TEMPLATE_DICT,'rb'))
+        self.best_templates = pickle.load(open(BEST_TEMPLATE_DICT,'ro'))
 
     def return_power_window(self, timepoint, trace, window=2000, nn_normalise=False):
         """ Return the window of power values for a given value """
