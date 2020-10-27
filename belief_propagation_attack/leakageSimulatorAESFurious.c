@@ -2717,7 +2717,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *     def fix_plaintext(self, plaintext):             # <<<<<<<<<<<<<<
  *         if len(plaintext) != 16:
- *             print("!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext)))
+ *             print "!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext))
  */
 
 /* Python wrapper */
@@ -2797,7 +2797,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *     def fix_plaintext(self, plaintext):
  *         if len(plaintext) != 16:             # <<<<<<<<<<<<<<
- *             print("!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext)))
+ *             print "!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext))
  *             raise IndexError
  */
   __pyx_t_1 = PyObject_Length(__pyx_v_plaintext); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 30, __pyx_L1_error)
@@ -2807,7 +2807,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
     /* "leakageSimulatorAESFurious.pyx":31
  *     def fix_plaintext(self, plaintext):
  *         if len(plaintext) != 16:
- *             print("!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext)))             # <<<<<<<<<<<<<<
+ *             print "!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext))             # <<<<<<<<<<<<<<
  *             raise IndexError
  *         self.plaintext = plaintext
  */
@@ -2837,7 +2837,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
 
     /* "leakageSimulatorAESFurious.pyx":32
  *         if len(plaintext) != 16:
- *             print("!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext)))
+ *             print "!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext))
  *             raise IndexError             # <<<<<<<<<<<<<<
  *         self.plaintext = plaintext
  * 
@@ -2849,13 +2849,13 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *     def fix_plaintext(self, plaintext):
  *         if len(plaintext) != 16:             # <<<<<<<<<<<<<<
- *             print("!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext)))
+ *             print "!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext))
  *             raise IndexError
  */
   }
 
   /* "leakageSimulatorAESFurious.pyx":33
- *             print("!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext)))
+ *             print "!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext))
  *             raise IndexError
  *         self.plaintext = plaintext             # <<<<<<<<<<<<<<
  * 
@@ -2868,7 +2868,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *     def fix_plaintext(self, plaintext):             # <<<<<<<<<<<<<<
  *         if len(plaintext) != 16:
- *             print("!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext)))
+ *             print "!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext))
  */
 
   /* function exit code */
@@ -5341,7 +5341,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *                         #print 'i = {}, val = 0x{} ({})'.format(i, line, eval('0x' + line))
  *                         p_backup[i-1] = eval('0x' + line)             # <<<<<<<<<<<<<<
  *                 except (IndexError, SyntaxError) as e:
- *                     print("Caught Error in leakageSimulatorAESFurious: {}".format(e))
+ *                     print "Caught Error in leakageSimulatorAESFurious: {}".format(e)
  */
             __pyx_t_1 = PyNumber_Add(__pyx_kp_s_0x, __pyx_v_line); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 133, __pyx_L16_error)
             __Pyx_GOTREF(__pyx_t_1);
@@ -5549,7 +5549,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *                         #print 'i = {}, val = 0x{} ({})'.format(i, line, eval('0x' + line))
  *                         p_backup[i-1] = eval('0x' + line)
  *                 except (IndexError, SyntaxError) as e:             # <<<<<<<<<<<<<<
- *                     print("Caught Error in leakageSimulatorAESFurious: {}".format(e))
+ *                     print "Caught Error in leakageSimulatorAESFurious: {}".format(e)
  *                     raise
  */
         __pyx_t_22 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_IndexError) || __Pyx_PyErr_ExceptionMatches(__pyx_builtin_SyntaxError);
@@ -5565,7 +5565,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
           /* "leakageSimulatorAESFurious.pyx":135
  *                         p_backup[i-1] = eval('0x' + line)
  *                 except (IndexError, SyntaxError) as e:
- *                     print("Caught Error in leakageSimulatorAESFurious: {}".format(e))             # <<<<<<<<<<<<<<
+ *                     print "Caught Error in leakageSimulatorAESFurious: {}".format(e)             # <<<<<<<<<<<<<<
  *                     raise
  *             elif random_plaintexts:
  */
@@ -5591,7 +5591,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
 
           /* "leakageSimulatorAESFurious.pyx":136
  *                 except (IndexError, SyntaxError) as e:
- *                     print("Caught Error in leakageSimulatorAESFurious: {}".format(e))
+ *                     print "Caught Error in leakageSimulatorAESFurious: {}".format(e)
  *                     raise             # <<<<<<<<<<<<<<
  *             elif random_plaintexts:
  *                 p_backup = get_random_bytes()
@@ -5632,7 +5632,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
     }
 
     /* "leakageSimulatorAESFurious.pyx":137
- *                     print("Caught Error in leakageSimulatorAESFurious: {}".format(e))
+ *                     print "Caught Error in leakageSimulatorAESFurious: {}".format(e)
  *                     raise
  *             elif random_plaintexts:             # <<<<<<<<<<<<<<
  *                 p_backup = get_random_bytes()
@@ -5669,7 +5669,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
       __pyx_t_16 = 0;
 
       /* "leakageSimulatorAESFurious.pyx":137
- *                     print("Caught Error in leakageSimulatorAESFurious: {}".format(e))
+ *                     print "Caught Error in leakageSimulatorAESFurious: {}".format(e)
  *                     raise
  *             elif random_plaintexts:             # <<<<<<<<<<<<<<
  *                 p_backup = get_random_bytes()
@@ -5698,7 +5698,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *             p[:len(self.plaintext)] = p_backup             # <<<<<<<<<<<<<<
  *             if print_all:
- *                 print("* Trace {:3}, Plaintext: {}".format(trace, p_backup))
+ *                 print "* Trace {:3}, Plaintext: {}".format(trace, p_backup)
  */
     __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_plaintext); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 150, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_16);
@@ -5710,7 +5710,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *             p[:len(self.plaintext)] = p_backup
  *             if print_all:             # <<<<<<<<<<<<<<
- *                 print("* Trace {:3}, Plaintext: {}".format(trace, p_backup))
+ *                 print "* Trace {:3}, Plaintext: {}".format(trace, p_backup)
  * 
  */
     __pyx_t_6 = (__pyx_v_print_all != 0);
@@ -5719,7 +5719,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
       /* "leakageSimulatorAESFurious.pyx":152
  *             p[:len(self.plaintext)] = p_backup
  *             if print_all:
- *                 print("* Trace {:3}, Plaintext: {}".format(trace, p_backup))             # <<<<<<<<<<<<<<
+ *                 print "* Trace {:3}, Plaintext: {}".format(trace, p_backup)             # <<<<<<<<<<<<<<
  * 
  *             # TEST TODO
  */
@@ -5781,7 +5781,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *             p[:len(self.plaintext)] = p_backup
  *             if print_all:             # <<<<<<<<<<<<<<
- *                 print("* Trace {:3}, Plaintext: {}".format(trace, p_backup))
+ *                 print "* Trace {:3}, Plaintext: {}".format(trace, p_backup)
  * 
  */
     }
@@ -6529,8 +6529,8 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *                         p[i+16] = shift[i] ^ k[i+16]
  * 
  *             if print_all:             # <<<<<<<<<<<<<<
- *                 print("Key:         {}".format(k[:16]))
- *                 print("Plaintext:   {}".format(p[:16]))
+ *                 print "Key:         {}".format(k[:16])
+ *                 print "Plaintext:   {}".format(p[:16])
  */
     __pyx_t_6 = (__pyx_v_print_all != 0);
     if (__pyx_t_6) {
@@ -6538,9 +6538,9 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
       /* "leakageSimulatorAESFurious.pyx":209
  * 
  *             if print_all:
- *                 print("Key:         {}".format(k[:16]))             # <<<<<<<<<<<<<<
- *                 print("Plaintext:   {}".format(p[:16]))
- *                 print("Ciphertext:  {}".format(p[-16:]))
+ *                 print "Key:         {}".format(k[:16])             # <<<<<<<<<<<<<<
+ *                 print "Plaintext:   {}".format(p[:16])
+ *                 print "Ciphertext:  {}".format(p[-16:])
  */
       __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Key, __pyx_n_s_format); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 209, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
@@ -6567,9 +6567,9 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
 
       /* "leakageSimulatorAESFurious.pyx":210
  *             if print_all:
- *                 print("Key:         {}".format(k[:16]))
- *                 print("Plaintext:   {}".format(p[:16]))             # <<<<<<<<<<<<<<
- *                 print("Ciphertext:  {}".format(p[-16:]))
+ *                 print "Key:         {}".format(k[:16])
+ *                 print "Plaintext:   {}".format(p[:16])             # <<<<<<<<<<<<<<
+ *                 print "Ciphertext:  {}".format(p[-16:])
  *                 print_new_line()
  */
       __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Plaintext, __pyx_n_s_format); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 210, __pyx_L1_error)
@@ -6596,11 +6596,11 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
       /* "leakageSimulatorAESFurious.pyx":211
- *                 print("Key:         {}".format(k[:16]))
- *                 print("Plaintext:   {}".format(p[:16]))
- *                 print("Ciphertext:  {}".format(p[-16:]))             # <<<<<<<<<<<<<<
+ *                 print "Key:         {}".format(k[:16])
+ *                 print "Plaintext:   {}".format(p[:16])
+ *                 print "Ciphertext:  {}".format(p[-16:])             # <<<<<<<<<<<<<<
  *                 print_new_line()
- *                 print("Key:         {}".format(get_list_as_hex_string(k[:16])))
+ *                 print "Key:         {}".format(get_list_as_hex_string(k[:16]))
  */
       __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Ciphertext, __pyx_n_s_format); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 211, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
@@ -6626,11 +6626,11 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
       /* "leakageSimulatorAESFurious.pyx":212
- *                 print("Plaintext:   {}".format(p[:16]))
- *                 print("Ciphertext:  {}".format(p[-16:]))
+ *                 print "Plaintext:   {}".format(p[:16])
+ *                 print "Ciphertext:  {}".format(p[-16:])
  *                 print_new_line()             # <<<<<<<<<<<<<<
- *                 print("Key:         {}".format(get_list_as_hex_string(k[:16])))
- *                 print("Plaintext:   {}".format(get_list_as_hex_string(p[:16])))
+ *                 print "Key:         {}".format(get_list_as_hex_string(k[:16]))
+ *                 print "Plaintext:   {}".format(get_list_as_hex_string(p[:16]))
  */
       __Pyx_GetModuleGlobalName(__pyx_t_16, __pyx_n_s_print_new_line); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 212, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
@@ -6652,11 +6652,11 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
       /* "leakageSimulatorAESFurious.pyx":213
- *                 print("Ciphertext:  {}".format(p[-16:]))
+ *                 print "Ciphertext:  {}".format(p[-16:])
  *                 print_new_line()
- *                 print("Key:         {}".format(get_list_as_hex_string(k[:16])))             # <<<<<<<<<<<<<<
- *                 print("Plaintext:   {}".format(get_list_as_hex_string(p[:16])))
- *                 print("Ciphertext:  {}".format(get_list_as_hex_string(p[-16:])))
+ *                 print "Key:         {}".format(get_list_as_hex_string(k[:16]))             # <<<<<<<<<<<<<<
+ *                 print "Plaintext:   {}".format(get_list_as_hex_string(p[:16]))
+ *                 print "Ciphertext:  {}".format(get_list_as_hex_string(p[-16:]))
  */
       __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Key, __pyx_n_s_format); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 213, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
@@ -6701,9 +6701,9 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
 
       /* "leakageSimulatorAESFurious.pyx":214
  *                 print_new_line()
- *                 print("Key:         {}".format(get_list_as_hex_string(k[:16])))
- *                 print("Plaintext:   {}".format(get_list_as_hex_string(p[:16])))             # <<<<<<<<<<<<<<
- *                 print("Ciphertext:  {}".format(get_list_as_hex_string(p[-16:])))
+ *                 print "Key:         {}".format(get_list_as_hex_string(k[:16]))
+ *                 print "Plaintext:   {}".format(get_list_as_hex_string(p[:16]))             # <<<<<<<<<<<<<<
+ *                 print "Ciphertext:  {}".format(get_list_as_hex_string(p[-16:]))
  *                 # print "expected: {}".format(hexStringToIntArray('3ad77bb40d7a3660a89ecaf32466ef97'))
  */
       __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Plaintext, __pyx_n_s_format); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 214, __pyx_L1_error)
@@ -6748,9 +6748,9 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
       /* "leakageSimulatorAESFurious.pyx":215
- *                 print("Key:         {}".format(get_list_as_hex_string(k[:16])))
- *                 print("Plaintext:   {}".format(get_list_as_hex_string(p[:16])))
- *                 print("Ciphertext:  {}".format(get_list_as_hex_string(p[-16:])))             # <<<<<<<<<<<<<<
+ *                 print "Key:         {}".format(get_list_as_hex_string(k[:16]))
+ *                 print "Plaintext:   {}".format(get_list_as_hex_string(p[:16]))
+ *                 print "Ciphertext:  {}".format(get_list_as_hex_string(p[-16:]))             # <<<<<<<<<<<<<<
  *                 # print "expected: {}".format(hexStringToIntArray('3ad77bb40d7a3660a89ecaf32466ef97'))
  * 
  */
@@ -6799,8 +6799,8 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *                         p[i+16] = shift[i] ^ k[i+16]
  * 
  *             if print_all:             # <<<<<<<<<<<<<<
- *                 print("Key:         {}".format(k[:16]))
- *                 print("Plaintext:   {}".format(p[:16]))
+ *                 print "Key:         {}".format(k[:16])
+ *                 print "Plaintext:   {}".format(p[:16])
  */
     }
 
@@ -10242,7 +10242,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *                 # print "Path to Trace File {}: {}".format(trace, trace_path)
  *                 f = open(trace_path)             # <<<<<<<<<<<<<<
  *             except IOError:
- *                 print("IOError: Can't open file named {}".format(
+ *                 print "IOError: Can't open file named {}".format(
  */
         __pyx_t_10 = __Pyx_PyObject_CallOneArg(__pyx_builtin_open, __pyx_v_trace_path); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 376, __pyx_L14_error)
         __Pyx_GOTREF(__pyx_t_10);
@@ -10275,8 +10275,8 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *                 # print "Path to Trace File {}: {}".format(trace, trace_path)
  *                 f = open(trace_path)
  *             except IOError:             # <<<<<<<<<<<<<<
- *                 print("IOError: Can't open file named {}".format(
- *                     'Leakage/trace{}.trc'.format(pad_string_zeros(trace + 1 + offset, 5))))
+ *                 print "IOError: Can't open file named {}".format(
+ *                     'Leakage/trace{}.trc'.format(pad_string_zeros(trace + 1 + offset, 5)))
  */
       __pyx_t_9 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_IOError);
       if (__pyx_t_9) {
@@ -10289,8 +10289,8 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
         /* "leakageSimulatorAESFurious.pyx":378
  *                 f = open(trace_path)
  *             except IOError:
- *                 print("IOError: Can't open file named {}".format(             # <<<<<<<<<<<<<<
- *                     'Leakage/trace{}.trc'.format(pad_string_zeros(trace + 1 + offset, 5))))
+ *                 print "IOError: Can't open file named {}".format(             # <<<<<<<<<<<<<<
+ *                     'Leakage/trace{}.trc'.format(pad_string_zeros(trace + 1 + offset, 5)))
  *                 raise
  */
         __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_IOError_Can_t_open_file_named, __pyx_n_s_format); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 378, __pyx_L16_except_error)
@@ -10298,8 +10298,8 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
 
         /* "leakageSimulatorAESFurious.pyx":379
  *             except IOError:
- *                 print("IOError: Can't open file named {}".format(
- *                     'Leakage/trace{}.trc'.format(pad_string_zeros(trace + 1 + offset, 5))))             # <<<<<<<<<<<<<<
+ *                 print "IOError: Can't open file named {}".format(
+ *                     'Leakage/trace{}.trc'.format(pad_string_zeros(trace + 1 + offset, 5)))             # <<<<<<<<<<<<<<
  *                 raise
  * 
  */
@@ -10395,8 +10395,8 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
         /* "leakageSimulatorAESFurious.pyx":380
- *                 print("IOError: Can't open file named {}".format(
- *                     'Leakage/trace{}.trc'.format(pad_string_zeros(trace + 1 + offset, 5))))
+ *                 print "IOError: Can't open file named {}".format(
+ *                     'Leakage/trace{}.trc'.format(pad_string_zeros(trace + 1 + offset, 5)))
  *                 raise             # <<<<<<<<<<<<<<
  * 
  *             hw_leaks = dict()
@@ -11590,7 +11590,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *                         #print 'i = {}, val = 0x{} ({})'.format(i, line, eval('0x' + line))
  *                         p_backup[i-1] = eval('0x' + line)             # <<<<<<<<<<<<<<
  *                 except (IndexError, SyntaxError) as e:
- *                     print("Caught Error in leakageSimulatorAES: {}".format(e))
+ *                     print "Caught Error in leakageSimulatorAES: {}".format(e)
  */
             __pyx_t_3 = PyNumber_Add(__pyx_kp_s_0x, __pyx_v_line); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 443, __pyx_L31_error)
             __Pyx_GOTREF(__pyx_t_3);
@@ -11757,7 +11757,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *                         #print 'i = {}, val = 0x{} ({})'.format(i, line, eval('0x' + line))
  *                         p_backup[i-1] = eval('0x' + line)
  *                 except (IndexError, SyntaxError) as e:             # <<<<<<<<<<<<<<
- *                     print("Caught Error in leakageSimulatorAES: {}".format(e))
+ *                     print "Caught Error in leakageSimulatorAES: {}".format(e)
  *                     raise
  */
         __pyx_t_9 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_IndexError) || __Pyx_PyErr_ExceptionMatches(__pyx_builtin_SyntaxError);
@@ -11773,7 +11773,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
           /* "leakageSimulatorAESFurious.pyx":445
  *                         p_backup[i-1] = eval('0x' + line)
  *                 except (IndexError, SyntaxError) as e:
- *                     print("Caught Error in leakageSimulatorAES: {}".format(e))             # <<<<<<<<<<<<<<
+ *                     print "Caught Error in leakageSimulatorAES: {}".format(e)             # <<<<<<<<<<<<<<
  *                     raise
  *             else:
  */
@@ -11799,7 +11799,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
 
           /* "leakageSimulatorAESFurious.pyx":446
  *                 except (IndexError, SyntaxError) as e:
- *                     print("Caught Error in leakageSimulatorAES: {}".format(e))
+ *                     print "Caught Error in leakageSimulatorAES: {}".format(e)
  *                     raise             # <<<<<<<<<<<<<<
  *             else:
  *                 p_backup = self.plaintext
@@ -13024,7 +13024,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *         # print "In Leakage Simulator AES Furious, badly_leaking_traces = {}, badly_leaking_nodes: {}".format(badly_leaking_traces, badly_leaking_nodes)
  * 
  *         if len(badly_leaking_nodes) > 0 and len(badly_leaking_traces) == 0:             # <<<<<<<<<<<<<<
- *             print("! As bl nodes set but blt not, setting all traces to badly leak")
+ *             print "! As bl nodes set but blt not, setting all traces to badly leak"
  *             badly_leaking_traces = range(traces)
  */
   __pyx_t_4 = PyObject_Length(__pyx_v_badly_leaking_nodes); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 548, __pyx_L1_error)
@@ -13043,7 +13043,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
     /* "leakageSimulatorAESFurious.pyx":549
  * 
  *         if len(badly_leaking_nodes) > 0 and len(badly_leaking_traces) == 0:
- *             print("! As bl nodes set but blt not, setting all traces to badly leak")             # <<<<<<<<<<<<<<
+ *             print "! As bl nodes set but blt not, setting all traces to badly leak"             # <<<<<<<<<<<<<<
  *             badly_leaking_traces = range(traces)
  * 
  */
@@ -13051,7 +13051,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
 
     /* "leakageSimulatorAESFurious.pyx":550
  *         if len(badly_leaking_nodes) > 0 and len(badly_leaking_traces) == 0:
- *             print("! As bl nodes set but blt not, setting all traces to badly leak")
+ *             print "! As bl nodes set but blt not, setting all traces to badly leak"
  *             badly_leaking_traces = range(traces)             # <<<<<<<<<<<<<<
  * 
  *         # Non-key bytes
@@ -13068,7 +13068,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *         # print "In Leakage Simulator AES Furious, badly_leaking_traces = {}, badly_leaking_nodes: {}".format(badly_leaking_traces, badly_leaking_nodes)
  * 
  *         if len(badly_leaking_nodes) > 0 and len(badly_leaking_traces) == 0:             # <<<<<<<<<<<<<<
- *             print("! As bl nodes set but blt not, setting all traces to badly leak")
+ *             print "! As bl nodes set but blt not, setting all traces to badly leak"
  *             badly_leaking_traces = range(traces)
  */
   }
@@ -13098,7 +13098,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *             print_out = False
  * 
  *             if print_out:             # <<<<<<<<<<<<<<
- *                 print("Leakage Simulator: Adding Noise to Trace {}".format(trace))
+ *                 print "Leakage Simulator: Adding Noise to Trace {}".format(trace)
  * 
  */
     __pyx_t_2 = (__pyx_v_print_out != 0);
@@ -13107,7 +13107,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
       /* "leakageSimulatorAESFurious.pyx":558
  * 
  *             if print_out:
- *                 print("Leakage Simulator: Adding Noise to Trace {}".format(trace))             # <<<<<<<<<<<<<<
+ *                 print "Leakage Simulator: Adding Noise to Trace {}".format(trace)             # <<<<<<<<<<<<<<
  * 
  *             for variable in variables:
  */
@@ -13138,13 +13138,13 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *             print_out = False
  * 
  *             if print_out:             # <<<<<<<<<<<<<<
- *                 print("Leakage Simulator: Adding Noise to Trace {}".format(trace))
+ *                 print "Leakage Simulator: Adding Noise to Trace {}".format(trace)
  * 
  */
     }
 
     /* "leakageSimulatorAESFurious.pyx":560
- *                 print("Leakage Simulator: Adding Noise to Trace {}".format(trace))
+ *                 print "Leakage Simulator: Adding Noise to Trace {}".format(trace)
  * 
  *             for variable in variables:             # <<<<<<<<<<<<<<
  * 
@@ -13167,7 +13167,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *                 if variable in no_noise_nodes:             # <<<<<<<<<<<<<<
  *                     if print_out:
- *                         print("+++ NO NOISE for Variable {}".format(variable))
+ *                         print "+++ NO NOISE for Variable {}".format(variable)
  */
       __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_v_variable, __pyx_v_no_noise_nodes, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 562, __pyx_L1_error)
       __pyx_t_1 = (__pyx_t_2 != 0);
@@ -13177,7 +13177,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *                 if variable in no_noise_nodes:
  *                     if print_out:             # <<<<<<<<<<<<<<
- *                         print("+++ NO NOISE for Variable {}".format(variable))
+ *                         print "+++ NO NOISE for Variable {}".format(variable)
  *                     pass
  */
         __pyx_t_1 = (__pyx_v_print_out != 0);
@@ -13186,7 +13186,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
           /* "leakageSimulatorAESFurious.pyx":564
  *                 if variable in no_noise_nodes:
  *                     if print_out:
- *                         print("+++ NO NOISE for Variable {}".format(variable))             # <<<<<<<<<<<<<<
+ *                         print "+++ NO NOISE for Variable {}".format(variable)             # <<<<<<<<<<<<<<
  *                     pass
  *                 else:
  */
@@ -13214,7 +13214,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *                 if variable in no_noise_nodes:
  *                     if print_out:             # <<<<<<<<<<<<<<
- *                         print("+++ NO NOISE for Variable {}".format(variable))
+ *                         print "+++ NO NOISE for Variable {}".format(variable)
  *                     pass
  */
         }
@@ -13224,7 +13224,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *                 if variable in no_noise_nodes:             # <<<<<<<<<<<<<<
  *                     if print_out:
- *                         print("+++ NO NOISE for Variable {}".format(variable))
+ *                         print "+++ NO NOISE for Variable {}".format(variable)
  */
         goto __pyx_L14;
       }
@@ -13245,7 +13245,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *                     if print_out:
  *                         print_new_line()             # <<<<<<<<<<<<<<
  *                         print_new_line()
- *                         print("*** NOISE FOR VARIABLE {}".format(variable))
+ *                         print "*** NOISE FOR VARIABLE {}".format(variable)
  */
           __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_print_new_line); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 569, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_9);
@@ -13270,7 +13270,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *                     if print_out:
  *                         print_new_line()
  *                         print_new_line()             # <<<<<<<<<<<<<<
- *                         print("*** NOISE FOR VARIABLE {}".format(variable))
+ *                         print "*** NOISE FOR VARIABLE {}".format(variable)
  *                         print_new_line()
  */
           __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_print_new_line); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 570, __pyx_L1_error)
@@ -13295,7 +13295,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
           /* "leakageSimulatorAESFurious.pyx":571
  *                         print_new_line()
  *                         print_new_line()
- *                         print("*** NOISE FOR VARIABLE {}".format(variable))             # <<<<<<<<<<<<<<
+ *                         print "*** NOISE FOR VARIABLE {}".format(variable)             # <<<<<<<<<<<<<<
  *                         print_new_line()
  *                         print_new_line()
  */
@@ -13321,7 +13321,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
 
           /* "leakageSimulatorAESFurious.pyx":572
  *                         print_new_line()
- *                         print("*** NOISE FOR VARIABLE {}".format(variable))
+ *                         print "*** NOISE FOR VARIABLE {}".format(variable)
  *                         print_new_line()             # <<<<<<<<<<<<<<
  *                         print_new_line()
  * 
@@ -13346,7 +13346,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
           /* "leakageSimulatorAESFurious.pyx":573
- *                         print("*** NOISE FOR VARIABLE {}".format(variable))
+ *                         print "*** NOISE FOR VARIABLE {}".format(variable)
  *                         print_new_line()
  *                         print_new_line()             # <<<<<<<<<<<<<<
  * 
@@ -13659,7 +13659,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
       __pyx_L14:;
 
       /* "leakageSimulatorAESFurious.pyx":560
- *                 print("Leakage Simulator: Adding Noise to Trace {}".format(trace))
+ *                 print "Leakage Simulator: Adding Noise to Trace {}".format(trace)
  * 
  *             for variable in variables:             # <<<<<<<<<<<<<<
  * 
@@ -14258,7 +14258,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *     def affect_array_with_noise(self, array, float snr, threshold = None, hw_leakage_model = True, category = 1, print_out = False, bad_leak = False, badly_leaking_snr = 0.1, erroneous_badleakage = False):
  *         # cdef DTYPE_t i
  *         if hw_leakage_model:             # <<<<<<<<<<<<<<
- *             print("!!! Removed support for hw_leakage_model in array noise!")
+ *             print "!!! Removed support for hw_leakage_model in array noise!"
  *             raise ValueError
  */
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_hw_leakage_model); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 626, __pyx_L1_error)
@@ -14267,7 +14267,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
     /* "leakageSimulatorAESFurious.pyx":627
  *         # cdef DTYPE_t i
  *         if hw_leakage_model:
- *             print("!!! Removed support for hw_leakage_model in array noise!")             # <<<<<<<<<<<<<<
+ *             print "!!! Removed support for hw_leakage_model in array noise!"             # <<<<<<<<<<<<<<
  *             raise ValueError
  *         if print_out:
  */
@@ -14275,10 +14275,10 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
 
     /* "leakageSimulatorAESFurious.pyx":628
  *         if hw_leakage_model:
- *             print("!!! Removed support for hw_leakage_model in array noise!")
+ *             print "!!! Removed support for hw_leakage_model in array noise!"
  *             raise ValueError             # <<<<<<<<<<<<<<
  *         if print_out:
- *             print("Affecting Array with Noise")
+ *             print "Affecting Array with Noise"
  */
     __Pyx_Raise(__pyx_builtin_ValueError, 0, 0, 0);
     __PYX_ERR(0, 628, __pyx_L1_error)
@@ -14287,16 +14287,16 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *     def affect_array_with_noise(self, array, float snr, threshold = None, hw_leakage_model = True, category = 1, print_out = False, bad_leak = False, badly_leaking_snr = 0.1, erroneous_badleakage = False):
  *         # cdef DTYPE_t i
  *         if hw_leakage_model:             # <<<<<<<<<<<<<<
- *             print("!!! Removed support for hw_leakage_model in array noise!")
+ *             print "!!! Removed support for hw_leakage_model in array noise!"
  *             raise ValueError
  */
   }
 
   /* "leakageSimulatorAESFurious.pyx":629
- *             print("!!! Removed support for hw_leakage_model in array noise!")
+ *             print "!!! Removed support for hw_leakage_model in array noise!"
  *             raise ValueError
  *         if print_out:             # <<<<<<<<<<<<<<
- *             print("Affecting Array with Noise")
+ *             print "Affecting Array with Noise"
  *         return np.array([self.affect_elmo_value_with_noise(i, snr, category = category, threshold = threshold, print_out = print_out, bad_leak = bad_leak, badly_leaking_snr = badly_leaking_snr, erroneous_badleakage=erroneous_badleakage) for i in array])
  */
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_print_out); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 629, __pyx_L1_error)
@@ -14305,24 +14305,24 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
     /* "leakageSimulatorAESFurious.pyx":630
  *             raise ValueError
  *         if print_out:
- *             print("Affecting Array with Noise")             # <<<<<<<<<<<<<<
+ *             print "Affecting Array with Noise"             # <<<<<<<<<<<<<<
  *         return np.array([self.affect_elmo_value_with_noise(i, snr, category = category, threshold = threshold, print_out = print_out, bad_leak = bad_leak, badly_leaking_snr = badly_leaking_snr, erroneous_badleakage=erroneous_badleakage) for i in array])
  * 
  */
     if (__Pyx_PrintOne(0, __pyx_kp_s_Affecting_Array_with_Noise) < 0) __PYX_ERR(0, 630, __pyx_L1_error)
 
     /* "leakageSimulatorAESFurious.pyx":629
- *             print("!!! Removed support for hw_leakage_model in array noise!")
+ *             print "!!! Removed support for hw_leakage_model in array noise!"
  *             raise ValueError
  *         if print_out:             # <<<<<<<<<<<<<<
- *             print("Affecting Array with Noise")
+ *             print "Affecting Array with Noise"
  *         return np.array([self.affect_elmo_value_with_noise(i, snr, category = category, threshold = threshold, print_out = print_out, bad_leak = bad_leak, badly_leaking_snr = badly_leaking_snr, erroneous_badleakage=erroneous_badleakage) for i in array])
  */
   }
 
   /* "leakageSimulatorAESFurious.pyx":631
  *         if print_out:
- *             print("Affecting Array with Noise")
+ *             print "Affecting Array with Noise"
  *         return np.array([self.affect_elmo_value_with_noise(i, snr, category = category, threshold = threshold, print_out = print_out, bad_leak = bad_leak, badly_leaking_snr = badly_leaking_snr, erroneous_badleakage=erroneous_badleakage) for i in array])             # <<<<<<<<<<<<<<
  * 
  *     def affect_hw_value_with_noise(self, int value, float snr, threshold = None, bad_leak = False, badly_leaking_snr = 0.1, erroneous_badleakage = False):
@@ -14920,7 +14920,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *             return temp             # <<<<<<<<<<<<<<
  *         except ValueError:
- *             print("Error with affect_hw_value_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma, threshold))
+ *             print "Error with affect_hw_value_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma, threshold)
  */
       __Pyx_XDECREF(__pyx_r);
       __pyx_t_1 = PyFloat_FromDouble(__pyx_v_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 652, __pyx_L4_error)
@@ -14949,7 +14949,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *             return temp
  *         except ValueError:             # <<<<<<<<<<<<<<
- *             print("Error with affect_hw_value_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma, threshold))
+ *             print "Error with affect_hw_value_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma, threshold)
  *             raise
  */
     __pyx_t_10 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_ValueError);
@@ -14963,7 +14963,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
       /* "leakageSimulatorAESFurious.pyx":654
  *             return temp
  *         except ValueError:
- *             print("Error with affect_hw_value_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma, threshold))             # <<<<<<<<<<<<<<
+ *             print "Error with affect_hw_value_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma, threshold)             # <<<<<<<<<<<<<<
  *             raise
  * 
  */
@@ -15030,7 +15030,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
 
       /* "leakageSimulatorAESFurious.pyx":655
  *         except ValueError:
- *             print("Error with affect_hw_value_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma, threshold))
+ *             print "Error with affect_hw_value_with_noise: value = {}, sigma = {}, threshold = {}".format(value, sigma, threshold)
  *             raise             # <<<<<<<<<<<<<<
  * 
  *     def affect_elmo_value_with_noise(self, float value, float snr, int category, threshold = None, print_out = False, bad_leak = False, badly_leaking_snr = 0.1, average = 1, erroneous_badleakage=False):
@@ -15097,7 +15097,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *     def affect_elmo_value_with_noise(self, float value, float snr, int category, threshold = None, print_out = False, bad_leak = False, badly_leaking_snr = 0.1, average = 1, erroneous_badleakage=False):             # <<<<<<<<<<<<<<
  *         if category > 4:
- *             print("ERROR: Category must be between 0 and 4, cannot be {}!".format(category))
+ *             print "ERROR: Category must be between 0 and 4, cannot be {}!".format(category)
  */
 
 /* Python wrapper */
@@ -15294,7 +15294,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *     def affect_elmo_value_with_noise(self, float value, float snr, int category, threshold = None, print_out = False, bad_leak = False, badly_leaking_snr = 0.1, average = 1, erroneous_badleakage=False):
  *         if category > 4:             # <<<<<<<<<<<<<<
- *             print("ERROR: Category must be between 0 and 4, cannot be {}!".format(category))
+ *             print "ERROR: Category must be between 0 and 4, cannot be {}!".format(category)
  *             raise ValueError
  */
   __pyx_t_1 = ((__pyx_v_category > 4) != 0);
@@ -15303,7 +15303,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
     /* "leakageSimulatorAESFurious.pyx":659
  *     def affect_elmo_value_with_noise(self, float value, float snr, int category, threshold = None, print_out = False, bad_leak = False, badly_leaking_snr = 0.1, average = 1, erroneous_badleakage=False):
  *         if category > 4:
- *             print("ERROR: Category must be between 0 and 4, cannot be {}!".format(category))             # <<<<<<<<<<<<<<
+ *             print "ERROR: Category must be between 0 and 4, cannot be {}!".format(category)             # <<<<<<<<<<<<<<
  *             raise ValueError
  *         cdef float noise, temp, sigma
  */
@@ -15332,7 +15332,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
 
     /* "leakageSimulatorAESFurious.pyx":660
  *         if category > 4:
- *             print("ERROR: Category must be between 0 and 4, cannot be {}!".format(category))
+ *             print "ERROR: Category must be between 0 and 4, cannot be {}!".format(category)
  *             raise ValueError             # <<<<<<<<<<<<<<
  *         cdef float noise, temp, sigma
  *         sigma = get_sigma(snr, hw = False, category = category)
@@ -15344,7 +15344,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *     def affect_elmo_value_with_noise(self, float value, float snr, int category, threshold = None, print_out = False, bad_leak = False, badly_leaking_snr = 0.1, average = 1, erroneous_badleakage=False):
  *         if category > 4:             # <<<<<<<<<<<<<<
- *             print("ERROR: Category must be between 0 and 4, cannot be {}!".format(category))
+ *             print "ERROR: Category must be between 0 and 4, cannot be {}!".format(category)
  *             raise ValueError
  */
   }
@@ -15707,7 +15707,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *                 # print "Now adding noise to a key var\nNoisyBits: {}\nMean: {}\nso {} + {} = {}".format(noisy_bits, noise, value, noise, temp)
  * 
  *             if print_out:             # <<<<<<<<<<<<<<
- *                 print("--------> noise {} + value {} = {}".format(noise, value, temp))
+ *                 print "--------> noise {} + value {} = {}".format(noise, value, temp)
  *                 if bad_leak and erroneous_badleakage:
  */
       __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_print_out); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 685, __pyx_L5_error)
@@ -15716,9 +15716,9 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
         /* "leakageSimulatorAESFurious.pyx":686
  * 
  *             if print_out:
- *                 print("--------> noise {} + value {} = {}".format(noise, value, temp))             # <<<<<<<<<<<<<<
+ *                 print "--------> noise {} + value {} = {}".format(noise, value, temp)             # <<<<<<<<<<<<<<
  *                 if bad_leak and erroneous_badleakage:
- *                     print("--------> ! bad leak so just {}".format(noise))
+ *                     print "--------> ! bad leak so just {}".format(noise)
  */
         __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_noise_value, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 686, __pyx_L5_error)
         __Pyx_GOTREF(__pyx_t_3);
@@ -15787,9 +15787,9 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
 
         /* "leakageSimulatorAESFurious.pyx":687
  *             if print_out:
- *                 print("--------> noise {} + value {} = {}".format(noise, value, temp))
+ *                 print "--------> noise {} + value {} = {}".format(noise, value, temp)
  *                 if bad_leak and erroneous_badleakage:             # <<<<<<<<<<<<<<
- *                     print("--------> ! bad leak so just {}".format(noise))
+ *                     print "--------> ! bad leak so just {}".format(noise)
  * 
  */
         __pyx_t_15 = __Pyx_PyObject_IsTrue(__pyx_v_bad_leak); if (unlikely(__pyx_t_15 < 0)) __PYX_ERR(0, 687, __pyx_L5_error)
@@ -15804,9 +15804,9 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
         if (__pyx_t_1) {
 
           /* "leakageSimulatorAESFurious.pyx":688
- *                 print("--------> noise {} + value {} = {}".format(noise, value, temp))
+ *                 print "--------> noise {} + value {} = {}".format(noise, value, temp)
  *                 if bad_leak and erroneous_badleakage:
- *                     print("--------> ! bad leak so just {}".format(noise))             # <<<<<<<<<<<<<<
+ *                     print "--------> ! bad leak so just {}".format(noise)             # <<<<<<<<<<<<<<
  * 
  * 
  */
@@ -15835,9 +15835,9 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
 
           /* "leakageSimulatorAESFurious.pyx":687
  *             if print_out:
- *                 print("--------> noise {} + value {} = {}".format(noise, value, temp))
+ *                 print "--------> noise {} + value {} = {}".format(noise, value, temp)
  *                 if bad_leak and erroneous_badleakage:             # <<<<<<<<<<<<<<
- *                     print("--------> ! bad leak so just {}".format(noise))
+ *                     print "--------> ! bad leak so just {}".format(noise)
  * 
  */
         }
@@ -15846,7 +15846,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *                 # print "Now adding noise to a key var\nNoisyBits: {}\nMean: {}\nso {} + {} = {}".format(noisy_bits, noise, value, noise, temp)
  * 
  *             if print_out:             # <<<<<<<<<<<<<<
- *                 print("--------> noise {} + value {} = {}".format(noise, value, temp))
+ *                 print "--------> noise {} + value {} = {}".format(noise, value, temp)
  *                 if bad_leak and erroneous_badleakage:
  */
       }
@@ -15932,7 +15932,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  *             return temp
  * 
  *         except ValueError:             # <<<<<<<<<<<<<<
- *             print("Error with affect_elmo_value_with_noise: value = {}, sigma = {}, category = {}, threshold = {}".format(value, sigma, category, threshold))
+ *             print "Error with affect_elmo_value_with_noise: value = {}, sigma = {}, category = {}, threshold = {}".format(value, sigma, category, threshold)
  *             raise
  */
     __pyx_t_14 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_ValueError);
@@ -15946,7 +15946,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
       /* "leakageSimulatorAESFurious.pyx":700
  * 
  *         except ValueError:
- *             print("Error with affect_elmo_value_with_noise: value = {}, sigma = {}, category = {}, threshold = {}".format(value, sigma, category, threshold))             # <<<<<<<<<<<<<<
+ *             print "Error with affect_elmo_value_with_noise: value = {}, sigma = {}, category = {}, threshold = {}".format(value, sigma, category, threshold)             # <<<<<<<<<<<<<<
  *             raise
  * 
  */
@@ -16020,7 +16020,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
 
       /* "leakageSimulatorAESFurious.pyx":701
  *         except ValueError:
- *             print("Error with affect_elmo_value_with_noise: value = {}, sigma = {}, category = {}, threshold = {}".format(value, sigma, category, threshold))
+ *             print "Error with affect_elmo_value_with_noise: value = {}, sigma = {}, category = {}, threshold = {}".format(value, sigma, category, threshold)
  *             raise             # <<<<<<<<<<<<<<
  * 
  *     def get_leakage_dictionary(self):
@@ -16060,7 +16060,7 @@ static PyObject *__pyx_pf_26leakageSimulatorAESFurious_26LeakageSimulatorAESFuri
  * 
  *     def affect_elmo_value_with_noise(self, float value, float snr, int category, threshold = None, print_out = False, bad_leak = False, badly_leaking_snr = 0.1, average = 1, erroneous_badleakage=False):             # <<<<<<<<<<<<<<
  *         if category > 4:
- *             print("ERROR: Category must be between 0 and 4, cannot be {}!".format(category))
+ *             print "ERROR: Category must be between 0 and 4, cannot be {}!".format(category)
  */
 
   /* function exit code */
@@ -19091,9 +19091,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "leakageSimulatorAESFurious.pyx":209
  * 
  *             if print_all:
- *                 print("Key:         {}".format(k[:16]))             # <<<<<<<<<<<<<<
- *                 print("Plaintext:   {}".format(p[:16]))
- *                 print("Ciphertext:  {}".format(p[-16:]))
+ *                 print "Key:         {}".format(k[:16])             # <<<<<<<<<<<<<<
+ *                 print "Plaintext:   {}".format(p[:16])
+ *                 print "Ciphertext:  {}".format(p[-16:])
  */
   __pyx_slice_ = PySlice_New(Py_None, __pyx_int_16, Py_None); if (unlikely(!__pyx_slice_)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice_);
@@ -19101,9 +19101,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 
   /* "leakageSimulatorAESFurious.pyx":210
  *             if print_all:
- *                 print("Key:         {}".format(k[:16]))
- *                 print("Plaintext:   {}".format(p[:16]))             # <<<<<<<<<<<<<<
- *                 print("Ciphertext:  {}".format(p[-16:]))
+ *                 print "Key:         {}".format(k[:16])
+ *                 print "Plaintext:   {}".format(p[:16])             # <<<<<<<<<<<<<<
+ *                 print "Ciphertext:  {}".format(p[-16:])
  *                 print_new_line()
  */
   __pyx_slice_ = PySlice_New(Py_None, __pyx_int_16, Py_None); if (unlikely(!__pyx_slice_)) __PYX_ERR(0, 210, __pyx_L1_error)
@@ -19111,22 +19111,22 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_slice_);
 
   /* "leakageSimulatorAESFurious.pyx":211
- *                 print("Key:         {}".format(k[:16]))
- *                 print("Plaintext:   {}".format(p[:16]))
- *                 print("Ciphertext:  {}".format(p[-16:]))             # <<<<<<<<<<<<<<
+ *                 print "Key:         {}".format(k[:16])
+ *                 print "Plaintext:   {}".format(p[:16])
+ *                 print "Ciphertext:  {}".format(p[-16:])             # <<<<<<<<<<<<<<
  *                 print_new_line()
- *                 print("Key:         {}".format(get_list_as_hex_string(k[:16])))
+ *                 print "Key:         {}".format(get_list_as_hex_string(k[:16]))
  */
   __pyx_slice__2 = PySlice_New(__pyx_int_neg_16, Py_None, Py_None); if (unlikely(!__pyx_slice__2)) __PYX_ERR(0, 211, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__2);
   __Pyx_GIVEREF(__pyx_slice__2);
 
   /* "leakageSimulatorAESFurious.pyx":213
- *                 print("Ciphertext:  {}".format(p[-16:]))
+ *                 print "Ciphertext:  {}".format(p[-16:])
  *                 print_new_line()
- *                 print("Key:         {}".format(get_list_as_hex_string(k[:16])))             # <<<<<<<<<<<<<<
- *                 print("Plaintext:   {}".format(get_list_as_hex_string(p[:16])))
- *                 print("Ciphertext:  {}".format(get_list_as_hex_string(p[-16:])))
+ *                 print "Key:         {}".format(get_list_as_hex_string(k[:16]))             # <<<<<<<<<<<<<<
+ *                 print "Plaintext:   {}".format(get_list_as_hex_string(p[:16]))
+ *                 print "Ciphertext:  {}".format(get_list_as_hex_string(p[-16:]))
  */
   __pyx_slice_ = PySlice_New(Py_None, __pyx_int_16, Py_None); if (unlikely(!__pyx_slice_)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice_);
@@ -19134,9 +19134,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 
   /* "leakageSimulatorAESFurious.pyx":214
  *                 print_new_line()
- *                 print("Key:         {}".format(get_list_as_hex_string(k[:16])))
- *                 print("Plaintext:   {}".format(get_list_as_hex_string(p[:16])))             # <<<<<<<<<<<<<<
- *                 print("Ciphertext:  {}".format(get_list_as_hex_string(p[-16:])))
+ *                 print "Key:         {}".format(get_list_as_hex_string(k[:16]))
+ *                 print "Plaintext:   {}".format(get_list_as_hex_string(p[:16]))             # <<<<<<<<<<<<<<
+ *                 print "Ciphertext:  {}".format(get_list_as_hex_string(p[-16:]))
  *                 # print "expected: {}".format(hexStringToIntArray('3ad77bb40d7a3660a89ecaf32466ef97'))
  */
   __pyx_slice_ = PySlice_New(Py_None, __pyx_int_16, Py_None); if (unlikely(!__pyx_slice_)) __PYX_ERR(0, 214, __pyx_L1_error)
@@ -19144,9 +19144,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_slice_);
 
   /* "leakageSimulatorAESFurious.pyx":215
- *                 print("Key:         {}".format(get_list_as_hex_string(k[:16])))
- *                 print("Plaintext:   {}".format(get_list_as_hex_string(p[:16])))
- *                 print("Ciphertext:  {}".format(get_list_as_hex_string(p[-16:])))             # <<<<<<<<<<<<<<
+ *                 print "Key:         {}".format(get_list_as_hex_string(k[:16]))
+ *                 print "Plaintext:   {}".format(get_list_as_hex_string(p[:16]))
+ *                 print "Ciphertext:  {}".format(get_list_as_hex_string(p[-16:]))             # <<<<<<<<<<<<<<
  *                 # print "expected: {}".format(hexStringToIntArray('3ad77bb40d7a3660a89ecaf32466ef97'))
  * 
  */
@@ -19361,7 +19361,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  *     def fix_plaintext(self, plaintext):             # <<<<<<<<<<<<<<
  *         if len(plaintext) != 16:
- *             print("!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext)))
+ *             print "!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext))
  */
   __pyx_tuple__19 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_plaintext); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
@@ -19499,7 +19499,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  *     def affect_elmo_value_with_noise(self, float value, float snr, int category, threshold = None, print_out = False, bad_leak = False, badly_leaking_snr = 0.1, average = 1, erroneous_badleakage=False):             # <<<<<<<<<<<<<<
  *         if category > 4:
- *             print("ERROR: Category must be between 0 and 4, cannot be {}!".format(category))
+ *             print "ERROR: Category must be between 0 and 4, cannot be {}!".format(category)
  */
   __pyx_tuple__45 = PyTuple_Pack(13, __pyx_n_s_self, __pyx_n_s_value, __pyx_n_s_snr, __pyx_n_s_category, __pyx_n_s_threshold, __pyx_n_s_print_out, __pyx_n_s_bad_leak, __pyx_n_s_badly_leaking_snr, __pyx_n_s_average, __pyx_n_s_erroneous_badleakage, __pyx_n_s_noise, __pyx_n_s_temp, __pyx_n_s_sigma); if (unlikely(!__pyx_tuple__45)) __PYX_ERR(0, 657, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__45);
@@ -20069,7 +20069,7 @@ if (!__Pyx_RefNanny) {
  * 
  *     def fix_plaintext(self, plaintext):             # <<<<<<<<<<<<<<
  *         if len(plaintext) != 16:
- *             print("!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext)))
+ *             print "!!! Plaintext must be 16 bytes, trying to fix {}".format(len(plaintext))
  */
   __pyx_t_2 = __Pyx_CyFunction_NewEx(&__pyx_mdef_26leakageSimulatorAESFurious_26LeakageSimulatorAESFurious_5fix_plaintext, 0, __pyx_n_s_LeakageSimulatorAESFurious_fix_p, NULL, __pyx_n_s_leakageSimulatorAESFurious, __pyx_d, ((PyObject *)__pyx_codeobj__20)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -20270,7 +20270,7 @@ if (!__Pyx_RefNanny) {
  * 
  *     def affect_elmo_value_with_noise(self, float value, float snr, int category, threshold = None, print_out = False, bad_leak = False, badly_leaking_snr = 0.1, average = 1, erroneous_badleakage=False):             # <<<<<<<<<<<<<<
  *         if category > 4:
- *             print("ERROR: Category must be between 0 and 4, cannot be {}!".format(category))
+ *             print "ERROR: Category must be between 0 and 4, cannot be {}!".format(category)
  */
   __pyx_t_8 = __Pyx_CyFunction_NewEx(&__pyx_mdef_26leakageSimulatorAESFurious_26LeakageSimulatorAESFurious_25affect_elmo_value_with_noise, 0, __pyx_n_s_LeakageSimulatorAESFurious_affec_5, NULL, __pyx_n_s_leakageSimulatorAESFurious, __pyx_d, ((PyObject *)__pyx_codeobj__46)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 657, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);

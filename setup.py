@@ -16,7 +16,7 @@ extensions = [Extension("belief_propagation_attack.*",
 
 if USE_CYTHON:
     from Cython.Build import cythonize
-    extensions = cythonize(extensions,compiler_directives={'language_level' : "3"})
+    extensions = cythonize(extensions)
 
 setup(
     ext_modules = extensions
