@@ -4,18 +4,18 @@
 {
     "distutils": {
         "depends": [
-            "/usr/local/lib/python2.7/dist-packages/numpy/core/include/numpy/arrayobject.h", 
-            "/usr/local/lib/python2.7/dist-packages/numpy/core/include/numpy/ufuncobject.h"
-        ], 
+            "/usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/arrayobject.h",
+            "/usr/local/lib/python3.6/dist-packages/numpy/core/include/numpy/ufuncobject.h"
+        ],
         "include_dirs": [
-            "/usr/local/lib/python2.7/dist-packages/numpy/core/include"
-        ], 
-        "language": "c", 
-        "name": "factorGraphAES", 
+            "/usr/local/lib/python3.6/dist-packages/numpy/core/include"
+        ],
+        "language": "c",
+        "name": "factorGraphAES",
         "sources": [
             "belief_propagation_attack/factorGraphAES.pyx"
         ]
-    }, 
+    },
     "module_name": "factorGraphAES"
 }
 END: Cython Metadata */
@@ -900,7 +900,7 @@ typedef struct {
 } __Pyx_BufFmt_Context;
 
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":776
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":776
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -909,7 +909,7 @@ typedef struct {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":777
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":777
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -918,7 +918,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":778
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":778
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -927,7 +927,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":779
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":779
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -936,7 +936,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":783
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":783
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -945,7 +945,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":784
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":784
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -954,7 +954,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":785
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":785
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -963,7 +963,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":786
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":786
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -972,7 +972,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":790
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":790
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -981,7 +981,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":791
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":791
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -990,7 +990,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":800
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":800
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -999,7 +999,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":801
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":801
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t             # <<<<<<<<<<<<<<
@@ -1008,7 +1008,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_long_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":802
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":802
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   long_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -1017,7 +1017,7 @@ typedef npy_longlong __pyx_t_5numpy_long_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":804
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":804
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -1026,7 +1026,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":805
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":805
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t             # <<<<<<<<<<<<<<
@@ -1035,7 +1035,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":806
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":806
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulong_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -1044,7 +1044,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulong_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":808
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":808
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -1053,7 +1053,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":809
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":809
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -1062,7 +1062,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":811
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":811
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -1071,7 +1071,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":812
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":812
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -1080,7 +1080,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":813
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":813
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -1124,7 +1124,7 @@ static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(do
 
 /*--- Type declarations ---*/
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":815
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":815
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -1133,7 +1133,7 @@ static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(do
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":816
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":816
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -1142,7 +1142,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":817
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":817
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -1151,7 +1151,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":819
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":819
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -1602,32 +1602,28 @@ static PyObject *__Pyx_PyDict_GetItem(PyObject *d, PyObject* key);
 #define __Pyx_PyObject_Dict_GetItem(obj, name)  PyObject_GetItem(obj, name)
 #endif
 
-/* PyObjectCallMethod0.proto */
-static PyObject* __Pyx_PyObject_CallMethod0(PyObject* obj, PyObject* method_name);
+/* py_dict_items.proto */
+static CYTHON_INLINE PyObject* __Pyx_PyDict_Items(PyObject* d);
 
-/* RaiseNoneIterError.proto */
-static CYTHON_INLINE void __Pyx_RaiseNoneNotIterableError(void);
-
-/* UnpackTupleError.proto */
-static void __Pyx_UnpackTupleError(PyObject *, Py_ssize_t index);
-
-/* UnpackTuple2.proto */
-#define __Pyx_unpack_tuple2(tuple, value1, value2, is_tuple, has_known_size, decref_tuple)\
-    (likely(is_tuple || PyTuple_Check(tuple)) ?\
-        (likely(has_known_size || PyTuple_GET_SIZE(tuple) == 2) ?\
-            __Pyx_unpack_tuple2_exact(tuple, value1, value2, decref_tuple) :\
-            (__Pyx_UnpackTupleError(tuple, 2), -1)) :\
-        __Pyx_unpack_tuple2_generic(tuple, value1, value2, has_known_size, decref_tuple))
-static CYTHON_INLINE int __Pyx_unpack_tuple2_exact(
-    PyObject* tuple, PyObject** value1, PyObject** value2, int decref_tuple);
-static int __Pyx_unpack_tuple2_generic(
-    PyObject* tuple, PyObject** value1, PyObject** value2, int has_known_size, int decref_tuple);
-
-/* dict_iter.proto */
-static CYTHON_INLINE PyObject* __Pyx_dict_iterator(PyObject* dict, int is_dict, PyObject* method_name,
-                                                   Py_ssize_t* p_orig_length, int* p_is_dict);
-static CYTHON_INLINE int __Pyx_dict_iter_next(PyObject* dict_or_iter, Py_ssize_t orig_length, Py_ssize_t* ppos,
-                                              PyObject** pkey, PyObject** pvalue, PyObject** pitem, int is_dict);
+/* CallUnboundCMethod0.proto */
+static PyObject* __Pyx__CallUnboundCMethod0(__Pyx_CachedCFunction* cfunc, PyObject* self);
+#if CYTHON_COMPILING_IN_CPYTHON
+#define __Pyx_CallUnboundCMethod0(cfunc, self)\
+    (likely((cfunc)->func) ?\
+        (likely((cfunc)->flag == METH_NOARGS) ?  (*((cfunc)->func))(self, NULL) :\
+         (PY_VERSION_HEX >= 0x030600B1 && likely((cfunc)->flag == METH_FASTCALL) ?\
+            (PY_VERSION_HEX >= 0x030700A0 ?\
+                (*(__Pyx_PyCFunctionFast)(void*)(PyCFunction)(cfunc)->func)(self, &__pyx_empty_tuple, 0) :\
+                (*(__Pyx_PyCFunctionFastWithKeywords)(void*)(PyCFunction)(cfunc)->func)(self, &__pyx_empty_tuple, 0, NULL)) :\
+          (PY_VERSION_HEX >= 0x030700A0 && (cfunc)->flag == (METH_FASTCALL | METH_KEYWORDS) ?\
+            (*(__Pyx_PyCFunctionFastWithKeywords)(void*)(PyCFunction)(cfunc)->func)(self, &__pyx_empty_tuple, 0, NULL) :\
+            (likely((cfunc)->flag == (METH_VARARGS | METH_KEYWORDS)) ?  ((*(PyCFunctionWithKeywords)(void*)(PyCFunction)(cfunc)->func)(self, __pyx_empty_tuple, NULL)) :\
+               ((cfunc)->flag == METH_VARARGS ?  (*((cfunc)->func))(self, __pyx_empty_tuple) :\
+               __Pyx__CallUnboundCMethod0(cfunc, self)))))) :\
+        __Pyx__CallUnboundCMethod0(cfunc, self))
+#else
+#define __Pyx_CallUnboundCMethod0(cfunc, self)  __Pyx__CallUnboundCMethod0(cfunc, self)
+#endif
 
 /* SliceObject.proto */
 static CYTHON_INLINE PyObject* __Pyx_PyObject_GetSlice(
@@ -1662,6 +1658,9 @@ static CYTHON_INLINE int __Pyx_set_iter_next(
 
 /* PyIntCompare.proto */
 static CYTHON_INLINE PyObject* __Pyx_PyInt_EqObjC(PyObject *op1, PyObject *op2, long intval, long inplace);
+
+/* RaiseNoneIterError.proto */
+static CYTHON_INLINE void __Pyx_RaiseNoneNotIterableError(void);
 
 /* TypeImport.proto */
 #ifndef __PYX_HAVE_RT_ImportType_proto
@@ -2106,6 +2105,7 @@ static const char __pyx_k_dtype[] = "dtype";
 static const char __pyx_k_edges[] = "edges";
 static const char __pyx_k_f_lst[] = "f_lst";
 static const char __pyx_k_index[] = "index";
+static const char __pyx_k_items[] = "items";
 static const char __pyx_k_lSimF[] = "lSimF";
 static const char __pyx_k_node1[] = "node1";
 static const char __pyx_k_node2[] = "node2";
@@ -2215,7 +2215,6 @@ static const char __pyx_k_epsilon_s[] = "epsilon_s";
 static const char __pyx_k_found_key[] = "found_key";
 static const char __pyx_k_get_edges[] = "get_edges";
 static const char __pyx_k_get_sigma[] = "get_sigma";
-static const char __pyx_k_iteritems[] = "iteritems";
 static const char __pyx_k_key_names[] = "key_names";
 static const char __pyx_k_key_nodes[] = "key_nodes";
 static const char __pyx_k_leaf_name[] = "leaf_name";
@@ -3092,7 +3091,7 @@ static PyObject *__pyx_n_s_is_xor_node;
 static PyObject *__pyx_n_s_is_xor_xtimes_node;
 static PyObject *__pyx_n_s_is_xtimes_node;
 static PyObject *__pyx_n_s_is_zeros_array;
-static PyObject *__pyx_n_s_iteritems;
+static PyObject *__pyx_n_s_items;
 static PyObject *__pyx_n_s_j;
 static PyObject *__pyx_n_s_jitter;
 static PyObject *__pyx_n_s_k;
@@ -3417,6 +3416,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_146print_key_rank(CY
 static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_148get_final_key_rank(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_martin, PyObject *__pyx_v_supplied_dist); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
+static __Pyx_CachedCFunction __pyx_umethod_PyDict_Type_items = {0, &__pyx_n_s_items, 0, 0, 0};
 static __Pyx_CachedCFunction __pyx_umethod_PyList_Type_remove = {0, &__pyx_n_s_remove, 0, 0, 0};
 static PyObject *__pyx_float_0_0;
 static PyObject *__pyx_float_1_0;
@@ -4112,7 +4112,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *         furious_string = ""
  *         round_string = str(rounds_of_aes)             # <<<<<<<<<<<<<<
  *         if my_print:
- *             print "Rounds of AES: {}".format(rounds_of_aes)
+ *             print("Rounds of AES: {}".format(rounds_of_aes))
  */
   __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_v_rounds_of_aes); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -4123,7 +4123,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *         furious_string = ""
  *         round_string = str(rounds_of_aes)
  *         if my_print:             # <<<<<<<<<<<<<<
- *             print "Rounds of AES: {}".format(rounds_of_aes)
+ *             print("Rounds of AES: {}".format(rounds_of_aes))
  *         remove_cycle_string = ""
  */
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_my_print); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 58, __pyx_L1_error)
@@ -4132,7 +4132,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
     /* "factorGraphAES.pyx":59
  *         round_string = str(rounds_of_aes)
  *         if my_print:
- *             print "Rounds of AES: {}".format(rounds_of_aes)             # <<<<<<<<<<<<<<
+ *             print("Rounds of AES: {}".format(rounds_of_aes))             # <<<<<<<<<<<<<<
  *         remove_cycle_string = ""
  *         if furious:
  */
@@ -4160,14 +4160,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *         furious_string = ""
  *         round_string = str(rounds_of_aes)
  *         if my_print:             # <<<<<<<<<<<<<<
- *             print "Rounds of AES: {}".format(rounds_of_aes)
+ *             print("Rounds of AES: {}".format(rounds_of_aes))
  *         remove_cycle_string = ""
  */
   }
 
   /* "factorGraphAES.pyx":60
  *         if my_print:
- *             print "Rounds of AES: {}".format(rounds_of_aes)
+ *             print("Rounds of AES: {}".format(rounds_of_aes))
  *         remove_cycle_string = ""             # <<<<<<<<<<<<<<
  *         if furious:
  *             furious_string = "Furious"
@@ -4176,7 +4176,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
   __pyx_v_remove_cycle_string = __pyx_kp_s_;
 
   /* "factorGraphAES.pyx":61
- *             print "Rounds of AES: {}".format(rounds_of_aes)
+ *             print("Rounds of AES: {}".format(rounds_of_aes))
  *         remove_cycle_string = ""
  *         if furious:             # <<<<<<<<<<<<<<
  *             furious_string = "Furious"
@@ -4196,7 +4196,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
     __Pyx_DECREF_SET(__pyx_v_furious_string, __pyx_n_s_Furious);
 
     /* "factorGraphAES.pyx":61
- *             print "Rounds of AES: {}".format(rounds_of_aes)
+ *             print("Rounds of AES: {}".format(rounds_of_aes))
  *         remove_cycle_string = ""
  *         if furious:             # <<<<<<<<<<<<<<
  *             furious_string = "Furious"
@@ -4237,7 +4237,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *             remove_cycle_string = "RemovedCycle"
  * 
  *         if my_print:             # <<<<<<<<<<<<<<
- *             print "Remove Cycle: {}".format(remove_cycle)
+ *             print("Remove Cycle: {}".format(remove_cycle))
  * 
  */
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_my_print); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 66, __pyx_L1_error)
@@ -4246,7 +4246,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
     /* "factorGraphAES.pyx":67
  * 
  *         if my_print:
- *             print "Remove Cycle: {}".format(remove_cycle)             # <<<<<<<<<<<<<<
+ *             print("Remove Cycle: {}".format(remove_cycle))             # <<<<<<<<<<<<<<
  * 
  *         if FORCE_GRAPH_CREATION:
  */
@@ -4274,13 +4274,13 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *             remove_cycle_string = "RemovedCycle"
  * 
  *         if my_print:             # <<<<<<<<<<<<<<
- *             print "Remove Cycle: {}".format(remove_cycle)
+ *             print("Remove Cycle: {}".format(remove_cycle))
  * 
  */
   }
 
   /* "factorGraphAES.pyx":69
- *             print "Remove Cycle: {}".format(remove_cycle)
+ *             print("Remove Cycle: {}".format(remove_cycle))
  * 
  *         if FORCE_GRAPH_CREATION:             # <<<<<<<<<<<<<<
  *             # TEST: Force Create Graph
@@ -4296,7 +4296,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *         if FORCE_GRAPH_CREATION:
  *             # TEST: Force Create Graph
  *             if my_print:             # <<<<<<<<<<<<<<
- *                 print "Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling)
+ *                 print("Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling))
  *             if furious:
  */
     __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_my_print); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 71, __pyx_L1_error)
@@ -4305,7 +4305,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
       /* "factorGraphAES.pyx":72
  *             # TEST: Force Create Graph
  *             if my_print:
- *                 print "Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling)             # <<<<<<<<<<<<<<
+ *                 print("Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling))             # <<<<<<<<<<<<<<
  *             if furious:
  *                 gexf_graphCreator.create_factor_graph_full_aes_furious(traces, removed_nodes, key_scheduling, rounds_of_aes, remove_cycle)
  */
@@ -4379,14 +4379,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *         if FORCE_GRAPH_CREATION:
  *             # TEST: Force Create Graph
  *             if my_print:             # <<<<<<<<<<<<<<
- *                 print "Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling)
+ *                 print("Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling))
  *             if furious:
  */
     }
 
     /* "factorGraphAES.pyx":73
  *             if my_print:
- *                 print "Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling)
+ *                 print("Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling))
  *             if furious:             # <<<<<<<<<<<<<<
  *                 gexf_graphCreator.create_factor_graph_full_aes_furious(traces, removed_nodes, key_scheduling, rounds_of_aes, remove_cycle)
  *             else:
@@ -4395,7 +4395,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
     if (__pyx_t_1) {
 
       /* "factorGraphAES.pyx":74
- *                 print "Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling)
+ *                 print("Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling))
  *             if furious:
  *                 gexf_graphCreator.create_factor_graph_full_aes_furious(traces, removed_nodes, key_scheduling, rounds_of_aes, remove_cycle)             # <<<<<<<<<<<<<<
  *             else:
@@ -4468,7 +4468,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
 
       /* "factorGraphAES.pyx":73
  *             if my_print:
- *                 print "Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling)
+ *                 print("Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling))
  *             if furious:             # <<<<<<<<<<<<<<
  *                 gexf_graphCreator.create_factor_graph_full_aes_furious(traces, removed_nodes, key_scheduling, rounds_of_aes, remove_cycle)
  *             else:
@@ -4481,7 +4481,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *             else:
  *                 gexf_graphCreator.create_factor_graph_full_aes(traces, removed_nodes, key_scheduling, rounds_of_aes)             # <<<<<<<<<<<<<<
  *             if my_print:
- *                 print "...finished creating!"
+ *                 print("...finished creating!")
  */
     /*else*/ {
       __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_gexf_graphCreator); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 76, __pyx_L1_error)
@@ -4552,7 +4552,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *             else:
  *                 gexf_graphCreator.create_factor_graph_full_aes(traces, removed_nodes, key_scheduling, rounds_of_aes)
  *             if my_print:             # <<<<<<<<<<<<<<
- *                 print "...finished creating!"
+ *                 print("...finished creating!")
  *                 print_new_line()
  */
     __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_my_print); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 77, __pyx_L1_error)
@@ -4561,7 +4561,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
       /* "factorGraphAES.pyx":78
  *                 gexf_graphCreator.create_factor_graph_full_aes(traces, removed_nodes, key_scheduling, rounds_of_aes)
  *             if my_print:
- *                 print "...finished creating!"             # <<<<<<<<<<<<<<
+ *                 print("...finished creating!")             # <<<<<<<<<<<<<<
  *                 print_new_line()
  *         else:
  */
@@ -4569,7 +4569,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
 
       /* "factorGraphAES.pyx":79
  *             if my_print:
- *                 print "...finished creating!"
+ *                 print("...finished creating!")
  *                 print_new_line()             # <<<<<<<<<<<<<<
  *         else:
  *             try:
@@ -4597,13 +4597,13 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *             else:
  *                 gexf_graphCreator.create_factor_graph_full_aes(traces, removed_nodes, key_scheduling, rounds_of_aes)
  *             if my_print:             # <<<<<<<<<<<<<<
- *                 print "...finished creating!"
+ *                 print("...finished creating!")
  *                 print_new_line()
  */
     }
 
     /* "factorGraphAES.pyx":69
- *             print "Remove Cycle: {}".format(remove_cycle)
+ *             print("Remove Cycle: {}".format(remove_cycle))
  * 
  *         if FORCE_GRAPH_CREATION:             # <<<<<<<<<<<<<<
  *             # TEST: Force Create Graph
@@ -4692,7 +4692,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *                                                                                              removed_nodes),
  *                                                                                          key_scheduling))             # <<<<<<<<<<<<<<
  *                 if my_print:
- *                     print "Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling)
+ *                     print("Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling))
  */
         __pyx_t_13 = NULL;
         __pyx_t_7 = 0;
@@ -4786,7 +4786,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *                                                                                              removed_nodes),
  *                                                                                          key_scheduling))
  *                 if my_print:             # <<<<<<<<<<<<<<
- *                     print "Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling)
+ *                     print("Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling))
  *             except IOError:
  */
         __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_my_print); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 89, __pyx_L13_error)
@@ -4795,7 +4795,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
           /* "factorGraphAES.pyx":90
  *                                                                                          key_scheduling))
  *                 if my_print:
- *                     print "Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling)             # <<<<<<<<<<<<<<
+ *                     print("Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling))             # <<<<<<<<<<<<<<
  *             except IOError:
  *                 # TEST: Force Create Graph
  */
@@ -4890,7 +4890,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *                                                                                              removed_nodes),
  *                                                                                          key_scheduling))
  *                 if my_print:             # <<<<<<<<<<<<<<
- *                     print "Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling)
+ *                     print("Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling))
  *             except IOError:
  */
         }
@@ -4919,7 +4919,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
 
       /* "factorGraphAES.pyx":91
  *                 if my_print:
- *                     print "Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling)
+ *                     print("Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling))
  *             except IOError:             # <<<<<<<<<<<<<<
  *                 # TEST: Force Create Graph
  *                 if my_print:
@@ -4936,7 +4936,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *             except IOError:
  *                 # TEST: Force Create Graph
  *                 if my_print:             # <<<<<<<<<<<<<<
- *                     print "- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling)
+ *                     print("- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling))
  *                 if furious:
  */
         __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_my_print); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 93, __pyx_L15_except_error)
@@ -4945,7 +4945,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
           /* "factorGraphAES.pyx":94
  *                 # TEST: Force Create Graph
  *                 if my_print:
- *                     print "- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling)             # <<<<<<<<<<<<<<
+ *                     print("- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling))             # <<<<<<<<<<<<<<
  *                 if furious:
  *                     gexf_graphCreator.create_factor_graph_full_aes_furious(traces, removed_nodes, key_scheduling, rounds_of_aes, remove_cycle)
  */
@@ -5030,14 +5030,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *             except IOError:
  *                 # TEST: Force Create Graph
  *                 if my_print:             # <<<<<<<<<<<<<<
- *                     print "- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling)
+ *                     print("- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling))
  *                 if furious:
  */
         }
 
         /* "factorGraphAES.pyx":95
  *                 if my_print:
- *                     print "- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling)
+ *                     print("- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling))
  *                 if furious:             # <<<<<<<<<<<<<<
  *                     gexf_graphCreator.create_factor_graph_full_aes_furious(traces, removed_nodes, key_scheduling, rounds_of_aes, remove_cycle)
  *                 else:
@@ -5046,7 +5046,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
         if (__pyx_t_1) {
 
           /* "factorGraphAES.pyx":96
- *                     print "- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling)
+ *                     print("- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling))
  *                 if furious:
  *                     gexf_graphCreator.create_factor_graph_full_aes_furious(traces, removed_nodes, key_scheduling, rounds_of_aes, remove_cycle)             # <<<<<<<<<<<<<<
  *                 else:
@@ -5119,7 +5119,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
 
           /* "factorGraphAES.pyx":95
  *                 if my_print:
- *                     print "- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling)
+ *                     print("- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling))
  *                 if furious:             # <<<<<<<<<<<<<<
  *                     gexf_graphCreator.create_factor_graph_full_aes_furious(traces, removed_nodes, key_scheduling, rounds_of_aes, remove_cycle)
  *                 else:
@@ -5132,7 +5132,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *                 else:
  *                     gexf_graphCreator.create_factor_graph_full_aes(traces, removed_nodes, key_scheduling, rounds_of_aes)             # <<<<<<<<<<<<<<
  *                 if my_print:
- *                     print "...finished creating!"
+ *                     print("...finished creating!")
  */
         /*else*/ {
           __Pyx_GetModuleGlobalName(__pyx_t_16, __pyx_n_s_gexf_graphCreator); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 98, __pyx_L15_except_error)
@@ -5203,7 +5203,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *                 else:
  *                     gexf_graphCreator.create_factor_graph_full_aes(traces, removed_nodes, key_scheduling, rounds_of_aes)
  *                 if my_print:             # <<<<<<<<<<<<<<
- *                     print "...finished creating!"
+ *                     print("...finished creating!")
  *                     print_new_line()
  */
         __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_my_print); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 99, __pyx_L15_except_error)
@@ -5212,7 +5212,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
           /* "factorGraphAES.pyx":100
  *                     gexf_graphCreator.create_factor_graph_full_aes(traces, removed_nodes, key_scheduling, rounds_of_aes)
  *                 if my_print:
- *                     print "...finished creating!"             # <<<<<<<<<<<<<<
+ *                     print("...finished creating!")             # <<<<<<<<<<<<<<
  *                     print_new_line()
  * 
  */
@@ -5220,7 +5220,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
 
           /* "factorGraphAES.pyx":101
  *                 if my_print:
- *                     print "...finished creating!"
+ *                     print("...finished creating!")
  *                     print_new_line()             # <<<<<<<<<<<<<<
  * 
  *         self.G = nx.read_gexf(
@@ -5248,7 +5248,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *                 else:
  *                     gexf_graphCreator.create_factor_graph_full_aes(traces, removed_nodes, key_scheduling, rounds_of_aes)
  *                 if my_print:             # <<<<<<<<<<<<<<
- *                     print "...finished creating!"
+ *                     print("...finished creating!")
  *                     print_new_line()
  */
         }
@@ -7688,7 +7688,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_22get_initial_distri
  *             if node in self.variables:
  *                 return get_no_knowledge_array()             # <<<<<<<<<<<<<<
  *             else:
- *                 print "Error: No node named {} in variable list".format(node)
+ *                 print("Error: No node named {} in variable list".format(node))
  */
         __Pyx_XDECREF(__pyx_r);
         __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_n_s_get_no_knowledge_array); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 214, __pyx_L5_except_error)
@@ -7727,7 +7727,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_22get_initial_distri
       /* "factorGraphAES.pyx":216
  *                 return get_no_knowledge_array()
  *             else:
- *                 print "Error: No node named {} in variable list".format(node)             # <<<<<<<<<<<<<<
+ *                 print("Error: No node named {} in variable list".format(node))             # <<<<<<<<<<<<<<
  *                 raise
  * 
  */
@@ -7754,7 +7754,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_22get_initial_distri
 
         /* "factorGraphAES.pyx":217
  *             else:
- *                 print "Error: No node named {} in variable list".format(node)
+ *                 print("Error: No node named {} in variable list".format(node))
  *                 raise             # <<<<<<<<<<<<<<
  * 
  *     # ****************************************************** ALL FUNCTIONS ******************************************************
@@ -9373,8 +9373,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_32check_leakage_deta
  *                 rank = get_rank_from_prob_dist(self.initial_distribution[variable], real_val, worst_case = worst_case)
  * 
  *                 if rank > 128:             # <<<<<<<<<<<<<<
- *                     print "\n* Variable {} is rank {}, details:\n".format(variable, rank)
- *                     print "Real Value: {}\nProbability: {}\nInitial Distribution:\n{}\n".format(real_val, initial_dist[real_val], initial_dist)
+ *                     print("\n* Variable {} is rank {}, details:\n".format(variable, rank))
+ *                     print("Real Value: {}\nProbability: {}\nInitial Distribution:\n{}\n".format(real_val, initial_dist[real_val], initial_dist))
  */
         __pyx_t_7 = PyObject_RichCompare(__pyx_v_rank, __pyx_int_128, Py_GT); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 279, __pyx_L25_error)
         __pyx_t_16 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_16 < 0)) __PYX_ERR(0, 279, __pyx_L25_error)
@@ -9384,8 +9384,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_32check_leakage_deta
           /* "factorGraphAES.pyx":280
  * 
  *                 if rank > 128:
- *                     print "\n* Variable {} is rank {}, details:\n".format(variable, rank)             # <<<<<<<<<<<<<<
- *                     print "Real Value: {}\nProbability: {}\nInitial Distribution:\n{}\n".format(real_val, initial_dist[real_val], initial_dist)
+ *                     print("\n* Variable {} is rank {}, details:\n".format(variable, rank))             # <<<<<<<<<<<<<<
+ *                     print("Real Value: {}\nProbability: {}\nInitial Distribution:\n{}\n".format(real_val, initial_dist[real_val], initial_dist))
  * 
  */
           __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Variable_is_rank_details, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 280, __pyx_L25_error)
@@ -9440,8 +9440,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_32check_leakage_deta
 
           /* "factorGraphAES.pyx":281
  *                 if rank > 128:
- *                     print "\n* Variable {} is rank {}, details:\n".format(variable, rank)
- *                     print "Real Value: {}\nProbability: {}\nInitial Distribution:\n{}\n".format(real_val, initial_dist[real_val], initial_dist)             # <<<<<<<<<<<<<<
+ *                     print("\n* Variable {} is rank {}, details:\n".format(variable, rank))
+ *                     print("Real Value: {}\nProbability: {}\nInitial Distribution:\n{}\n".format(real_val, initial_dist[real_val], initial_dist))             # <<<<<<<<<<<<<<
  * 
  *                 # print "Variable {:8}: Rank {:3}".format(variable, rank)
  */
@@ -9506,8 +9506,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_32check_leakage_deta
  *                 rank = get_rank_from_prob_dist(self.initial_distribution[variable], real_val, worst_case = worst_case)
  * 
  *                 if rank > 128:             # <<<<<<<<<<<<<<
- *                     print "\n* Variable {} is rank {}, details:\n".format(variable, rank)
- *                     print "Real Value: {}\nProbability: {}\nInitial Distribution:\n{}\n".format(real_val, initial_dist[real_val], initial_dist)
+ *                     print("\n* Variable {} is rank {}, details:\n".format(variable, rank))
+ *                     print("Real Value: {}\nProbability: {}\nInitial Distribution:\n{}\n".format(real_val, initial_dist[real_val], initial_dist))
  */
         }
 
@@ -9628,7 +9628,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_32check_leakage_deta
   /* "factorGraphAES.pyx":294
  *                 pass
  * 
- *         print "*** Checking Leakage Details from Initial Distribution (Worst Case {}) ***\n".format(worst_case)             # <<<<<<<<<<<<<<
+ *         print("*** Checking Leakage Details from Initial Distribution (Worst Case {}) ***\n".format(worst_case))             # <<<<<<<<<<<<<<
  *         for i in range (256):
  *             if len(rank_list[i]) >= 1:
  */
@@ -9654,10 +9654,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_32check_leakage_deta
 
   /* "factorGraphAES.pyx":295
  * 
- *         print "*** Checking Leakage Details from Initial Distribution (Worst Case {}) ***\n".format(worst_case)
+ *         print("*** Checking Leakage Details from Initial Distribution (Worst Case {}) ***\n".format(worst_case))
  *         for i in range (256):             # <<<<<<<<<<<<<<
  *             if len(rank_list[i]) >= 1:
- *                 print "Rank {:3} Nodes:\n{}\n".format(i+1, rank_list[i])
+ *                 print("Rank {:3} Nodes:\n{}\n".format(i+1, rank_list[i]))
  */
   for (__pyx_t_5 = 0; __pyx_t_5 < 0x100; __pyx_t_5+=1) {
     __pyx_t_2 = __Pyx_PyInt_From_long(__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 295, __pyx_L1_error)
@@ -9666,11 +9666,11 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_32check_leakage_deta
     __pyx_t_2 = 0;
 
     /* "factorGraphAES.pyx":296
- *         print "*** Checking Leakage Details from Initial Distribution (Worst Case {}) ***\n".format(worst_case)
+ *         print("*** Checking Leakage Details from Initial Distribution (Worst Case {}) ***\n".format(worst_case))
  *         for i in range (256):
  *             if len(rank_list[i]) >= 1:             # <<<<<<<<<<<<<<
- *                 print "Rank {:3} Nodes:\n{}\n".format(i+1, rank_list[i])
- *         print "*** Stats ***"
+ *                 print("Rank {:3} Nodes:\n{}\n".format(i+1, rank_list[i]))
+ *         print("*** Stats ***")
  */
     __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_rank_list, __pyx_v_i); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 296, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
@@ -9682,8 +9682,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_32check_leakage_deta
       /* "factorGraphAES.pyx":297
  *         for i in range (256):
  *             if len(rank_list[i]) >= 1:
- *                 print "Rank {:3} Nodes:\n{}\n".format(i+1, rank_list[i])             # <<<<<<<<<<<<<<
- *         print "*** Stats ***"
+ *                 print("Rank {:3} Nodes:\n{}\n".format(i+1, rank_list[i]))             # <<<<<<<<<<<<<<
+ *         print("*** Stats ***")
  *         print_statistics(all_ranks)
  */
       __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Rank_3_Nodes, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 297, __pyx_L1_error)
@@ -9745,27 +9745,27 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_32check_leakage_deta
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
       /* "factorGraphAES.pyx":296
- *         print "*** Checking Leakage Details from Initial Distribution (Worst Case {}) ***\n".format(worst_case)
+ *         print("*** Checking Leakage Details from Initial Distribution (Worst Case {}) ***\n".format(worst_case))
  *         for i in range (256):
  *             if len(rank_list[i]) >= 1:             # <<<<<<<<<<<<<<
- *                 print "Rank {:3} Nodes:\n{}\n".format(i+1, rank_list[i])
- *         print "*** Stats ***"
+ *                 print("Rank {:3} Nodes:\n{}\n".format(i+1, rank_list[i]))
+ *         print("*** Stats ***")
  */
     }
   }
 
   /* "factorGraphAES.pyx":298
  *             if len(rank_list[i]) >= 1:
- *                 print "Rank {:3} Nodes:\n{}\n".format(i+1, rank_list[i])
- *         print "*** Stats ***"             # <<<<<<<<<<<<<<
+ *                 print("Rank {:3} Nodes:\n{}\n".format(i+1, rank_list[i]))
+ *         print("*** Stats ***")             # <<<<<<<<<<<<<<
  *         print_statistics(all_ranks)
  * 
  */
   if (__Pyx_PrintOne(0, __pyx_kp_s_Stats) < 0) __PYX_ERR(0, 298, __pyx_L1_error)
 
   /* "factorGraphAES.pyx":299
- *                 print "Rank {:3} Nodes:\n{}\n".format(i+1, rank_list[i])
- *         print "*** Stats ***"
+ *                 print("Rank {:3} Nodes:\n{}\n".format(i+1, rank_list[i]))
+ *         print("*** Stats ***")
  *         print_statistics(all_ranks)             # <<<<<<<<<<<<<<
  * 
  *     def compute_averaged_key_values(self, averaged_traces = 1, specific_trace = None, no_leak = None,
@@ -10232,7 +10232,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
  *         else:
  *             matched_fixed_values = get_variables_that_match(self.variables, fixed_value[0])             # <<<<<<<<<<<<<<
  *             if not self.no_print:
- *                 print "::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values)
+ *                 print("::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values))
  */
   /*else*/ {
     __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_get_variables_that_match); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 313, __pyx_L1_error)
@@ -10297,7 +10297,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
  *         else:
  *             matched_fixed_values = get_variables_that_match(self.variables, fixed_value[0])
  *             if not self.no_print:             # <<<<<<<<<<<<<<
- *                 print "::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values)
+ *                 print("::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values))
  * 
  */
     __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_no_print); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 314, __pyx_L1_error)
@@ -10310,7 +10310,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
       /* "factorGraphAES.pyx":315
  *             matched_fixed_values = get_variables_that_match(self.variables, fixed_value[0])
  *             if not self.no_print:
- *                 print "::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values)             # <<<<<<<<<<<<<<
+ *                 print("::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values))             # <<<<<<<<<<<<<<
  * 
  *         averaged_power_values = [0] * len(self.key_nodes)
  */
@@ -10372,7 +10372,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
  *         else:
  *             matched_fixed_values = get_variables_that_match(self.variables, fixed_value[0])
  *             if not self.no_print:             # <<<<<<<<<<<<<<
- *                 print "::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values)
+ *                 print("::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values))
  * 
  */
     }
@@ -10380,7 +10380,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
   __pyx_L4:;
 
   /* "factorGraphAES.pyx":317
- *                 print "::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values)
+ *                 print("::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values))
  * 
  *         averaged_power_values = [0] * len(self.key_nodes)             # <<<<<<<<<<<<<<
  * 
@@ -10470,7 +10470,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
     /* "factorGraphAES.pyx":325
  * 
  *             # leakage = leakage_simulator.simulate(snr = snr, traces = self.traces, offset = 0, read_plaintexts = 0, random_plaintexts = 1)
- *             print "* In Factor Graph, badly leaking traces {} (erroneous {})".format(self.badly_leaking_traces, self.erroneous_badleakage)             # <<<<<<<<<<<<<<
+ *             print("* In Factor Graph, badly leaking traces {} (erroneous {})".format(self.badly_leaking_traces, self.erroneous_badleakage))             # <<<<<<<<<<<<<<
  *             leakage_simulator.simulate(snr = snr, traces = averaged_traces, offset = offset, read_plaintexts = 0, random_plaintexts = 1, badly_leaking_nodes = self.badly_leaking_nodes, badly_leaking_traces = self.badly_leaking_traces, badly_leaking_snr = self.badly_leaking_snr, no_noise_nodes = self.no_noise_nodes, threshold = None, local_leakage = 0, print_all = 0, affect_with_noise = not no_noise, hw_leakage_model = False, real_values = False, rounds_of_aes = self.rounds_of_aes,
  *             erroneous_badleakage = self.erroneous_badleakage)
  */
@@ -10534,7 +10534,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
 
     /* "factorGraphAES.pyx":326
  *             # leakage = leakage_simulator.simulate(snr = snr, traces = self.traces, offset = 0, read_plaintexts = 0, random_plaintexts = 1)
- *             print "* In Factor Graph, badly leaking traces {} (erroneous {})".format(self.badly_leaking_traces, self.erroneous_badleakage)
+ *             print("* In Factor Graph, badly leaking traces {} (erroneous {})".format(self.badly_leaking_traces, self.erroneous_badleakage))
  *             leakage_simulator.simulate(snr = snr, traces = averaged_traces, offset = offset, read_plaintexts = 0, random_plaintexts = 1, badly_leaking_nodes = self.badly_leaking_nodes, badly_leaking_traces = self.badly_leaking_traces, badly_leaking_snr = self.badly_leaking_snr, no_noise_nodes = self.no_noise_nodes, threshold = None, local_leakage = 0, print_all = 0, affect_with_noise = not no_noise, hw_leakage_model = False, real_values = False, rounds_of_aes = self.rounds_of_aes,             # <<<<<<<<<<<<<<
  *             erroneous_badleakage = self.erroneous_badleakage)
  * 
@@ -10580,7 +10580,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
     /* "factorGraphAES.pyx":327
- *             print "* In Factor Graph, badly leaking traces {} (erroneous {})".format(self.badly_leaking_traces, self.erroneous_badleakage)
+ *             print("* In Factor Graph, badly leaking traces {} (erroneous {})".format(self.badly_leaking_traces, self.erroneous_badleakage))
  *             leakage_simulator.simulate(snr = snr, traces = averaged_traces, offset = offset, read_plaintexts = 0, random_plaintexts = 1, badly_leaking_nodes = self.badly_leaking_nodes, badly_leaking_traces = self.badly_leaking_traces, badly_leaking_snr = self.badly_leaking_snr, no_noise_nodes = self.no_noise_nodes, threshold = None, local_leakage = 0, print_all = 0, affect_with_noise = not no_noise, hw_leakage_model = False, real_values = False, rounds_of_aes = self.rounds_of_aes,
  *             erroneous_badleakage = self.erroneous_badleakage)             # <<<<<<<<<<<<<<
  * 
@@ -10593,7 +10593,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
 
     /* "factorGraphAES.pyx":326
  *             # leakage = leakage_simulator.simulate(snr = snr, traces = self.traces, offset = 0, read_plaintexts = 0, random_plaintexts = 1)
- *             print "* In Factor Graph, badly leaking traces {} (erroneous {})".format(self.badly_leaking_traces, self.erroneous_badleakage)
+ *             print("* In Factor Graph, badly leaking traces {} (erroneous {})".format(self.badly_leaking_traces, self.erroneous_badleakage))
  *             leakage_simulator.simulate(snr = snr, traces = averaged_traces, offset = offset, read_plaintexts = 0, random_plaintexts = 1, badly_leaking_nodes = self.badly_leaking_nodes, badly_leaking_traces = self.badly_leaking_traces, badly_leaking_snr = self.badly_leaking_snr, no_noise_nodes = self.no_noise_nodes, threshold = None, local_leakage = 0, print_all = 0, affect_with_noise = not no_noise, hw_leakage_model = False, real_values = False, rounds_of_aes = self.rounds_of_aes,             # <<<<<<<<<<<<<<
  *             erroneous_badleakage = self.erroneous_badleakage)
  * 
@@ -10916,8 +10916,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
  *                     averaged_power_values[i] = powervalue
  *                     # print "In COMPUTE_AVERAGE: Var {}, PowerValue {}".format(var, powervalue)
  *                 except KeyError:             # <<<<<<<<<<<<<<
- *                     print "! Key Error for Variable {}".format(var)
- *                     print leakage[var_name][var_trace][var_number-1]
+ *                     print("! Key Error for Variable {}".format(var))
+ *                     print(leakage[var_name][var_trace][var_number-1])
  */
         __pyx_t_7 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
         if (__pyx_t_7) {
@@ -10930,8 +10930,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
           /* "factorGraphAES.pyx":346
  *                     # print "In COMPUTE_AVERAGE: Var {}, PowerValue {}".format(var, powervalue)
  *                 except KeyError:
- *                     print "! Key Error for Variable {}".format(var)             # <<<<<<<<<<<<<<
- *                     print leakage[var_name][var_trace][var_number-1]
+ *                     print("! Key Error for Variable {}".format(var))             # <<<<<<<<<<<<<<
+ *                     print(leakage[var_name][var_trace][var_number-1])
  *                     raise
  */
           __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Key_Error_for_Variable, __pyx_n_s_format); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 346, __pyx_L13_except_error)
@@ -10956,8 +10956,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
 
           /* "factorGraphAES.pyx":347
  *                 except KeyError:
- *                     print "! Key Error for Variable {}".format(var)
- *                     print leakage[var_name][var_trace][var_number-1]             # <<<<<<<<<<<<<<
+ *                     print("! Key Error for Variable {}".format(var))
+ *                     print(leakage[var_name][var_trace][var_number-1])             # <<<<<<<<<<<<<<
  *                     raise
  *         else:
  */
@@ -10976,8 +10976,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
           __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
 
           /* "factorGraphAES.pyx":348
- *                     print "! Key Error for Variable {}".format(var)
- *                     print leakage[var_name][var_trace][var_number-1]
+ *                     print("! Key Error for Variable {}".format(var))
+ *                     print(leakage[var_name][var_trace][var_number-1])
  *                     raise             # <<<<<<<<<<<<<<
  *         else:
  * 
@@ -11252,7 +11252,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
  *                     averaged_power_values[i] = powervalue
  *                     # print "In COMPUTE_AVERAGE: Var {}, PowerValue {}".format(var, powervalue)
  *                 except KeyError:             # <<<<<<<<<<<<<<
- *                     print "! Key Error for Variable {}".format(var)
+ *                     print("! Key Error for Variable {}".format(var))
  *                     raise
  */
         __pyx_t_7 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
@@ -11266,7 +11266,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
           /* "factorGraphAES.pyx":360
  *                     # print "In COMPUTE_AVERAGE: Var {}, PowerValue {}".format(var, powervalue)
  *                 except KeyError:
- *                     print "! Key Error for Variable {}".format(var)             # <<<<<<<<<<<<<<
+ *                     print("! Key Error for Variable {}".format(var))             # <<<<<<<<<<<<<<
  *                     raise
  * 
  */
@@ -11292,7 +11292,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_34compute_averaged_k
 
           /* "factorGraphAES.pyx":361
  *                 except KeyError:
- *                     print "! Key Error for Variable {}".format(var)
+ *                     print("! Key Error for Variable {}".format(var))
  *                     raise             # <<<<<<<<<<<<<<
  * 
  *         self.averaged_key_values = averaged_power_values
@@ -11795,7 +11795,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
  *         else:
  *             matched_fixed_values = get_variables_that_match(self.variables, fixed_value[0])             # <<<<<<<<<<<<<<
  *             if not self.no_print:
- *                 print "::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values)
+ *                 print("::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values))
  */
   /*else*/ {
     __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_get_variables_that_match); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 382, __pyx_L1_error)
@@ -11860,7 +11860,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
  *         else:
  *             matched_fixed_values = get_variables_that_match(self.variables, fixed_value[0])
  *             if not self.no_print:             # <<<<<<<<<<<<<<
- *                 print "::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values)
+ *                 print("::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values))
  * 
  */
     __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_no_print); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 383, __pyx_L1_error)
@@ -11873,7 +11873,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
       /* "factorGraphAES.pyx":384
  *             matched_fixed_values = get_variables_that_match(self.variables, fixed_value[0])
  *             if not self.no_print:
- *                 print "::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values)             # <<<<<<<<<<<<<<
+ *                 print("::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values))             # <<<<<<<<<<<<<<
  * 
  *         # SIMULATED DATA
  */
@@ -11935,7 +11935,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
  *         else:
  *             matched_fixed_values = get_variables_that_match(self.variables, fixed_value[0])
  *             if not self.no_print:             # <<<<<<<<<<<<<<
- *                 print "::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values)
+ *                 print("::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values))
  * 
  */
     }
@@ -12628,7 +12628,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
  *                             else:
  *                                 self.set_initial_distribution(var, get_hamming_weight_array(powervalue, hw_sigma))             # <<<<<<<<<<<<<<
  *                     except KeyError:
- *                         print "! Key Error for Variable {}".format(var)
+ *                         print("! Key Error for Variable {}".format(var))
  */
               /*else*/ {
                 __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_set_initial_distribution); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 431, __pyx_L17_error)
@@ -12757,8 +12757,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
  *                             else:
  *                                 self.set_initial_distribution(var, get_hamming_weight_array(powervalue, hw_sigma))
  *                     except KeyError:             # <<<<<<<<<<<<<<
- *                         print "! Key Error for Variable {}".format(var)
- *                         print leakage[var_name][var_trace][var_number-1]
+ *                         print("! Key Error for Variable {}".format(var))
+ *                         print(leakage[var_name][var_trace][var_number-1])
  */
           __pyx_t_7 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
           if (__pyx_t_7) {
@@ -12771,8 +12771,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
             /* "factorGraphAES.pyx":433
  *                                 self.set_initial_distribution(var, get_hamming_weight_array(powervalue, hw_sigma))
  *                     except KeyError:
- *                         print "! Key Error for Variable {}".format(var)             # <<<<<<<<<<<<<<
- *                         print leakage[var_name][var_trace][var_number-1]
+ *                         print("! Key Error for Variable {}".format(var))             # <<<<<<<<<<<<<<
+ *                         print(leakage[var_name][var_trace][var_number-1])
  *                         raise
  */
             __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Key_Error_for_Variable, __pyx_n_s_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 433, __pyx_L19_except_error)
@@ -12797,8 +12797,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
 
             /* "factorGraphAES.pyx":434
  *                     except KeyError:
- *                         print "! Key Error for Variable {}".format(var)
- *                         print leakage[var_name][var_trace][var_number-1]             # <<<<<<<<<<<<<<
+ *                         print("! Key Error for Variable {}".format(var))
+ *                         print(leakage[var_name][var_trace][var_number-1])             # <<<<<<<<<<<<<<
  *                         raise
  *                 else:
  */
@@ -12817,8 +12817,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
             /* "factorGraphAES.pyx":435
- *                         print "! Key Error for Variable {}".format(var)
- *                         print leakage[var_name][var_trace][var_number-1]
+ *                         print("! Key Error for Variable {}".format(var))
+ *                         print(leakage[var_name][var_trace][var_number-1])
  *                         raise             # <<<<<<<<<<<<<<
  *                 else:
  *                     # Check if in dictionary
@@ -13039,7 +13039,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
  *                                 powervalue = leakage[var_name][var_trace][var_number-1]
  *                             # print "...done! Value = {}".format(powervalue)
  *                         except IndexError:             # <<<<<<<<<<<<<<
- *                             print "! ERROR: Power Value not Found! leakage[{}][{}][{}]\n".format(var_name, var_trace, var_number-1)
+ *                             print("! ERROR: Power Value not Found! leakage[{}][{}][{}]\n".format(var_name, var_trace, var_number-1))
  *                             raise
  */
               __pyx_t_7 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_IndexError);
@@ -13053,7 +13053,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
                 /* "factorGraphAES.pyx":451
  *                             # print "...done! Value = {}".format(powervalue)
  *                         except IndexError:
- *                             print "! ERROR: Power Value not Found! leakage[{}][{}][{}]\n".format(var_name, var_trace, var_number-1)             # <<<<<<<<<<<<<<
+ *                             print("! ERROR: Power Value not Found! leakage[{}][{}][{}]\n".format(var_name, var_trace, var_number-1))             # <<<<<<<<<<<<<<
  *                             raise
  *                         # print "In FactorGraphAES, Power Value for {}{} in trace {}: {}".format(var_name, var_number, var_trace, powervalue)
  */
@@ -13116,7 +13116,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
 
                 /* "factorGraphAES.pyx":452
  *                         except IndexError:
- *                             print "! ERROR: Power Value not Found! leakage[{}][{}][{}]\n".format(var_name, var_trace, var_number-1)
+ *                             print("! ERROR: Power Value not Found! leakage[{}][{}][{}]\n".format(var_name, var_trace, var_number-1))
  *                             raise             # <<<<<<<<<<<<<<
  *                         # print "In FactorGraphAES, Power Value for {}{} in trace {}: {}".format(var_name, var_number, var_trace, powervalue)
  *                         # Check if p1 - p16 or rc
@@ -13385,7 +13385,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
  *                             else:
  *                                 self.set_initial_distribution(var, get_hamming_weight_array(powervalue, hw_sigma))             # <<<<<<<<<<<<<<
  *                     except KeyError:
- *                         print "KeyError: No record for {}[{}] in leakage ({})".format(var_name, var_number-1, var)
+ *                         print("KeyError: No record for {}[{}] in leakage ({})".format(var_name, var_number-1, var))
  */
               /*else*/ {
                 __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_set_initial_distribution); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 465, __pyx_L29_error)
@@ -13516,7 +13516,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
  *                             else:
  *                                 self.set_initial_distribution(var, get_hamming_weight_array(powervalue, hw_sigma))
  *                     except KeyError:             # <<<<<<<<<<<<<<
- *                         print "KeyError: No record for {}[{}] in leakage ({})".format(var_name, var_number-1, var)
+ *                         print("KeyError: No record for {}[{}] in leakage ({})".format(var_name, var_number-1, var))
  *                         raise
  */
           __pyx_t_7 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
@@ -13530,7 +13530,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
             /* "factorGraphAES.pyx":467
  *                                 self.set_initial_distribution(var, get_hamming_weight_array(powervalue, hw_sigma))
  *                     except KeyError:
- *                         print "KeyError: No record for {}[{}] in leakage ({})".format(var_name, var_number-1, var)             # <<<<<<<<<<<<<<
+ *                         print("KeyError: No record for {}[{}] in leakage ({})".format(var_name, var_number-1, var))             # <<<<<<<<<<<<<<
  *                         raise
  * 
  */
@@ -13593,7 +13593,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_36set_all_initial_di
 
             /* "factorGraphAES.pyx":468
  *                     except KeyError:
- *                         print "KeyError: No record for {}[{}] in leakage ({})".format(var_name, var_number-1, var)
+ *                         print("KeyError: No record for {}[{}] in leakage ({})".format(var_name, var_number-1, var))
  *                         raise             # <<<<<<<<<<<<<<
  * 
  *         else:
@@ -14658,7 +14658,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_38set_key_distributi
  * 
  *     def fabricate_key_scheduling_leakage(self):             # <<<<<<<<<<<<<<
  *         if 'k017-K' in self.variables:
- *             print "Fabricating now!"
+ *             print("Fabricating now!")
  */
 
 /* Python wrapper */
@@ -14689,7 +14689,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_40fabricate_key_sche
  * 
  *     def fabricate_key_scheduling_leakage(self):
  *         if 'k017-K' in self.variables:             # <<<<<<<<<<<<<<
- *             print "Fabricating now!"
+ *             print("Fabricating now!")
  *         else:
  */
   __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_variables); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 502, __pyx_L1_error)
@@ -14702,9 +14702,9 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_40fabricate_key_sche
     /* "factorGraphAES.pyx":503
  *     def fabricate_key_scheduling_leakage(self):
  *         if 'k017-K' in self.variables:
- *             print "Fabricating now!"             # <<<<<<<<<<<<<<
+ *             print("Fabricating now!")             # <<<<<<<<<<<<<<
  *         else:
- *             print "No need to fabricate"
+ *             print("No need to fabricate")
  */
     if (__Pyx_PrintOne(0, __pyx_kp_s_Fabricating_now) < 0) __PYX_ERR(0, 503, __pyx_L1_error)
 
@@ -14712,16 +14712,16 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_40fabricate_key_sche
  * 
  *     def fabricate_key_scheduling_leakage(self):
  *         if 'k017-K' in self.variables:             # <<<<<<<<<<<<<<
- *             print "Fabricating now!"
+ *             print("Fabricating now!")
  *         else:
  */
     goto __pyx_L3;
   }
 
   /* "factorGraphAES.pyx":505
- *             print "Fabricating now!"
+ *             print("Fabricating now!")
  *         else:
- *             print "No need to fabricate"             # <<<<<<<<<<<<<<
+ *             print("No need to fabricate")             # <<<<<<<<<<<<<<
  *         sys.exit(1)
  * 
  */
@@ -14732,7 +14732,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_40fabricate_key_sche
 
   /* "factorGraphAES.pyx":506
  *         else:
- *             print "No need to fabricate"
+ *             print("No need to fabricate")
  *         sys.exit(1)             # <<<<<<<<<<<<<<
  * 
  *     def get_neighbours(self, name):
@@ -14764,7 +14764,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_40fabricate_key_sche
  * 
  *     def fabricate_key_scheduling_leakage(self):             # <<<<<<<<<<<<<<
  *         if 'k017-K' in self.variables:
- *             print "Fabricating now!"
+ *             print("Fabricating now!")
  */
 
   /* function exit code */
@@ -15678,7 +15678,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_50get_outgoing_messa
  * 
  *     def check_factor_nodes(self, print_all = False, simple_xor = True):             # <<<<<<<<<<<<<<
  *         print_length = 20
- *         print "*** Checking Factor Nodes ***"
+ *         print("*** Checking Factor Nodes ***")
  */
 
 /* Python wrapper */
@@ -15786,14 +15786,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_52check_factor_nodes
   PyObject *__pyx_t_13 = NULL;
   PyObject *__pyx_t_14 = NULL;
   PyObject *__pyx_t_15 = NULL;
-  int __pyx_t_16;
+  PyObject *(*__pyx_t_16)(PyObject *);
   __Pyx_RefNannySetupContext("check_factor_nodes", 0);
 
   /* "factorGraphAES.pyx":531
  * 
  *     def check_factor_nodes(self, print_all = False, simple_xor = True):
  *         print_length = 20             # <<<<<<<<<<<<<<
- *         print "*** Checking Factor Nodes ***"
+ *         print("*** Checking Factor Nodes ***")
  *         print_new_line()
  */
   __pyx_v_print_length = 20;
@@ -15801,7 +15801,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_52check_factor_nodes
   /* "factorGraphAES.pyx":532
  *     def check_factor_nodes(self, print_all = False, simple_xor = True):
  *         print_length = 20
- *         print "*** Checking Factor Nodes ***"             # <<<<<<<<<<<<<<
+ *         print("*** Checking Factor Nodes ***")             # <<<<<<<<<<<<<<
  *         print_new_line()
  *         factor_counter = dict()
  */
@@ -15809,7 +15809,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_52check_factor_nodes
 
   /* "factorGraphAES.pyx":533
  *         print_length = 20
- *         print "*** Checking Factor Nodes ***"
+ *         print("*** Checking Factor Nodes ***")
  *         print_new_line()             # <<<<<<<<<<<<<<
  *         factor_counter = dict()
  *         edge_counter = 0
@@ -15834,7 +15834,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_52check_factor_nodes
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "factorGraphAES.pyx":534
- *         print "*** Checking Factor Nodes ***"
+ *         print("*** Checking Factor Nodes ***")
  *         print_new_line()
  *         factor_counter = dict()             # <<<<<<<<<<<<<<
  *         edge_counter = 0
@@ -16338,7 +16338,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_52check_factor_nodes
  *             else:
  *                 print_length_append("{}:".format(f), "*** neighbours: {}".format(neighbours), print_length)             # <<<<<<<<<<<<<<
  * 
- *         print "{:20s}: {:17}".format("Total Number of Factors", len(self.factors))
+ *         print("{:20s}: {:17}".format("Total Number of Factors", len(self.factors)))
  */
     /*else*/ {
       __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_print_length_append); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 556, __pyx_L1_error)
@@ -16450,9 +16450,9 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_52check_factor_nodes
   /* "factorGraphAES.pyx":558
  *                 print_length_append("{}:".format(f), "*** neighbours: {}".format(neighbours), print_length)
  * 
- *         print "{:20s}: {:17}".format("Total Number of Factors", len(self.factors))             # <<<<<<<<<<<<<<
- *         for key, val in factor_counter.iteritems():
- *             print "{:20s}: {:20}".format(key, val)
+ *         print("{:20s}: {:17}".format("Total Number of Factors", len(self.factors)))             # <<<<<<<<<<<<<<
+ *         for key, val in factor_counter.items():
+ *             print("{:20s}: {:20}".format(key, val))
  */
   __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_20s_17, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 558, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -16514,180 +16514,264 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_52check_factor_nodes
 
   /* "factorGraphAES.pyx":559
  * 
- *         print "{:20s}: {:17}".format("Total Number of Factors", len(self.factors))
- *         for key, val in factor_counter.iteritems():             # <<<<<<<<<<<<<<
- *             print "{:20s}: {:20}".format(key, val)
- *         print "Counted Edges: {}".format(edge_counter)
+ *         print("{:20s}: {:17}".format("Total Number of Factors", len(self.factors)))
+ *         for key, val in factor_counter.items():             # <<<<<<<<<<<<<<
+ *             print("{:20s}: {:20}".format(key, val))
+ *         print("Counted Edges: {}".format(edge_counter))
  */
-  __pyx_t_4 = 0;
-  __pyx_t_3 = __Pyx_dict_iterator(__pyx_v_factor_counter, 1, __pyx_n_s_iteritems, (&__pyx_t_11), (&__pyx_t_9)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 559, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_XDECREF(__pyx_t_2);
-  __pyx_t_2 = __pyx_t_3;
-  __pyx_t_3 = 0;
-  while (1) {
-    __pyx_t_16 = __Pyx_dict_iter_next(__pyx_t_2, __pyx_t_11, &__pyx_t_4, &__pyx_t_3, &__pyx_t_1, NULL, __pyx_t_9);
-    if (unlikely(__pyx_t_16 == 0)) break;
-    if (unlikely(__pyx_t_16 == -1)) __PYX_ERR(0, 559, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_Items(__pyx_v_factor_counter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 559, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
+    __pyx_t_3 = __pyx_t_2; __Pyx_INCREF(__pyx_t_3); __pyx_t_4 = 0;
+    __pyx_t_5 = NULL;
+  } else {
+    __pyx_t_4 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 559, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_3);
-    __pyx_t_3 = 0;
-    __Pyx_XDECREF_SET(__pyx_v_val, __pyx_t_1);
+    __pyx_t_5 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 559, __pyx_L1_error)
+  }
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  for (;;) {
+    if (likely(!__pyx_t_5)) {
+      if (likely(PyList_CheckExact(__pyx_t_3))) {
+        if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_3)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 559, __pyx_L1_error)
+        #else
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 559, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        #endif
+      } else {
+        if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_2); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 559, __pyx_L1_error)
+        #else
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 559, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        #endif
+      }
+    } else {
+      __pyx_t_2 = __pyx_t_5(__pyx_t_3);
+      if (unlikely(!__pyx_t_2)) {
+        PyObject* exc_type = PyErr_Occurred();
+        if (exc_type) {
+          if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
+          else __PYX_ERR(0, 559, __pyx_L1_error)
+        }
+        break;
+      }
+      __Pyx_GOTREF(__pyx_t_2);
+    }
+    if ((likely(PyTuple_CheckExact(__pyx_t_2))) || (PyList_CheckExact(__pyx_t_2))) {
+      PyObject* sequence = __pyx_t_2;
+      Py_ssize_t size = __Pyx_PySequence_SIZE(sequence);
+      if (unlikely(size != 2)) {
+        if (size > 2) __Pyx_RaiseTooManyValuesError(2);
+        else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
+        __PYX_ERR(0, 559, __pyx_L1_error)
+      }
+      #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+      if (likely(PyTuple_CheckExact(sequence))) {
+        __pyx_t_1 = PyTuple_GET_ITEM(sequence, 0); 
+        __pyx_t_6 = PyTuple_GET_ITEM(sequence, 1); 
+      } else {
+        __pyx_t_1 = PyList_GET_ITEM(sequence, 0); 
+        __pyx_t_6 = PyList_GET_ITEM(sequence, 1); 
+      }
+      __Pyx_INCREF(__pyx_t_1);
+      __Pyx_INCREF(__pyx_t_6);
+      #else
+      __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 559, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 559, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      #endif
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    } else {
+      Py_ssize_t index = -1;
+      __pyx_t_15 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 559, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_15);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_16 = Py_TYPE(__pyx_t_15)->tp_iternext;
+      index = 0; __pyx_t_1 = __pyx_t_16(__pyx_t_15); if (unlikely(!__pyx_t_1)) goto __pyx_L18_unpacking_failed;
+      __Pyx_GOTREF(__pyx_t_1);
+      index = 1; __pyx_t_6 = __pyx_t_16(__pyx_t_15); if (unlikely(!__pyx_t_6)) goto __pyx_L18_unpacking_failed;
+      __Pyx_GOTREF(__pyx_t_6);
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_16(__pyx_t_15), 2) < 0) __PYX_ERR(0, 559, __pyx_L1_error)
+      __pyx_t_16 = NULL;
+      __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+      goto __pyx_L19_unpacking_done;
+      __pyx_L18_unpacking_failed:;
+      __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+      __pyx_t_16 = NULL;
+      if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
+      __PYX_ERR(0, 559, __pyx_L1_error)
+      __pyx_L19_unpacking_done:;
+    }
+    __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_1);
     __pyx_t_1 = 0;
+    __Pyx_XDECREF_SET(__pyx_v_val, __pyx_t_6);
+    __pyx_t_6 = 0;
 
     /* "factorGraphAES.pyx":560
- *         print "{:20s}: {:17}".format("Total Number of Factors", len(self.factors))
- *         for key, val in factor_counter.iteritems():
- *             print "{:20s}: {:20}".format(key, val)             # <<<<<<<<<<<<<<
- *         print "Counted Edges: {}".format(edge_counter)
- *         print "Edges found from G.edges: {}".format(len(self.edges))
+ *         print("{:20s}: {:17}".format("Total Number of Factors", len(self.factors)))
+ *         for key, val in factor_counter.items():
+ *             print("{:20s}: {:20}".format(key, val))             # <<<<<<<<<<<<<<
+ *         print("Counted Edges: {}".format(edge_counter))
+ *         print("Edges found from G.edges: {}".format(len(self.edges)))
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_20s_20, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 560, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_6 = NULL;
-    __pyx_t_16 = 0;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
-      __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_3);
-      if (likely(__pyx_t_6)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-        __Pyx_INCREF(__pyx_t_6);
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_20s_20, __pyx_n_s_format); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 560, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __pyx_t_1 = NULL;
+    __pyx_t_9 = 0;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_6))) {
+      __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_6);
+      if (likely(__pyx_t_1)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
+        __Pyx_INCREF(__pyx_t_1);
         __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_3, function);
-        __pyx_t_16 = 1;
+        __Pyx_DECREF_SET(__pyx_t_6, function);
+        __pyx_t_9 = 1;
       }
     }
     #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_3)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_v_key, __pyx_v_val};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 560, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
+    if (PyFunction_Check(__pyx_t_6)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_key, __pyx_v_val};
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 560, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
     } else
     #endif
     #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_v_key, __pyx_v_val};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 560, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_6)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_key, __pyx_v_val};
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 560, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
     } else
     #endif
     {
-      __pyx_t_15 = PyTuple_New(2+__pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 560, __pyx_L1_error)
+      __pyx_t_15 = PyTuple_New(2+__pyx_t_9); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 560, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
-      if (__pyx_t_6) {
-        __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_6); __pyx_t_6 = NULL;
+      if (__pyx_t_1) {
+        __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_1); __pyx_t_1 = NULL;
       }
       __Pyx_INCREF(__pyx_v_key);
       __Pyx_GIVEREF(__pyx_v_key);
-      PyTuple_SET_ITEM(__pyx_t_15, 0+__pyx_t_16, __pyx_v_key);
+      PyTuple_SET_ITEM(__pyx_t_15, 0+__pyx_t_9, __pyx_v_key);
       __Pyx_INCREF(__pyx_v_val);
       __Pyx_GIVEREF(__pyx_v_val);
-      PyTuple_SET_ITEM(__pyx_t_15, 1+__pyx_t_16, __pyx_v_val);
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_15, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 560, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
+      PyTuple_SET_ITEM(__pyx_t_15, 1+__pyx_t_9, __pyx_v_val);
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_15, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 560, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
     }
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 560, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 560, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+    /* "factorGraphAES.pyx":559
+ * 
+ *         print("{:20s}: {:17}".format("Total Number of Factors", len(self.factors)))
+ *         for key, val in factor_counter.items():             # <<<<<<<<<<<<<<
+ *             print("{:20s}: {:20}".format(key, val))
+ *         print("Counted Edges: {}".format(edge_counter))
+ */
   }
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "factorGraphAES.pyx":561
- *         for key, val in factor_counter.iteritems():
- *             print "{:20s}: {:20}".format(key, val)
- *         print "Counted Edges: {}".format(edge_counter)             # <<<<<<<<<<<<<<
- *         print "Edges found from G.edges: {}".format(len(self.edges))
+ *         for key, val in factor_counter.items():
+ *             print("{:20s}: {:20}".format(key, val))
+ *         print("Counted Edges: {}".format(edge_counter))             # <<<<<<<<<<<<<<
+ *         print("Edges found from G.edges: {}".format(len(self.edges)))
  *         print_new_line()
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Counted_Edges, __pyx_n_s_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 561, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_1);
-    if (likely(__pyx_t_3)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-      __Pyx_INCREF(__pyx_t_3);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Counted_Edges, __pyx_n_s_format); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 561, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_6 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_6)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_6);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_1, function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
     }
   }
-  __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_3, __pyx_v_edge_counter) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_edge_counter);
-  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 561, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 561, __pyx_L1_error)
+  __pyx_t_3 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_6, __pyx_v_edge_counter) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_edge_counter);
+  __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 561, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  if (__Pyx_PrintOne(0, __pyx_t_3) < 0) __PYX_ERR(0, 561, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "factorGraphAES.pyx":562
- *             print "{:20s}: {:20}".format(key, val)
- *         print "Counted Edges: {}".format(edge_counter)
- *         print "Edges found from G.edges: {}".format(len(self.edges))             # <<<<<<<<<<<<<<
+ *             print("{:20s}: {:20}".format(key, val))
+ *         print("Counted Edges: {}".format(edge_counter))
+ *         print("Edges found from G.edges: {}".format(len(self.edges)))             # <<<<<<<<<<<<<<
  *         print_new_line()
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Edges_found_from_G_edges, __pyx_n_s_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 562, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_edges); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 562, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_11 = PyObject_Length(__pyx_t_3); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 562, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyInt_FromSsize_t(__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 562, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Edges_found_from_G_edges, __pyx_n_s_format); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 562, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_edges); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 562, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __pyx_t_4 = PyObject_Length(__pyx_t_6); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 562, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  __pyx_t_6 = PyInt_FromSsize_t(__pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 562, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_15 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-    __pyx_t_15 = PyMethod_GET_SELF(__pyx_t_1);
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_15 = PyMethod_GET_SELF(__pyx_t_2);
     if (likely(__pyx_t_15)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
       __Pyx_INCREF(__pyx_t_15);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_1, function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
     }
   }
-  __pyx_t_2 = (__pyx_t_15) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_15, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_3);
+  __pyx_t_3 = (__pyx_t_15) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_15, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6);
   __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 562, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 562, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 562, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  if (__Pyx_PrintOne(0, __pyx_t_3) < 0) __PYX_ERR(0, 562, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "factorGraphAES.pyx":563
- *         print "Counted Edges: {}".format(edge_counter)
- *         print "Edges found from G.edges: {}".format(len(self.edges))
+ *         print("Counted Edges: {}".format(edge_counter))
+ *         print("Edges found from G.edges: {}".format(len(self.edges)))
  *         print_new_line()             # <<<<<<<<<<<<<<
  * 
  *     def check_variable_nodes(self, print_all = False):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_print_new_line); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 563, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = NULL;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_1))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_1);
-    if (likely(__pyx_t_3)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-      __Pyx_INCREF(__pyx_t_3);
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_print_new_line); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_6 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_6)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_6);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_1, function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
     }
   }
-  __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 563, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_3 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 563, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "factorGraphAES.pyx":530
  *         return self.G.edge[node][neighbour]
  * 
  *     def check_factor_nodes(self, print_all = False, simple_xor = True):             # <<<<<<<<<<<<<<
  *         print_length = 20
- *         print "*** Checking Factor Nodes ***"
+ *         print("*** Checking Factor Nodes ***")
  */
 
   /* function exit code */
@@ -17034,18 +17118,18 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_54check_variable_nod
   /* "factorGraphAES.pyx":574
  * 
  *         # Just check size etc
- *         print "*** Checking Variable Nodes ***"             # <<<<<<<<<<<<<<
+ *         print("*** Checking Variable Nodes ***")             # <<<<<<<<<<<<<<
  *         print_new_line()
- *         print "Total Number of Variables: {:10}".format(len(self.variables))
+ *         print("Total Number of Variables: {:10}".format(len(self.variables)))
  */
   if (__Pyx_PrintOne(0, __pyx_kp_s_Checking_Variable_Nodes) < 0) __PYX_ERR(0, 574, __pyx_L1_error)
 
   /* "factorGraphAES.pyx":575
  *         # Just check size etc
- *         print "*** Checking Variable Nodes ***"
+ *         print("*** Checking Variable Nodes ***")
  *         print_new_line()             # <<<<<<<<<<<<<<
- *         print "Total Number of Variables: {:10}".format(len(self.variables))
- *         print "Leaf Nodes: {:25}".format(len(self.leaf_nodes))
+ *         print("Total Number of Variables: {:10}".format(len(self.variables)))
+ *         print("Leaf Nodes: {:25}".format(len(self.leaf_nodes)))
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_print_new_line); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 575, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -17067,11 +17151,11 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_54check_variable_nod
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "factorGraphAES.pyx":576
- *         print "*** Checking Variable Nodes ***"
+ *         print("*** Checking Variable Nodes ***")
  *         print_new_line()
- *         print "Total Number of Variables: {:10}".format(len(self.variables))             # <<<<<<<<<<<<<<
- *         print "Leaf Nodes: {:25}".format(len(self.leaf_nodes))
- *         print "Unique Leaves: {:22} ({})".format(len(unique_leaves), unique_leaves)
+ *         print("Total Number of Variables: {:10}".format(len(self.variables)))             # <<<<<<<<<<<<<<
+ *         print("Leaf Nodes: {:25}".format(len(self.leaf_nodes)))
+ *         print("Unique Leaves: {:22} ({})".format(len(unique_leaves), unique_leaves))
  */
   __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Total_Number_of_Variables_10, __pyx_n_s_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 576, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -17102,9 +17186,9 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_54check_variable_nod
 
   /* "factorGraphAES.pyx":577
  *         print_new_line()
- *         print "Total Number of Variables: {:10}".format(len(self.variables))
- *         print "Leaf Nodes: {:25}".format(len(self.leaf_nodes))             # <<<<<<<<<<<<<<
- *         print "Unique Leaves: {:22} ({})".format(len(unique_leaves), unique_leaves)
+ *         print("Total Number of Variables: {:10}".format(len(self.variables)))
+ *         print("Leaf Nodes: {:25}".format(len(self.leaf_nodes)))             # <<<<<<<<<<<<<<
+ *         print("Unique Leaves: {:22} ({})".format(len(unique_leaves), unique_leaves))
  * 
  */
   __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Leaf_Nodes_25, __pyx_n_s_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 577, __pyx_L1_error)
@@ -17135,9 +17219,9 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_54check_variable_nod
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "factorGraphAES.pyx":578
- *         print "Total Number of Variables: {:10}".format(len(self.variables))
- *         print "Leaf Nodes: {:25}".format(len(self.leaf_nodes))
- *         print "Unique Leaves: {:22} ({})".format(len(unique_leaves), unique_leaves)             # <<<<<<<<<<<<<<
+ *         print("Total Number of Variables: {:10}".format(len(self.variables)))
+ *         print("Leaf Nodes: {:25}".format(len(self.leaf_nodes)))
+ *         print("Unique Leaves: {:22} ({})".format(len(unique_leaves), unique_leaves))             # <<<<<<<<<<<<<<
  * 
  * 
  */
@@ -18631,7 +18715,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
  *                 other_neighbours = self.get_other_neighbours(variable, neighbour)
  * 
  *                 if print_out:             # <<<<<<<<<<<<<<
- *                     print ">>> Handling message from Variable {} to Factor {} <<<\n".format(variable, neighbour)
+ *                     print(">>> Handling message from Variable {} to Factor {} <<<\n".format(variable, neighbour))
  * 
  */
       __pyx_t_3 = (__pyx_v_print_out != 0);
@@ -18640,7 +18724,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
         /* "factorGraphAES.pyx":660
  * 
  *                 if print_out:
- *                     print ">>> Handling message from Variable {} to Factor {} <<<\n".format(variable, neighbour)             # <<<<<<<<<<<<<<
+ *                     print(">>> Handling message from Variable {} to Factor {} <<<\n".format(variable, neighbour))             # <<<<<<<<<<<<<<
  * 
  *                 for other_neighbour in other_neighbours:
  */
@@ -18698,13 +18782,13 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
  *                 other_neighbours = self.get_other_neighbours(variable, neighbour)
  * 
  *                 if print_out:             # <<<<<<<<<<<<<<
- *                     print ">>> Handling message from Variable {} to Factor {} <<<\n".format(variable, neighbour)
+ *                     print(">>> Handling message from Variable {} to Factor {} <<<\n".format(variable, neighbour))
  * 
  */
       }
 
       /* "factorGraphAES.pyx":662
- *                     print ">>> Handling message from Variable {} to Factor {} <<<\n".format(variable, neighbour)
+ *                     print(">>> Handling message from Variable {} to Factor {} <<<\n".format(variable, neighbour))
  * 
  *                 for other_neighbour in other_neighbours:             # <<<<<<<<<<<<<<
  *                     if other_neighbour != neighbour:
@@ -18883,8 +18967,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
  *                         v_product = array_multiply(v_product, incoming)
  *                         # Quick Check Here
  *                         if CHECK_EMPTY and is_zeros_array(v_product):             # <<<<<<<<<<<<<<
- *                             print "EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour
- *                             print "Specifcally, incoming message from {}".format(other_neighbour)
+ *                             print("EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour)
+ *                             print("Specifcally, incoming message from {}".format(other_neighbour))
  */
           __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_CHECK_EMPTY); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 668, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_8);
@@ -18921,8 +19005,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
             /* "factorGraphAES.pyx":669
  *                         # Quick Check Here
  *                         if CHECK_EMPTY and is_zeros_array(v_product):
- *                             print "EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour             # <<<<<<<<<<<<<<
- *                             print "Specifcally, incoming message from {}".format(other_neighbour)
+ *                             print("EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour)             # <<<<<<<<<<<<<<
+ *                             print("Specifcally, incoming message from {}".format(other_neighbour))
  *                             print_new_line()
  */
             __pyx_t_8 = PyTuple_New(4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 669, __pyx_L1_error)
@@ -18939,13 +19023,13 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
             __Pyx_INCREF(__pyx_v_neighbour);
             __Pyx_GIVEREF(__pyx_v_neighbour);
             PyTuple_SET_ITEM(__pyx_t_8, 3, __pyx_v_neighbour);
-            if (__Pyx_Print(0, __pyx_t_8, 1) < 0) __PYX_ERR(0, 669, __pyx_L1_error)
+            if (__Pyx_PrintOne(0, __pyx_t_8) < 0) __PYX_ERR(0, 669, __pyx_L1_error)
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
             /* "factorGraphAES.pyx":670
  *                         if CHECK_EMPTY and is_zeros_array(v_product):
- *                             print "EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour
- *                             print "Specifcally, incoming message from {}".format(other_neighbour)             # <<<<<<<<<<<<<<
+ *                             print("EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour)
+ *                             print("Specifcally, incoming message from {}".format(other_neighbour))             # <<<<<<<<<<<<<<
  *                             print_new_line()
  *                             raise ValueError
  */
@@ -18970,8 +19054,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
             /* "factorGraphAES.pyx":671
- *                             print "EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour
- *                             print "Specifcally, incoming message from {}".format(other_neighbour)
+ *                             print("EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour)
+ *                             print("Specifcally, incoming message from {}".format(other_neighbour))
  *                             print_new_line()             # <<<<<<<<<<<<<<
  *                             raise ValueError
  * 
@@ -18996,7 +19080,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
             /* "factorGraphAES.pyx":672
- *                             print "Specifcally, incoming message from {}".format(other_neighbour)
+ *                             print("Specifcally, incoming message from {}".format(other_neighbour))
  *                             print_new_line()
  *                             raise ValueError             # <<<<<<<<<<<<<<
  * 
@@ -19009,8 +19093,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
  *                         v_product = array_multiply(v_product, incoming)
  *                         # Quick Check Here
  *                         if CHECK_EMPTY and is_zeros_array(v_product):             # <<<<<<<<<<<<<<
- *                             print "EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour
- *                             print "Specifcally, incoming message from {}".format(other_neighbour)
+ *                             print("EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour)
+ *                             print("Specifcally, incoming message from {}".format(other_neighbour))
  */
           }
 
@@ -19024,7 +19108,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
         }
 
         /* "factorGraphAES.pyx":662
- *                     print ">>> Handling message from Variable {} to Factor {} <<<\n".format(variable, neighbour)
+ *                     print(">>> Handling message from Variable {} to Factor {} <<<\n".format(variable, neighbour))
  * 
  *                 for other_neighbour in other_neighbours:             # <<<<<<<<<<<<<<
  *                     if other_neighbour != neighbour:
@@ -19037,7 +19121,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
  * 
  *                 # Check product
  *                 if CHECK_EMPTY and is_zeros_array(v_product):             # <<<<<<<<<<<<<<
- *                     print "EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour
+ *                     print("EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour)
  *                     raise ValueError
  */
       __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_CHECK_EMPTY); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 675, __pyx_L1_error)
@@ -19075,7 +19159,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
         /* "factorGraphAES.pyx":676
  *                 # Check product
  *                 if CHECK_EMPTY and is_zeros_array(v_product):
- *                     print "EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour             # <<<<<<<<<<<<<<
+ *                     print("EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour)             # <<<<<<<<<<<<<<
  *                     raise ValueError
  * 
  */
@@ -19093,12 +19177,12 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
         __Pyx_INCREF(__pyx_v_neighbour);
         __Pyx_GIVEREF(__pyx_v_neighbour);
         PyTuple_SET_ITEM(__pyx_t_1, 3, __pyx_v_neighbour);
-        if (__Pyx_Print(0, __pyx_t_1, 1) < 0) __PYX_ERR(0, 676, __pyx_L1_error)
+        if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 676, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
         /* "factorGraphAES.pyx":677
  *                 if CHECK_EMPTY and is_zeros_array(v_product):
- *                     print "EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour
+ *                     print("EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour)
  *                     raise ValueError             # <<<<<<<<<<<<<<
  * 
  *                 if STOP_EMPTY_PROPAGATION and is_zeros_array(v_product):
@@ -19110,7 +19194,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
  * 
  *                 # Check product
  *                 if CHECK_EMPTY and is_zeros_array(v_product):             # <<<<<<<<<<<<<<
- *                     print "EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour
+ *                     print("EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour)
  *                     raise ValueError
  */
       }
@@ -19195,7 +19279,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
  *                     v_product = get_no_knowledge_array()
  * 
  *                 if print_updated_edge or print_out:             # <<<<<<<<<<<<<<
- *                     print "Updating Edge from Variable {} to Factor {}:\n{}\n".format(variable, neighbour, v_product[:4])
+ *                     print("Updating Edge from Variable {} to Factor {}:\n{}\n".format(variable, neighbour, v_product[:4]))
  * 
  */
       __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_print_updated_edge); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 682, __pyx_L1_error)
@@ -19212,7 +19296,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
         /* "factorGraphAES.pyx":683
  * 
  *                 if print_updated_edge or print_out:
- *                     print "Updating Edge from Variable {} to Factor {}:\n{}\n".format(variable, neighbour, v_product[:4])             # <<<<<<<<<<<<<<
+ *                     print("Updating Edge from Variable {} to Factor {}:\n{}\n".format(variable, neighbour, v_product[:4]))             # <<<<<<<<<<<<<<
  * 
  *                 # Set as new outgoing message
  */
@@ -19277,7 +19361,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_66bp_variable_handle
  *                     v_product = get_no_knowledge_array()
  * 
  *                 if print_updated_edge or print_out:             # <<<<<<<<<<<<<<
- *                     print "Updating Edge from Variable {} to Factor {}:\n{}\n".format(variable, neighbour, v_product[:4])
+ *                     print("Updating Edge from Variable {} to Factor {}:\n{}\n".format(variable, neighbour, v_product[:4]))
  * 
  */
       }
@@ -19586,7 +19670,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
  *                 if neighbour not in self.leaf_nodes:
  * 
  *                     if print_out:             # <<<<<<<<<<<<<<
- *                         print ">>> Handling message from Factor {} to Variable {} <<<\n".format(factor, neighbour)
+ *                         print(">>> Handling message from Factor {} to Variable {} <<<\n".format(factor, neighbour))
  * 
  */
         __pyx_t_2 = (__pyx_v_print_out != 0);
@@ -19595,7 +19679,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
           /* "factorGraphAES.pyx":710
  * 
  *                     if print_out:
- *                         print ">>> Handling message from Factor {} to Variable {} <<<\n".format(factor, neighbour)             # <<<<<<<<<<<<<<
+ *                         print(">>> Handling message from Factor {} to Variable {} <<<\n".format(factor, neighbour))             # <<<<<<<<<<<<<<
  * 
  *                     message = get_no_knowledge_array()
  */
@@ -19653,13 +19737,13 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
  *                 if neighbour not in self.leaf_nodes:
  * 
  *                     if print_out:             # <<<<<<<<<<<<<<
- *                         print ">>> Handling message from Factor {} to Variable {} <<<\n".format(factor, neighbour)
+ *                         print(">>> Handling message from Factor {} to Variable {} <<<\n".format(factor, neighbour))
  * 
  */
         }
 
         /* "factorGraphAES.pyx":712
- *                         print ">>> Handling message from Factor {} to Variable {} <<<\n".format(factor, neighbour)
+ *                         print(">>> Handling message from Factor {} to Variable {} <<<\n".format(factor, neighbour))
  * 
  *                     message = get_no_knowledge_array()             # <<<<<<<<<<<<<<
  *                     # Either XOR or SBOX: Handle separately
@@ -19747,7 +19831,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
  * 
  *                     if len(other_neighbours) == 0:             # <<<<<<<<<<<<<<
  * 
- *                         print "--- Factor {} sending to neighbour {}, doesn't have any other neighbours".format(factor, neighbour)
+ *                         print("--- Factor {} sending to neighbour {}, doesn't have any other neighbours".format(factor, neighbour))
  */
         __pyx_t_11 = PyObject_Length(__pyx_v_other_neighbours); if (unlikely(__pyx_t_11 == ((Py_ssize_t)-1))) __PYX_ERR(0, 716, __pyx_L1_error)
         __pyx_t_2 = ((__pyx_t_11 == 0) != 0);
@@ -19756,7 +19840,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
           /* "factorGraphAES.pyx":718
  *                     if len(other_neighbours) == 0:
  * 
- *                         print "--- Factor {} sending to neighbour {}, doesn't have any other neighbours".format(factor, neighbour)             # <<<<<<<<<<<<<<
+ *                         print("--- Factor {} sending to neighbour {}, doesn't have any other neighbours".format(factor, neighbour))             # <<<<<<<<<<<<<<
  *                         pass
  * 
  */
@@ -19815,7 +19899,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
  * 
  *                     if len(other_neighbours) == 0:             # <<<<<<<<<<<<<<
  * 
- *                         print "--- Factor {} sending to neighbour {}, doesn't have any other neighbours".format(factor, neighbour)
+ *                         print("--- Factor {} sending to neighbour {}, doesn't have any other neighbours".format(factor, neighbour))
  */
           goto __pyx_L8;
         }
@@ -19853,7 +19937,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
  *                         # XOR
  *                         message = self.get_incoming_message(factor, other_neighbours[0])             # <<<<<<<<<<<<<<
  *                         if print_out:
- *                             print "--->>> Message from neighbour {} ({}):\n{}\n".format(other_neighbours[0], message.dtype, message)
+ *                             print("--->>> Message from neighbour {} ({}):\n{}\n".format(other_neighbours[0], message.dtype, message))
  */
           __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_get_incoming_message); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 725, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
@@ -19913,7 +19997,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
  *                         # XOR
  *                         message = self.get_incoming_message(factor, other_neighbours[0])
  *                         if print_out:             # <<<<<<<<<<<<<<
- *                             print "--->>> Message from neighbour {} ({}):\n{}\n".format(other_neighbours[0], message.dtype, message)
+ *                             print("--->>> Message from neighbour {} ({}):\n{}\n".format(other_neighbours[0], message.dtype, message))
  *                         for i in range(1, len(other_neighbours)):
  */
           __pyx_t_2 = (__pyx_v_print_out != 0);
@@ -19922,7 +20006,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
             /* "factorGraphAES.pyx":727
  *                         message = self.get_incoming_message(factor, other_neighbours[0])
  *                         if print_out:
- *                             print "--->>> Message from neighbour {} ({}):\n{}\n".format(other_neighbours[0], message.dtype, message)             # <<<<<<<<<<<<<<
+ *                             print("--->>> Message from neighbour {} ({}):\n{}\n".format(other_neighbours[0], message.dtype, message))             # <<<<<<<<<<<<<<
  *                         for i in range(1, len(other_neighbours)):
  *                             incoming_message = self.get_incoming_message(factor, other_neighbours[i])
  */
@@ -19991,14 +20075,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
  *                         # XOR
  *                         message = self.get_incoming_message(factor, other_neighbours[0])
  *                         if print_out:             # <<<<<<<<<<<<<<
- *                             print "--->>> Message from neighbour {} ({}):\n{}\n".format(other_neighbours[0], message.dtype, message)
+ *                             print("--->>> Message from neighbour {} ({}):\n{}\n".format(other_neighbours[0], message.dtype, message))
  *                         for i in range(1, len(other_neighbours)):
  */
           }
 
           /* "factorGraphAES.pyx":728
  *                         if print_out:
- *                             print "--->>> Message from neighbour {} ({}):\n{}\n".format(other_neighbours[0], message.dtype, message)
+ *                             print("--->>> Message from neighbour {} ({}):\n{}\n".format(other_neighbours[0], message.dtype, message))
  *                         for i in range(1, len(other_neighbours)):             # <<<<<<<<<<<<<<
  *                             incoming_message = self.get_incoming_message(factor, other_neighbours[i])
  *                             if print_out:
@@ -20009,11 +20093,11 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
             __pyx_v_i = __pyx_t_15;
 
             /* "factorGraphAES.pyx":729
- *                             print "--->>> Message from neighbour {} ({}):\n{}\n".format(other_neighbours[0], message.dtype, message)
+ *                             print("--->>> Message from neighbour {} ({}):\n{}\n".format(other_neighbours[0], message.dtype, message))
  *                         for i in range(1, len(other_neighbours)):
  *                             incoming_message = self.get_incoming_message(factor, other_neighbours[i])             # <<<<<<<<<<<<<<
  *                             if print_out:
- *                                 print "--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype)
+ *                                 print("--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype))
  */
             __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_get_incoming_message); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 729, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_5);
@@ -20073,7 +20157,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
  *                         for i in range(1, len(other_neighbours)):
  *                             incoming_message = self.get_incoming_message(factor, other_neighbours[i])
  *                             if print_out:             # <<<<<<<<<<<<<<
- *                                 print "--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype)
+ *                                 print("--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype))
  *                             message = message_xor(message, incoming_message)
  */
             __pyx_t_2 = (__pyx_v_print_out != 0);
@@ -20082,7 +20166,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
               /* "factorGraphAES.pyx":731
  *                             incoming_message = self.get_incoming_message(factor, other_neighbours[i])
  *                             if print_out:
- *                                 print "--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype)             # <<<<<<<<<<<<<<
+ *                                 print("--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype))             # <<<<<<<<<<<<<<
  *                             message = message_xor(message, incoming_message)
  *                             if print_out:
  */
@@ -20148,17 +20232,17 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
  *                         for i in range(1, len(other_neighbours)):
  *                             incoming_message = self.get_incoming_message(factor, other_neighbours[i])
  *                             if print_out:             # <<<<<<<<<<<<<<
- *                                 print "--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype)
+ *                                 print("--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype))
  *                             message = message_xor(message, incoming_message)
  */
             }
 
             /* "factorGraphAES.pyx":732
  *                             if print_out:
- *                                 print "--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype)
+ *                                 print("--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype))
  *                             message = message_xor(message, incoming_message)             # <<<<<<<<<<<<<<
  *                             if print_out:
- *                                 print "{}\n".format(message)
+ *                                 print("{}\n".format(message))
  */
             __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_message_xor); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 732, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_5);
@@ -20211,10 +20295,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
             __pyx_t_1 = 0;
 
             /* "factorGraphAES.pyx":733
- *                                 print "--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype)
+ *                                 print("--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype))
  *                             message = message_xor(message, incoming_message)
  *                             if print_out:             # <<<<<<<<<<<<<<
- *                                 print "{}\n".format(message)
+ *                                 print("{}\n".format(message))
  * 
  */
             __pyx_t_2 = (__pyx_v_print_out != 0);
@@ -20223,7 +20307,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
               /* "factorGraphAES.pyx":734
  *                             message = message_xor(message, incoming_message)
  *                             if print_out:
- *                                 print "{}\n".format(message)             # <<<<<<<<<<<<<<
+ *                                 print("{}\n".format(message))             # <<<<<<<<<<<<<<
  * 
  *                     elif is_sbox_node(factor):
  */
@@ -20248,10 +20332,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
               __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
               /* "factorGraphAES.pyx":733
- *                                 print "--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype)
+ *                                 print("--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype))
  *                             message = message_xor(message, incoming_message)
  *                             if print_out:             # <<<<<<<<<<<<<<
- *                                 print "{}\n".format(message)
+ *                                 print("{}\n".format(message))
  * 
  */
             }
@@ -20268,7 +20352,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
         }
 
         /* "factorGraphAES.pyx":736
- *                                 print "{}\n".format(message)
+ *                                 print("{}\n".format(message))
  * 
  *                     elif is_sbox_node(factor):             # <<<<<<<<<<<<<<
  *                         # SBOX - handle direction (not invertible)
@@ -20525,7 +20609,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
           __pyx_L14:;
 
           /* "factorGraphAES.pyx":736
- *                                 print "{}\n".format(message)
+ *                                 print("{}\n".format(message))
  * 
  *                     elif is_sbox_node(factor):             # <<<<<<<<<<<<<<
  *                         # SBOX - handle direction (not invertible)
@@ -21728,7 +21812,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
         /* "factorGraphAES.pyx":776
  * 
  *                     else:
- *                         print "Factor node has no id: {}".format(factor)             # <<<<<<<<<<<<<<
+ *                         print("Factor node has no id: {}".format(factor))             # <<<<<<<<<<<<<<
  *                         # break
  *                         raise ValueError
  */
@@ -21754,7 +21838,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
           /* "factorGraphAES.pyx":778
- *                         print "Factor node has no id: {}".format(factor)
+ *                         print("Factor node has no id: {}".format(factor))
  *                         # break
  *                         raise ValueError             # <<<<<<<<<<<<<<
  * 
@@ -21769,7 +21853,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
  * 
  *                     # Quick Check Here
  *                     if CHECK_EMPTY and is_zeros_array(message):             # <<<<<<<<<<<<<<
- *                         print "EMPTY ARRAY FOUND, Factor", factor, "sending to neighbour", neighbour
+ *                         print("EMPTY ARRAY FOUND, Factor", factor, "sending to neighbour", neighbour)
  *                         raise ValueError
  */
         __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_CHECK_EMPTY); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 781, __pyx_L1_error)
@@ -21807,7 +21891,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
           /* "factorGraphAES.pyx":782
  *                     # Quick Check Here
  *                     if CHECK_EMPTY and is_zeros_array(message):
- *                         print "EMPTY ARRAY FOUND, Factor", factor, "sending to neighbour", neighbour             # <<<<<<<<<<<<<<
+ *                         print("EMPTY ARRAY FOUND, Factor", factor, "sending to neighbour", neighbour)             # <<<<<<<<<<<<<<
  *                         raise ValueError
  * 
  */
@@ -21825,12 +21909,12 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
           __Pyx_INCREF(__pyx_v_neighbour);
           __Pyx_GIVEREF(__pyx_v_neighbour);
           PyTuple_SET_ITEM(__pyx_t_1, 3, __pyx_v_neighbour);
-          if (__Pyx_Print(0, __pyx_t_1, 1) < 0) __PYX_ERR(0, 782, __pyx_L1_error)
+          if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 782, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
           /* "factorGraphAES.pyx":783
  *                     if CHECK_EMPTY and is_zeros_array(message):
- *                         print "EMPTY ARRAY FOUND, Factor", factor, "sending to neighbour", neighbour
+ *                         print("EMPTY ARRAY FOUND, Factor", factor, "sending to neighbour", neighbour)
  *                         raise ValueError             # <<<<<<<<<<<<<<
  * 
  *                     # Set as new outgoing message
@@ -21842,7 +21926,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_68bp_factor_handle(C
  * 
  *                     # Quick Check Here
  *                     if CHECK_EMPTY and is_zeros_array(message):             # <<<<<<<<<<<<<<
- *                         print "EMPTY ARRAY FOUND, Factor", factor, "sending to neighbour", neighbour
+ *                         print("EMPTY ARRAY FOUND, Factor", factor, "sending to neighbour", neighbour)
  *                         raise ValueError
  */
         }
@@ -40493,7 +40577,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_148get_final_key_ran
   return __pyx_r;
 }
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":258
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":258
  *         # experimental exception made for __getbuffer__ and __releasebuffer__
  *         # -- the details of this may change.
  *         def __getbuffer__(ndarray self, Py_buffer* info, int flags):             # <<<<<<<<<<<<<<
@@ -40542,7 +40626,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_v_info->obj = Py_None; __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(__pyx_v_info->obj);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":265
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":265
  * 
  *             cdef int i, ndim
  *             cdef int endian_detector = 1             # <<<<<<<<<<<<<<
@@ -40551,7 +40635,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_endian_detector = 1;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":266
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":266
  *             cdef int i, ndim
  *             cdef int endian_detector = 1
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
@@ -40560,7 +40644,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":268
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":268
  *             cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)
  * 
  *             ndim = PyArray_NDIM(self)             # <<<<<<<<<<<<<<
@@ -40569,7 +40653,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_ndim = PyArray_NDIM(__pyx_v_self);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":270
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":270
  *             ndim = PyArray_NDIM(self)
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -40583,7 +40667,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L4_bool_binop_done;
   }
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":271
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":271
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_ARRAY_C_CONTIGUOUS)):             # <<<<<<<<<<<<<<
@@ -40594,7 +40678,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = __pyx_t_2;
   __pyx_L4_bool_binop_done:;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":270
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":270
  *             ndim = PyArray_NDIM(self)
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -40603,7 +40687,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   if (unlikely(__pyx_t_1)) {
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":272
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":272
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_ARRAY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
@@ -40616,7 +40700,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(1, 272, __pyx_L1_error)
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":270
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":270
  *             ndim = PyArray_NDIM(self)
  * 
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -40625,7 +40709,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   }
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":274
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":274
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -40639,7 +40723,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L7_bool_binop_done;
   }
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":275
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":275
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_ARRAY_F_CONTIGUOUS)):             # <<<<<<<<<<<<<<
@@ -40650,7 +40734,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = __pyx_t_2;
   __pyx_L7_bool_binop_done:;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":274
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":274
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -40659,7 +40743,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   if (unlikely(__pyx_t_1)) {
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":276
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":276
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_ARRAY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
@@ -40672,7 +40756,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(1, 276, __pyx_L1_error)
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":274
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":274
  *                 raise ValueError(u"ndarray is not C contiguous")
  * 
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)             # <<<<<<<<<<<<<<
@@ -40681,7 +40765,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   }
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":278
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":278
  *                 raise ValueError(u"ndarray is not Fortran contiguous")
  * 
  *             info.buf = PyArray_DATA(self)             # <<<<<<<<<<<<<<
@@ -40690,7 +40774,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->buf = PyArray_DATA(__pyx_v_self);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":279
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":279
  * 
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim             # <<<<<<<<<<<<<<
@@ -40699,7 +40783,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->ndim = __pyx_v_ndim;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":280
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":280
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -40709,7 +40793,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = (((sizeof(npy_intp)) != (sizeof(Py_ssize_t))) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":283
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":283
  *                 # Allocate new buffer for strides and shape info.
  *                 # This is allocated as one block, strides first.
  *                 info.strides = <Py_ssize_t*>PyObject_Malloc(sizeof(Py_ssize_t) * 2 * <size_t>ndim)             # <<<<<<<<<<<<<<
@@ -40718,7 +40802,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->strides = ((Py_ssize_t *)PyObject_Malloc((((sizeof(Py_ssize_t)) * 2) * ((size_t)__pyx_v_ndim))));
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":284
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":284
  *                 # This is allocated as one block, strides first.
  *                 info.strides = <Py_ssize_t*>PyObject_Malloc(sizeof(Py_ssize_t) * 2 * <size_t>ndim)
  *                 info.shape = info.strides + ndim             # <<<<<<<<<<<<<<
@@ -40727,7 +40811,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->shape = (__pyx_v_info->strides + __pyx_v_ndim);
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":285
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":285
  *                 info.strides = <Py_ssize_t*>PyObject_Malloc(sizeof(Py_ssize_t) * 2 * <size_t>ndim)
  *                 info.shape = info.strides + ndim
  *                 for i in range(ndim):             # <<<<<<<<<<<<<<
@@ -40739,7 +40823,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_5; __pyx_t_6+=1) {
       __pyx_v_i = __pyx_t_6;
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":286
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":286
  *                 info.shape = info.strides + ndim
  *                 for i in range(ndim):
  *                     info.strides[i] = PyArray_STRIDES(self)[i]             # <<<<<<<<<<<<<<
@@ -40748,7 +40832,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
       (__pyx_v_info->strides[__pyx_v_i]) = (PyArray_STRIDES(__pyx_v_self)[__pyx_v_i]);
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":287
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":287
  *                 for i in range(ndim):
  *                     info.strides[i] = PyArray_STRIDES(self)[i]
  *                     info.shape[i] = PyArray_DIMS(self)[i]             # <<<<<<<<<<<<<<
@@ -40758,7 +40842,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       (__pyx_v_info->shape[__pyx_v_i]) = (PyArray_DIMS(__pyx_v_self)[__pyx_v_i]);
     }
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":280
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":280
  *             info.buf = PyArray_DATA(self)
  *             info.ndim = ndim
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -40768,7 +40852,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     goto __pyx_L9;
   }
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":289
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":289
  *                     info.shape[i] = PyArray_DIMS(self)[i]
  *             else:
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)             # <<<<<<<<<<<<<<
@@ -40778,7 +40862,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   /*else*/ {
     __pyx_v_info->strides = ((Py_ssize_t *)PyArray_STRIDES(__pyx_v_self));
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":290
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":290
  *             else:
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)             # <<<<<<<<<<<<<<
@@ -40789,7 +40873,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   }
   __pyx_L9:;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":291
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":291
  *                 info.strides = <Py_ssize_t*>PyArray_STRIDES(self)
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)
  *             info.suboffsets = NULL             # <<<<<<<<<<<<<<
@@ -40798,7 +40882,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->suboffsets = NULL;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":292
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":292
  *                 info.shape = <Py_ssize_t*>PyArray_DIMS(self)
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)             # <<<<<<<<<<<<<<
@@ -40807,7 +40891,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->itemsize = PyArray_ITEMSIZE(__pyx_v_self);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":293
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":293
  *             info.suboffsets = NULL
  *             info.itemsize = PyArray_ITEMSIZE(self)
  *             info.readonly = not PyArray_ISWRITEABLE(self)             # <<<<<<<<<<<<<<
@@ -40816,7 +40900,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_info->readonly = (!(PyArray_ISWRITEABLE(__pyx_v_self) != 0));
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":296
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":296
  * 
  *             cdef int t
  *             cdef char* f = NULL             # <<<<<<<<<<<<<<
@@ -40825,7 +40909,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   __pyx_v_f = NULL;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":297
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":297
  *             cdef int t
  *             cdef char* f = NULL
  *             cdef dtype descr = <dtype>PyArray_DESCR(self)             # <<<<<<<<<<<<<<
@@ -40838,7 +40922,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_v_descr = ((PyArray_Descr *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":300
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":300
  *             cdef int offset
  * 
  *             info.obj = self             # <<<<<<<<<<<<<<
@@ -40851,7 +40935,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __Pyx_DECREF(__pyx_v_info->obj);
   __pyx_v_info->obj = ((PyObject *)__pyx_v_self);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":302
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":302
  *             info.obj = self
  * 
  *             if not PyDataType_HASFIELDS(descr):             # <<<<<<<<<<<<<<
@@ -40861,7 +40945,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   __pyx_t_1 = ((!(PyDataType_HASFIELDS(__pyx_v_descr) != 0)) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":303
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":303
  * 
  *             if not PyDataType_HASFIELDS(descr):
  *                 t = descr.type_num             # <<<<<<<<<<<<<<
@@ -40871,7 +40955,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_4 = __pyx_v_descr->type_num;
     __pyx_v_t = __pyx_t_4;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":304
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":304
  *             if not PyDataType_HASFIELDS(descr):
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -40891,7 +40975,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     }
     __pyx_L15_next_or:;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":305
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":305
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):             # <<<<<<<<<<<<<<
@@ -40908,7 +40992,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_1 = __pyx_t_2;
     __pyx_L14_bool_binop_done:;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":304
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":304
  *             if not PyDataType_HASFIELDS(descr):
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -40917,7 +41001,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     if (unlikely(__pyx_t_1)) {
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":306
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":306
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -40930,7 +41014,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(1, 306, __pyx_L1_error)
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":304
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":304
  *             if not PyDataType_HASFIELDS(descr):
  *                 t = descr.type_num
  *                 if ((descr.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -40939,7 +41023,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     }
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":307
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":307
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")
  *                 if   t == NPY_BYTE:        f = "b"             # <<<<<<<<<<<<<<
@@ -40952,7 +41036,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_UBYTE:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":308
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":308
  *                     raise ValueError(u"Non-native byte order not supported")
  *                 if   t == NPY_BYTE:        f = "b"
  *                 elif t == NPY_UBYTE:       f = "B"             # <<<<<<<<<<<<<<
@@ -40963,7 +41047,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_SHORT:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":309
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":309
  *                 if   t == NPY_BYTE:        f = "b"
  *                 elif t == NPY_UBYTE:       f = "B"
  *                 elif t == NPY_SHORT:       f = "h"             # <<<<<<<<<<<<<<
@@ -40974,7 +41058,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_USHORT:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":310
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":310
  *                 elif t == NPY_UBYTE:       f = "B"
  *                 elif t == NPY_SHORT:       f = "h"
  *                 elif t == NPY_USHORT:      f = "H"             # <<<<<<<<<<<<<<
@@ -40985,7 +41069,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_INT:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":311
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":311
  *                 elif t == NPY_SHORT:       f = "h"
  *                 elif t == NPY_USHORT:      f = "H"
  *                 elif t == NPY_INT:         f = "i"             # <<<<<<<<<<<<<<
@@ -40996,7 +41080,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_UINT:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":312
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":312
  *                 elif t == NPY_USHORT:      f = "H"
  *                 elif t == NPY_INT:         f = "i"
  *                 elif t == NPY_UINT:        f = "I"             # <<<<<<<<<<<<<<
@@ -41007,7 +41091,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_LONG:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":313
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":313
  *                 elif t == NPY_INT:         f = "i"
  *                 elif t == NPY_UINT:        f = "I"
  *                 elif t == NPY_LONG:        f = "l"             # <<<<<<<<<<<<<<
@@ -41018,7 +41102,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_ULONG:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":314
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":314
  *                 elif t == NPY_UINT:        f = "I"
  *                 elif t == NPY_LONG:        f = "l"
  *                 elif t == NPY_ULONG:       f = "L"             # <<<<<<<<<<<<<<
@@ -41029,7 +41113,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_LONGLONG:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":315
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":315
  *                 elif t == NPY_LONG:        f = "l"
  *                 elif t == NPY_ULONG:       f = "L"
  *                 elif t == NPY_LONGLONG:    f = "q"             # <<<<<<<<<<<<<<
@@ -41040,7 +41124,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_ULONGLONG:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":316
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":316
  *                 elif t == NPY_ULONG:       f = "L"
  *                 elif t == NPY_LONGLONG:    f = "q"
  *                 elif t == NPY_ULONGLONG:   f = "Q"             # <<<<<<<<<<<<<<
@@ -41051,7 +41135,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_FLOAT:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":317
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":317
  *                 elif t == NPY_LONGLONG:    f = "q"
  *                 elif t == NPY_ULONGLONG:   f = "Q"
  *                 elif t == NPY_FLOAT:       f = "f"             # <<<<<<<<<<<<<<
@@ -41062,7 +41146,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_DOUBLE:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":318
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":318
  *                 elif t == NPY_ULONGLONG:   f = "Q"
  *                 elif t == NPY_FLOAT:       f = "f"
  *                 elif t == NPY_DOUBLE:      f = "d"             # <<<<<<<<<<<<<<
@@ -41073,7 +41157,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_LONGDOUBLE:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":319
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":319
  *                 elif t == NPY_FLOAT:       f = "f"
  *                 elif t == NPY_DOUBLE:      f = "d"
  *                 elif t == NPY_LONGDOUBLE:  f = "g"             # <<<<<<<<<<<<<<
@@ -41084,7 +41168,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_CFLOAT:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":320
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":320
  *                 elif t == NPY_DOUBLE:      f = "d"
  *                 elif t == NPY_LONGDOUBLE:  f = "g"
  *                 elif t == NPY_CFLOAT:      f = "Zf"             # <<<<<<<<<<<<<<
@@ -41095,7 +41179,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_CDOUBLE:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":321
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":321
  *                 elif t == NPY_LONGDOUBLE:  f = "g"
  *                 elif t == NPY_CFLOAT:      f = "Zf"
  *                 elif t == NPY_CDOUBLE:     f = "Zd"             # <<<<<<<<<<<<<<
@@ -41106,7 +41190,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_CLONGDOUBLE:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":322
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":322
  *                 elif t == NPY_CFLOAT:      f = "Zf"
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"             # <<<<<<<<<<<<<<
@@ -41117,7 +41201,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       case NPY_OBJECT:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":323
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":323
  *                 elif t == NPY_CDOUBLE:     f = "Zd"
  *                 elif t == NPY_CLONGDOUBLE: f = "Zg"
  *                 elif t == NPY_OBJECT:      f = "O"             # <<<<<<<<<<<<<<
@@ -41128,7 +41212,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
       default:
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":325
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":325
  *                 elif t == NPY_OBJECT:      f = "O"
  *                 else:
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)             # <<<<<<<<<<<<<<
@@ -41149,7 +41233,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
       break;
     }
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":326
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":326
  *                 else:
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *                 info.format = f             # <<<<<<<<<<<<<<
@@ -41158,7 +41242,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_info->format = __pyx_v_f;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":327
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":327
  *                     raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *                 info.format = f
  *                 return             # <<<<<<<<<<<<<<
@@ -41168,7 +41252,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":302
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":302
  *             info.obj = self
  * 
  *             if not PyDataType_HASFIELDS(descr):             # <<<<<<<<<<<<<<
@@ -41177,7 +41261,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
   }
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":329
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":329
  *                 return
  *             else:
  *                 info.format = <char*>PyObject_Malloc(_buffer_format_string_len)             # <<<<<<<<<<<<<<
@@ -41187,7 +41271,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   /*else*/ {
     __pyx_v_info->format = ((char *)PyObject_Malloc(0xFF));
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":330
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":330
  *             else:
  *                 info.format = <char*>PyObject_Malloc(_buffer_format_string_len)
  *                 info.format[0] = c'^' # Native data types, manual alignment             # <<<<<<<<<<<<<<
@@ -41196,7 +41280,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     (__pyx_v_info->format[0]) = '^';
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":331
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":331
  *                 info.format = <char*>PyObject_Malloc(_buffer_format_string_len)
  *                 info.format[0] = c'^' # Native data types, manual alignment
  *                 offset = 0             # <<<<<<<<<<<<<<
@@ -41205,7 +41289,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
  */
     __pyx_v_offset = 0;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":332
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":332
  *                 info.format[0] = c'^' # Native data types, manual alignment
  *                 offset = 0
  *                 f = _util_dtypestring(descr, info.format + 1,             # <<<<<<<<<<<<<<
@@ -41215,7 +41299,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     __pyx_t_9 = __pyx_f_5numpy__util_dtypestring(__pyx_v_descr, (__pyx_v_info->format + 1), (__pyx_v_info->format + 0xFF), (&__pyx_v_offset)); if (unlikely(__pyx_t_9 == ((char *)NULL))) __PYX_ERR(1, 332, __pyx_L1_error)
     __pyx_v_f = __pyx_t_9;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":335
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":335
  *                                       info.format + _buffer_format_string_len,
  *                                       &offset)
  *                 f[0] = c'\0' # Terminate format string             # <<<<<<<<<<<<<<
@@ -41225,7 +41309,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
     (__pyx_v_f[0]) = '\x00';
   }
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":258
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":258
  *         # experimental exception made for __getbuffer__ and __releasebuffer__
  *         # -- the details of this may change.
  *         def __getbuffer__(ndarray self, Py_buffer* info, int flags):             # <<<<<<<<<<<<<<
@@ -41257,7 +41341,7 @@ static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, P
   return __pyx_r;
 }
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":337
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":337
  *                 f[0] = c'\0' # Terminate format string
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
@@ -41281,7 +41365,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("__releasebuffer__", 0);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":338
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":338
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
@@ -41291,7 +41375,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __pyx_t_1 = (PyArray_HASFIELDS(__pyx_v_self) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":339
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":339
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):
  *                 PyObject_Free(info.format)             # <<<<<<<<<<<<<<
@@ -41300,7 +41384,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
     PyObject_Free(__pyx_v_info->format);
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":338
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":338
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):
  *             if PyArray_HASFIELDS(self):             # <<<<<<<<<<<<<<
@@ -41309,7 +41393,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
   }
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":340
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":340
  *             if PyArray_HASFIELDS(self):
  *                 PyObject_Free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -41319,7 +41403,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __pyx_t_1 = (((sizeof(npy_intp)) != (sizeof(Py_ssize_t))) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":341
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":341
  *                 PyObject_Free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):
  *                 PyObject_Free(info.strides)             # <<<<<<<<<<<<<<
@@ -41328,7 +41412,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
     PyObject_Free(__pyx_v_info->strides);
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":340
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":340
  *             if PyArray_HASFIELDS(self):
  *                 PyObject_Free(info.format)
  *             if sizeof(npy_intp) != sizeof(Py_ssize_t):             # <<<<<<<<<<<<<<
@@ -41337,7 +41421,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
  */
   }
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":337
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":337
  *                 f[0] = c'\0' # Terminate format string
  * 
  *         def __releasebuffer__(ndarray self, Py_buffer* info):             # <<<<<<<<<<<<<<
@@ -41349,7 +41433,7 @@ static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_s
   __Pyx_RefNannyFinishContext();
 }
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":821
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":821
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -41363,7 +41447,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 0);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":822
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":822
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -41377,7 +41461,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":821
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":821
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -41396,7 +41480,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":824
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":824
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -41410,7 +41494,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 0);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":825
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":825
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -41424,7 +41508,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":824
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":824
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -41443,7 +41527,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":827
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":827
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -41457,7 +41541,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 0);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":828
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":828
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -41471,7 +41555,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":827
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":827
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -41490,7 +41574,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":830
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":830
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -41504,7 +41588,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 0);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":831
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":831
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -41518,7 +41602,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":830
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":830
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -41537,7 +41621,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":833
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":833
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -41551,7 +41635,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 0);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":834
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":834
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -41565,7 +41649,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":833
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":833
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -41584,7 +41668,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":836
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":836
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -41598,7 +41682,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("PyDataType_SHAPE", 0);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":837
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":837
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -41608,7 +41692,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   __pyx_t_1 = (PyDataType_HASSUBARRAY(__pyx_v_d) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":838
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":838
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):
  *         return <tuple>d.subarray.shape             # <<<<<<<<<<<<<<
@@ -41620,7 +41704,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     __pyx_r = ((PyObject*)__pyx_v_d->subarray->shape);
     goto __pyx_L0;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":837
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":837
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -41629,7 +41713,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
  */
   }
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":840
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":840
  *         return <tuple>d.subarray.shape
  *     else:
  *         return ()             # <<<<<<<<<<<<<<
@@ -41643,7 +41727,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     goto __pyx_L0;
   }
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":836
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":836
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -41658,7 +41742,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   return __pyx_r;
 }
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":842
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":842
  *         return ()
  * 
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
@@ -41687,7 +41771,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   char *__pyx_t_9;
   __Pyx_RefNannySetupContext("_util_dtypestring", 0);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":847
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":847
  * 
  *     cdef dtype child
  *     cdef int endian_detector = 1             # <<<<<<<<<<<<<<
@@ -41696,7 +41780,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
   __pyx_v_endian_detector = 1;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":848
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":848
  *     cdef dtype child
  *     cdef int endian_detector = 1
  *     cdef bint little_endian = ((<char*>&endian_detector)[0] != 0)             # <<<<<<<<<<<<<<
@@ -41705,7 +41789,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
   __pyx_v_little_endian = ((((char *)(&__pyx_v_endian_detector))[0]) != 0);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":851
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":851
  *     cdef tuple fields
  * 
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
@@ -41728,7 +41812,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_childname, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":852
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":852
  * 
  *     for childname in descr.names:
  *         fields = descr.fields[childname]             # <<<<<<<<<<<<<<
@@ -41745,7 +41829,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_fields, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":853
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":853
  *     for childname in descr.names:
  *         fields = descr.fields[childname]
  *         child, new_offset = fields             # <<<<<<<<<<<<<<
@@ -41780,7 +41864,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __Pyx_XDECREF_SET(__pyx_v_new_offset, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":855
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":855
  *         child, new_offset = fields
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
@@ -41797,7 +41881,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = ((((__pyx_v_end - __pyx_v_f) - ((int)__pyx_t_5)) < 15) != 0);
     if (unlikely(__pyx_t_6)) {
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":856
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":856
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
@@ -41810,7 +41894,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(1, 856, __pyx_L1_error)
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":855
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":855
  *         child, new_offset = fields
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:             # <<<<<<<<<<<<<<
@@ -41819,7 +41903,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
     }
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":858
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":858
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -41839,7 +41923,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     __pyx_L8_next_or:;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":859
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":859
  * 
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):             # <<<<<<<<<<<<<<
@@ -41856,7 +41940,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = __pyx_t_7;
     __pyx_L7_bool_binop_done:;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":858
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":858
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -41865,7 +41949,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
     if (unlikely(__pyx_t_6)) {
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":860
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":860
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -41878,7 +41962,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(1, 860, __pyx_L1_error)
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":858
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":858
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")
  * 
  *         if ((child.byteorder == c'>' and little_endian) or             # <<<<<<<<<<<<<<
@@ -41887,7 +41971,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
     }
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":870
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":870
  * 
  *         # Output padding bytes
  *         while offset[0] < new_offset:             # <<<<<<<<<<<<<<
@@ -41903,7 +41987,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       if (!__pyx_t_6) break;
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":871
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":871
  *         # Output padding bytes
  *         while offset[0] < new_offset:
  *             f[0] = 120 # "x"; pad byte             # <<<<<<<<<<<<<<
@@ -41912,7 +41996,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       (__pyx_v_f[0]) = 0x78;
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":872
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":872
  *         while offset[0] < new_offset:
  *             f[0] = 120 # "x"; pad byte
  *             f += 1             # <<<<<<<<<<<<<<
@@ -41921,7 +42005,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       __pyx_v_f = (__pyx_v_f + 1);
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":873
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":873
  *             f[0] = 120 # "x"; pad byte
  *             f += 1
  *             offset[0] += 1             # <<<<<<<<<<<<<<
@@ -41932,7 +42016,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       (__pyx_v_offset[__pyx_t_8]) = ((__pyx_v_offset[__pyx_t_8]) + 1);
     }
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":875
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":875
  *             offset[0] += 1
  * 
  *         offset[0] += child.itemsize             # <<<<<<<<<<<<<<
@@ -41942,7 +42026,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_8 = 0;
     (__pyx_v_offset[__pyx_t_8]) = ((__pyx_v_offset[__pyx_t_8]) + __pyx_v_child->elsize);
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":877
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":877
  *         offset[0] += child.itemsize
  * 
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
@@ -41952,7 +42036,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     __pyx_t_6 = ((!(PyDataType_HASFIELDS(__pyx_v_child) != 0)) != 0);
     if (__pyx_t_6) {
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":878
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":878
  * 
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num             # <<<<<<<<<<<<<<
@@ -41964,7 +42048,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __Pyx_XDECREF_SET(__pyx_v_t, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":879
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":879
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
@@ -41974,7 +42058,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       __pyx_t_6 = (((__pyx_v_end - __pyx_v_f) < 5) != 0);
       if (unlikely(__pyx_t_6)) {
 
-        /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":880
+        /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":880
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
@@ -41987,7 +42071,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __PYX_ERR(1, 880, __pyx_L1_error)
 
-        /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":879
+        /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":879
  *         if not PyDataType_HASFIELDS(child):
  *             t = child.type_num
  *             if end - f < 5:             # <<<<<<<<<<<<<<
@@ -41996,7 +42080,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":883
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":883
  * 
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"             # <<<<<<<<<<<<<<
@@ -42014,7 +42098,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":884
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":884
  *             # Until ticket #99 is fixed, use integers to avoid warnings
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"             # <<<<<<<<<<<<<<
@@ -42032,7 +42116,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":885
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":885
  *             if   t == NPY_BYTE:        f[0] =  98 #"b"
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"             # <<<<<<<<<<<<<<
@@ -42050,7 +42134,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":886
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":886
  *             elif t == NPY_UBYTE:       f[0] =  66 #"B"
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"             # <<<<<<<<<<<<<<
@@ -42068,7 +42152,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":887
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":887
  *             elif t == NPY_SHORT:       f[0] = 104 #"h"
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"
  *             elif t == NPY_INT:         f[0] = 105 #"i"             # <<<<<<<<<<<<<<
@@ -42086,7 +42170,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":888
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":888
  *             elif t == NPY_USHORT:      f[0] =  72 #"H"
  *             elif t == NPY_INT:         f[0] = 105 #"i"
  *             elif t == NPY_UINT:        f[0] =  73 #"I"             # <<<<<<<<<<<<<<
@@ -42104,7 +42188,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":889
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":889
  *             elif t == NPY_INT:         f[0] = 105 #"i"
  *             elif t == NPY_UINT:        f[0] =  73 #"I"
  *             elif t == NPY_LONG:        f[0] = 108 #"l"             # <<<<<<<<<<<<<<
@@ -42122,7 +42206,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":890
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":890
  *             elif t == NPY_UINT:        f[0] =  73 #"I"
  *             elif t == NPY_LONG:        f[0] = 108 #"l"
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"             # <<<<<<<<<<<<<<
@@ -42140,7 +42224,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":891
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":891
  *             elif t == NPY_LONG:        f[0] = 108 #"l"
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"             # <<<<<<<<<<<<<<
@@ -42158,7 +42242,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":892
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":892
  *             elif t == NPY_ULONG:       f[0] = 76  #"L"
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"             # <<<<<<<<<<<<<<
@@ -42176,7 +42260,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":893
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":893
  *             elif t == NPY_LONGLONG:    f[0] = 113 #"q"
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"             # <<<<<<<<<<<<<<
@@ -42194,7 +42278,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":894
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":894
  *             elif t == NPY_ULONGLONG:   f[0] = 81  #"Q"
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"             # <<<<<<<<<<<<<<
@@ -42212,7 +42296,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":895
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":895
  *             elif t == NPY_FLOAT:       f[0] = 102 #"f"
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"             # <<<<<<<<<<<<<<
@@ -42230,7 +42314,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":896
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":896
  *             elif t == NPY_DOUBLE:      f[0] = 100 #"d"
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf             # <<<<<<<<<<<<<<
@@ -42250,7 +42334,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":897
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":897
  *             elif t == NPY_LONGDOUBLE:  f[0] = 103 #"g"
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd             # <<<<<<<<<<<<<<
@@ -42270,7 +42354,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":898
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":898
  *             elif t == NPY_CFLOAT:      f[0] = 90; f[1] = 102; f += 1 # Zf
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd
  *             elif t == NPY_CLONGDOUBLE: f[0] = 90; f[1] = 103; f += 1 # Zg             # <<<<<<<<<<<<<<
@@ -42290,7 +42374,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":899
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":899
  *             elif t == NPY_CDOUBLE:     f[0] = 90; f[1] = 100; f += 1 # Zd
  *             elif t == NPY_CLONGDOUBLE: f[0] = 90; f[1] = 103; f += 1 # Zg
  *             elif t == NPY_OBJECT:      f[0] = 79 #"O"             # <<<<<<<<<<<<<<
@@ -42308,7 +42392,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
         goto __pyx_L15;
       }
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":901
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":901
  *             elif t == NPY_OBJECT:      f[0] = 79 #"O"
  *             else:
  *                 raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)             # <<<<<<<<<<<<<<
@@ -42327,7 +42411,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       }
       __pyx_L15:;
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":902
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":902
  *             else:
  *                 raise ValueError(u"unknown dtype code in numpy.pxd (%d)" % t)
  *             f += 1             # <<<<<<<<<<<<<<
@@ -42336,7 +42420,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
  */
       __pyx_v_f = (__pyx_v_f + 1);
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":877
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":877
  *         offset[0] += child.itemsize
  * 
  *         if not PyDataType_HASFIELDS(child):             # <<<<<<<<<<<<<<
@@ -42346,7 +42430,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
       goto __pyx_L13;
     }
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":906
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":906
  *             # Cython ignores struct boundary information ("T{...}"),
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)             # <<<<<<<<<<<<<<
@@ -42359,7 +42443,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
     }
     __pyx_L13:;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":851
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":851
  *     cdef tuple fields
  * 
  *     for childname in descr.names:             # <<<<<<<<<<<<<<
@@ -42369,7 +42453,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":907
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":907
  *             # so don't output it
  *             f = _util_dtypestring(child, f, end, offset)
  *     return f             # <<<<<<<<<<<<<<
@@ -42379,7 +42463,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   __pyx_r = __pyx_v_f;
   goto __pyx_L0;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":842
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":842
  *         return ()
  * 
  * cdef inline char* _util_dtypestring(dtype descr, char* f, char* end, int* offset) except NULL:             # <<<<<<<<<<<<<<
@@ -42404,7 +42488,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *__pyx
   return __pyx_r;
 }
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1022
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1022
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -42416,7 +42500,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("set_array_base", 0);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1023
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1023
  * 
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!             # <<<<<<<<<<<<<<
@@ -42425,7 +42509,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_INCREF(__pyx_v_base);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1024
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1024
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!
  *     PyArray_SetBaseObject(arr, base)             # <<<<<<<<<<<<<<
@@ -42434,7 +42518,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   (void)(PyArray_SetBaseObject(__pyx_v_arr, __pyx_v_base));
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1022
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1022
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -42446,7 +42530,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __Pyx_RefNannyFinishContext();
 }
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1026
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1026
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -42461,7 +42545,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 0);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1027
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1027
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)             # <<<<<<<<<<<<<<
@@ -42470,7 +42554,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   __pyx_v_base = PyArray_BASE(__pyx_v_arr);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1028
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1028
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -42480,7 +42564,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = ((__pyx_v_base == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1029
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1029
  *     base = PyArray_BASE(arr)
  *     if base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -42491,7 +42575,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1028
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1028
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -42500,7 +42584,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1030
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1030
  *     if base is NULL:
  *         return None
  *     return <object>base             # <<<<<<<<<<<<<<
@@ -42512,7 +42596,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_r = ((PyObject *)__pyx_v_base);
   goto __pyx_L0;
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1026
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1026
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -42527,7 +42611,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1034
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1034
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -42548,7 +42632,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("import_array", 0);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1035
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1035
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -42564,7 +42648,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1036
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1036
  * cdef inline int import_array() except -1:
  *     try:
  *         _import_array()             # <<<<<<<<<<<<<<
@@ -42573,7 +42657,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
  */
       __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 1036, __pyx_L3_error)
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1035
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1035
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -42587,7 +42671,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1037
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1037
  *     try:
  *         _import_array()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -42602,7 +42686,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1038
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1038
  *         _import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -42618,7 +42702,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1035
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1035
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -42633,7 +42717,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1034
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1034
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -42656,7 +42740,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   return __pyx_r;
 }
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1040
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1040
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -42677,7 +42761,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("import_umath", 0);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1041
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1041
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -42693,7 +42777,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1042
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1042
  * cdef inline int import_umath() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -42702,7 +42786,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 1042, __pyx_L3_error)
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1041
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1041
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -42716,7 +42800,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1043
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1043
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -42731,7 +42815,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1044
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1044
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -42747,7 +42831,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1041
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1041
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -42762,7 +42846,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1040
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1040
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -42785,7 +42869,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   return __pyx_r;
 }
 
-/* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1046
+/* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1046
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -42806,7 +42890,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("import_ufunc", 0);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1047
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1047
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -42822,7 +42906,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1048
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1048
  * cdef inline int import_ufunc() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -42831,7 +42915,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 1048, __pyx_L3_error)
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1047
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1047
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -42845,7 +42929,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1049
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1049
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -42859,7 +42943,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1050
+      /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1050
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -42873,7 +42957,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1047
+    /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1047
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -42888,7 +42972,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1046
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1046
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -43738,7 +43822,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_is_xor_xtimes_node, __pyx_k_is_xor_xtimes_node, sizeof(__pyx_k_is_xor_xtimes_node), 0, 0, 1, 1},
   {&__pyx_n_s_is_xtimes_node, __pyx_k_is_xtimes_node, sizeof(__pyx_k_is_xtimes_node), 0, 0, 1, 1},
   {&__pyx_n_s_is_zeros_array, __pyx_k_is_zeros_array, sizeof(__pyx_k_is_zeros_array), 0, 0, 1, 1},
-  {&__pyx_n_s_iteritems, __pyx_k_iteritems, sizeof(__pyx_k_iteritems), 0, 0, 1, 1},
+  {&__pyx_n_s_items, __pyx_k_items, sizeof(__pyx_k_items), 0, 0, 1, 1},
   {&__pyx_n_s_j, __pyx_k_j, sizeof(__pyx_k_j), 0, 0, 1, 1},
   {&__pyx_n_s_jitter, __pyx_k_jitter, sizeof(__pyx_k_jitter), 0, 0, 1, 1},
   {&__pyx_n_s_k, __pyx_k_k, sizeof(__pyx_k_k), 0, 0, 1, 1},
@@ -44057,7 +44141,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "factorGraphAES.pyx":683
  * 
  *                 if print_updated_edge or print_out:
- *                     print "Updating Edge from Variable {} to Factor {}:\n{}\n".format(variable, neighbour, v_product[:4])             # <<<<<<<<<<<<<<
+ *                     print("Updating Edge from Variable {} to Factor {}:\n{}\n".format(variable, neighbour, v_product[:4]))             # <<<<<<<<<<<<<<
  * 
  *                 # Set as new outgoing message
  */
@@ -44076,7 +44160,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__5);
   __Pyx_GIVEREF(__pyx_slice__5);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":272
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":272
  *             if ((flags & pybuf.PyBUF_C_CONTIGUOUS == pybuf.PyBUF_C_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_ARRAY_C_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not C contiguous")             # <<<<<<<<<<<<<<
@@ -44087,7 +44171,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":276
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":276
  *             if ((flags & pybuf.PyBUF_F_CONTIGUOUS == pybuf.PyBUF_F_CONTIGUOUS)
  *                 and not PyArray_CHKFLAGS(self, NPY_ARRAY_F_CONTIGUOUS)):
  *                 raise ValueError(u"ndarray is not Fortran contiguous")             # <<<<<<<<<<<<<<
@@ -44098,7 +44182,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":306
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":306
  *                 if ((descr.byteorder == c'>' and little_endian) or
  *                     (descr.byteorder == c'<' and not little_endian)):
  *                     raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -44109,7 +44193,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":856
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":856
  * 
  *         if (end - f) - <int>(new_offset - offset[0]) < 15:
  *             raise RuntimeError(u"Format string allocated too short, see comment in numpy.pxd")             # <<<<<<<<<<<<<<
@@ -44120,7 +44204,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":860
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":860
  *         if ((child.byteorder == c'>' and little_endian) or
  *             (child.byteorder == c'<' and not little_endian)):
  *             raise ValueError(u"Non-native byte order not supported")             # <<<<<<<<<<<<<<
@@ -44131,7 +44215,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":880
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":880
  *             t = child.type_num
  *             if end - f < 5:
  *                 raise RuntimeError(u"Format string allocated too short.")             # <<<<<<<<<<<<<<
@@ -44142,7 +44226,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1038
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1038
  *         _import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -44153,7 +44237,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__20);
   __Pyx_GIVEREF(__pyx_tuple__20);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1044
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1044
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -44164,7 +44248,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
 
-  /* "../../../usr/local/lib/python2.7/dist-packages/Cython/Includes/numpy/__init__.pxd":1050
+  /* "../../../usr/local/lib/python3.6/dist-packages/Cython/Includes/numpy/__init__.pxd":1050
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -44427,7 +44511,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  *     def fabricate_key_scheduling_leakage(self):             # <<<<<<<<<<<<<<
  *         if 'k017-K' in self.variables:
- *             print "Fabricating now!"
+ *             print("Fabricating now!")
  */
   __pyx_tuple__66 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__66)) __PYX_ERR(0, 501, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__66);
@@ -44499,7 +44583,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  *     def check_factor_nodes(self, print_all = False, simple_xor = True):             # <<<<<<<<<<<<<<
  *         print_length = 20
- *         print "*** Checking Factor Nodes ***"
+ *         print("*** Checking Factor Nodes ***")
  */
   __pyx_tuple__78 = PyTuple_Pack(11, __pyx_n_s_self, __pyx_n_s_print_all, __pyx_n_s_simple_xor, __pyx_n_s_print_length, __pyx_n_s_factor_counter, __pyx_n_s_edge_counter, __pyx_n_s_f, __pyx_n_s_f_name, __pyx_n_s_neighbours_2, __pyx_n_s_key, __pyx_n_s_val); if (unlikely(!__pyx_tuple__78)) __PYX_ERR(0, 530, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__78);
@@ -45164,6 +45248,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 }
 
 static CYTHON_SMALL_CODE int __Pyx_InitGlobals(void) {
+  __pyx_umethod_PyDict_Type_items.type = (PyObject*)&PyDict_Type;
   __pyx_umethod_PyList_Type_remove.type = (PyObject*)&PyList_Type;
   if (__Pyx_InitStrings(__pyx_string_tab) < 0) __PYX_ERR(0, 1, __pyx_L1_error);
   __pyx_float_0_0 = PyFloat_FromDouble(0.0); if (unlikely(!__pyx_float_0_0)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -46184,7 +46269,7 @@ if (!__Pyx_RefNanny) {
  * 
  *     def fabricate_key_scheduling_leakage(self):             # <<<<<<<<<<<<<<
  *         if 'k017-K' in self.variables:
- *             print "Fabricating now!"
+ *             print("Fabricating now!")
  */
   __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_14factorGraphAES_14FactorGraphAES_41fabricate_key_scheduling_leakage, 0, __pyx_n_s_FactorGraphAES_fabricate_key_sch, NULL, __pyx_n_s_factorGraphAES, __pyx_d, ((PyObject *)__pyx_codeobj__67)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 501, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -46256,7 +46341,7 @@ if (!__Pyx_RefNanny) {
  * 
  *     def check_factor_nodes(self, print_all = False, simple_xor = True):             # <<<<<<<<<<<<<<
  *         print_length = 20
- *         print "*** Checking Factor Nodes ***"
+ *         print("*** Checking Factor Nodes ***")
  */
   __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_14factorGraphAES_14FactorGraphAES_53check_factor_nodes, 0, __pyx_n_s_FactorGraphAES_check_factor_node, NULL, __pyx_n_s_factorGraphAES, __pyx_d, ((PyObject *)__pyx_codeobj__79)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 530, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -46910,7 +46995,7 @@ if (!__Pyx_RefNanny) {
  * 
  *     G = FactorGraphAES(key_scheduling = False)             # <<<<<<<<<<<<<<
  * 
- *     print G
+ *     print(G)
  */
     __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_FactorGraphAES); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1634, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
@@ -46927,7 +47012,7 @@ if (!__Pyx_RefNanny) {
     /* "factorGraphAES.pyx":1636
  *     G = FactorGraphAES(key_scheduling = False)
  * 
- *     print G             # <<<<<<<<<<<<<<
+ *     print(G)             # <<<<<<<<<<<<<<
  * 
  *     TEST_KEY_SCHEDULING = False
  */
@@ -46937,7 +47022,7 @@ if (!__Pyx_RefNanny) {
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
     /* "factorGraphAES.pyx":1638
- *     print G
+ *     print(G)
  * 
  *     TEST_KEY_SCHEDULING = False             # <<<<<<<<<<<<<<
  *     TEST_REMOVING_NODES = False
@@ -46959,7 +47044,7 @@ if (!__Pyx_RefNanny) {
  *     # Test Key Scheduling
  *     if TEST_KEY_SCHEDULING:             # <<<<<<<<<<<<<<
  * 
- *         print "*** Without Key Scheduling ***"
+ *         print("*** Without Key Scheduling ***")
  */
     __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_TEST_KEY_SCHEDULING); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1642, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
@@ -46970,7 +47055,7 @@ if (!__Pyx_RefNanny) {
       /* "factorGraphAES.pyx":1644
  *     if TEST_KEY_SCHEDULING:
  * 
- *         print "*** Without Key Scheduling ***"             # <<<<<<<<<<<<<<
+ *         print("*** Without Key Scheduling ***")             # <<<<<<<<<<<<<<
  *         print_new_line()
  *         G_without = FactorGraphAES(key_scheduling = False)
  */
@@ -46978,7 +47063,7 @@ if (!__Pyx_RefNanny) {
 
       /* "factorGraphAES.pyx":1645
  * 
- *         print "*** Without Key Scheduling ***"
+ *         print("*** Without Key Scheduling ***")
  *         print_new_line()             # <<<<<<<<<<<<<<
  *         G_without = FactorGraphAES(key_scheduling = False)
  * 
@@ -46991,11 +47076,11 @@ if (!__Pyx_RefNanny) {
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
       /* "factorGraphAES.pyx":1646
- *         print "*** Without Key Scheduling ***"
+ *         print("*** Without Key Scheduling ***")
  *         print_new_line()
  *         G_without = FactorGraphAES(key_scheduling = False)             # <<<<<<<<<<<<<<
  * 
- *         print "*** With Key Scheduling ***"
+ *         print("*** With Key Scheduling ***")
  */
       __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_FactorGraphAES); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1646, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
@@ -47012,7 +47097,7 @@ if (!__Pyx_RefNanny) {
       /* "factorGraphAES.pyx":1648
  *         G_without = FactorGraphAES(key_scheduling = False)
  * 
- *         print "*** With Key Scheduling ***"             # <<<<<<<<<<<<<<
+ *         print("*** With Key Scheduling ***")             # <<<<<<<<<<<<<<
  *         print_new_line()
  *         G_with = FactorGraphAES(key_scheduling = True)
  */
@@ -47020,7 +47105,7 @@ if (!__Pyx_RefNanny) {
 
       /* "factorGraphAES.pyx":1649
  * 
- *         print "*** With Key Scheduling ***"
+ *         print("*** With Key Scheduling ***")
  *         print_new_line()             # <<<<<<<<<<<<<<
  *         G_with = FactorGraphAES(key_scheduling = True)
  *         print_new_line()
@@ -47033,7 +47118,7 @@ if (!__Pyx_RefNanny) {
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
       /* "factorGraphAES.pyx":1650
- *         print "*** With Key Scheduling ***"
+ *         print("*** With Key Scheduling ***")
  *         print_new_line()
  *         G_with = FactorGraphAES(key_scheduling = True)             # <<<<<<<<<<<<<<
  *         print_new_line()
@@ -47087,7 +47172,7 @@ if (!__Pyx_RefNanny) {
  *     # Test Key Scheduling
  *     if TEST_KEY_SCHEDULING:             # <<<<<<<<<<<<<<
  * 
- *         print "*** Without Key Scheduling ***"
+ *         print("*** Without Key Scheduling ***")
  */
     }
 
@@ -47096,7 +47181,7 @@ if (!__Pyx_RefNanny) {
  *     # Test Removing Nodes
  *     if TEST_REMOVING_NODES:             # <<<<<<<<<<<<<<
  * 
- *         print "*** No Removal (Excluding Key Scheduling) ***"
+ *         print("*** No Removal (Excluding Key Scheduling) ***")
  */
     __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_TEST_REMOVING_NODES); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1656, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
@@ -47107,7 +47192,7 @@ if (!__Pyx_RefNanny) {
       /* "factorGraphAES.pyx":1658
  *     if TEST_REMOVING_NODES:
  * 
- *         print "*** No Removal (Excluding Key Scheduling) ***"             # <<<<<<<<<<<<<<
+ *         print("*** No Removal (Excluding Key Scheduling) ***")             # <<<<<<<<<<<<<<
  *         print_new_line()
  *         G = FactorGraphAES()
  */
@@ -47115,7 +47200,7 @@ if (!__Pyx_RefNanny) {
 
       /* "factorGraphAES.pyx":1659
  * 
- *         print "*** No Removal (Excluding Key Scheduling) ***"
+ *         print("*** No Removal (Excluding Key Scheduling) ***")
  *         print_new_line()             # <<<<<<<<<<<<<<
  *         G = FactorGraphAES()
  * 
@@ -47128,11 +47213,11 @@ if (!__Pyx_RefNanny) {
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
       /* "factorGraphAES.pyx":1660
- *         print "*** No Removal (Excluding Key Scheduling) ***"
+ *         print("*** No Removal (Excluding Key Scheduling) ***")
  *         print_new_line()
  *         G = FactorGraphAES()             # <<<<<<<<<<<<<<
  * 
- *         print "*** Removing cm node ***"
+ *         print("*** Removing cm node ***")
  */
       __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_FactorGraphAES); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1660, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
@@ -47145,7 +47230,7 @@ if (!__Pyx_RefNanny) {
       /* "factorGraphAES.pyx":1662
  *         G = FactorGraphAES()
  * 
- *         print "*** Removing cm node ***"             # <<<<<<<<<<<<<<
+ *         print("*** Removing cm node ***")             # <<<<<<<<<<<<<<
  *         print_new_line()
  *         G_no_cm = FactorGraphAES(removed_nodes = ['cm'])
  */
@@ -47153,7 +47238,7 @@ if (!__Pyx_RefNanny) {
 
       /* "factorGraphAES.pyx":1663
  * 
- *         print "*** Removing cm node ***"
+ *         print("*** Removing cm node ***")
  *         print_new_line()             # <<<<<<<<<<<<<<
  *         G_no_cm = FactorGraphAES(removed_nodes = ['cm'])
  * 
@@ -47166,11 +47251,11 @@ if (!__Pyx_RefNanny) {
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
       /* "factorGraphAES.pyx":1664
- *         print "*** Removing cm node ***"
+ *         print("*** Removing cm node ***")
  *         print_new_line()
  *         G_no_cm = FactorGraphAES(removed_nodes = ['cm'])             # <<<<<<<<<<<<<<
  * 
- *         print "*** Removing xa node ***"
+ *         print("*** Removing xa node ***")
  */
       __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_FactorGraphAES); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1664, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
@@ -47193,7 +47278,7 @@ if (!__Pyx_RefNanny) {
       /* "factorGraphAES.pyx":1666
  *         G_no_cm = FactorGraphAES(removed_nodes = ['cm'])
  * 
- *         print "*** Removing xa node ***"             # <<<<<<<<<<<<<<
+ *         print("*** Removing xa node ***")             # <<<<<<<<<<<<<<
  *         print_new_line()
  *         G_no_xa = FactorGraphAES(removed_nodes = ['xa'])
  */
@@ -47201,7 +47286,7 @@ if (!__Pyx_RefNanny) {
 
       /* "factorGraphAES.pyx":1667
  * 
- *         print "*** Removing xa node ***"
+ *         print("*** Removing xa node ***")
  *         print_new_line()             # <<<<<<<<<<<<<<
  *         G_no_xa = FactorGraphAES(removed_nodes = ['xa'])
  * 
@@ -47214,11 +47299,11 @@ if (!__Pyx_RefNanny) {
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
       /* "factorGraphAES.pyx":1668
- *         print "*** Removing xa node ***"
+ *         print("*** Removing xa node ***")
  *         print_new_line()
  *         G_no_xa = FactorGraphAES(removed_nodes = ['xa'])             # <<<<<<<<<<<<<<
  * 
- *         print "*** Removing xb node ***"
+ *         print("*** Removing xb node ***")
  */
       __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_FactorGraphAES); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1668, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
@@ -47241,7 +47326,7 @@ if (!__Pyx_RefNanny) {
       /* "factorGraphAES.pyx":1670
  *         G_no_xa = FactorGraphAES(removed_nodes = ['xa'])
  * 
- *         print "*** Removing xb node ***"             # <<<<<<<<<<<<<<
+ *         print("*** Removing xb node ***")             # <<<<<<<<<<<<<<
  *         print_new_line()
  *         G_no_xb = FactorGraphAES(removed_nodes = ['xb'])
  */
@@ -47249,7 +47334,7 @@ if (!__Pyx_RefNanny) {
 
       /* "factorGraphAES.pyx":1671
  * 
- *         print "*** Removing xb node ***"
+ *         print("*** Removing xb node ***")
  *         print_new_line()             # <<<<<<<<<<<<<<
  *         G_no_xb = FactorGraphAES(removed_nodes = ['xb'])
  * 
@@ -47262,11 +47347,11 @@ if (!__Pyx_RefNanny) {
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
       /* "factorGraphAES.pyx":1672
- *         print "*** Removing xb node ***"
+ *         print("*** Removing xb node ***")
  *         print_new_line()
  *         G_no_xb = FactorGraphAES(removed_nodes = ['xb'])             # <<<<<<<<<<<<<<
  * 
- *         print "*** Removing cm, xa, xb nodes ***"
+ *         print("*** Removing cm, xa, xb nodes ***")
  */
       __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_FactorGraphAES); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1672, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
@@ -47289,7 +47374,7 @@ if (!__Pyx_RefNanny) {
       /* "factorGraphAES.pyx":1674
  *         G_no_xb = FactorGraphAES(removed_nodes = ['xb'])
  * 
- *         print "*** Removing cm, xa, xb nodes ***"             # <<<<<<<<<<<<<<
+ *         print("*** Removing cm, xa, xb nodes ***")             # <<<<<<<<<<<<<<
  *         print_new_line()
  *         G_no_all = FactorGraphAES(removed_nodes = ['cm','xa','xb'])
  */
@@ -47297,7 +47382,7 @@ if (!__Pyx_RefNanny) {
 
       /* "factorGraphAES.pyx":1675
  * 
- *         print "*** Removing cm, xa, xb nodes ***"
+ *         print("*** Removing cm, xa, xb nodes ***")
  *         print_new_line()             # <<<<<<<<<<<<<<
  *         G_no_all = FactorGraphAES(removed_nodes = ['cm','xa','xb'])
  */
@@ -47309,7 +47394,7 @@ if (!__Pyx_RefNanny) {
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
       /* "factorGraphAES.pyx":1676
- *         print "*** Removing cm, xa, xb nodes ***"
+ *         print("*** Removing cm, xa, xb nodes ***")
  *         print_new_line()
  *         G_no_all = FactorGraphAES(removed_nodes = ['cm','xa','xb'])             # <<<<<<<<<<<<<<
  */
@@ -47342,7 +47427,7 @@ if (!__Pyx_RefNanny) {
  *     # Test Removing Nodes
  *     if TEST_REMOVING_NODES:             # <<<<<<<<<<<<<<
  * 
- *         print "*** No Removal (Excluding Key Scheduling) ***"
+ *         print("*** No Removal (Excluding Key Scheduling) ***")
  */
     }
 
@@ -49559,201 +49644,31 @@ static PyObject *__Pyx_PyDict_GetItem(PyObject *d, PyObject* key) {
 }
 #endif
 
-/* PyObjectCallMethod0 */
-  static PyObject* __Pyx_PyObject_CallMethod0(PyObject* obj, PyObject* method_name) {
-    PyObject *method = NULL, *result = NULL;
-    int is_method = __Pyx_PyObject_GetMethod(obj, method_name, &method);
-    if (likely(is_method)) {
-        result = __Pyx_PyObject_CallOneArg(method, obj);
-        Py_DECREF(method);
-        return result;
-    }
-    if (unlikely(!method)) goto bad;
-    result = __Pyx_PyObject_CallNoArg(method);
-    Py_DECREF(method);
+/* CallUnboundCMethod0 */
+  static PyObject* __Pyx__CallUnboundCMethod0(__Pyx_CachedCFunction* cfunc, PyObject* self) {
+    PyObject *args, *result = NULL;
+    if (unlikely(!cfunc->method) && unlikely(__Pyx_TryUnpackUnboundCMethod(cfunc) < 0)) return NULL;
+#if CYTHON_ASSUME_SAFE_MACROS
+    args = PyTuple_New(1);
+    if (unlikely(!args)) goto bad;
+    Py_INCREF(self);
+    PyTuple_SET_ITEM(args, 0, self);
+#else
+    args = PyTuple_Pack(1, self);
+    if (unlikely(!args)) goto bad;
+#endif
+    result = __Pyx_PyObject_Call(cfunc->method, args, NULL);
+    Py_DECREF(args);
 bad:
     return result;
 }
 
-/* RaiseNoneIterError */
-  static CYTHON_INLINE void __Pyx_RaiseNoneNotIterableError(void) {
-    PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-}
-
-/* UnpackTupleError */
-  static void __Pyx_UnpackTupleError(PyObject *t, Py_ssize_t index) {
-    if (t == Py_None) {
-      __Pyx_RaiseNoneNotIterableError();
-    } else if (PyTuple_GET_SIZE(t) < index) {
-      __Pyx_RaiseNeedMoreValuesError(PyTuple_GET_SIZE(t));
-    } else {
-      __Pyx_RaiseTooManyValuesError(index);
-    }
-}
-
-/* UnpackTuple2 */
-  static CYTHON_INLINE int __Pyx_unpack_tuple2_exact(
-        PyObject* tuple, PyObject** pvalue1, PyObject** pvalue2, int decref_tuple) {
-    PyObject *value1 = NULL, *value2 = NULL;
-#if CYTHON_COMPILING_IN_PYPY
-    value1 = PySequence_ITEM(tuple, 0);  if (unlikely(!value1)) goto bad;
-    value2 = PySequence_ITEM(tuple, 1);  if (unlikely(!value2)) goto bad;
-#else
-    value1 = PyTuple_GET_ITEM(tuple, 0);  Py_INCREF(value1);
-    value2 = PyTuple_GET_ITEM(tuple, 1);  Py_INCREF(value2);
-#endif
-    if (decref_tuple) {
-        Py_DECREF(tuple);
-    }
-    *pvalue1 = value1;
-    *pvalue2 = value2;
-    return 0;
-#if CYTHON_COMPILING_IN_PYPY
-bad:
-    Py_XDECREF(value1);
-    Py_XDECREF(value2);
-    if (decref_tuple) { Py_XDECREF(tuple); }
-    return -1;
-#endif
-}
-static int __Pyx_unpack_tuple2_generic(PyObject* tuple, PyObject** pvalue1, PyObject** pvalue2,
-                                       int has_known_size, int decref_tuple) {
-    Py_ssize_t index;
-    PyObject *value1 = NULL, *value2 = NULL, *iter = NULL;
-    iternextfunc iternext;
-    iter = PyObject_GetIter(tuple);
-    if (unlikely(!iter)) goto bad;
-    if (decref_tuple) { Py_DECREF(tuple); tuple = NULL; }
-    iternext = Py_TYPE(iter)->tp_iternext;
-    value1 = iternext(iter); if (unlikely(!value1)) { index = 0; goto unpacking_failed; }
-    value2 = iternext(iter); if (unlikely(!value2)) { index = 1; goto unpacking_failed; }
-    if (!has_known_size && unlikely(__Pyx_IternextUnpackEndCheck(iternext(iter), 2))) goto bad;
-    Py_DECREF(iter);
-    *pvalue1 = value1;
-    *pvalue2 = value2;
-    return 0;
-unpacking_failed:
-    if (!has_known_size && __Pyx_IterFinish() == 0)
-        __Pyx_RaiseNeedMoreValuesError(index);
-bad:
-    Py_XDECREF(iter);
-    Py_XDECREF(value1);
-    Py_XDECREF(value2);
-    if (decref_tuple) { Py_XDECREF(tuple); }
-    return -1;
-}
-
-/* dict_iter */
-  static CYTHON_INLINE PyObject* __Pyx_dict_iterator(PyObject* iterable, int is_dict, PyObject* method_name,
-                                                   Py_ssize_t* p_orig_length, int* p_source_is_dict) {
-    is_dict = is_dict || likely(PyDict_CheckExact(iterable));
-    *p_source_is_dict = is_dict;
-    if (is_dict) {
-#if !CYTHON_COMPILING_IN_PYPY
-        *p_orig_length = PyDict_Size(iterable);
-        Py_INCREF(iterable);
-        return iterable;
-#elif PY_MAJOR_VERSION >= 3
-        static PyObject *py_items = NULL, *py_keys = NULL, *py_values = NULL;
-        PyObject **pp = NULL;
-        if (method_name) {
-            const char *name = PyUnicode_AsUTF8(method_name);
-            if (strcmp(name, "iteritems") == 0) pp = &py_items;
-            else if (strcmp(name, "iterkeys") == 0) pp = &py_keys;
-            else if (strcmp(name, "itervalues") == 0) pp = &py_values;
-            if (pp) {
-                if (!*pp) {
-                    *pp = PyUnicode_FromString(name + 4);
-                    if (!*pp)
-                        return NULL;
-                }
-                method_name = *pp;
-            }
-        }
-#endif
-    }
-    *p_orig_length = 0;
-    if (method_name) {
-        PyObject* iter;
-        iterable = __Pyx_PyObject_CallMethod0(iterable, method_name);
-        if (!iterable)
-            return NULL;
-#if !CYTHON_COMPILING_IN_PYPY
-        if (PyTuple_CheckExact(iterable) || PyList_CheckExact(iterable))
-            return iterable;
-#endif
-        iter = PyObject_GetIter(iterable);
-        Py_DECREF(iterable);
-        return iter;
-    }
-    return PyObject_GetIter(iterable);
-}
-static CYTHON_INLINE int __Pyx_dict_iter_next(
-        PyObject* iter_obj, CYTHON_NCP_UNUSED Py_ssize_t orig_length, CYTHON_NCP_UNUSED Py_ssize_t* ppos,
-        PyObject** pkey, PyObject** pvalue, PyObject** pitem, int source_is_dict) {
-    PyObject* next_item;
-#if !CYTHON_COMPILING_IN_PYPY
-    if (source_is_dict) {
-        PyObject *key, *value;
-        if (unlikely(orig_length != PyDict_Size(iter_obj))) {
-            PyErr_SetString(PyExc_RuntimeError, "dictionary changed size during iteration");
-            return -1;
-        }
-        if (unlikely(!PyDict_Next(iter_obj, ppos, &key, &value))) {
-            return 0;
-        }
-        if (pitem) {
-            PyObject* tuple = PyTuple_New(2);
-            if (unlikely(!tuple)) {
-                return -1;
-            }
-            Py_INCREF(key);
-            Py_INCREF(value);
-            PyTuple_SET_ITEM(tuple, 0, key);
-            PyTuple_SET_ITEM(tuple, 1, value);
-            *pitem = tuple;
-        } else {
-            if (pkey) {
-                Py_INCREF(key);
-                *pkey = key;
-            }
-            if (pvalue) {
-                Py_INCREF(value);
-                *pvalue = value;
-            }
-        }
-        return 1;
-    } else if (PyTuple_CheckExact(iter_obj)) {
-        Py_ssize_t pos = *ppos;
-        if (unlikely(pos >= PyTuple_GET_SIZE(iter_obj))) return 0;
-        *ppos = pos + 1;
-        next_item = PyTuple_GET_ITEM(iter_obj, pos);
-        Py_INCREF(next_item);
-    } else if (PyList_CheckExact(iter_obj)) {
-        Py_ssize_t pos = *ppos;
-        if (unlikely(pos >= PyList_GET_SIZE(iter_obj))) return 0;
-        *ppos = pos + 1;
-        next_item = PyList_GET_ITEM(iter_obj, pos);
-        Py_INCREF(next_item);
-    } else
-#endif
-    {
-        next_item = PyIter_Next(iter_obj);
-        if (unlikely(!next_item)) {
-            return __Pyx_IterFinish();
-        }
-    }
-    if (pitem) {
-        *pitem = next_item;
-    } else if (pkey && pvalue) {
-        if (__Pyx_unpack_tuple2(next_item, pkey, pvalue, source_is_dict, source_is_dict, 1))
-            return -1;
-    } else if (pkey) {
-        *pkey = next_item;
-    } else {
-        *pvalue = next_item;
-    }
-    return 1;
+/* py_dict_items */
+  static CYTHON_INLINE PyObject* __Pyx_PyDict_Items(PyObject* d) {
+    if (PY_MAJOR_VERSION >= 3)
+        return __Pyx_CallUnboundCMethod0(&__pyx_umethod_PyDict_Type_items, d);
+    else
+        return PyDict_Items(d);
 }
 
 /* SliceObject */
@@ -50222,6 +50137,11 @@ static CYTHON_INLINE int __Pyx_set_iter_next(
     }
     return (
         PyObject_RichCompare(op1, op2, Py_EQ));
+}
+
+/* RaiseNoneIterError */
+    static CYTHON_INLINE void __Pyx_RaiseNoneNotIterableError(void) {
+    PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
 }
 
 /* TypeImport */
