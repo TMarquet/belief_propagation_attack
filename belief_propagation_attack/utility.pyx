@@ -1718,8 +1718,10 @@ def load_bpann(variable, load_metadata=True, normalise_traces=True, input_length
     time_point = np.load('{}{}.npy'.format(TIMEPOINTS_FOLDER, var_name), allow_pickle=True)[var_number-1]
 
     start_window, end_window = handle_window(time_point, input_length, 0, samples - 1)
-
+    start_window = int(start_window)
+    end_window = int(start_window)
     trace_data = load_trace_data(filepath=get_shifted_tracedata_filepath(shifted=jitter))[:, start_window:end_window]
+    print 'This is trace_data :',trace_data
     traces, data_length = trace_data.shape
     type = trace_data.dtype
     real_values = np.load('{}{}.npy'.format(REALVALUES_FOLDER, var_name), allow_pickle=True)[var_number-1,:]
@@ -1778,6 +1780,8 @@ def load_bpann(variable, load_metadata=True, normalise_traces=True, input_length
     else:
         # Load profiling traces
         X_profiling = trace_data[:training_traces, :]
+        print 'This is X :', X_profiling
+
         # Load profiling labels
         Y_profiling = real_values[:training_traces]
 
@@ -1821,6 +1825,7 @@ def divide_rows_by_max(X):
         return X.astype(np.float32) / np.max(X, axis=1)[:, None]
 
 def normalise_neural_traces(X):
+     
     if X.shape[0] > 200000:
         # Memory error: do sequentially
         out = np.empty(X.shape)
@@ -1829,7 +1834,7 @@ def normalise_neural_traces(X):
         return out
     else:
 
-        # DEBUG
+        # DEBUG 
         minimum_value_zero = np.apply_along_axis(normalise_neural_trace, 1, X)
         divided_by_max = divide_rows_by_max(minimum_value_zero)
         return divided_by_max
