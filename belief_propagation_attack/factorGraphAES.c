@@ -2041,7 +2041,7 @@ static const char __pyx_k_xt[] = "xt";
 static const char __pyx_k_001[] = "001";
 static const char __pyx_k_005[] = "005";
 static const char __pyx_k_017[] = "017";
-static const char __pyx_k_115[] = "115:{}";
+static const char __pyx_k_115[] = "115:{})";
 static const char __pyx_k_144[] = "144";
 static const char __pyx_k_145[] = "145";
 static const char __pyx_k_160[] = "160";
@@ -4634,7 +4634,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *             try:
  *                 self.G = nx.read_gexf(             # <<<<<<<<<<<<<<
  *                     'graphs/{}_trace_fullAES{}{}{}_removednodes-{}_keysched-{}.graph'.format(traces, furious_string,
- *                                                                                          rounds_of_aes,
+ *                                                                                           rounds_of_aes,
  */
         __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_nx); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 82, __pyx_L13_error)
         __Pyx_GOTREF(__pyx_t_6);
@@ -4646,8 +4646,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *             try:
  *                 self.G = nx.read_gexf(
  *                     'graphs/{}_trace_fullAES{}{}{}_removednodes-{}_keysched-{}.graph'.format(traces, furious_string,             # <<<<<<<<<<<<<<
- *                                                                                          rounds_of_aes,
- *                                                                                          remove_cycle_string,
+ *                                                                                           rounds_of_aes,
+ *                                                                                           remove_cycle_string,
  */
         __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_graphs__trace_fullAES__removedno, __pyx_n_s_format); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 83, __pyx_L13_error)
         __Pyx_GOTREF(__pyx_t_8);
@@ -4655,20 +4655,20 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
         __Pyx_GOTREF(__pyx_t_4);
 
         /* "factorGraphAES.pyx":86
- *                                                                                          rounds_of_aes,
- *                                                                                          remove_cycle_string,
- *                                                                                          list_to_file_string(             # <<<<<<<<<<<<<<
- *                                                                                              removed_nodes),
- *                                                                                          key_scheduling))
+ *                                                                                           rounds_of_aes,
+ *                                                                                           remove_cycle_string,
+ *                                                                                           list_to_file_string(             # <<<<<<<<<<<<<<
+ *                                                                                               removed_nodes),
+ *                                                                                           key_scheduling))
  */
         __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_list_to_file_string); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 86, __pyx_L13_error)
         __Pyx_GOTREF(__pyx_t_13);
 
         /* "factorGraphAES.pyx":87
- *                                                                                          remove_cycle_string,
- *                                                                                          list_to_file_string(
- *                                                                                              removed_nodes),             # <<<<<<<<<<<<<<
- *                                                                                          key_scheduling))
+ *                                                                                           remove_cycle_string,
+ *                                                                                           list_to_file_string(
+ *                                                                                               removed_nodes),             # <<<<<<<<<<<<<<
+ *                                                                                           key_scheduling))
  *                 if my_print:
  */
         __pyx_t_14 = NULL;
@@ -4688,9 +4688,9 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
         /* "factorGraphAES.pyx":88
- *                                                                                          list_to_file_string(
- *                                                                                              removed_nodes),
- *                                                                                          key_scheduling))             # <<<<<<<<<<<<<<
+ *                                                                                           list_to_file_string(
+ *                                                                                               removed_nodes),
+ *                                                                                           key_scheduling))             # <<<<<<<<<<<<<<
  *                 if my_print:
  *                     print("Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling))
  */
@@ -4777,14 +4777,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  *             try:
  *                 self.G = nx.read_gexf(             # <<<<<<<<<<<<<<
  *                     'graphs/{}_trace_fullAES{}{}{}_removednodes-{}_keysched-{}.graph'.format(traces, furious_string,
- *                                                                                          rounds_of_aes,
+ *                                                                                           rounds_of_aes,
  */
         if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_G, __pyx_t_3) < 0) __PYX_ERR(0, 82, __pyx_L13_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
         /* "factorGraphAES.pyx":89
- *                                                                                              removed_nodes),
- *                                                                                          key_scheduling))
+ *                                                                                               removed_nodes),
+ *                                                                                           key_scheduling))
  *                 if my_print:             # <<<<<<<<<<<<<<
  *                     print("Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling))
  *             except IOError:
@@ -4793,7 +4793,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
         if (__pyx_t_1) {
 
           /* "factorGraphAES.pyx":90
- *                                                                                          key_scheduling))
+ *                                                                                           key_scheduling))
  *                 if my_print:
  *                     print("Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling))             # <<<<<<<<<<<<<<
  *             except IOError:
@@ -4887,8 +4887,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
           /* "factorGraphAES.pyx":89
- *                                                                                              removed_nodes),
- *                                                                                          key_scheduling))
+ *                                                                                               removed_nodes),
+ *                                                                                           key_scheduling))
  *                 if my_print:             # <<<<<<<<<<<<<<
  *                     print("Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling))
  *             except IOError:
@@ -5287,7 +5287,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  * 
  *         self.G = nx.read_gexf(             # <<<<<<<<<<<<<<
  *             'graphs/{}_trace_fullAES{}{}{}_removednodes-{}_keysched-{}.graph'.format(traces, furious_string,
- *                                                                                  rounds_of_aes,
+ *                                                                                   rounds_of_aes,
  */
   __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_nx); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 103, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
@@ -5299,8 +5299,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  * 
  *         self.G = nx.read_gexf(
  *             'graphs/{}_trace_fullAES{}{}{}_removednodes-{}_keysched-{}.graph'.format(traces, furious_string,             # <<<<<<<<<<<<<<
- *                                                                                  rounds_of_aes,
- *                                                                                  remove_cycle_string,
+ *                                                                                   rounds_of_aes,
+ *                                                                                   remove_cycle_string,
  */
   __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_graphs__trace_fullAES__removedno, __pyx_n_s_format); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 104, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
@@ -5308,10 +5308,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
   __Pyx_GOTREF(__pyx_t_8);
 
   /* "factorGraphAES.pyx":107
- *                                                                                  rounds_of_aes,
- *                                                                                  remove_cycle_string,
- *                                                                                  list_to_file_string(removed_nodes),             # <<<<<<<<<<<<<<
- *                                                                                  key_scheduling))
+ *                                                                                   rounds_of_aes,
+ *                                                                                   remove_cycle_string,
+ *                                                                                   list_to_file_string(removed_nodes),             # <<<<<<<<<<<<<<
+ *                                                                                   key_scheduling))
  * 
  */
   __Pyx_GetModuleGlobalName(__pyx_t_16, __pyx_n_s_list_to_file_string); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 107, __pyx_L1_error)
@@ -5333,9 +5333,9 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
   __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
   /* "factorGraphAES.pyx":108
- *                                                                                  remove_cycle_string,
- *                                                                                  list_to_file_string(removed_nodes),
- *                                                                                  key_scheduling))             # <<<<<<<<<<<<<<
+ *                                                                                   remove_cycle_string,
+ *                                                                                   list_to_file_string(removed_nodes),
+ *                                                                                   key_scheduling))             # <<<<<<<<<<<<<<
  * 
  *         variables       = list()
  */
@@ -5422,13 +5422,13 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES___init__(CYTHON_UNUS
  * 
  *         self.G = nx.read_gexf(             # <<<<<<<<<<<<<<
  *             'graphs/{}_trace_fullAES{}{}{}_removednodes-{}_keysched-{}.graph'.format(traces, furious_string,
- *                                                                                  rounds_of_aes,
+ *                                                                                   rounds_of_aes,
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_G, __pyx_t_13) < 0) __PYX_ERR(0, 103, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
   /* "factorGraphAES.pyx":110
- *                                                                                  key_scheduling))
+ *                                                                                   key_scheduling))
  * 
  *         variables       = list()             # <<<<<<<<<<<<<<
  *         factors         = list()
@@ -8800,7 +8800,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_32check_leakage_deta
  *         sim.fix_key(self.key)
  *         sim.fix_plaintext(plaintext)             # <<<<<<<<<<<<<<
  *         sim.simulate(read_plaintexts=0, print_all=0, random_plaintexts=0, affect_with_noise=False,
- *              hw_leakage_model=False, real_values=True)
+ *               hw_leakage_model=False, real_values=True)
  */
   __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_sim, __pyx_n_s_fix_plaintext); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 252, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -8825,7 +8825,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_32check_leakage_deta
  *         sim.fix_key(self.key)
  *         sim.fix_plaintext(plaintext)
  *         sim.simulate(read_plaintexts=0, print_all=0, random_plaintexts=0, affect_with_noise=False,             # <<<<<<<<<<<<<<
- *              hw_leakage_model=False, real_values=True)
+ *               hw_leakage_model=False, real_values=True)
  *         real_values = sim.get_leakage_dictionary()
  */
   __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_sim, __pyx_n_s_simulate); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 253, __pyx_L1_error)
@@ -8840,7 +8840,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_32check_leakage_deta
   /* "factorGraphAES.pyx":254
  *         sim.fix_plaintext(plaintext)
  *         sim.simulate(read_plaintexts=0, print_all=0, random_plaintexts=0, affect_with_noise=False,
- *              hw_leakage_model=False, real_values=True)             # <<<<<<<<<<<<<<
+ *               hw_leakage_model=False, real_values=True)             # <<<<<<<<<<<<<<
  *         real_values = sim.get_leakage_dictionary()
  *         # Loop through all variables
  */
@@ -8851,7 +8851,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_32check_leakage_deta
  *         sim.fix_key(self.key)
  *         sim.fix_plaintext(plaintext)
  *         sim.simulate(read_plaintexts=0, print_all=0, random_plaintexts=0, affect_with_noise=False,             # <<<<<<<<<<<<<<
- *              hw_leakage_model=False, real_values=True)
+ *               hw_leakage_model=False, real_values=True)
  *         real_values = sim.get_leakage_dictionary()
  */
   __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 253, __pyx_L1_error)
@@ -8862,7 +8862,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_32check_leakage_deta
 
   /* "factorGraphAES.pyx":255
  *         sim.simulate(read_plaintexts=0, print_all=0, random_plaintexts=0, affect_with_noise=False,
- *              hw_leakage_model=False, real_values=True)
+ *               hw_leakage_model=False, real_values=True)
  *         real_values = sim.get_leakage_dictionary()             # <<<<<<<<<<<<<<
  *         # Loop through all variables
  *         rank_list = [ [] for i in range (256) ]
@@ -22670,8 +22670,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_74bp_one_round(CYTHO
  *         self.bp_factor_pass(rnd, total_rounds)
  * 
  *     def bp_run(self, int rounds, print_all_messages = False, print_all_marginal_distributions = False,             # <<<<<<<<<<<<<<
- *                print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
- *                rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
+ *                 print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
+ *                 rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
  */
 
 static PyObject *__pyx_pf_14factorGraphAES___defaults__(CYTHON_UNUSED PyObject *__pyx_self) {
@@ -22684,10 +22684,10 @@ static PyObject *__pyx_pf_14factorGraphAES___defaults__(CYTHON_UNUSED PyObject *
   __Pyx_XDECREF(__pyx_r);
 
   /* "factorGraphAES.pyx":808
- *                print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
- *                rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
- *                float epsilon = 0, int epsilon_s = INFORMATION_EXHAUSTED_S, break_if_failed = True,             # <<<<<<<<<<<<<<
- *                round_csv = False, snrexp = "UNKNOWN", update_key_initial_distributions = False, debug_mode = False):
+ *                 print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
+ *                 rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
+ *                 float epsilon = 0, int epsilon_s = INFORMATION_EXHAUSTED_S, break_if_failed = True,             # <<<<<<<<<<<<<<
+ *                 round_csv = False, snrexp = "UNKNOWN", update_key_initial_distributions = False, debug_mode = False):
  * 
  */
   __pyx_t_1 = PyFloat_FromDouble(((float)0.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 808, __pyx_L1_error)
@@ -22697,16 +22697,16 @@ static PyObject *__pyx_pf_14factorGraphAES___defaults__(CYTHON_UNUSED PyObject *
  *         self.bp_factor_pass(rnd, total_rounds)
  * 
  *     def bp_run(self, int rounds, print_all_messages = False, print_all_marginal_distributions = False,             # <<<<<<<<<<<<<<
- *                print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
- *                rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
+ *                 print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
+ *                 rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
  */
   __pyx_t_2 = __Pyx_PyInt_From_int(__Pyx_CyFunction_Defaults(__pyx_defaults, __pyx_self)->__pyx_arg_epsilon_s); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 805, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
   /* "factorGraphAES.pyx":809
- *                rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
- *                float epsilon = 0, int epsilon_s = INFORMATION_EXHAUSTED_S, break_if_failed = True,
- *                round_csv = False, snrexp = "UNKNOWN", update_key_initial_distributions = False, debug_mode = False):             # <<<<<<<<<<<<<<
+ *                 rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
+ *                 float epsilon = 0, int epsilon_s = INFORMATION_EXHAUSTED_S, break_if_failed = True,
+ *                 round_csv = False, snrexp = "UNKNOWN", update_key_initial_distributions = False, debug_mode = False):             # <<<<<<<<<<<<<<
  * 
  *         cdef int ranking_start, i, epsilon_succession
  */
@@ -22762,8 +22762,8 @@ static PyObject *__pyx_pf_14factorGraphAES___defaults__(CYTHON_UNUSED PyObject *
  *         self.bp_factor_pass(rnd, total_rounds)
  * 
  *     def bp_run(self, int rounds, print_all_messages = False, print_all_marginal_distributions = False,             # <<<<<<<<<<<<<<
- *                print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
- *                rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
+ *                 print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
+ *                 rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
  */
   __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 805, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -23366,7 +23366,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *                 self.bp_one_round(i, rounds+1)
  * 
  *             if (print_all_messages or print_all_marginal_distributions or print_all_key_ranks or print_marginal_distance or print_possible_values) and not self.no_print:             # <<<<<<<<<<<<<<
- *                 print "----------- Running Round {} -----------".format(i)
+ *                 print("----------- Running Round {} -----------").format(i)
  *                 print_new_line()
  */
     __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_v_print_all_messages); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 838, __pyx_L1_error)
@@ -23408,7 +23408,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
       /* "factorGraphAES.pyx":839
  * 
  *             if (print_all_messages or print_all_marginal_distributions or print_all_key_ranks or print_marginal_distance or print_possible_values) and not self.no_print:
- *                 print "----------- Running Round {} -----------".format(i)             # <<<<<<<<<<<<<<
+ *                 print("----------- Running Round {} -----------").format(i)             # <<<<<<<<<<<<<<
  *                 print_new_line()
  * 
  */
@@ -23437,7 +23437,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
 
       /* "factorGraphAES.pyx":840
  *             if (print_all_messages or print_all_marginal_distributions or print_all_key_ranks or print_marginal_distance or print_possible_values) and not self.no_print:
- *                 print "----------- Running Round {} -----------".format(i)
+ *                 print("----------- Running Round {} -----------").format(i)
  *                 print_new_line()             # <<<<<<<<<<<<<<
  * 
  *             if print_all_messages:
@@ -23465,7 +23465,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *                 self.bp_one_round(i, rounds+1)
  * 
  *             if (print_all_messages or print_all_marginal_distributions or print_all_key_ranks or print_marginal_distance or print_possible_values) and not self.no_print:             # <<<<<<<<<<<<<<
- *                 print "----------- Running Round {} -----------".format(i)
+ *                 print("----------- Running Round {} -----------").format(i)
  *                 print_new_line()
  */
     }
@@ -23877,7 +23877,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *                     if round_csv:
  *                         # Store subkey rank in csv
  *                         append_csv('Output/SubkeyRoundRank.csv',             # <<<<<<<<<<<<<<
- *                                    '{}, {}, {}, {}\n'.format(snrexp, node, i, key_rank[0] + key_rank[1]))
+ *                                     '{}, {}, {}, {}\n'.format(snrexp, node, i, key_rank[0] + key_rank[1]))
  *                     k_rank_order[j][i] = key_rank[0] + key_rank[1]
  */
           __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_append_csv); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 863, __pyx_L1_error)
@@ -23886,7 +23886,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
           /* "factorGraphAES.pyx":864
  *                         # Store subkey rank in csv
  *                         append_csv('Output/SubkeyRoundRank.csv',
- *                                    '{}, {}, {}, {}\n'.format(snrexp, node, i, key_rank[0] + key_rank[1]))             # <<<<<<<<<<<<<<
+ *                                     '{}, {}, {}, {}\n'.format(snrexp, node, i, key_rank[0] + key_rank[1]))             # <<<<<<<<<<<<<<
  *                     k_rank_order[j][i] = key_rank[0] + key_rank[1]
  * 
  */
@@ -24017,7 +24017,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
 
         /* "factorGraphAES.pyx":865
  *                         append_csv('Output/SubkeyRoundRank.csv',
- *                                    '{}, {}, {}, {}\n'.format(snrexp, node, i, key_rank[0] + key_rank[1]))
+ *                                     '{}, {}, {}, {}\n'.format(snrexp, node, i, key_rank[0] + key_rank[1]))
  *                     k_rank_order[j][i] = key_rank[0] + key_rank[1]             # <<<<<<<<<<<<<<
  * 
  *             if print_marginal_distance and i > 0:
@@ -24141,7 +24141,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *             # Break if found
  *             if break_when_found and self.found_key():             # <<<<<<<<<<<<<<
  *                 if not self.no_print:
- *                     print '+++++++ Found the Key at Round {} +++++++'.format(i)
+ *                     print('+++++++ Found the Key at Round {} +++++++').format(i)
  */
     __pyx_t_16 = __Pyx_PyObject_IsTrue(__pyx_v_break_when_found); if (unlikely(__pyx_t_16 < 0)) __PYX_ERR(0, 872, __pyx_L1_error)
     if (__pyx_t_16) {
@@ -24176,7 +24176,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *             # Break if found
  *             if break_when_found and self.found_key():
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print '+++++++ Found the Key at Round {} +++++++'.format(i)
+ *                     print('+++++++ Found the Key at Round {} +++++++').format(i)
  *                 final_state = "foundkey"
  */
       __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_no_print); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 873, __pyx_L1_error)
@@ -24189,7 +24189,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
         /* "factorGraphAES.pyx":874
  *             if break_when_found and self.found_key():
  *                 if not self.no_print:
- *                     print '+++++++ Found the Key at Round {} +++++++'.format(i)             # <<<<<<<<<<<<<<
+ *                     print('+++++++ Found the Key at Round {} +++++++').format(i)             # <<<<<<<<<<<<<<
  *                 final_state = "foundkey"
  *                 break
  */
@@ -24220,14 +24220,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *             # Break if found
  *             if break_when_found and self.found_key():
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print '+++++++ Found the Key at Round {} +++++++'.format(i)
+ *                     print('+++++++ Found the Key at Round {} +++++++').format(i)
  *                 final_state = "foundkey"
  */
       }
 
       /* "factorGraphAES.pyx":875
  *                 if not self.no_print:
- *                     print '+++++++ Found the Key at Round {} +++++++'.format(i)
+ *                     print('+++++++ Found the Key at Round {} +++++++').format(i)
  *                 final_state = "foundkey"             # <<<<<<<<<<<<<<
  *                 break
  * 
@@ -24236,7 +24236,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
       __Pyx_DECREF_SET(__pyx_v_final_state, __pyx_n_s_foundkey);
 
       /* "factorGraphAES.pyx":876
- *                     print '+++++++ Found the Key at Round {} +++++++'.format(i)
+ *                     print('+++++++ Found the Key at Round {} +++++++').format(i)
  *                 final_state = "foundkey"
  *                 break             # <<<<<<<<<<<<<<
  * 
@@ -24249,7 +24249,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *             # Break if found
  *             if break_when_found and self.found_key():             # <<<<<<<<<<<<<<
  *                 if not self.no_print:
- *                     print '+++++++ Found the Key at Round {} +++++++'.format(i)
+ *                     print('+++++++ Found the Key at Round {} +++++++').format(i)
  */
     }
 
@@ -24258,7 +24258,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *             # Break if failed
  *             if break_if_failed and (i > FAILURE_MIN_ROUNDS) and (self.check_plaintext_failure() or self.check_failure_on_specific_byte('t')):             # <<<<<<<<<<<<<<
  *                 if not self.no_print:
- *                     print '!!!!!!!!!! FAILED at Round {} !!!!!!!!!!'.format(i)
+ *                     print('!!!!!!!!!! FAILED at Round {} !!!!!!!!!!').format(i)
  */
     __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_v_break_if_failed); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 879, __pyx_L1_error)
     if (__pyx_t_6) {
@@ -24331,7 +24331,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *             # Break if failed
  *             if break_if_failed and (i > FAILURE_MIN_ROUNDS) and (self.check_plaintext_failure() or self.check_failure_on_specific_byte('t')):
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print '!!!!!!!!!! FAILED at Round {} !!!!!!!!!!'.format(i)
+ *                     print('!!!!!!!!!! FAILED at Round {} !!!!!!!!!!').format(i)
  *                 final_state = "failed"
  */
       __pyx_t_19 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_no_print); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 880, __pyx_L1_error)
@@ -24344,7 +24344,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
         /* "factorGraphAES.pyx":881
  *             if break_if_failed and (i > FAILURE_MIN_ROUNDS) and (self.check_plaintext_failure() or self.check_failure_on_specific_byte('t')):
  *                 if not self.no_print:
- *                     print '!!!!!!!!!! FAILED at Round {} !!!!!!!!!!'.format(i)             # <<<<<<<<<<<<<<
+ *                     print('!!!!!!!!!! FAILED at Round {} !!!!!!!!!!').format(i)             # <<<<<<<<<<<<<<
  *                 final_state = "failed"
  *                 break
  */
@@ -24375,14 +24375,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *             # Break if failed
  *             if break_if_failed and (i > FAILURE_MIN_ROUNDS) and (self.check_plaintext_failure() or self.check_failure_on_specific_byte('t')):
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print '!!!!!!!!!! FAILED at Round {} !!!!!!!!!!'.format(i)
+ *                     print('!!!!!!!!!! FAILED at Round {} !!!!!!!!!!').format(i)
  *                 final_state = "failed"
  */
       }
 
       /* "factorGraphAES.pyx":882
  *                 if not self.no_print:
- *                     print '!!!!!!!!!! FAILED at Round {} !!!!!!!!!!'.format(i)
+ *                     print('!!!!!!!!!! FAILED at Round {} !!!!!!!!!!').format(i)
  *                 final_state = "failed"             # <<<<<<<<<<<<<<
  *                 break
  * 
@@ -24391,7 +24391,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
       __Pyx_DECREF_SET(__pyx_v_final_state, __pyx_n_s_failed);
 
       /* "factorGraphAES.pyx":883
- *                     print '!!!!!!!!!! FAILED at Round {} !!!!!!!!!!'.format(i)
+ *                     print('!!!!!!!!!! FAILED at Round {} !!!!!!!!!!').format(i)
  *                 final_state = "failed"
  *                 break             # <<<<<<<<<<<<<<
  * 
@@ -24404,7 +24404,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *             # Break if failed
  *             if break_if_failed and (i > FAILURE_MIN_ROUNDS) and (self.check_plaintext_failure() or self.check_failure_on_specific_byte('t')):             # <<<<<<<<<<<<<<
  *                 if not self.no_print:
- *                     print '!!!!!!!!!! FAILED at Round {} !!!!!!!!!!'.format(i)
+ *                     print('!!!!!!!!!! FAILED at Round {} !!!!!!!!!!').format(i)
  */
     }
 
@@ -24413,7 +24413,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *             # Break if all key bytes converged or repeating a pattern
  *             if break_when_information_exhausted_pattern and self.information_exhausted_pattern(k_rank_order, i):             # <<<<<<<<<<<<<<
  *                 if PRINT_EXHAUSTION and not self.no_print:
- *                     print '+++ Information Exhausted at Round {} (Pattern Matched) +++'.format(i)
+ *                     print('+++ Information Exhausted at Round {} (Pattern Matched) +++').format(i)
  */
     __pyx_t_16 = __Pyx_PyObject_IsTrue(__pyx_v_break_when_information_exhausted_pattern); if (unlikely(__pyx_t_16 < 0)) __PYX_ERR(0, 886, __pyx_L1_error)
     if (__pyx_t_16) {
@@ -24483,7 +24483,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *             # Break if all key bytes converged or repeating a pattern
  *             if break_when_information_exhausted_pattern and self.information_exhausted_pattern(k_rank_order, i):
  *                 if PRINT_EXHAUSTION and not self.no_print:             # <<<<<<<<<<<<<<
- *                     print '+++ Information Exhausted at Round {} (Pattern Matched) +++'.format(i)
+ *                     print('+++ Information Exhausted at Round {} (Pattern Matched) +++').format(i)
  *                 final_state = "patternexhaust"
  */
       __Pyx_GetModuleGlobalName(__pyx_t_19, __pyx_n_s_PRINT_EXHAUSTION); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 887, __pyx_L1_error)
@@ -24507,7 +24507,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
         /* "factorGraphAES.pyx":888
  *             if break_when_information_exhausted_pattern and self.information_exhausted_pattern(k_rank_order, i):
  *                 if PRINT_EXHAUSTION and not self.no_print:
- *                     print '+++ Information Exhausted at Round {} (Pattern Matched) +++'.format(i)             # <<<<<<<<<<<<<<
+ *                     print('+++ Information Exhausted at Round {} (Pattern Matched) +++').format(i)             # <<<<<<<<<<<<<<
  *                 final_state = "patternexhaust"
  *                 break
  */
@@ -24538,14 +24538,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *             # Break if all key bytes converged or repeating a pattern
  *             if break_when_information_exhausted_pattern and self.information_exhausted_pattern(k_rank_order, i):
  *                 if PRINT_EXHAUSTION and not self.no_print:             # <<<<<<<<<<<<<<
- *                     print '+++ Information Exhausted at Round {} (Pattern Matched) +++'.format(i)
+ *                     print('+++ Information Exhausted at Round {} (Pattern Matched) +++').format(i)
  *                 final_state = "patternexhaust"
  */
       }
 
       /* "factorGraphAES.pyx":889
  *                 if PRINT_EXHAUSTION and not self.no_print:
- *                     print '+++ Information Exhausted at Round {} (Pattern Matched) +++'.format(i)
+ *                     print('+++ Information Exhausted at Round {} (Pattern Matched) +++').format(i)
  *                 final_state = "patternexhaust"             # <<<<<<<<<<<<<<
  *                 break
  * 
@@ -24554,7 +24554,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
       __Pyx_DECREF_SET(__pyx_v_final_state, __pyx_n_s_patternexhaust);
 
       /* "factorGraphAES.pyx":890
- *                     print '+++ Information Exhausted at Round {} (Pattern Matched) +++'.format(i)
+ *                     print('+++ Information Exhausted at Round {} (Pattern Matched) +++').format(i)
  *                 final_state = "patternexhaust"
  *                 break             # <<<<<<<<<<<<<<
  * 
@@ -24567,7 +24567,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *             # Break if all key bytes converged or repeating a pattern
  *             if break_when_information_exhausted_pattern and self.information_exhausted_pattern(k_rank_order, i):             # <<<<<<<<<<<<<<
  *                 if PRINT_EXHAUSTION and not self.no_print:
- *                     print '+++ Information Exhausted at Round {} (Pattern Matched) +++'.format(i)
+ *                     print('+++ Information Exhausted at Round {} (Pattern Matched) +++').format(i)
  */
     }
 
@@ -24687,7 +24687,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *                     epsilon_succession = 0
  *                 if epsilon_succession > epsilon_s:             # <<<<<<<<<<<<<<
  *                     if PRINT_EXHAUSTION and not self.no_print:
- *                         print '+++ Information Exhausted at Round {} (Below Epsilon Threshold after {} Successions) +++'.format(i, INFORMATION_EXHAUSTED_S)
+ *                         print('+++ Information Exhausted at Round {} (Below Epsilon Threshold after {} Successions) +++').format(i, INFORMATION_EXHAUSTED_S)
  */
       __pyx_t_6 = ((__pyx_v_epsilon_succession > __pyx_v_epsilon_s) != 0);
       if (__pyx_t_6) {
@@ -24696,7 +24696,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *                     epsilon_succession = 0
  *                 if epsilon_succession > epsilon_s:
  *                     if PRINT_EXHAUSTION and not self.no_print:             # <<<<<<<<<<<<<<
- *                         print '+++ Information Exhausted at Round {} (Below Epsilon Threshold after {} Successions) +++'.format(i, INFORMATION_EXHAUSTED_S)
+ *                         print('+++ Information Exhausted at Round {} (Below Epsilon Threshold after {} Successions) +++').format(i, INFORMATION_EXHAUSTED_S)
  *                     # round_converged = i - epsilon_s + 1
  */
         __Pyx_GetModuleGlobalName(__pyx_t_19, __pyx_n_s_PRINT_EXHAUSTION); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 898, __pyx_L1_error)
@@ -24720,7 +24720,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
           /* "factorGraphAES.pyx":899
  *                 if epsilon_succession > epsilon_s:
  *                     if PRINT_EXHAUSTION and not self.no_print:
- *                         print '+++ Information Exhausted at Round {} (Below Epsilon Threshold after {} Successions) +++'.format(i, INFORMATION_EXHAUSTED_S)             # <<<<<<<<<<<<<<
+ *                         print('+++ Information Exhausted at Round {} (Below Epsilon Threshold after {} Successions) +++').format(i, INFORMATION_EXHAUSTED_S)             # <<<<<<<<<<<<<<
  *                     # round_converged = i - epsilon_s + 1
  *                     # round_found = i - epsilon_s + 1
  */
@@ -24786,7 +24786,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *                     epsilon_succession = 0
  *                 if epsilon_succession > epsilon_s:
  *                     if PRINT_EXHAUSTION and not self.no_print:             # <<<<<<<<<<<<<<
- *                         print '+++ Information Exhausted at Round {} (Below Epsilon Threshold after {} Successions) +++'.format(i, INFORMATION_EXHAUSTED_S)
+ *                         print('+++ Information Exhausted at Round {} (Below Epsilon Threshold after {} Successions) +++').format(i, INFORMATION_EXHAUSTED_S)
  *                     # round_converged = i - epsilon_s + 1
  */
         }
@@ -24839,7 +24839,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *                     epsilon_succession = 0
  *                 if epsilon_succession > epsilon_s:             # <<<<<<<<<<<<<<
  *                     if PRINT_EXHAUSTION and not self.no_print:
- *                         print '+++ Information Exhausted at Round {} (Below Epsilon Threshold after {} Successions) +++'.format(i, INFORMATION_EXHAUSTED_S)
+ *                         print('+++ Information Exhausted at Round {} (Below Epsilon Threshold after {} Successions) +++').format(i, INFORMATION_EXHAUSTED_S)
  */
       }
 
@@ -25226,7 +25226,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Key Byte {}: {}".format(i+1, smaller_rank_order)             # <<<<<<<<<<<<<<
  *                 if not self.no_print:
- *                     print string
+ *                     print(string)
  */
       __pyx_t_19 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Key_Byte, __pyx_n_s_format); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 936, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_19);
@@ -25286,7 +25286,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Key Byte {}: {}".format(i+1, smaller_rank_order)
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"
  */
       __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_no_print); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 937, __pyx_L1_error)
@@ -25299,7 +25299,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
         /* "factorGraphAES.pyx":938
  *                 string = "Key Byte {}: {}".format(i+1, smaller_rank_order)
  *                 if not self.no_print:
- *                     print string             # <<<<<<<<<<<<<<
+ *                     print(string)             # <<<<<<<<<<<<<<
  *                 output_string += string + "\n"
  * 
  */
@@ -25309,14 +25309,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Key Byte {}: {}".format(i+1, smaller_rank_order)
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"
  */
       }
 
       /* "factorGraphAES.pyx":939
  *                 if not self.no_print:
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"             # <<<<<<<<<<<<<<
  * 
  *                 string = "Max Rank: {}".format(max(smaller_rank_order))
@@ -25334,7 +25334,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Max Rank: {}".format(max(smaller_rank_order))             # <<<<<<<<<<<<<<
  *                 if not self.no_print:
- *                     print string
+ *                     print(string)
  */
       __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Max_Rank, __pyx_n_s_format); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 941, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
@@ -25363,7 +25363,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Max Rank: {}".format(max(smaller_rank_order))
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"
  */
       __pyx_t_19 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_no_print); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 942, __pyx_L1_error)
@@ -25376,7 +25376,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
         /* "factorGraphAES.pyx":943
  *                 string = "Max Rank: {}".format(max(smaller_rank_order))
  *                 if not self.no_print:
- *                     print string             # <<<<<<<<<<<<<<
+ *                     print(string)             # <<<<<<<<<<<<<<
  *                 output_string += string + "\n"
  * 
  */
@@ -25386,14 +25386,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Max Rank: {}".format(max(smaller_rank_order))
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"
  */
       }
 
       /* "factorGraphAES.pyx":944
  *                 if not self.no_print:
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"             # <<<<<<<<<<<<<<
  * 
  *                 string = "Min Rank: {}".format(min(smaller_rank_order))
@@ -25411,7 +25411,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Min Rank: {}".format(min(smaller_rank_order))             # <<<<<<<<<<<<<<
  *                 if not self.no_print:
- *                     print string
+ *                     print(string)
  */
       __pyx_t_19 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Min_Rank, __pyx_n_s_format); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 946, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_19);
@@ -25440,7 +25440,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Min Rank: {}".format(min(smaller_rank_order))
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"
  */
       __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_no_print); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 947, __pyx_L1_error)
@@ -25453,7 +25453,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
         /* "factorGraphAES.pyx":948
  *                 string = "Min Rank: {}".format(min(smaller_rank_order))
  *                 if not self.no_print:
- *                     print string             # <<<<<<<<<<<<<<
+ *                     print(string)             # <<<<<<<<<<<<<<
  *                 output_string += string + "\n"
  * 
  */
@@ -25463,14 +25463,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Min Rank: {}".format(min(smaller_rank_order))
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"
  */
       }
 
       /* "factorGraphAES.pyx":949
  *                 if not self.no_print:
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"             # <<<<<<<<<<<<<<
  * 
  *                 string = "Average Rank: {}".format(get_average(smaller_rank_order))
@@ -25488,7 +25488,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Average Rank: {}".format(get_average(smaller_rank_order))             # <<<<<<<<<<<<<<
  *                 if not self.no_print:
- *                     print string
+ *                     print(string)
  */
       __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Average_Rank, __pyx_n_s_format); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 951, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
@@ -25532,7 +25532,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Average Rank: {}".format(get_average(smaller_rank_order))
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"
  */
       __pyx_t_19 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_no_print); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 952, __pyx_L1_error)
@@ -25545,7 +25545,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
         /* "factorGraphAES.pyx":953
  *                 string = "Average Rank: {}".format(get_average(smaller_rank_order))
  *                 if not self.no_print:
- *                     print string             # <<<<<<<<<<<<<<
+ *                     print(string)             # <<<<<<<<<<<<<<
  *                 output_string += string + "\n"
  * 
  */
@@ -25555,14 +25555,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Average Rank: {}".format(get_average(smaller_rank_order))
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"
  */
       }
 
       /* "factorGraphAES.pyx":954
  *                 if not self.no_print:
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"             # <<<<<<<<<<<<<<
  * 
  *                 string = "Mode Rank: {}".format(mode)
@@ -25580,7 +25580,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Mode Rank: {}".format(mode)             # <<<<<<<<<<<<<<
  *                 if not self.no_print:
- *                     print string
+ *                     print(string)
  */
       __pyx_t_19 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Mode_Rank, __pyx_n_s_format); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 956, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_19);
@@ -25606,7 +25606,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Mode Rank: {}".format(mode)
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"
  */
       __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_no_print); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 957, __pyx_L1_error)
@@ -25619,7 +25619,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
         /* "factorGraphAES.pyx":958
  *                 string = "Mode Rank: {}".format(mode)
  *                 if not self.no_print:
- *                     print string             # <<<<<<<<<<<<<<
+ *                     print(string)             # <<<<<<<<<<<<<<
  *                 output_string += string + "\n"
  * 
  */
@@ -25629,14 +25629,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Mode Rank: {}".format(mode)
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"
  */
       }
 
       /* "factorGraphAES.pyx":959
  *                 if not self.no_print:
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"             # <<<<<<<<<<<<<<
  * 
  *                 string = "Final Rank: {}".format(smaller_rank_order[-1])
@@ -25654,7 +25654,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Final Rank: {}".format(smaller_rank_order[-1])             # <<<<<<<<<<<<<<
  *                 if not self.no_print:
- *                     print string
+ *                     print(string)
  */
       __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Final_Rank, __pyx_n_s_format); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 961, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
@@ -25683,7 +25683,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Final Rank: {}".format(smaller_rank_order[-1])
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"
  */
       __pyx_t_19 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_no_print); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 962, __pyx_L1_error)
@@ -25696,7 +25696,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
         /* "factorGraphAES.pyx":963
  *                 string = "Final Rank: {}".format(smaller_rank_order[-1])
  *                 if not self.no_print:
- *                     print string             # <<<<<<<<<<<<<<
+ *                     print(string)             # <<<<<<<<<<<<<<
  *                 output_string += string + "\n"
  * 
  */
@@ -25706,14 +25706,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  * 
  *                 string = "Final Rank: {}".format(smaller_rank_order[-1])
  *                 if not self.no_print:             # <<<<<<<<<<<<<<
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"
  */
       }
 
       /* "factorGraphAES.pyx":964
  *                 if not self.no_print:
- *                     print string
+ *                     print(string)
  *                 output_string += string + "\n"             # <<<<<<<<<<<<<<
  * 
  *                 if not self.no_print:
@@ -26003,8 +26003,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_76bp_run(CYTHON_UNUS
  *         self.bp_factor_pass(rnd, total_rounds)
  * 
  *     def bp_run(self, int rounds, print_all_messages = False, print_all_marginal_distributions = False,             # <<<<<<<<<<<<<<
- *                print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
- *                rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
+ *                 print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
+ *                 rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
  */
 
   /* function exit code */
@@ -27426,7 +27426,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_86check_failure_on_s
  * 
  *     def check_plaintext_failure(self, snr = None, debug_mode = False):             # <<<<<<<<<<<<<<
  *         if debug_mode:
- *             print "&&& Checking Plaintext Failure &&&"
+ *             print("&&& Checking Plaintext Failure &&&")
  */
 
 /* Python wrapper */
@@ -27543,7 +27543,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_88check_plaintext_fa
  * 
  *     def check_plaintext_failure(self, snr = None, debug_mode = False):
  *         if debug_mode:             # <<<<<<<<<<<<<<
- *             print "&&& Checking Plaintext Failure &&&"
+ *             print("&&& Checking Plaintext Failure &&&")
  *         cdef int i
  */
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_debug_mode); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 1080, __pyx_L1_error)
@@ -27552,7 +27552,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_88check_plaintext_fa
     /* "factorGraphAES.pyx":1081
  *     def check_plaintext_failure(self, snr = None, debug_mode = False):
  *         if debug_mode:
- *             print "&&& Checking Plaintext Failure &&&"             # <<<<<<<<<<<<<<
+ *             print("&&& Checking Plaintext Failure &&&")             # <<<<<<<<<<<<<<
  *         cdef int i
  *         cdef int failed_plaintexts
  */
@@ -27562,7 +27562,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_88check_plaintext_fa
  * 
  *     def check_plaintext_failure(self, snr = None, debug_mode = False):
  *         if debug_mode:             # <<<<<<<<<<<<<<
- *             print "&&& Checking Plaintext Failure &&&"
+ *             print("&&& Checking Plaintext Failure &&&")
  *         cdef int i
  */
   }
@@ -27962,7 +27962,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_88check_plaintext_fa
  * 
  * 
  *             if debug_mode:             # <<<<<<<<<<<<<<
- *                 print "For Plaintext Byte {}, correct value = {:3}, rank {:3}, probability found = {}".format(p,
+ *                 print("For Plaintext Byte {}, correct value = {:3}, rank {:3}, probability found = {}").format(p,
  *                                                                                                               correct_val,
  */
     __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_v_debug_mode); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 1126, __pyx_L1_error)
@@ -27971,7 +27971,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_88check_plaintext_fa
       /* "factorGraphAES.pyx":1127
  * 
  *             if debug_mode:
- *                 print "For Plaintext Byte {}, correct value = {:3}, rank {:3}, probability found = {}".format(p,             # <<<<<<<<<<<<<<
+ *                 print("For Plaintext Byte {}, correct value = {:3}, rank {:3}, probability found = {}").format(p,             # <<<<<<<<<<<<<<
  *                                                                                                               correct_val,
  *                                                                                                               get_rank_from_prob_dist(
  */
@@ -27979,7 +27979,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_88check_plaintext_fa
       __Pyx_GOTREF(__pyx_t_2);
 
       /* "factorGraphAES.pyx":1129
- *                 print "For Plaintext Byte {}, correct value = {:3}, rank {:3}, probability found = {}".format(p,
+ *                 print("For Plaintext Byte {}, correct value = {:3}, rank {:3}, probability found = {}").format(p,
  *                                                                                                               correct_val,
  *                                                                                                               get_rank_from_prob_dist(             # <<<<<<<<<<<<<<
  *                                                                                                                   incoming,
@@ -28112,7 +28112,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_88check_plaintext_fa
  * 
  * 
  *             if debug_mode:             # <<<<<<<<<<<<<<
- *                 print "For Plaintext Byte {}, correct value = {:3}, rank {:3}, probability found = {}".format(p,
+ *                 print("For Plaintext Byte {}, correct value = {:3}, rank {:3}, probability found = {}").format(p,
  *                                                                                                               correct_val,
  */
     }
@@ -28160,7 +28160,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_88check_plaintext_fa
  * 
  *             if incoming[correct_val] < failure_threshold:             # <<<<<<<<<<<<<<
  *                 if debug_mode:
- *                     print "OH NO! incoming message stats:\nMax:       {}\nMin:          {}\nCorrect Val: {}\nSum:          {}".format(
+ *                     print("OH NO! incoming message stats:\nMax:       {}\nMin:          {}\nCorrect Val: {}\nSum:          {}").format(
  */
     __pyx_t_2 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_incoming), __pyx_v_correct_val); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1138, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
@@ -28174,7 +28174,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_88check_plaintext_fa
  * 
  *             if incoming[correct_val] < failure_threshold:
  *                 if debug_mode:             # <<<<<<<<<<<<<<
- *                     print "OH NO! incoming message stats:\nMax:       {}\nMin:          {}\nCorrect Val: {}\nSum:          {}".format(
+ *                     print("OH NO! incoming message stats:\nMax:       {}\nMin:          {}\nCorrect Val: {}\nSum:          {}").format(
  *                         array_max(incoming), array_min(incoming), incoming[correct_val], sum(incoming))
  */
       __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_v_debug_mode); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 1139, __pyx_L1_error)
@@ -28183,7 +28183,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_88check_plaintext_fa
         /* "factorGraphAES.pyx":1140
  *             if incoming[correct_val] < failure_threshold:
  *                 if debug_mode:
- *                     print "OH NO! incoming message stats:\nMax:       {}\nMin:          {}\nCorrect Val: {}\nSum:          {}".format(             # <<<<<<<<<<<<<<
+ *                     print("OH NO! incoming message stats:\nMax:       {}\nMin:          {}\nCorrect Val: {}\nSum:          {}").format(             # <<<<<<<<<<<<<<
  *                         array_max(incoming), array_min(incoming), incoming[correct_val], sum(incoming))
  *                 # return True
  */
@@ -28192,7 +28192,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_88check_plaintext_fa
 
         /* "factorGraphAES.pyx":1141
  *                 if debug_mode:
- *                     print "OH NO! incoming message stats:\nMax:       {}\nMin:          {}\nCorrect Val: {}\nSum:          {}".format(
+ *                     print("OH NO! incoming message stats:\nMax:       {}\nMin:          {}\nCorrect Val: {}\nSum:          {}").format(
  *                         array_max(incoming), array_min(incoming), incoming[correct_val], sum(incoming))             # <<<<<<<<<<<<<<
  *                 # return True
  *                 failed_plaintexts += 1
@@ -28301,7 +28301,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_88check_plaintext_fa
  * 
  *             if incoming[correct_val] < failure_threshold:
  *                 if debug_mode:             # <<<<<<<<<<<<<<
- *                     print "OH NO! incoming message stats:\nMax:       {}\nMin:          {}\nCorrect Val: {}\nSum:          {}".format(
+ *                     print("OH NO! incoming message stats:\nMax:       {}\nMin:          {}\nCorrect Val: {}\nSum:          {}").format(
  *                         array_max(incoming), array_min(incoming), incoming[correct_val], sum(incoming))
  */
       }
@@ -28320,7 +28320,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_88check_plaintext_fa
  * 
  *             if incoming[correct_val] < failure_threshold:             # <<<<<<<<<<<<<<
  *                 if debug_mode:
- *                     print "OH NO! incoming message stats:\nMax:       {}\nMin:          {}\nCorrect Val: {}\nSum:          {}".format(
+ *                     print("OH NO! incoming message stats:\nMax:       {}\nMin:          {}\nCorrect Val: {}\nSum:          {}").format(
  */
     }
 
@@ -28449,7 +28449,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_88check_plaintext_fa
  * 
  *     def check_plaintext_failure(self, snr = None, debug_mode = False):             # <<<<<<<<<<<<<<
  *         if debug_mode:
- *             print "&&& Checking Plaintext Failure &&&"
+ *             print("&&& Checking Plaintext Failure &&&")
  */
 
   /* function exit code */
@@ -32316,7 +32316,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_112get_length_betwee
  *             if node2 in reachable_nodes:
  *                 return i             # <<<<<<<<<<<<<<
  *         else:
- *             print "Couldn't find {} from {} within {} steps".format(node2, node1, my_max)
+ *             print("Couldn't find {} from {} within {} steps").format(node2, node1, my_max)
  */
       __Pyx_XDECREF(__pyx_r);
       __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_i); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1310, __pyx_L1_error)
@@ -32339,7 +32339,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_112get_length_betwee
     /* "factorGraphAES.pyx":1312
  *                 return i
  *         else:
- *             print "Couldn't find {} from {} within {} steps".format(node2, node1, my_max)             # <<<<<<<<<<<<<<
+ *             print("Couldn't find {} from {} within {} steps").format(node2, node1, my_max)             # <<<<<<<<<<<<<<
  *             return -1
  * 
  */
@@ -32402,7 +32402,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_112get_length_betwee
 
     /* "factorGraphAES.pyx":1313
  *         else:
- *             print "Couldn't find {} from {} within {} steps".format(node2, node1, my_max)
+ *             print("Couldn't find {} from {} within {} steps").format(node2, node1, my_max)
  *             return -1             # <<<<<<<<<<<<<<
  * 
  *     def print_nodes_reachable_from_variable_node_after_series_of_steps(self, start, steps = 5):
@@ -32441,7 +32441,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_112get_length_betwee
  *             return -1
  * 
  *     def print_nodes_reachable_from_variable_node_after_series_of_steps(self, start, steps = 5):             # <<<<<<<<<<<<<<
- *         print "*** Nodes Reachable from Variable {} ***".format(start)
+ *         print("*** Nodes Reachable from Variable {} ***").format(start)
  *         for i in range(steps+1):
  */
 
@@ -32539,9 +32539,9 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_114print_nodes_reach
   /* "factorGraphAES.pyx":1316
  * 
  *     def print_nodes_reachable_from_variable_node_after_series_of_steps(self, start, steps = 5):
- *         print "*** Nodes Reachable from Variable {} ***".format(start)             # <<<<<<<<<<<<<<
+ *         print("*** Nodes Reachable from Variable {} ***").format(start)             # <<<<<<<<<<<<<<
  *         for i in range(steps+1):
- *             print "* Step {} *".format(i)
+ *             print("* Step {} *").format(i)
  */
   __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Nodes_Reachable_from_Variable, __pyx_n_s_format); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1316, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -32565,10 +32565,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_114print_nodes_reach
 
   /* "factorGraphAES.pyx":1317
  *     def print_nodes_reachable_from_variable_node_after_series_of_steps(self, start, steps = 5):
- *         print "*** Nodes Reachable from Variable {} ***".format(start)
+ *         print("*** Nodes Reachable from Variable {} ***").format(start)
  *         for i in range(steps+1):             # <<<<<<<<<<<<<<
- *             print "* Step {} *".format(i)
- *             print self.get_nodes_reachable_from_variable_node_after_steps(start, i)
+ *             print("* Step {} *").format(i)
+ *             print(self.get_nodes_reachable_from_variable_node_after_steps(start, i))
  */
   __pyx_t_1 = __Pyx_PyInt_AddObjC(__pyx_v_steps, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1317, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -32619,10 +32619,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_114print_nodes_reach
     __pyx_t_2 = 0;
 
     /* "factorGraphAES.pyx":1318
- *         print "*** Nodes Reachable from Variable {} ***".format(start)
+ *         print("*** Nodes Reachable from Variable {} ***").format(start)
  *         for i in range(steps+1):
- *             print "* Step {} *".format(i)             # <<<<<<<<<<<<<<
- *             print self.get_nodes_reachable_from_variable_node_after_steps(start, i)
+ *             print("* Step {} *").format(i)             # <<<<<<<<<<<<<<
+ *             print(self.get_nodes_reachable_from_variable_node_after_steps(start, i))
  * 
  */
     __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Step, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1318, __pyx_L1_error)
@@ -32647,8 +32647,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_114print_nodes_reach
 
     /* "factorGraphAES.pyx":1319
  *         for i in range(steps+1):
- *             print "* Step {} *".format(i)
- *             print self.get_nodes_reachable_from_variable_node_after_steps(start, i)             # <<<<<<<<<<<<<<
+ *             print("* Step {} *").format(i)
+ *             print(self.get_nodes_reachable_from_variable_node_after_steps(start, i))             # <<<<<<<<<<<<<<
  * 
  *     def get_nodes_reachable_from_variable_node_after_steps(self, start, steps = 1):
  */
@@ -32704,10 +32704,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_114print_nodes_reach
 
     /* "factorGraphAES.pyx":1317
  *     def print_nodes_reachable_from_variable_node_after_series_of_steps(self, start, steps = 5):
- *         print "*** Nodes Reachable from Variable {} ***".format(start)
+ *         print("*** Nodes Reachable from Variable {} ***").format(start)
  *         for i in range(steps+1):             # <<<<<<<<<<<<<<
- *             print "* Step {} *".format(i)
- *             print self.get_nodes_reachable_from_variable_node_after_steps(start, i)
+ *             print("* Step {} *").format(i)
+ *             print(self.get_nodes_reachable_from_variable_node_after_steps(start, i))
  */
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -32716,7 +32716,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_114print_nodes_reach
  *             return -1
  * 
  *     def print_nodes_reachable_from_variable_node_after_series_of_steps(self, start, steps = 5):             # <<<<<<<<<<<<<<
- *         print "*** Nodes Reachable from Variable {} ***".format(start)
+ *         print("*** Nodes Reachable from Variable {} ***").format(start)
  *         for i in range(steps+1):
  */
 
@@ -32739,7 +32739,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_114print_nodes_reach
 }
 
 /* "factorGraphAES.pyx":1321
- *             print self.get_nodes_reachable_from_variable_node_after_steps(start, i)
+ *             print(self.get_nodes_reachable_from_variable_node_after_steps(start, i))
  * 
  *     def get_nodes_reachable_from_variable_node_after_steps(self, start, steps = 1):             # <<<<<<<<<<<<<<
  * 
@@ -33013,7 +33013,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_116get_nodes_reachab
   goto __pyx_L0;
 
   /* "factorGraphAES.pyx":1321
- *             print self.get_nodes_reachable_from_variable_node_after_steps(start, i)
+ *             print(self.get_nodes_reachable_from_variable_node_after_steps(start, i))
  * 
  *     def get_nodes_reachable_from_variable_node_after_steps(self, start, steps = 1):             # <<<<<<<<<<<<<<
  * 
@@ -34804,7 +34804,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
  *         try:
  *             marginal_dist = np.copy(self.get_initial_distribution(node)[:])             # <<<<<<<<<<<<<<
  *         except TypeError:
- *             print "!!! ERROR: TypeError Encountered in FactorGraphAES, slicing initial distribution of {} but self.get_initial_distribution(node) = {}".format(node, self.get_initial_distribution(node))
+ *             print("!!! ERROR: TypeError Encountered in FactorGraphAES, slicing initial distribution of {} but self.get_initial_distribution(node) = {}").format(node, self.get_initial_distribution(node))
  */
       __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1414, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_2);
@@ -34874,7 +34874,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
  *         try:
  *             marginal_dist = np.copy(self.get_initial_distribution(node)[:])
  *         except TypeError:             # <<<<<<<<<<<<<<
- *             print "!!! ERROR: TypeError Encountered in FactorGraphAES, slicing initial distribution of {} but self.get_initial_distribution(node) = {}".format(node, self.get_initial_distribution(node))
+ *             print("!!! ERROR: TypeError Encountered in FactorGraphAES, slicing initial distribution of {} but self.get_initial_distribution(node) = {}").format(node, self.get_initial_distribution(node))
  *             print_new_line()
  */
     __pyx_t_9 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_TypeError);
@@ -34888,7 +34888,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
       /* "factorGraphAES.pyx":1416
  *             marginal_dist = np.copy(self.get_initial_distribution(node)[:])
  *         except TypeError:
- *             print "!!! ERROR: TypeError Encountered in FactorGraphAES, slicing initial distribution of {} but self.get_initial_distribution(node) = {}".format(node, self.get_initial_distribution(node))             # <<<<<<<<<<<<<<
+ *             print("!!! ERROR: TypeError Encountered in FactorGraphAES, slicing initial distribution of {} but self.get_initial_distribution(node) = {}").format(node, self.get_initial_distribution(node))             # <<<<<<<<<<<<<<
  *             print_new_line()
  *             raise
  */
@@ -34963,7 +34963,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
 
       /* "factorGraphAES.pyx":1417
  *         except TypeError:
- *             print "!!! ERROR: TypeError Encountered in FactorGraphAES, slicing initial distribution of {} but self.get_initial_distribution(node) = {}".format(node, self.get_initial_distribution(node))
+ *             print("!!! ERROR: TypeError Encountered in FactorGraphAES, slicing initial distribution of {} but self.get_initial_distribution(node) = {}").format(node, self.get_initial_distribution(node))
  *             print_new_line()             # <<<<<<<<<<<<<<
  *             raise
  * 
@@ -34988,7 +34988,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
       /* "factorGraphAES.pyx":1418
- *             print "!!! ERROR: TypeError Encountered in FactorGraphAES, slicing initial distribution of {} but self.get_initial_distribution(node) = {}".format(node, self.get_initial_distribution(node))
+ *             print("!!! ERROR: TypeError Encountered in FactorGraphAES, slicing initial distribution of {} but self.get_initial_distribution(node) = {}").format(node, self.get_initial_distribution(node))
  *             print_new_line()
  *             raise             # <<<<<<<<<<<<<<
  * 
@@ -35023,8 +35023,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
  *             raise
  * 
  *         if node == "k005-K" and debug_mode:             # <<<<<<<<<<<<<<
- *             print "\n-=-=- Getting Marginal Distribution for {} -=-=-".format(node)
- *             print "115:{}".format(marginal_dist[115])
+ *             print("\n-=-=- Getting Marginal Distribution for {} -=-=-").format(node)
+ *             print("115:{})".format(marginal_dist[115]))
  */
   __pyx_t_14 = (__Pyx_PyString_Equals(__pyx_v_node, __pyx_kp_s_k005_K, Py_EQ)); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 1420, __pyx_L1_error)
   if (__pyx_t_14) {
@@ -35040,8 +35040,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
     /* "factorGraphAES.pyx":1421
  * 
  *         if node == "k005-K" and debug_mode:
- *             print "\n-=-=- Getting Marginal Distribution for {} -=-=-".format(node)             # <<<<<<<<<<<<<<
- *             print "115:{}".format(marginal_dist[115])
+ *             print("\n-=-=- Getting Marginal Distribution for {} -=-=-").format(node)             # <<<<<<<<<<<<<<
+ *             print("115:{})".format(marginal_dist[115]))
  * 
  */
     __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Getting_Marginal_Distribution_f, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1421, __pyx_L1_error)
@@ -35066,8 +35066,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
 
     /* "factorGraphAES.pyx":1422
  *         if node == "k005-K" and debug_mode:
- *             print "\n-=-=- Getting Marginal Distribution for {} -=-=-".format(node)
- *             print "115:{}".format(marginal_dist[115])             # <<<<<<<<<<<<<<
+ *             print("\n-=-=- Getting Marginal Distribution for {} -=-=-").format(node)
+ *             print("115:{})".format(marginal_dist[115]))             # <<<<<<<<<<<<<<
  * 
  *         for neighbour in self.get_neighbours(node):
  */
@@ -35098,13 +35098,13 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
  *             raise
  * 
  *         if node == "k005-K" and debug_mode:             # <<<<<<<<<<<<<<
- *             print "\n-=-=- Getting Marginal Distribution for {} -=-=-".format(node)
- *             print "115:{}".format(marginal_dist[115])
+ *             print("\n-=-=- Getting Marginal Distribution for {} -=-=-").format(node)
+ *             print("115:{})".format(marginal_dist[115]))
  */
   }
 
   /* "factorGraphAES.pyx":1424
- *             print "115:{}".format(marginal_dist[115])
+ *             print("115:{})".format(marginal_dist[115]))
  * 
  *         for neighbour in self.get_neighbours(node):             # <<<<<<<<<<<<<<
  *             # Take the product with the incoming message
@@ -35282,7 +35282,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
  *             marginal_dist = array_multiply(marginal_dist, self.get_incoming_message(node, neighbour))
  *             if (node == "k005-K") and debug_mode:             # <<<<<<<<<<<<<<
  *                 incoming = np.copy(self.get_incoming_message(node, neighbour))
- *                 print "-> Incoming Message from {}: \n----->Most likely Val {} with probability {}\n----->115 has probability {}, difference = {}".format(
+ *                 print("-> Incoming Message from {}: \n----->Most likely Val {} with probability {}\n----->115 has probability {}, difference = {}").format(
  */
     __pyx_t_14 = (__Pyx_PyString_Equals(__pyx_v_node, __pyx_kp_s_k005_K, Py_EQ)); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 1428, __pyx_L1_error)
     if (__pyx_t_14) {
@@ -35299,7 +35299,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
  *             marginal_dist = array_multiply(marginal_dist, self.get_incoming_message(node, neighbour))
  *             if (node == "k005-K") and debug_mode:
  *                 incoming = np.copy(self.get_incoming_message(node, neighbour))             # <<<<<<<<<<<<<<
- *                 print "-> Incoming Message from {}: \n----->Most likely Val {} with probability {}\n----->115 has probability {}, difference = {}".format(
+ *                 print("-> Incoming Message from {}: \n----->Most likely Val {} with probability {}\n----->115 has probability {}, difference = {}").format(
  *                     neighbour, max_index(incoming), max(incoming), incoming[115], max(incoming) - incoming[115])
  */
       __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1429, __pyx_L1_error)
@@ -35377,18 +35377,18 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
       /* "factorGraphAES.pyx":1430
  *             if (node == "k005-K") and debug_mode:
  *                 incoming = np.copy(self.get_incoming_message(node, neighbour))
- *                 print "-> Incoming Message from {}: \n----->Most likely Val {} with probability {}\n----->115 has probability {}, difference = {}".format(             # <<<<<<<<<<<<<<
+ *                 print("-> Incoming Message from {}: \n----->Most likely Val {} with probability {}\n----->115 has probability {}, difference = {}").format(             # <<<<<<<<<<<<<<
  *                     neighbour, max_index(incoming), max(incoming), incoming[115], max(incoming) - incoming[115])
- *                 print "--> New Marginal Dist (after mult):\n----->Most likely Val {} with probability {}\n------>115 has probability {}, difference = {}".format(
+ *                 print("--> New Marginal Dist (after mult):\n----->Most likely Val {} with probability {}\n------>115 has probability {}, difference = {}").format(
  */
       __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Incoming_Message_from_Most_like, __pyx_n_s_format); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1430, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_10);
 
       /* "factorGraphAES.pyx":1431
  *                 incoming = np.copy(self.get_incoming_message(node, neighbour))
- *                 print "-> Incoming Message from {}: \n----->Most likely Val {} with probability {}\n----->115 has probability {}, difference = {}".format(
+ *                 print("-> Incoming Message from {}: \n----->Most likely Val {} with probability {}\n----->115 has probability {}, difference = {}").format(
  *                     neighbour, max_index(incoming), max(incoming), incoming[115], max(incoming) - incoming[115])             # <<<<<<<<<<<<<<
- *                 print "--> New Marginal Dist (after mult):\n----->Most likely Val {} with probability {}\n------>115 has probability {}, difference = {}".format(
+ *                 print("--> New Marginal Dist (after mult):\n----->Most likely Val {} with probability {}\n------>115 has probability {}, difference = {}").format(
  *                     max_index(marginal_dist), max(marginal_dist), marginal_dist[115],
  */
       __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_max_index); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1431, __pyx_L1_error)
@@ -35486,9 +35486,9 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
       /* "factorGraphAES.pyx":1432
- *                 print "-> Incoming Message from {}: \n----->Most likely Val {} with probability {}\n----->115 has probability {}, difference = {}".format(
+ *                 print("-> Incoming Message from {}: \n----->Most likely Val {} with probability {}\n----->115 has probability {}, difference = {}").format(
  *                     neighbour, max_index(incoming), max(incoming), incoming[115], max(incoming) - incoming[115])
- *                 print "--> New Marginal Dist (after mult):\n----->Most likely Val {} with probability {}\n------>115 has probability {}, difference = {}".format(             # <<<<<<<<<<<<<<
+ *                 print("--> New Marginal Dist (after mult):\n----->Most likely Val {} with probability {}\n------>115 has probability {}, difference = {}").format(             # <<<<<<<<<<<<<<
  *                     max_index(marginal_dist), max(marginal_dist), marginal_dist[115],
  *                     max(marginal_dist) - marginal_dist[115])
  */
@@ -35497,7 +35497,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
 
       /* "factorGraphAES.pyx":1433
  *                     neighbour, max_index(incoming), max(incoming), incoming[115], max(incoming) - incoming[115])
- *                 print "--> New Marginal Dist (after mult):\n----->Most likely Val {} with probability {}\n------>115 has probability {}, difference = {}".format(
+ *                 print("--> New Marginal Dist (after mult):\n----->Most likely Val {} with probability {}\n------>115 has probability {}, difference = {}").format(
  *                     max_index(marginal_dist), max(marginal_dist), marginal_dist[115],             # <<<<<<<<<<<<<<
  *                     max(marginal_dist) - marginal_dist[115])
  * 
@@ -35525,7 +35525,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
       __Pyx_GOTREF(__pyx_t_12);
 
       /* "factorGraphAES.pyx":1434
- *                 print "--> New Marginal Dist (after mult):\n----->Most likely Val {} with probability {}\n------>115 has probability {}, difference = {}".format(
+ *                 print("--> New Marginal Dist (after mult):\n----->Most likely Val {} with probability {}\n------>115 has probability {}, difference = {}").format(
  *                     max_index(marginal_dist), max(marginal_dist), marginal_dist[115],
  *                     max(marginal_dist) - marginal_dist[115])             # <<<<<<<<<<<<<<
  * 
@@ -35606,12 +35606,12 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_126get_marginal_dist
  *             marginal_dist = array_multiply(marginal_dist, self.get_incoming_message(node, neighbour))
  *             if (node == "k005-K") and debug_mode:             # <<<<<<<<<<<<<<
  *                 incoming = np.copy(self.get_incoming_message(node, neighbour))
- *                 print "-> Incoming Message from {}: \n----->Most likely Val {} with probability {}\n----->115 has probability {}, difference = {}".format(
+ *                 print("-> Incoming Message from {}: \n----->Most likely Val {} with probability {}\n----->115 has probability {}, difference = {}").format(
  */
     }
 
     /* "factorGraphAES.pyx":1424
- *             print "115:{}".format(marginal_dist[115])
+ *             print("115:{})".format(marginal_dist[115]))
  * 
  *         for neighbour in self.get_neighbours(node):             # <<<<<<<<<<<<<<
  *             # Take the product with the incoming message
@@ -36434,7 +36434,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_132get_rc_from_facto
  *     # ************************************ PRINTING FUNCTIONS ************************************
  * 
  *     def print_all_messages(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Messages ***"
+ *         print("*** Printing All Messages ***")
  *         print_new_line()
  */
 
@@ -36474,7 +36474,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_134print_all_message
   /* "factorGraphAES.pyx":1471
  * 
  *     def print_all_messages(self):
- *         print "*** Printing All Messages ***"             # <<<<<<<<<<<<<<
+ *         print("*** Printing All Messages ***")             # <<<<<<<<<<<<<<
  *         print_new_line()
  *         for node in self.G.nodes():
  */
@@ -36482,10 +36482,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_134print_all_message
 
   /* "factorGraphAES.pyx":1472
  *     def print_all_messages(self):
- *         print "*** Printing All Messages ***"
+ *         print("*** Printing All Messages ***")
  *         print_new_line()             # <<<<<<<<<<<<<<
  *         for node in self.G.nodes():
- *             print "From", node
+ *             print("From", node)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_print_new_line); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1472, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -36507,10 +36507,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_134print_all_message
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "factorGraphAES.pyx":1473
- *         print "*** Printing All Messages ***"
+ *         print("*** Printing All Messages ***")
  *         print_new_line()
  *         for node in self.G.nodes():             # <<<<<<<<<<<<<<
- *             print "From", node
+ *             print("From", node)
  *             print_new_line()
  */
   __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_G); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1473, __pyx_L1_error)
@@ -36579,7 +36579,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_134print_all_message
     /* "factorGraphAES.pyx":1474
  *         print_new_line()
  *         for node in self.G.nodes():
- *             print "From", node             # <<<<<<<<<<<<<<
+ *             print("From", node)             # <<<<<<<<<<<<<<
  *             print_new_line()
  *             neighbours = self.get_neighbours(node)
  */
@@ -36591,12 +36591,12 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_134print_all_message
     __Pyx_INCREF(__pyx_v_node);
     __Pyx_GIVEREF(__pyx_v_node);
     PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_node);
-    if (__Pyx_Print(0, __pyx_t_1, 1) < 0) __PYX_ERR(0, 1474, __pyx_L1_error)
+    if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 1474, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "factorGraphAES.pyx":1475
  *         for node in self.G.nodes():
- *             print "From", node
+ *             print("From", node)
  *             print_new_line()             # <<<<<<<<<<<<<<
  *             neighbours = self.get_neighbours(node)
  *             for neighbour in neighbours:
@@ -36621,11 +36621,11 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_134print_all_message
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "factorGraphAES.pyx":1476
- *             print "From", node
+ *             print("From", node)
  *             print_new_line()
  *             neighbours = self.get_neighbours(node)             # <<<<<<<<<<<<<<
  *             for neighbour in neighbours:
- *                 print "-> to", neighbour, ":", self.get_outgoing_message(node, neighbour)
+ *                 print("-> to", neighbour, ":", self.get_outgoing_message(node, neighbour))
  */
     __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_get_neighbours); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1476, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
@@ -36651,7 +36651,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_134print_all_message
  *             print_new_line()
  *             neighbours = self.get_neighbours(node)
  *             for neighbour in neighbours:             # <<<<<<<<<<<<<<
- *                 print "-> to", neighbour, ":", self.get_outgoing_message(node, neighbour)
+ *                 print("-> to", neighbour, ":", self.get_outgoing_message(node, neighbour))
  *                 print_new_line()
  */
     if (likely(PyList_CheckExact(__pyx_v_neighbours)) || PyTuple_CheckExact(__pyx_v_neighbours)) {
@@ -36699,7 +36699,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_134print_all_message
       /* "factorGraphAES.pyx":1478
  *             neighbours = self.get_neighbours(node)
  *             for neighbour in neighbours:
- *                 print "-> to", neighbour, ":", self.get_outgoing_message(node, neighbour)             # <<<<<<<<<<<<<<
+ *                 print("-> to", neighbour, ":", self.get_outgoing_message(node, neighbour))             # <<<<<<<<<<<<<<
  *                 print_new_line()
  *         print_new_line()
  */
@@ -36764,12 +36764,12 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_134print_all_message
       __Pyx_GIVEREF(__pyx_t_2);
       PyTuple_SET_ITEM(__pyx_t_6, 3, __pyx_t_2);
       __pyx_t_2 = 0;
-      if (__Pyx_Print(0, __pyx_t_6, 1) < 0) __PYX_ERR(0, 1478, __pyx_L1_error)
+      if (__Pyx_PrintOne(0, __pyx_t_6) < 0) __PYX_ERR(0, 1478, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
       /* "factorGraphAES.pyx":1479
  *             for neighbour in neighbours:
- *                 print "-> to", neighbour, ":", self.get_outgoing_message(node, neighbour)
+ *                 print("-> to", neighbour, ":", self.get_outgoing_message(node, neighbour))
  *                 print_new_line()             # <<<<<<<<<<<<<<
  *         print_new_line()
  * 
@@ -36797,24 +36797,24 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_134print_all_message
  *             print_new_line()
  *             neighbours = self.get_neighbours(node)
  *             for neighbour in neighbours:             # <<<<<<<<<<<<<<
- *                 print "-> to", neighbour, ":", self.get_outgoing_message(node, neighbour)
+ *                 print("-> to", neighbour, ":", self.get_outgoing_message(node, neighbour))
  *                 print_new_line()
  */
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
     /* "factorGraphAES.pyx":1473
- *         print "*** Printing All Messages ***"
+ *         print("*** Printing All Messages ***")
  *         print_new_line()
  *         for node in self.G.nodes():             # <<<<<<<<<<<<<<
- *             print "From", node
+ *             print("From", node)
  *             print_new_line()
  */
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "factorGraphAES.pyx":1480
- *                 print "-> to", neighbour, ":", self.get_outgoing_message(node, neighbour)
+ *                 print("-> to", neighbour, ":", self.get_outgoing_message(node, neighbour))
  *                 print_new_line()
  *         print_new_line()             # <<<<<<<<<<<<<<
  * 
@@ -36843,7 +36843,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_134print_all_message
  *     # ************************************ PRINTING FUNCTIONS ************************************
  * 
  *     def print_all_messages(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Messages ***"
+ *         print("*** Printing All Messages ***")
  *         print_new_line()
  */
 
@@ -36873,7 +36873,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_134print_all_message
  * 
  *     def print_all_variables(self):             # <<<<<<<<<<<<<<
  * 
- *         print "*** Printing Variables and their Neighbours ***"
+ *         print("*** Printing Variables and their Neighbours ***")
  */
 
 /* Python wrapper */
@@ -36913,7 +36913,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_136print_all_variabl
   /* "factorGraphAES.pyx":1484
  *     def print_all_variables(self):
  * 
- *         print "*** Printing Variables and their Neighbours ***"             # <<<<<<<<<<<<<<
+ *         print("*** Printing Variables and their Neighbours ***")             # <<<<<<<<<<<<<<
  *         print_new_line()
  * 
  */
@@ -36921,7 +36921,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_136print_all_variabl
 
   /* "factorGraphAES.pyx":1485
  * 
- *         print "*** Printing Variables and their Neighbours ***"
+ *         print("*** Printing Variables and their Neighbours ***")
  *         print_new_line()             # <<<<<<<<<<<<<<
  * 
  *         numbers = ['001','017','144','145','160','161']
@@ -37031,7 +37031,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_136print_all_variabl
  *         for v in self.variables:
  * 
  *             if string_contains_any(v, numbers):             # <<<<<<<<<<<<<<
- *                 print v
+ *                 print(v)
  *                 neighbours = sorted(self.get_neighbours(v))
  */
     __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_string_contains_any); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1491, __pyx_L1_error)
@@ -37088,7 +37088,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_136print_all_variabl
       /* "factorGraphAES.pyx":1492
  * 
  *             if string_contains_any(v, numbers):
- *                 print v             # <<<<<<<<<<<<<<
+ *                 print(v)             # <<<<<<<<<<<<<<
  *                 neighbours = sorted(self.get_neighbours(v))
  *                 for n in neighbours:
  */
@@ -37096,10 +37096,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_136print_all_variabl
 
       /* "factorGraphAES.pyx":1493
  *             if string_contains_any(v, numbers):
- *                 print v
+ *                 print(v)
  *                 neighbours = sorted(self.get_neighbours(v))             # <<<<<<<<<<<<<<
  *                 for n in neighbours:
- *                     print "---->", n
+ *                     print("---->", n)
  */
       __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_get_neighbours); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1493, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
@@ -37128,10 +37128,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_136print_all_variabl
       __pyx_t_1 = 0;
 
       /* "factorGraphAES.pyx":1494
- *                 print v
+ *                 print(v)
  *                 neighbours = sorted(self.get_neighbours(v))
  *                 for n in neighbours:             # <<<<<<<<<<<<<<
- *                     print "---->", n
+ *                     print("---->", n)
  *                 print_new_line()
  */
       if (unlikely(__pyx_v_neighbours == Py_None)) {
@@ -37153,7 +37153,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_136print_all_variabl
         /* "factorGraphAES.pyx":1495
  *                 neighbours = sorted(self.get_neighbours(v))
  *                 for n in neighbours:
- *                     print "---->", n             # <<<<<<<<<<<<<<
+ *                     print("---->", n)             # <<<<<<<<<<<<<<
  *                 print_new_line()
  * 
  */
@@ -37165,14 +37165,14 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_136print_all_variabl
         __Pyx_INCREF(__pyx_v_n);
         __Pyx_GIVEREF(__pyx_v_n);
         PyTuple_SET_ITEM(__pyx_t_8, 1, __pyx_v_n);
-        if (__Pyx_Print(0, __pyx_t_8, 1) < 0) __PYX_ERR(0, 1495, __pyx_L1_error)
+        if (__Pyx_PrintOne(0, __pyx_t_8) < 0) __PYX_ERR(0, 1495, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
         /* "factorGraphAES.pyx":1494
- *                 print v
+ *                 print(v)
  *                 neighbours = sorted(self.get_neighbours(v))
  *                 for n in neighbours:             # <<<<<<<<<<<<<<
- *                     print "---->", n
+ *                     print("---->", n)
  *                 print_new_line()
  */
       }
@@ -37180,10 +37180,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_136print_all_variabl
 
       /* "factorGraphAES.pyx":1496
  *                 for n in neighbours:
- *                     print "---->", n
+ *                     print("---->", n)
  *                 print_new_line()             # <<<<<<<<<<<<<<
  * 
- *         print "***********************************************"
+ *         print("***********************************************")
  */
       __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_print_new_line); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 1496, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
@@ -37208,7 +37208,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_136print_all_variabl
  *         for v in self.variables:
  * 
  *             if string_contains_any(v, numbers):             # <<<<<<<<<<<<<<
- *                 print v
+ *                 print(v)
  *                 neighbours = sorted(self.get_neighbours(v))
  */
     }
@@ -37226,7 +37226,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_136print_all_variabl
   /* "factorGraphAES.pyx":1498
  *                 print_new_line()
  * 
- *         print "***********************************************"             # <<<<<<<<<<<<<<
+ *         print("***********************************************")             # <<<<<<<<<<<<<<
  * 
  *     def print_all_initial_distributions(self):
  */
@@ -37237,7 +37237,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_136print_all_variabl
  * 
  *     def print_all_variables(self):             # <<<<<<<<<<<<<<
  * 
- *         print "*** Printing Variables and their Neighbours ***"
+ *         print("*** Printing Variables and their Neighbours ***")
  */
 
   /* function exit code */
@@ -37262,10 +37262,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_136print_all_variabl
 }
 
 /* "factorGraphAES.pyx":1500
- *         print "***********************************************"
+ *         print("***********************************************")
  * 
  *     def print_all_initial_distributions(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Initial Distributions ***"
+ *         print("*** Printing All Initial Distributions ***")
  *         print_new_line()
  */
 
@@ -37298,7 +37298,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_138print_all_initial
   /* "factorGraphAES.pyx":1501
  * 
  *     def print_all_initial_distributions(self):
- *         print "*** Printing All Initial Distributions ***"             # <<<<<<<<<<<<<<
+ *         print("*** Printing All Initial Distributions ***")             # <<<<<<<<<<<<<<
  *         print_new_line()
  *         for v in self.variables:
  */
@@ -37306,10 +37306,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_138print_all_initial
 
   /* "factorGraphAES.pyx":1502
  *     def print_all_initial_distributions(self):
- *         print "*** Printing All Initial Distributions ***"
+ *         print("*** Printing All Initial Distributions ***")
  *         print_new_line()             # <<<<<<<<<<<<<<
  *         for v in self.variables:
- *             print v, ":", self.get_initial_distribution(v)
+ *             print(v, ":", self.get_initial_distribution(v))
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_print_new_line); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1502, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -37331,10 +37331,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_138print_all_initial
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "factorGraphAES.pyx":1503
- *         print "*** Printing All Initial Distributions ***"
+ *         print("*** Printing All Initial Distributions ***")
  *         print_new_line()
  *         for v in self.variables:             # <<<<<<<<<<<<<<
- *             print v, ":", self.get_initial_distribution(v)
+ *             print(v, ":", self.get_initial_distribution(v))
  *             print_new_line()
  */
   __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_variables); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1503, __pyx_L1_error)
@@ -37385,7 +37385,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_138print_all_initial
     /* "factorGraphAES.pyx":1504
  *         print_new_line()
  *         for v in self.variables:
- *             print v, ":", self.get_initial_distribution(v)             # <<<<<<<<<<<<<<
+ *             print(v, ":", self.get_initial_distribution(v))             # <<<<<<<<<<<<<<
  *             print_new_line()
  * 
  */
@@ -37417,12 +37417,12 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_138print_all_initial
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_t_1);
     __pyx_t_1 = 0;
-    if (__Pyx_Print(0, __pyx_t_3, 1) < 0) __PYX_ERR(0, 1504, __pyx_L1_error)
+    if (__Pyx_PrintOne(0, __pyx_t_3) < 0) __PYX_ERR(0, 1504, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
     /* "factorGraphAES.pyx":1505
  *         for v in self.variables:
- *             print v, ":", self.get_initial_distribution(v)
+ *             print(v, ":", self.get_initial_distribution(v))
  *             print_new_line()             # <<<<<<<<<<<<<<
  * 
  *     def print_all_marginal_distributions(self):
@@ -37447,20 +37447,20 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_138print_all_initial
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
     /* "factorGraphAES.pyx":1503
- *         print "*** Printing All Initial Distributions ***"
+ *         print("*** Printing All Initial Distributions ***")
  *         print_new_line()
  *         for v in self.variables:             # <<<<<<<<<<<<<<
- *             print v, ":", self.get_initial_distribution(v)
+ *             print(v, ":", self.get_initial_distribution(v))
  *             print_new_line()
  */
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "factorGraphAES.pyx":1500
- *         print "***********************************************"
+ *         print("***********************************************")
  * 
  *     def print_all_initial_distributions(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Initial Distributions ***"
+ *         print("*** Printing All Initial Distributions ***")
  *         print_new_line()
  */
 
@@ -37485,7 +37485,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_138print_all_initial
  *             print_new_line()
  * 
  *     def print_all_marginal_distributions(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Marginal Distributions ***"
+ *         print("*** Printing All Marginal Distributions ***")
  *         print_new_line()
  */
 
@@ -37522,7 +37522,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_140print_all_margina
   /* "factorGraphAES.pyx":1508
  * 
  *     def print_all_marginal_distributions(self):
- *         print "*** Printing All Marginal Distributions ***"             # <<<<<<<<<<<<<<
+ *         print("*** Printing All Marginal Distributions ***")             # <<<<<<<<<<<<<<
  *         print_new_line()
  *         for v in self.variables:
  */
@@ -37530,7 +37530,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_140print_all_margina
 
   /* "factorGraphAES.pyx":1509
  *     def print_all_marginal_distributions(self):
- *         print "*** Printing All Marginal Distributions ***"
+ *         print("*** Printing All Marginal Distributions ***")
  *         print_new_line()             # <<<<<<<<<<<<<<
  *         for v in self.variables:
  *             if string_ends_with(v, '-K') and string_contains(v, '005'):
@@ -37555,11 +37555,11 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_140print_all_margina
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "factorGraphAES.pyx":1510
- *         print "*** Printing All Marginal Distributions ***"
+ *         print("*** Printing All Marginal Distributions ***")
  *         print_new_line()
  *         for v in self.variables:             # <<<<<<<<<<<<<<
  *             if string_ends_with(v, '-K') and string_contains(v, '005'):
- *                 print v, ":", self.get_marginal_distribution(v, debug_mode = True)
+ *                 print(v, ":", self.get_marginal_distribution(v, debug_mode = True))
  */
   __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_variables); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1510, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -37610,7 +37610,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_140print_all_margina
  *         print_new_line()
  *         for v in self.variables:
  *             if string_ends_with(v, '-K') and string_contains(v, '005'):             # <<<<<<<<<<<<<<
- *                 print v, ":", self.get_marginal_distribution(v, debug_mode = True)
+ *                 print(v, ":", self.get_marginal_distribution(v, debug_mode = True))
  *                 print_new_line()
  */
     __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_string_ends_with); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1511, __pyx_L1_error)
@@ -37723,7 +37723,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_140print_all_margina
       /* "factorGraphAES.pyx":1512
  *         for v in self.variables:
  *             if string_ends_with(v, '-K') and string_contains(v, '005'):
- *                 print v, ":", self.get_marginal_distribution(v, debug_mode = True)             # <<<<<<<<<<<<<<
+ *                 print(v, ":", self.get_marginal_distribution(v, debug_mode = True))             # <<<<<<<<<<<<<<
  *                 print_new_line()
  *                 # print "Prob:", convert_to_probability_distribution(self.get_marginal_distribution(v))
  */
@@ -37753,12 +37753,12 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_140print_all_margina
       __Pyx_GIVEREF(__pyx_t_9);
       PyTuple_SET_ITEM(__pyx_t_7, 2, __pyx_t_9);
       __pyx_t_9 = 0;
-      if (__Pyx_Print(0, __pyx_t_7, 1) < 0) __PYX_ERR(0, 1512, __pyx_L1_error)
+      if (__Pyx_PrintOne(0, __pyx_t_7) < 0) __PYX_ERR(0, 1512, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
       /* "factorGraphAES.pyx":1513
  *             if string_ends_with(v, '-K') and string_contains(v, '005'):
- *                 print v, ":", self.get_marginal_distribution(v, debug_mode = True)
+ *                 print(v, ":", self.get_marginal_distribution(v, debug_mode = True))
  *                 print_new_line()             # <<<<<<<<<<<<<<
  *                 # print "Prob:", convert_to_probability_distribution(self.get_marginal_distribution(v))
  *                 # print_new_line()
@@ -37786,17 +37786,17 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_140print_all_margina
  *         print_new_line()
  *         for v in self.variables:
  *             if string_ends_with(v, '-K') and string_contains(v, '005'):             # <<<<<<<<<<<<<<
- *                 print v, ":", self.get_marginal_distribution(v, debug_mode = True)
+ *                 print(v, ":", self.get_marginal_distribution(v, debug_mode = True))
  *                 print_new_line()
  */
     }
 
     /* "factorGraphAES.pyx":1510
- *         print "*** Printing All Marginal Distributions ***"
+ *         print("*** Printing All Marginal Distributions ***")
  *         print_new_line()
  *         for v in self.variables:             # <<<<<<<<<<<<<<
  *             if string_ends_with(v, '-K') and string_contains(v, '005'):
- *                 print v, ":", self.get_marginal_distribution(v, debug_mode = True)
+ *                 print(v, ":", self.get_marginal_distribution(v, debug_mode = True))
  */
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -37805,7 +37805,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_140print_all_margina
  *             print_new_line()
  * 
  *     def print_all_marginal_distributions(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Marginal Distributions ***"
+ *         print("*** Printing All Marginal Distributions ***")
  *         print_new_line()
  */
 
@@ -37831,7 +37831,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_140print_all_margina
  *                 # print_new_line()
  * 
  *     def print_marginal_distance(self, previous_marginal_distributions, distance_threshold = 0.0015):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Marginal Distances ***"
+ *         print("*** Printing All Marginal Distances ***")
  *         print_new_line()
  */
 
@@ -37948,7 +37948,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
   /* "factorGraphAES.pyx":1518
  * 
  *     def print_marginal_distance(self, previous_marginal_distributions, distance_threshold = 0.0015):
- *         print "*** Printing All Marginal Distances ***"             # <<<<<<<<<<<<<<
+ *         print("*** Printing All Marginal Distances ***")             # <<<<<<<<<<<<<<
  *         print_new_line()
  *         current_distributions = self.get_marginal_distributions_of_key_bytes()
  */
@@ -37956,7 +37956,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
 
   /* "factorGraphAES.pyx":1519
  *     def print_marginal_distance(self, previous_marginal_distributions, distance_threshold = 0.0015):
- *         print "*** Printing All Marginal Distances ***"
+ *         print("*** Printing All Marginal Distances ***")
  *         print_new_line()             # <<<<<<<<<<<<<<
  *         current_distributions = self.get_marginal_distributions_of_key_bytes()
  * 
@@ -37981,7 +37981,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "factorGraphAES.pyx":1520
- *         print "*** Printing All Marginal Distances ***"
+ *         print("*** Printing All Marginal Distances ***")
  *         print_new_line()
  *         current_distributions = self.get_marginal_distributions_of_key_bytes()             # <<<<<<<<<<<<<<
  * 
@@ -38560,7 +38560,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
  *             passed = max < distance_threshold
  * 
  *             if i == 4:             # <<<<<<<<<<<<<<
- *                 print "* Key Byte {} ({}):".format(i+1, self.key_nodes[i])
+ *                 print("* Key Byte {} ({}):".format(i+1, self.key_nodes[i]))
  *                 # print "Previous: {}".format(previous_marginal_distributions[i])
  */
     __pyx_t_2 = __Pyx_PyInt_EqObjC(__pyx_v_i, __pyx_int_4, 4, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1557, __pyx_L1_error)
@@ -38572,7 +38572,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
       /* "factorGraphAES.pyx":1558
  * 
  *             if i == 4:
- *                 print "* Key Byte {} ({}):".format(i+1, self.key_nodes[i])             # <<<<<<<<<<<<<<
+ *                 print("* Key Byte {} ({}):".format(i+1, self.key_nodes[i]))             # <<<<<<<<<<<<<<
  *                 # print "Previous: {}".format(previous_marginal_distributions[i])
  *                 # print "Current: {}".format(current_distributions[i])
  */
@@ -38640,9 +38640,9 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
       /* "factorGraphAES.pyx":1562
  *                 # print "Current: {}".format(current_distributions[i])
  *                 # print "Difference: {}".format(difference)
- *                 print "Max: {}\nMin: {}\nAvg: {}\nBelow Threshold: {}".format(my_max, my_min, my_avg, passed)             # <<<<<<<<<<<<<<
- *                 print "Correct key 115, value {}".format(current_distributions[i][115])
- *                 print "Maximum probability {} (Index {})".format(max(current_distributions[i]),
+ *                 print("Max: {}\nMin: {}\nAvg: {}\nBelow Threshold: {}".format(my_max, my_min, my_avg, passed))             # <<<<<<<<<<<<<<
+ *                 print("Correct key 115, value {}".format(current_distributions[i][115]))
+ *                 print("Maximum probability {} (Index {})".format(max(current_distributions[i]),
  */
       __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Max_Min_Avg_Below_Threshold, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1562, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
@@ -38702,10 +38702,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
 
       /* "factorGraphAES.pyx":1563
  *                 # print "Difference: {}".format(difference)
- *                 print "Max: {}\nMin: {}\nAvg: {}\nBelow Threshold: {}".format(my_max, my_min, my_avg, passed)
- *                 print "Correct key 115, value {}".format(current_distributions[i][115])             # <<<<<<<<<<<<<<
- *                 print "Maximum probability {} (Index {})".format(max(current_distributions[i]),
- *                                                                  max_index(current_distributions[i]))
+ *                 print("Max: {}\nMin: {}\nAvg: {}\nBelow Threshold: {}".format(my_max, my_min, my_avg, passed))
+ *                 print("Correct key 115, value {}".format(current_distributions[i][115]))             # <<<<<<<<<<<<<<
+ *                 print("Maximum probability {} (Index {})".format(max(current_distributions[i]),
+ *                                                                  max_index(current_distributions[i])))
  */
       __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Correct_key_115_value, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1563, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
@@ -38734,10 +38734,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
       /* "factorGraphAES.pyx":1564
- *                 print "Max: {}\nMin: {}\nAvg: {}\nBelow Threshold: {}".format(my_max, my_min, my_avg, passed)
- *                 print "Correct key 115, value {}".format(current_distributions[i][115])
- *                 print "Maximum probability {} (Index {})".format(max(current_distributions[i]),             # <<<<<<<<<<<<<<
- *                                                                  max_index(current_distributions[i]))
+ *                 print("Max: {}\nMin: {}\nAvg: {}\nBelow Threshold: {}".format(my_max, my_min, my_avg, passed))
+ *                 print("Correct key 115, value {}".format(current_distributions[i][115]))
+ *                 print("Maximum probability {} (Index {})".format(max(current_distributions[i]),             # <<<<<<<<<<<<<<
+ *                                                                  max_index(current_distributions[i])))
  *                 print_new_line()
  */
       __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Maximum_probability_Index, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1564, __pyx_L1_error)
@@ -38749,9 +38749,9 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
       /* "factorGraphAES.pyx":1565
- *                 print "Correct key 115, value {}".format(current_distributions[i][115])
- *                 print "Maximum probability {} (Index {})".format(max(current_distributions[i]),
- *                                                                  max_index(current_distributions[i]))             # <<<<<<<<<<<<<<
+ *                 print("Correct key 115, value {}".format(current_distributions[i][115]))
+ *                 print("Maximum probability {} (Index {})".format(max(current_distributions[i]),
+ *                                                                  max_index(current_distributions[i])))             # <<<<<<<<<<<<<<
  *                 print_new_line()
  * 
  */
@@ -38828,8 +38828,8 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
       /* "factorGraphAES.pyx":1566
- *                 print "Maximum probability {} (Index {})".format(max(current_distributions[i]),
- *                                                                  max_index(current_distributions[i]))
+ *                 print("Maximum probability {} (Index {})".format(max(current_distributions[i]),
+ *                                                                  max_index(current_distributions[i])))
  *                 print_new_line()             # <<<<<<<<<<<<<<
  * 
  *             if not passed:
@@ -38857,7 +38857,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
  *             passed = max < distance_threshold
  * 
  *             if i == 4:             # <<<<<<<<<<<<<<
- *                 print "* Key Byte {} ({}):".format(i+1, self.key_nodes[i])
+ *                 print("* Key Byte {} ({}):".format(i+1, self.key_nodes[i]))
  *                 # print "Previous: {}".format(previous_marginal_distributions[i])
  */
     }
@@ -38904,16 +38904,16 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
   /* "factorGraphAES.pyx":1572
  * 
  * 
- *         print "* Over all Key Bytes:"             # <<<<<<<<<<<<<<
- *         print "Max: {} ({})\nMin: {} ({})\nAvg: {}\n".format(total_max, total_max_i, total_min, total_min_i, total_avg / len(self.key_nodes))
+ *         print("* Over all Key Bytes:")             # <<<<<<<<<<<<<<
+ *         print("Max: {} ({})\nMin: {} ({})\nAvg: {}\n".format(total_max, total_max_i, total_min, total_min_i, total_avg / len(self.key_nodes)))
  * 
  */
   if (__Pyx_PrintOne(0, __pyx_kp_s_Over_all_Key_Bytes) < 0) __PYX_ERR(0, 1572, __pyx_L1_error)
 
   /* "factorGraphAES.pyx":1573
  * 
- *         print "* Over all Key Bytes:"
- *         print "Max: {} ({})\nMin: {} ({})\nAvg: {}\n".format(total_max, total_max_i, total_min, total_min_i, total_avg / len(self.key_nodes))             # <<<<<<<<<<<<<<
+ *         print("* Over all Key Bytes:")
+ *         print("Max: {} ({})\nMin: {} ({})\nAvg: {}\n".format(total_max, total_max_i, total_min, total_min_i, total_avg / len(self.key_nodes)))             # <<<<<<<<<<<<<<
  * 
  *         if all_pass:
  */
@@ -38988,10 +38988,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "factorGraphAES.pyx":1575
- *         print "Max: {} ({})\nMin: {} ({})\nAvg: {}\n".format(total_max, total_max_i, total_min, total_min_i, total_avg / len(self.key_nodes))
+ *         print("Max: {} ({})\nMin: {} ({})\nAvg: {}\n".format(total_max, total_max_i, total_min, total_min_i, total_avg / len(self.key_nodes)))
  * 
  *         if all_pass:             # <<<<<<<<<<<<<<
- *             print "*** All Values Below Threshold, Can Conclude Exhaustion ***"
+ *             print("*** All Values Below Threshold, Can Conclude Exhaustion ***")
  *         else:
  */
   __pyx_t_14 = (__pyx_v_all_pass != 0);
@@ -39000,26 +39000,26 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
     /* "factorGraphAES.pyx":1576
  * 
  *         if all_pass:
- *             print "*** All Values Below Threshold, Can Conclude Exhaustion ***"             # <<<<<<<<<<<<<<
+ *             print("*** All Values Below Threshold, Can Conclude Exhaustion ***")             # <<<<<<<<<<<<<<
  *         else:
- *             print "--- Not all Values below Threshold ---"
+ *             print("--- Not all Values below Threshold ---")
  */
     if (__Pyx_PrintOne(0, __pyx_kp_s_All_Values_Below_Threshold_Can) < 0) __PYX_ERR(0, 1576, __pyx_L1_error)
 
     /* "factorGraphAES.pyx":1575
- *         print "Max: {} ({})\nMin: {} ({})\nAvg: {}\n".format(total_max, total_max_i, total_min, total_min_i, total_avg / len(self.key_nodes))
+ *         print("Max: {} ({})\nMin: {} ({})\nAvg: {}\n".format(total_max, total_max_i, total_min, total_min_i, total_avg / len(self.key_nodes)))
  * 
  *         if all_pass:             # <<<<<<<<<<<<<<
- *             print "*** All Values Below Threshold, Can Conclude Exhaustion ***"
+ *             print("*** All Values Below Threshold, Can Conclude Exhaustion ***")
  *         else:
  */
     goto __pyx_L13;
   }
 
   /* "factorGraphAES.pyx":1578
- *             print "*** All Values Below Threshold, Can Conclude Exhaustion ***"
+ *             print("*** All Values Below Threshold, Can Conclude Exhaustion ***")
  *         else:
- *             print "--- Not all Values below Threshold ---"             # <<<<<<<<<<<<<<
+ *             print("--- Not all Values below Threshold ---")             # <<<<<<<<<<<<<<
  * 
  *     def print_all_possible_values(self):
  */
@@ -39032,7 +39032,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
  *                 # print_new_line()
  * 
  *     def print_marginal_distance(self, previous_marginal_distributions, distance_threshold = 0.0015):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Marginal Distances ***"
+ *         print("*** Printing All Marginal Distances ***")
  *         print_new_line()
  */
 
@@ -39071,10 +39071,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_142print_marginal_di
 }
 
 /* "factorGraphAES.pyx":1580
- *             print "--- Not all Values below Threshold ---"
+ *             print("--- Not all Values below Threshold ---")
  * 
  *     def print_all_possible_values(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Possible Values ***"
+ *         print("*** Printing All Possible Values ***")
  *         print_new_line()
  */
 
@@ -39115,7 +39115,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_144print_all_possibl
   /* "factorGraphAES.pyx":1581
  * 
  *     def print_all_possible_values(self):
- *         print "*** Printing All Possible Values ***"             # <<<<<<<<<<<<<<
+ *         print("*** Printing All Possible Values ***")             # <<<<<<<<<<<<<<
  *         print_new_line()
  *         # Print Possible values
  */
@@ -39123,7 +39123,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_144print_all_possibl
 
   /* "factorGraphAES.pyx":1582
  *     def print_all_possible_values(self):
- *         print "*** Printing All Possible Values ***"
+ *         print("*** Printing All Possible Values ***")
  *         print_new_line()             # <<<<<<<<<<<<<<
  *         # Print Possible values
  *         for var in self.variables:
@@ -39204,7 +39204,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_144print_all_possibl
  *         for var in self.variables:
  *             var_name, var_number, var_trace = split_variable_name(var)             # <<<<<<<<<<<<<<
  *             if var_number < 3:
- *                 print "{}: {}".format(var, self.get_possible_values(var))
+ *                 print("{}: {}".format(var, self.get_possible_values(var)))
  */
     __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_split_variable_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1585, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
@@ -39287,7 +39287,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_144print_all_possibl
  *         for var in self.variables:
  *             var_name, var_number, var_trace = split_variable_name(var)
  *             if var_number < 3:             # <<<<<<<<<<<<<<
- *                 print "{}: {}".format(var, self.get_possible_values(var))
+ *                 print("{}: {}".format(var, self.get_possible_values(var)))
  *         print_new_line()
  */
     __pyx_t_1 = PyObject_RichCompare(__pyx_v_var_number, __pyx_int_3, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1586, __pyx_L1_error)
@@ -39298,7 +39298,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_144print_all_possibl
       /* "factorGraphAES.pyx":1587
  *             var_name, var_number, var_trace = split_variable_name(var)
  *             if var_number < 3:
- *                 print "{}: {}".format(var, self.get_possible_values(var))             # <<<<<<<<<<<<<<
+ *                 print("{}: {}".format(var, self.get_possible_values(var)))             # <<<<<<<<<<<<<<
  *         print_new_line()
  * 
  */
@@ -39375,7 +39375,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_144print_all_possibl
  *         for var in self.variables:
  *             var_name, var_number, var_trace = split_variable_name(var)
  *             if var_number < 3:             # <<<<<<<<<<<<<<
- *                 print "{}: {}".format(var, self.get_possible_values(var))
+ *                 print("{}: {}".format(var, self.get_possible_values(var)))
  *         print_new_line()
  */
     }
@@ -39392,7 +39392,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_144print_all_possibl
 
   /* "factorGraphAES.pyx":1588
  *             if var_number < 3:
- *                 print "{}: {}".format(var, self.get_possible_values(var))
+ *                 print("{}: {}".format(var, self.get_possible_values(var)))
  *         print_new_line()             # <<<<<<<<<<<<<<
  * 
  *     def print_key_rank(self, supplied_dist = None, print_line = False, martin=False):
@@ -39417,10 +39417,10 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_144print_all_possibl
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "factorGraphAES.pyx":1580
- *             print "--- Not all Values below Threshold ---"
+ *             print("--- Not all Values below Threshold ---")
  * 
  *     def print_all_possible_values(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Possible Values ***"
+ *         print("*** Printing All Possible Values ***")
  *         print_new_line()
  */
 
@@ -39451,7 +39451,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_144print_all_possibl
  * 
  *     def print_key_rank(self, supplied_dist = None, print_line = False, martin=False):             # <<<<<<<<<<<<<<
  *         if print_line:
- *             print "*** Printing Key Ranks ***"
+ *             print("*** Printing Key Ranks ***")
  */
 
 /* Python wrapper */
@@ -39573,7 +39573,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_146print_key_rank(CY
  * 
  *     def print_key_rank(self, supplied_dist = None, print_line = False, martin=False):
  *         if print_line:             # <<<<<<<<<<<<<<
- *             print "*** Printing Key Ranks ***"
+ *             print("*** Printing Key Ranks ***")
  *             print_new_line()
  */
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_print_line); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 1591, __pyx_L1_error)
@@ -39582,7 +39582,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_146print_key_rank(CY
     /* "factorGraphAES.pyx":1592
  *     def print_key_rank(self, supplied_dist = None, print_line = False, martin=False):
  *         if print_line:
- *             print "*** Printing Key Ranks ***"             # <<<<<<<<<<<<<<
+ *             print("*** Printing Key Ranks ***")             # <<<<<<<<<<<<<<
  *             print_new_line()
  * 
  */
@@ -39590,7 +39590,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_146print_key_rank(CY
 
     /* "factorGraphAES.pyx":1593
  *         if print_line:
- *             print "*** Printing Key Ranks ***"
+ *             print("*** Printing Key Ranks ***")
  *             print_new_line()             # <<<<<<<<<<<<<<
  * 
  *         rank_product = 1
@@ -39618,7 +39618,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_146print_key_rank(CY
  * 
  *     def print_key_rank(self, supplied_dist = None, print_line = False, martin=False):
  *         if print_line:             # <<<<<<<<<<<<<<
- *             print "*** Printing Key Ranks ***"
+ *             print("*** Printing Key Ranks ***")
  *             print_new_line()
  */
   }
@@ -39857,7 +39857,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_146print_key_rank(CY
  *             l = 15
  *             if value == 0:             # <<<<<<<<<<<<<<
  *                 # print "k{} FAILED - Value 0 (Ranked {} with {} duplicates)".format(index, rank, duplicate)
- *                 print "k%3s %8s (Ranked %3s with %3s duplicates) [%s]" % (index, 'FAILED', rank, duplicate, value)
+ *                 print("k%3s %8s (Ranked %3s with %3s duplicates) [%s]" % (index, 'FAILED', rank, duplicate, value))
  */
     __pyx_t_10 = __Pyx_PyInt_EqObjC(__pyx_v_value, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1601, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
@@ -39868,7 +39868,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_146print_key_rank(CY
       /* "factorGraphAES.pyx":1603
  *             if value == 0:
  *                 # print "k{} FAILED - Value 0 (Ranked {} with {} duplicates)".format(index, rank, duplicate)
- *                 print "k%3s %8s (Ranked %3s with %3s duplicates) [%s]" % (index, 'FAILED', rank, duplicate, value)             # <<<<<<<<<<<<<<
+ *                 print("k%3s %8s (Ranked %3s with %3s duplicates) [%s]" % (index, 'FAILED', rank, duplicate, value))             # <<<<<<<<<<<<<<
  *             else:
  *                 # print "k{} Rank {} (Ranked {} with {} duplicates, value = {})".format(index, rank+duplicate, rank, duplicate, value)
  */
@@ -39900,7 +39900,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_146print_key_rank(CY
  *             l = 15
  *             if value == 0:             # <<<<<<<<<<<<<<
  *                 # print "k{} FAILED - Value 0 (Ranked {} with {} duplicates)".format(index, rank, duplicate)
- *                 print "k%3s %8s (Ranked %3s with %3s duplicates) [%s]" % (index, 'FAILED', rank, duplicate, value)
+ *                 print("k%3s %8s (Ranked %3s with %3s duplicates) [%s]" % (index, 'FAILED', rank, duplicate, value))
  */
       goto __pyx_L8;
     }
@@ -39908,7 +39908,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_146print_key_rank(CY
     /* "factorGraphAES.pyx":1606
  *             else:
  *                 # print "k{} Rank {} (Ranked {} with {} duplicates, value = {})".format(index, rank+duplicate, rank, duplicate, value)
- *                 print "k%3s Rank %3s (Ranked %3s with %3s duplicates) [%s]" % (index, rank+duplicate, rank, duplicate, value)             # <<<<<<<<<<<<<<
+ *                 print("k%3s Rank %3s (Ranked %3s with %3s duplicates) [%s]" % (index, rank+duplicate, rank, duplicate, value))             # <<<<<<<<<<<<<<
  * 
  *         if martin:
  */
@@ -39942,7 +39942,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_146print_key_rank(CY
   }
 
   /* "factorGraphAES.pyx":1608
- *                 print "k%3s Rank %3s (Ranked %3s with %3s duplicates) [%s]" % (index, rank+duplicate, rank, duplicate, value)
+ *                 print("k%3s Rank %3s (Ranked %3s with %3s duplicates) [%s]" % (index, rank+duplicate, rank, duplicate, value))
  * 
  *         if martin:             # <<<<<<<<<<<<<<
  *             # Different
@@ -39955,7 +39955,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_146print_key_rank(CY
  *         if martin:
  *             # Different
  *             rank_product = self.get_final_key_rank(martin)             # <<<<<<<<<<<<<<
- *         print "Estimated Whole Key Rank: {} (~2^{})".format(rank_product, bit_length(rank_product))
+ *         print("Estimated Whole Key Rank: {} (~2^{})".format(rank_product, bit_length(rank_product)))
  *         print_new_line()
  */
     __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_get_final_key_rank); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 1610, __pyx_L1_error)
@@ -39979,7 +39979,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_146print_key_rank(CY
     __pyx_t_2 = 0;
 
     /* "factorGraphAES.pyx":1608
- *                 print "k%3s Rank %3s (Ranked %3s with %3s duplicates) [%s]" % (index, rank+duplicate, rank, duplicate, value)
+ *                 print("k%3s Rank %3s (Ranked %3s with %3s duplicates) [%s]" % (index, rank+duplicate, rank, duplicate, value))
  * 
  *         if martin:             # <<<<<<<<<<<<<<
  *             # Different
@@ -39990,7 +39990,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_146print_key_rank(CY
   /* "factorGraphAES.pyx":1611
  *             # Different
  *             rank_product = self.get_final_key_rank(martin)
- *         print "Estimated Whole Key Rank: {} (~2^{})".format(rank_product, bit_length(rank_product))             # <<<<<<<<<<<<<<
+ *         print("Estimated Whole Key Rank: {} (~2^{})".format(rank_product, bit_length(rank_product)))             # <<<<<<<<<<<<<<
  *         print_new_line()
  * 
  */
@@ -40065,7 +40065,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_146print_key_rank(CY
 
   /* "factorGraphAES.pyx":1612
  *             rank_product = self.get_final_key_rank(martin)
- *         print "Estimated Whole Key Rank: {} (~2^{})".format(rank_product, bit_length(rank_product))
+ *         print("Estimated Whole Key Rank: {} (~2^{})".format(rank_product, bit_length(rank_product)))
  *         print_new_line()             # <<<<<<<<<<<<<<
  * 
  *     def get_final_key_rank(self, martin=False, supplied_dist = None):
@@ -40094,7 +40094,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_146print_key_rank(CY
  * 
  *     def print_key_rank(self, supplied_dist = None, print_line = False, martin=False):             # <<<<<<<<<<<<<<
  *         if print_line:
- *             print "*** Printing Key Ranks ***"
+ *             print("*** Printing Key Ranks ***")
  */
 
   /* function exit code */
@@ -40234,7 +40234,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_148get_final_key_ran
  *     def get_final_key_rank(self, martin=False, supplied_dist = None):
  *         if martin:             # <<<<<<<<<<<<<<
  *             all_dists = self.get_marginal_distributions_of_key_bytes()
- *             print "...computing Martin Key Rank, please wait..."
+ *             print("...computing Martin Key Rank, please wait...")
  */
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_martin); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 1615, __pyx_L1_error)
   if (__pyx_t_1) {
@@ -40243,7 +40243,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_148get_final_key_ran
  *     def get_final_key_rank(self, martin=False, supplied_dist = None):
  *         if martin:
  *             all_dists = self.get_marginal_distributions_of_key_bytes()             # <<<<<<<<<<<<<<
- *             print "...computing Martin Key Rank, please wait..."
+ *             print("...computing Martin Key Rank, please wait...")
  *             return martin_rank(all_dists)
  */
     __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_get_marginal_distributions_of_ke); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1616, __pyx_L1_error)
@@ -40269,7 +40269,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_148get_final_key_ran
     /* "factorGraphAES.pyx":1617
  *         if martin:
  *             all_dists = self.get_marginal_distributions_of_key_bytes()
- *             print "...computing Martin Key Rank, please wait..."             # <<<<<<<<<<<<<<
+ *             print("...computing Martin Key Rank, please wait...")             # <<<<<<<<<<<<<<
  *             return martin_rank(all_dists)
  *         else:
  */
@@ -40277,7 +40277,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_148get_final_key_ran
 
     /* "factorGraphAES.pyx":1618
  *             all_dists = self.get_marginal_distributions_of_key_bytes()
- *             print "...computing Martin Key Rank, please wait..."
+ *             print("...computing Martin Key Rank, please wait...")
  *             return martin_rank(all_dists)             # <<<<<<<<<<<<<<
  *         else:
  *             # Container
@@ -40309,7 +40309,7 @@ static PyObject *__pyx_pf_14factorGraphAES_14FactorGraphAES_148get_final_key_ran
  *     def get_final_key_rank(self, martin=False, supplied_dist = None):
  *         if martin:             # <<<<<<<<<<<<<<
  *             all_dists = self.get_marginal_distributions_of_key_bytes()
- *             print "...computing Martin Key Rank, please wait..."
+ *             print("...computing Martin Key Rank, please wait...")
  */
   }
 
@@ -44154,7 +44154,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         try:
  *             marginal_dist = np.copy(self.get_initial_distribution(node)[:])             # <<<<<<<<<<<<<<
  *         except TypeError:
- *             print "!!! ERROR: TypeError Encountered in FactorGraphAES, slicing initial distribution of {} but self.get_initial_distribution(node) = {}".format(node, self.get_initial_distribution(node))
+ *             print("!!! ERROR: TypeError Encountered in FactorGraphAES, slicing initial distribution of {} but self.get_initial_distribution(node) = {}").format(node, self.get_initial_distribution(node))
  */
   __pyx_slice__5 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__5)) __PYX_ERR(0, 1414, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__5);
@@ -44741,8 +44741,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         self.bp_factor_pass(rnd, total_rounds)
  * 
  *     def bp_run(self, int rounds, print_all_messages = False, print_all_marginal_distributions = False,             # <<<<<<<<<<<<<<
- *                print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
- *                rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
+ *                 print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
+ *                 rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
  */
   __pyx_tuple__107 = PyTuple_Pack(34, __pyx_n_s_self, __pyx_n_s_rounds, __pyx_n_s_print_all_messages, __pyx_n_s_print_all_marginal_distributions, __pyx_n_s_print_all_key_ranks, __pyx_n_s_print_possible_values, __pyx_n_s_print_marginal_distance, __pyx_n_s_rank_order, __pyx_n_s_break_when_found, __pyx_n_s_break_when_information_exhausted, __pyx_n_s_epsilon, __pyx_n_s_epsilon_s, __pyx_n_s_break_if_failed, __pyx_n_s_round_csv, __pyx_n_s_snrexp, __pyx_n_s_update_key_initial_distributions, __pyx_n_s_debug_mode, __pyx_n_s_ranking_start, __pyx_n_s_i, __pyx_n_s_epsilon_succession, __pyx_n_s_round_converged, __pyx_n_s_final_state, __pyx_n_s_k_rank_order, __pyx_n_s_previous_marginal_distributions, __pyx_n_s_failed, __pyx_n_s_round_found, __pyx_n_s_j, __pyx_n_s_node, __pyx_n_s_key_rank, __pyx_n_s_output_string, __pyx_n_s_smaller_rank_order, __pyx_n_s_mode, __pyx_n_s_string, __pyx_n_s_f); if (unlikely(!__pyx_tuple__107)) __PYX_ERR(0, 805, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__107);
@@ -44829,7 +44829,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  *     def check_plaintext_failure(self, snr = None, debug_mode = False):             # <<<<<<<<<<<<<<
  *         if debug_mode:
- *             print "&&& Checking Plaintext Failure &&&"
+ *             print("&&& Checking Plaintext Failure &&&")
  */
   __pyx_tuple__124 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_snr, __pyx_n_s_debug_mode, __pyx_n_s_i, __pyx_n_s_failed_plaintexts, __pyx_n_s_probability_list, __pyx_n_s_incoming, __pyx_n_s_failure_threshold, __pyx_n_s_p, __pyx_n_s_correct_val); if (unlikely(!__pyx_tuple__124)) __PYX_ERR(0, 1079, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__124);
@@ -45005,7 +45005,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *             return -1
  * 
  *     def print_nodes_reachable_from_variable_node_after_series_of_steps(self, start, steps = 5):             # <<<<<<<<<<<<<<
- *         print "*** Nodes Reachable from Variable {} ***".format(start)
+ *         print("*** Nodes Reachable from Variable {} ***").format(start)
  *         for i in range(steps+1):
  */
   __pyx_tuple__157 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_start, __pyx_n_s_steps, __pyx_n_s_i); if (unlikely(!__pyx_tuple__157)) __PYX_ERR(0, 1315, __pyx_L1_error)
@@ -45017,7 +45017,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__159);
 
   /* "factorGraphAES.pyx":1321
- *             print self.get_nodes_reachable_from_variable_node_after_steps(start, i)
+ *             print(self.get_nodes_reachable_from_variable_node_after_steps(start, i))
  * 
  *     def get_nodes_reachable_from_variable_node_after_steps(self, start, steps = 1):             # <<<<<<<<<<<<<<
  * 
@@ -45140,7 +45140,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *     # ************************************ PRINTING FUNCTIONS ************************************
  * 
  *     def print_all_messages(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Messages ***"
+ *         print("*** Printing All Messages ***")
  *         print_new_line()
  */
   __pyx_tuple__182 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_node, __pyx_n_s_neighbours_2, __pyx_n_s_neighbour); if (unlikely(!__pyx_tuple__182)) __PYX_ERR(0, 1470, __pyx_L1_error)
@@ -45153,7 +45153,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  *     def print_all_variables(self):             # <<<<<<<<<<<<<<
  * 
- *         print "*** Printing Variables and their Neighbours ***"
+ *         print("*** Printing Variables and their Neighbours ***")
  */
   __pyx_tuple__184 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_numbers, __pyx_n_s_v, __pyx_n_s_neighbours_2, __pyx_n_s_n); if (unlikely(!__pyx_tuple__184)) __PYX_ERR(0, 1482, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__184);
@@ -45161,10 +45161,10 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_codeobj__185 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__184, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_belief_propagation_attack_factor, __pyx_n_s_print_all_variables, 1482, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__185)) __PYX_ERR(0, 1482, __pyx_L1_error)
 
   /* "factorGraphAES.pyx":1500
- *         print "***********************************************"
+ *         print("***********************************************")
  * 
  *     def print_all_initial_distributions(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Initial Distributions ***"
+ *         print("*** Printing All Initial Distributions ***")
  *         print_new_line()
  */
   __pyx_tuple__186 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_v); if (unlikely(!__pyx_tuple__186)) __PYX_ERR(0, 1500, __pyx_L1_error)
@@ -45176,7 +45176,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *             print_new_line()
  * 
  *     def print_all_marginal_distributions(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Marginal Distributions ***"
+ *         print("*** Printing All Marginal Distributions ***")
  *         print_new_line()
  */
   __pyx_tuple__188 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_v); if (unlikely(!__pyx_tuple__188)) __PYX_ERR(0, 1507, __pyx_L1_error)
@@ -45188,7 +45188,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *                 # print_new_line()
  * 
  *     def print_marginal_distance(self, previous_marginal_distributions, distance_threshold = 0.0015):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Marginal Distances ***"
+ *         print("*** Printing All Marginal Distances ***")
  *         print_new_line()
  */
   __pyx_tuple__190 = PyTuple_Pack(17, __pyx_n_s_self, __pyx_n_s_previous_marginal_distributions, __pyx_n_s_distance_threshold, __pyx_n_s_current_distributions, __pyx_n_s_i, __pyx_n_s_dist, __pyx_n_s_all_pass, __pyx_n_s_total_max, __pyx_n_s_total_max_i, __pyx_n_s_total_min, __pyx_n_s_total_min_i, __pyx_n_s_total_avg, __pyx_n_s_difference, __pyx_n_s_my_max, __pyx_n_s_my_min, __pyx_n_s_my_avg, __pyx_n_s_passed); if (unlikely(!__pyx_tuple__190)) __PYX_ERR(0, 1517, __pyx_L1_error)
@@ -45200,10 +45200,10 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__192);
 
   /* "factorGraphAES.pyx":1580
- *             print "--- Not all Values below Threshold ---"
+ *             print("--- Not all Values below Threshold ---")
  * 
  *     def print_all_possible_values(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Possible Values ***"
+ *         print("*** Printing All Possible Values ***")
  *         print_new_line()
  */
   __pyx_tuple__193 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_var, __pyx_n_s_var_name, __pyx_n_s_var_number, __pyx_n_s_var_trace); if (unlikely(!__pyx_tuple__193)) __PYX_ERR(0, 1580, __pyx_L1_error)
@@ -45216,7 +45216,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  *     def print_key_rank(self, supplied_dist = None, print_line = False, martin=False):             # <<<<<<<<<<<<<<
  *         if print_line:
- *             print "*** Printing Key Ranks ***"
+ *             print("*** Printing Key Ranks ***")
  */
   __pyx_tuple__195 = PyTuple_Pack(11, __pyx_n_s_self, __pyx_n_s_supplied_dist, __pyx_n_s_print_line, __pyx_n_s_martin, __pyx_n_s_rank_product, __pyx_n_s_i, __pyx_n_s_index, __pyx_n_s_rank, __pyx_n_s_duplicate, __pyx_n_s_value, __pyx_n_s_l); if (unlikely(!__pyx_tuple__195)) __PYX_ERR(0, 1590, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__195);
@@ -46489,18 +46489,18 @@ if (!__Pyx_RefNanny) {
  *         self.bp_factor_pass(rnd, total_rounds)
  * 
  *     def bp_run(self, int rounds, print_all_messages = False, print_all_marginal_distributions = False,             # <<<<<<<<<<<<<<
- *                print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
- *                rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
+ *                 print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
+ *                 rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
  */
   __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_14factorGraphAES_14FactorGraphAES_77bp_run, 0, __pyx_n_s_FactorGraphAES_bp_run, NULL, __pyx_n_s_factorGraphAES, __pyx_d, ((PyObject *)__pyx_codeobj__108)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 805, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (!__Pyx_CyFunction_InitDefaults(__pyx_t_1, sizeof(__pyx_defaults), 0)) __PYX_ERR(0, 805, __pyx_L1_error)
 
   /* "factorGraphAES.pyx":808
- *                print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
- *                rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
- *                float epsilon = 0, int epsilon_s = INFORMATION_EXHAUSTED_S, break_if_failed = True,             # <<<<<<<<<<<<<<
- *                round_csv = False, snrexp = "UNKNOWN", update_key_initial_distributions = False, debug_mode = False):
+ *                 print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
+ *                 rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
+ *                 float epsilon = 0, int epsilon_s = INFORMATION_EXHAUSTED_S, break_if_failed = True,             # <<<<<<<<<<<<<<
+ *                 round_csv = False, snrexp = "UNKNOWN", update_key_initial_distributions = False, debug_mode = False):
  * 
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_INFORMATION_EXHAUSTED_S); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 808, __pyx_L1_error)
@@ -46582,7 +46582,7 @@ if (!__Pyx_RefNanny) {
  * 
  *     def check_plaintext_failure(self, snr = None, debug_mode = False):             # <<<<<<<<<<<<<<
  *         if debug_mode:
- *             print "&&& Checking Plaintext Failure &&&"
+ *             print("&&& Checking Plaintext Failure &&&")
  */
   __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_14factorGraphAES_14FactorGraphAES_89check_plaintext_failure, 0, __pyx_n_s_FactorGraphAES_check_plaintext_f, NULL, __pyx_n_s_factorGraphAES, __pyx_d, ((PyObject *)__pyx_codeobj__125)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1079, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -46744,7 +46744,7 @@ if (!__Pyx_RefNanny) {
  *             return -1
  * 
  *     def print_nodes_reachable_from_variable_node_after_series_of_steps(self, start, steps = 5):             # <<<<<<<<<<<<<<
- *         print "*** Nodes Reachable from Variable {} ***".format(start)
+ *         print("*** Nodes Reachable from Variable {} ***").format(start)
  *         for i in range(steps+1):
  */
   __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_14factorGraphAES_14FactorGraphAES_115print_nodes_reachable_from_variable_node_after_series_of_steps, 0, __pyx_n_s_FactorGraphAES_print_nodes_reach, NULL, __pyx_n_s_factorGraphAES, __pyx_d, ((PyObject *)__pyx_codeobj__158)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1315, __pyx_L1_error)
@@ -46754,7 +46754,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "factorGraphAES.pyx":1321
- *             print self.get_nodes_reachable_from_variable_node_after_steps(start, i)
+ *             print(self.get_nodes_reachable_from_variable_node_after_steps(start, i))
  * 
  *     def get_nodes_reachable_from_variable_node_after_steps(self, start, steps = 1):             # <<<<<<<<<<<<<<
  * 
@@ -46869,7 +46869,7 @@ if (!__Pyx_RefNanny) {
  *     # ************************************ PRINTING FUNCTIONS ************************************
  * 
  *     def print_all_messages(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Messages ***"
+ *         print("*** Printing All Messages ***")
  *         print_new_line()
  */
   __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_14factorGraphAES_14FactorGraphAES_135print_all_messages, 0, __pyx_n_s_FactorGraphAES_print_all_message, NULL, __pyx_n_s_factorGraphAES, __pyx_d, ((PyObject *)__pyx_codeobj__183)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1470, __pyx_L1_error)
@@ -46882,7 +46882,7 @@ if (!__Pyx_RefNanny) {
  * 
  *     def print_all_variables(self):             # <<<<<<<<<<<<<<
  * 
- *         print "*** Printing Variables and their Neighbours ***"
+ *         print("*** Printing Variables and their Neighbours ***")
  */
   __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_14factorGraphAES_14FactorGraphAES_137print_all_variables, 0, __pyx_n_s_FactorGraphAES_print_all_variabl, NULL, __pyx_n_s_factorGraphAES, __pyx_d, ((PyObject *)__pyx_codeobj__185)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1482, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -46890,10 +46890,10 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "factorGraphAES.pyx":1500
- *         print "***********************************************"
+ *         print("***********************************************")
  * 
  *     def print_all_initial_distributions(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Initial Distributions ***"
+ *         print("*** Printing All Initial Distributions ***")
  *         print_new_line()
  */
   __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_14factorGraphAES_14FactorGraphAES_139print_all_initial_distributions, 0, __pyx_n_s_FactorGraphAES_print_all_initial, NULL, __pyx_n_s_factorGraphAES, __pyx_d, ((PyObject *)__pyx_codeobj__187)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1500, __pyx_L1_error)
@@ -46905,7 +46905,7 @@ if (!__Pyx_RefNanny) {
  *             print_new_line()
  * 
  *     def print_all_marginal_distributions(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Marginal Distributions ***"
+ *         print("*** Printing All Marginal Distributions ***")
  *         print_new_line()
  */
   __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_14factorGraphAES_14FactorGraphAES_141print_all_marginal_distributions, 0, __pyx_n_s_FactorGraphAES_print_all_margina, NULL, __pyx_n_s_factorGraphAES, __pyx_d, ((PyObject *)__pyx_codeobj__189)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1507, __pyx_L1_error)
@@ -46917,7 +46917,7 @@ if (!__Pyx_RefNanny) {
  *                 # print_new_line()
  * 
  *     def print_marginal_distance(self, previous_marginal_distributions, distance_threshold = 0.0015):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Marginal Distances ***"
+ *         print("*** Printing All Marginal Distances ***")
  *         print_new_line()
  */
   __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_14factorGraphAES_14FactorGraphAES_143print_marginal_distance, 0, __pyx_n_s_FactorGraphAES_print_marginal_di, NULL, __pyx_n_s_factorGraphAES, __pyx_d, ((PyObject *)__pyx_codeobj__191)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1517, __pyx_L1_error)
@@ -46927,10 +46927,10 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "factorGraphAES.pyx":1580
- *             print "--- Not all Values below Threshold ---"
+ *             print("--- Not all Values below Threshold ---")
  * 
  *     def print_all_possible_values(self):             # <<<<<<<<<<<<<<
- *         print "*** Printing All Possible Values ***"
+ *         print("*** Printing All Possible Values ***")
  *         print_new_line()
  */
   __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_14factorGraphAES_14FactorGraphAES_145print_all_possible_values, 0, __pyx_n_s_FactorGraphAES_print_all_possibl, NULL, __pyx_n_s_factorGraphAES, __pyx_d, ((PyObject *)__pyx_codeobj__194)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1580, __pyx_L1_error)
@@ -46943,7 +46943,7 @@ if (!__Pyx_RefNanny) {
  * 
  *     def print_key_rank(self, supplied_dist = None, print_line = False, martin=False):             # <<<<<<<<<<<<<<
  *         if print_line:
- *             print "*** Printing Key Ranks ***"
+ *             print("*** Printing Key Ranks ***")
  */
   __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_14factorGraphAES_14FactorGraphAES_147print_key_rank, 0, __pyx_n_s_FactorGraphAES_print_key_rank, NULL, __pyx_n_s_factorGraphAES, __pyx_d, ((PyObject *)__pyx_codeobj__196)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1590, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
