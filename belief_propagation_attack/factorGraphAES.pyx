@@ -56,7 +56,7 @@ class FactorGraphAES:
         furious_string = ""
         round_string = str(rounds_of_aes)
         if my_print:
-            print("Rounds of AES: {}".format(rounds_of_aes))
+            print "Rounds of AES: {}".format(rounds_of_aes)
         remove_cycle_string = ""
         if furious:
             furious_string = "Furious"
@@ -64,48 +64,48 @@ class FactorGraphAES:
             remove_cycle_string = "RemovedCycle"
 
         if my_print:
-            print("Remove Cycle: {}".format(remove_cycle))
+            print "Remove Cycle: {}".format(remove_cycle)
 
         if FORCE_GRAPH_CREATION:
             # TEST: Force Create Graph
             if my_print:
-                print("Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling))
+                print "Creating {} Round AES {} Factor Graph {}\n{} Traces, removed_nodes {}, key scheduling {}...".format(round_string, furious_string, remove_cycle_string, traces, removed_nodes, key_scheduling)
             if furious:
                 gexf_graphCreator.create_factor_graph_full_aes_furious(traces, removed_nodes, key_scheduling, rounds_of_aes, remove_cycle)
             else:
                 gexf_graphCreator.create_factor_graph_full_aes(traces, removed_nodes, key_scheduling, rounds_of_aes)
             if my_print:
-                print("...finished creating!")
+                print "...finished creating!"
                 print_new_line()
         else:
             try:
                 self.G = nx.read_gexf(
                     'graphs/{}_trace_fullAES{}{}{}_removednodes-{}_keysched-{}.graph'.format(traces, furious_string,
-                                                                                          rounds_of_aes,
-                                                                                          remove_cycle_string,
-                                                                                          list_to_file_string(
-                                                                                              removed_nodes),
-                                                                                          key_scheduling))
+                                                                                         rounds_of_aes,
+                                                                                         remove_cycle_string,
+                                                                                         list_to_file_string(
+                                                                                             removed_nodes),
+                                                                                         key_scheduling))
                 if my_print:
-                    print("Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling))
+                    print "Loaded AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}".format(furious_string, one_round_string + ' ', remove_cycle_string + ' ', two_rounds_string + ' ', traces, removed_nodes, key_scheduling)
             except IOError:
                 # TEST: Force Create Graph
                 if my_print:
-                    print("- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling))
+                    print "- Attempted load, could not find available graph.\nCreating AES {} Factor Graph {}{}{} with {} Traces, removed_nodes {}, key scheduling {}...".format(furious_string, one_round_string, two_rounds_string, remove_cycle_string, traces, removed_nodes, key_scheduling)
                 if furious:
                     gexf_graphCreator.create_factor_graph_full_aes_furious(traces, removed_nodes, key_scheduling, rounds_of_aes, remove_cycle)
                 else:
                     gexf_graphCreator.create_factor_graph_full_aes(traces, removed_nodes, key_scheduling, rounds_of_aes)
                 if my_print:
-                    print("...finished creating!")
+                    print "...finished creating!"
                     print_new_line()
 
         self.G = nx.read_gexf(
             'graphs/{}_trace_fullAES{}{}{}_removednodes-{}_keysched-{}.graph'.format(traces, furious_string,
-                                                                                  rounds_of_aes,
-                                                                                  remove_cycle_string,
-                                                                                  list_to_file_string(removed_nodes),
-                                                                                  key_scheduling))
+                                                                                 rounds_of_aes,
+                                                                                 remove_cycle_string,
+                                                                                 list_to_file_string(removed_nodes),
+                                                                                 key_scheduling))
 
         variables       = list()
         factors         = list()
@@ -213,7 +213,7 @@ class FactorGraphAES:
             if node in self.variables:
                 return get_no_knowledge_array()
             else:
-                print("Error: No node named {} in variable list".format(node))
+                print "Error: No node named {} in variable list".format(node)
                 raise
 
     # ****************************************************** ALL FUNCTIONS ******************************************************
@@ -251,7 +251,7 @@ class FactorGraphAES:
         sim.fix_key(self.key)
         sim.fix_plaintext(plaintext)
         sim.simulate(read_plaintexts=0, print_all=0, random_plaintexts=0, affect_with_noise=False,
-              hw_leakage_model=False, real_values=True)
+             hw_leakage_model=False, real_values=True)
         real_values = sim.get_leakage_dictionary()
         # Loop through all variables
         rank_list = [ [] for i in range (256) ]
@@ -277,8 +277,8 @@ class FactorGraphAES:
                 rank = get_rank_from_prob_dist(self.initial_distribution[variable], real_val, worst_case = worst_case)
 
                 if rank > 128:
-                    print("\n* Variable {} is rank {}, details:\n".format(variable, rank))
-                    print("Real Value: {}\nProbability: {}\nInitial Distribution:\n{}\n".format(real_val, initial_dist[real_val], initial_dist))
+                    print "\n* Variable {} is rank {}, details:\n".format(variable, rank)
+                    print "Real Value: {}\nProbability: {}\nInitial Distribution:\n{}\n".format(real_val, initial_dist[real_val], initial_dist)
 
                 # print "Variable {:8}: Rank {:3}".format(variable, rank)
                 rank_list[rank-1].append(variable)
@@ -291,11 +291,11 @@ class FactorGraphAES:
             except KeyError:
                 pass
 
-        print("*** Checking Leakage Details from Initial Distribution (Worst Case {}) ***\n".format(worst_case))
+        print "*** Checking Leakage Details from Initial Distribution (Worst Case {}) ***\n".format(worst_case)
         for i in range (256):
             if len(rank_list[i]) >= 1:
-                print("Rank {:3} Nodes:\n{}\n".format(i+1, rank_list[i]))
-        print("*** Stats ***")
+                print "Rank {:3} Nodes:\n{}\n".format(i+1, rank_list[i])
+        print "*** Stats ***"
         print_statistics(all_ranks)
 
     def compute_averaged_key_values(self, averaged_traces = 1, specific_trace = None, no_leak = None,
@@ -312,7 +312,7 @@ class FactorGraphAES:
         else:
             matched_fixed_values = get_variables_that_match(self.variables, fixed_value[0])
             if not self.no_print:
-                print("::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values))
+                print "::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values)
 
         averaged_power_values = [0] * len(self.key_nodes)
 
@@ -322,7 +322,7 @@ class FactorGraphAES:
             leakage_simulator.fix_key(self.key)
 
             # leakage = leakage_simulator.simulate(snr = snr, traces = self.traces, offset = 0, read_plaintexts = 0, random_plaintexts = 1)
-            print("* In Factor Graph, badly leaking traces {} (erroneous {})".format(self.badly_leaking_traces, self.erroneous_badleakage))
+            print "* In Factor Graph, badly leaking traces {} (erroneous {})".format(self.badly_leaking_traces, self.erroneous_badleakage)
             leakage_simulator.simulate(snr = snr, traces = averaged_traces, offset = offset, read_plaintexts = 0, random_plaintexts = 1, badly_leaking_nodes = self.badly_leaking_nodes, badly_leaking_traces = self.badly_leaking_traces, badly_leaking_snr = self.badly_leaking_snr, no_noise_nodes = self.no_noise_nodes, threshold = None, local_leakage = 0, print_all = 0, affect_with_noise = not no_noise, hw_leakage_model = False, real_values = False, rounds_of_aes = self.rounds_of_aes,
             erroneous_badleakage = self.erroneous_badleakage)
 
@@ -343,8 +343,8 @@ class FactorGraphAES:
                     averaged_power_values[i] = powervalue
                     # print "In COMPUTE_AVERAGE: Var {}, PowerValue {}".format(var, powervalue)
                 except KeyError:
-                    print("! Key Error for Variable {}".format(var))
-                    print(leakage[var_name][var_trace][var_number-1])
+                    print "! Key Error for Variable {}".format(var)
+                    print leakage[var_name][var_trace][var_number-1]
                     raise
         else:
 
@@ -357,7 +357,7 @@ class FactorGraphAES:
                     averaged_power_values[i] = powervalue
                     # print "In COMPUTE_AVERAGE: Var {}, PowerValue {}".format(var, powervalue)
                 except KeyError:
-                    print("! Key Error for Variable {}".format(var))
+                    print "! Key Error for Variable {}".format(var)
                     raise
 
         self.averaged_key_values = averaged_power_values
@@ -381,7 +381,7 @@ class FactorGraphAES:
         else:
             matched_fixed_values = get_variables_that_match(self.variables, fixed_value[0])
             if not self.no_print:
-                print("::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values))
+                print "::: Fixing var {}, matched: {}".format(fixed_value[0], matched_fixed_values)
 
         # SIMULATED DATA
         if not real_traces:
@@ -430,8 +430,8 @@ class FactorGraphAES:
                             else:
                                 self.set_initial_distribution(var, get_hamming_weight_array(powervalue, hw_sigma))
                     except KeyError:
-                        print("! Key Error for Variable {}".format(var))
-                        print(leakage[var_name][var_trace][var_number-1])
+                        print "! Key Error for Variable {}".format(var)
+                        print leakage[var_name][var_trace][var_number-1]
                         raise
                 else:
                     # Check if in dictionary
@@ -448,7 +448,7 @@ class FactorGraphAES:
                                 powervalue = leakage[var_name][var_trace][var_number-1]
                             # print "...done! Value = {}".format(powervalue)
                         except IndexError:
-                            print("! ERROR: Power Value not Found! leakage[{}][{}][{}]\n".format(var_name, var_trace, var_number-1))
+                            print "! ERROR: Power Value not Found! leakage[{}][{}][{}]\n".format(var_name, var_trace, var_number-1)
                             raise
                         # print "In FactorGraphAES, Power Value for {}{} in trace {}: {}".format(var_name, var_number, var_trace, powervalue)
                         # Check if p1 - p16 or rc
@@ -464,7 +464,7 @@ class FactorGraphAES:
                             else:
                                 self.set_initial_distribution(var, get_hamming_weight_array(powervalue, hw_sigma))
                     except KeyError:
-                        print("KeyError: No record for {}[{}] in leakage ({})".format(var_name, var_number-1, var))
+                        print "KeyError: No record for {}[{}] in leakage ({})".format(var_name, var_number-1, var)
                         raise
 
         else:
@@ -500,9 +500,9 @@ class FactorGraphAES:
 
     def fabricate_key_scheduling_leakage(self):
         if 'k017-K' in self.variables:
-            print("Fabricating now!")
+            print "Fabricating now!"
         else:
-            print("No need to fabricate")
+            print "No need to fabricate"
         sys.exit(1)
 
     def get_neighbours(self, name):
@@ -529,7 +529,7 @@ class FactorGraphAES:
 
     def check_factor_nodes(self, print_all = False, simple_xor = True):
         print_length = 20
-        print("*** Checking Factor Nodes ***")
+        print "*** Checking Factor Nodes ***"
         print_new_line()
         factor_counter = dict()
         edge_counter = 0
@@ -555,11 +555,11 @@ class FactorGraphAES:
             else:
                 print_length_append("{}:".format(f), "*** neighbours: {}".format(neighbours), print_length)
 
-        print("{:20s}: {:17}".format("Total Number of Factors", len(self.factors)))
-        for key, val in factor_counter.items():
-            print("{:20s}: {:20}".format(key, val))
-        print("Counted Edges: {}".format(edge_counter))
-        print("Edges found from G.edges: {}".format(len(self.edges)))
+        print "{:20s}: {:17}".format("Total Number of Factors", len(self.factors))
+        for key, val in factor_counter.iteritems():
+            print "{:20s}: {:20}".format(key, val)
+        print "Counted Edges: {}".format(edge_counter)
+        print "Edges found from G.edges: {}".format(len(self.edges))
         print_new_line()
 
     def check_variable_nodes(self, print_all = False):
@@ -571,11 +571,11 @@ class FactorGraphAES:
                 unique_leaves.append(leaf)
 
         # Just check size etc
-        print("*** Checking Variable Nodes ***")
+        print "*** Checking Variable Nodes ***"
         print_new_line()
-        print("Total Number of Variables: {:10}".format(len(self.variables)))
-        print("Leaf Nodes: {:25}".format(len(self.leaf_nodes)))
-        print("Unique Leaves: {:22} ({})".format(len(unique_leaves), unique_leaves))
+        print "Total Number of Variables: {:10}".format(len(self.variables))
+        print "Leaf Nodes: {:25}".format(len(self.leaf_nodes))
+        print "Unique Leaves: {:22} ({})".format(len(unique_leaves), unique_leaves)
 
 
     def update_edge(self, src, dst, np.ndarray val):
@@ -657,7 +657,7 @@ class FactorGraphAES:
                 other_neighbours = self.get_other_neighbours(variable, neighbour)
 
                 if print_out:
-                    print(">>> Handling message from Variable {} to Factor {} <<<\n".format(variable, neighbour))
+                    print ">>> Handling message from Variable {} to Factor {} <<<\n".format(variable, neighbour)
 
                 for other_neighbour in other_neighbours:
                     if other_neighbour != neighbour:
@@ -666,21 +666,21 @@ class FactorGraphAES:
                         v_product = array_multiply(v_product, incoming)
                         # Quick Check Here
                         if CHECK_EMPTY and is_zeros_array(v_product):
-                            print("EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour)
-                            print("Specifcally, incoming message from {}".format(other_neighbour))
+                            print "EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour
+                            print "Specifcally, incoming message from {}".format(other_neighbour)
                             print_new_line()
                             raise ValueError
 
                 # Check product
                 if CHECK_EMPTY and is_zeros_array(v_product):
-                    print("EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour)
+                    print "EMPTY ARRAY FOUND, Variable", variable, "sending to neighbour", neighbour
                     raise ValueError
 
                 if STOP_EMPTY_PROPAGATION and is_zeros_array(v_product):
                     v_product = get_no_knowledge_array()
 
                 if print_updated_edge or print_out:
-                    print("Updating Edge from Variable {} to Factor {}:\n{}\n".format(variable, neighbour, v_product[:4]))
+                    print "Updating Edge from Variable {} to Factor {}:\n{}\n".format(variable, neighbour, v_product[:4])
 
                 # Set as new outgoing message
                 # self.update_edge(variable, neighbour, v_product)
@@ -707,7 +707,7 @@ class FactorGraphAES:
                 if neighbour not in self.leaf_nodes:
 
                     if print_out:
-                        print(">>> Handling message from Factor {} to Variable {} <<<\n".format(factor, neighbour))
+                        print ">>> Handling message from Factor {} to Variable {} <<<\n".format(factor, neighbour)
 
                     message = get_no_knowledge_array()
                     # Either XOR or SBOX: Handle separately
@@ -715,7 +715,7 @@ class FactorGraphAES:
 
                     if len(other_neighbours) == 0:
 
-                        print("--- Factor {} sending to neighbour {}, doesn't have any other neighbours".format(factor, neighbour))
+                        print "--- Factor {} sending to neighbour {}, doesn't have any other neighbours".format(factor, neighbour)
                         pass
 
                     # Handle each type of operation - we can generalise if we have too many here
@@ -724,14 +724,14 @@ class FactorGraphAES:
                         # XOR
                         message = self.get_incoming_message(factor, other_neighbours[0])
                         if print_out:
-                            print("--->>> Message from neighbour {} ({}):\n{}\n".format(other_neighbours[0], message.dtype, message))
+                            print "--->>> Message from neighbour {} ({}):\n{}\n".format(other_neighbours[0], message.dtype, message)
                         for i in range(1, len(other_neighbours)):
                             incoming_message = self.get_incoming_message(factor, other_neighbours[i])
                             if print_out:
-                                print("--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype))
+                                print "--->>> Xoring message from neighbour {} ({}):".format(other_neighbours[i], incoming_message.dtype)
                             message = message_xor(message, incoming_message)
                             if print_out:
-                                print("{}\n".format(message))
+                                print "{}\n".format(message)
 
                     elif is_sbox_node(factor):
                         # SBOX - handle direction (not invertible)
@@ -773,13 +773,13 @@ class FactorGraphAES:
 
 
                     else:
-                        print("Factor node has no id: {}".format(factor))
+                        print "Factor node has no id: {}".format(factor)
                         # break
                         raise ValueError
 
                     # Quick Check Here
                     if CHECK_EMPTY and is_zeros_array(message):
-                        print("EMPTY ARRAY FOUND, Factor", factor, "sending to neighbour", neighbour)
+                        print "EMPTY ARRAY FOUND, Factor", factor, "sending to neighbour", neighbour
                         raise ValueError
 
                     # Set as new outgoing message
@@ -803,10 +803,10 @@ class FactorGraphAES:
         self.bp_factor_pass(rnd, total_rounds)
 
     def bp_run(self, int rounds, print_all_messages = False, print_all_marginal_distributions = False,
-                print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
-                rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
-                float epsilon = 0, int epsilon_s = INFORMATION_EXHAUSTED_S, break_if_failed = True,
-                round_csv = False, snrexp = "UNKNOWN", update_key_initial_distributions = False, debug_mode = False):
+               print_all_key_ranks = False, print_possible_values = False, print_marginal_distance = False,
+               rank_order = False, break_when_found = True, break_when_information_exhausted_pattern = False,
+               float epsilon = 0, int epsilon_s = INFORMATION_EXHAUSTED_S, break_if_failed = True,
+               round_csv = False, snrexp = "UNKNOWN", update_key_initial_distributions = False, debug_mode = False):
 
         cdef int ranking_start, i, epsilon_succession
 
@@ -836,7 +836,7 @@ class FactorGraphAES:
                 self.bp_one_round(i, rounds+1)
 
             if (print_all_messages or print_all_marginal_distributions or print_all_key_ranks or print_marginal_distance or print_possible_values) and not self.no_print:
-                print("----------- Running Round {} -----------").format(i)
+                print "----------- Running Round {} -----------".format(i)
                 print_new_line()
 
             if print_all_messages:
@@ -861,7 +861,7 @@ class FactorGraphAES:
                     if round_csv:
                         # Store subkey rank in csv
                         append_csv('Output/SubkeyRoundRank.csv',
-                                    '{}, {}, {}, {}\n'.format(snrexp, node, i, key_rank[0] + key_rank[1]))
+                                   '{}, {}, {}, {}\n'.format(snrexp, node, i, key_rank[0] + key_rank[1]))
                     k_rank_order[j][i] = key_rank[0] + key_rank[1]
 
             if print_marginal_distance and i > 0:
@@ -871,21 +871,21 @@ class FactorGraphAES:
             # Break if found
             if break_when_found and self.found_key():
                 if not self.no_print:
-                    print('+++++++ Found the Key at Round {} +++++++').format(i)
+                    print '+++++++ Found the Key at Round {} +++++++'.format(i)
                 final_state = "foundkey"
                 break
 
             # Break if failed
             if break_if_failed and (i > FAILURE_MIN_ROUNDS) and (self.check_plaintext_failure() or self.check_failure_on_specific_byte('t')):
                 if not self.no_print:
-                    print('!!!!!!!!!! FAILED at Round {} !!!!!!!!!!').format(i)
+                    print '!!!!!!!!!! FAILED at Round {} !!!!!!!!!!'.format(i)
                 final_state = "failed"
                 break
 
             # Break if all key bytes converged or repeating a pattern
             if break_when_information_exhausted_pattern and self.information_exhausted_pattern(k_rank_order, i):
                 if PRINT_EXHAUSTION and not self.no_print:
-                    print('+++ Information Exhausted at Round {} (Pattern Matched) +++').format(i)
+                    print '+++ Information Exhausted at Round {} (Pattern Matched) +++'.format(i)
                 final_state = "patternexhaust"
                 break
 
@@ -896,7 +896,7 @@ class FactorGraphAES:
                     epsilon_succession = 0
                 if epsilon_succession > epsilon_s:
                     if PRINT_EXHAUSTION and not self.no_print:
-                        print('+++ Information Exhausted at Round {} (Below Epsilon Threshold after {} Successions) +++').format(i, INFORMATION_EXHAUSTED_S)
+                        print '+++ Information Exhausted at Round {} (Below Epsilon Threshold after {} Successions) +++'.format(i, INFORMATION_EXHAUSTED_S)
                     # round_converged = i - epsilon_s + 1
                     # round_found = i - epsilon_s + 1
                     round_converged = i
@@ -935,32 +935,32 @@ class FactorGraphAES:
 
                 string = "Key Byte {}: {}".format(i+1, smaller_rank_order)
                 if not self.no_print:
-                    print(string)
+                    print string
                 output_string += string + "\n"
 
                 string = "Max Rank: {}".format(max(smaller_rank_order))
                 if not self.no_print:
-                    print(string)
+                    print string
                 output_string += string + "\n"
 
                 string = "Min Rank: {}".format(min(smaller_rank_order))
                 if not self.no_print:
-                    print(string)
+                    print string
                 output_string += string + "\n"
 
                 string = "Average Rank: {}".format(get_average(smaller_rank_order))
                 if not self.no_print:
-                    print(string)
+                    print string
                 output_string += string + "\n"
 
                 string = "Mode Rank: {}".format(mode)
                 if not self.no_print:
-                    print(string)
+                    print string
                 output_string += string + "\n"
 
                 string = "Final Rank: {}".format(smaller_rank_order[-1])
                 if not self.no_print:
-                    print(string)
+                    print string
                 output_string += string + "\n"
 
                 if not self.no_print:
@@ -1078,7 +1078,7 @@ class FactorGraphAES:
 
     def check_plaintext_failure(self, snr = None, debug_mode = False):
         if debug_mode:
-            print("&&& Checking Plaintext Failure &&&")
+            print "&&& Checking Plaintext Failure &&&"
         cdef int i
         cdef int failed_plaintexts
         failed_plaintexts = 0
@@ -1124,7 +1124,7 @@ class FactorGraphAES:
 
 
             if debug_mode:
-                print("For Plaintext Byte {}, correct value = {:3}, rank {:3}, probability found = {}").format(p,
+                print "For Plaintext Byte {}, correct value = {:3}, rank {:3}, probability found = {}".format(p,
                                                                                                               correct_val,
                                                                                                               get_rank_from_prob_dist(
                                                                                                                   incoming,
@@ -1137,7 +1137,7 @@ class FactorGraphAES:
 
             if incoming[correct_val] < failure_threshold:
                 if debug_mode:
-                    print("OH NO! incoming message stats:\nMax:       {}\nMin:          {}\nCorrect Val: {}\nSum:          {}").format(
+                    print "OH NO! incoming message stats:\nMax:       {}\nMin:          {}\nCorrect Val: {}\nSum:          {}".format(
                         array_max(incoming), array_min(incoming), incoming[correct_val], sum(incoming))
                 # return True
                 failed_plaintexts += 1
@@ -1309,14 +1309,14 @@ class FactorGraphAES:
             if node2 in reachable_nodes:
                 return i
         else:
-            print("Couldn't find {} from {} within {} steps").format(node2, node1, my_max)
+            print "Couldn't find {} from {} within {} steps".format(node2, node1, my_max)
             return -1
 
     def print_nodes_reachable_from_variable_node_after_series_of_steps(self, start, steps = 5):
-        print("*** Nodes Reachable from Variable {} ***").format(start)
+        print "*** Nodes Reachable from Variable {} ***".format(start)
         for i in range(steps+1):
-            print("* Step {} *").format(i)
-            print(self.get_nodes_reachable_from_variable_node_after_steps(start, i))
+            print "* Step {} *".format(i)
+            print self.get_nodes_reachable_from_variable_node_after_steps(start, i)
 
     def get_nodes_reachable_from_variable_node_after_steps(self, start, steps = 1):
 
@@ -1413,13 +1413,13 @@ class FactorGraphAES:
         try:
             marginal_dist = np.copy(self.get_initial_distribution(node)[:])
         except TypeError:
-            print("!!! ERROR: TypeError Encountered in FactorGraphAES, slicing initial distribution of {} but self.get_initial_distribution(node) = {}").format(node, self.get_initial_distribution(node))
+            print "!!! ERROR: TypeError Encountered in FactorGraphAES, slicing initial distribution of {} but self.get_initial_distribution(node) = {}".format(node, self.get_initial_distribution(node))
             print_new_line()
             raise
 
         if node == "k005-K" and debug_mode:
-            print("\n-=-=- Getting Marginal Distribution for {} -=-=-").format(node)
-            print("115:{})".format(marginal_dist[115]))
+            print "\n-=-=- Getting Marginal Distribution for {} -=-=-".format(node)
+            print "115:{}".format(marginal_dist[115])
 
         for neighbour in self.get_neighbours(node):
             # Take the product with the incoming message
@@ -1427,9 +1427,9 @@ class FactorGraphAES:
             marginal_dist = array_multiply(marginal_dist, self.get_incoming_message(node, neighbour))
             if (node == "k005-K") and debug_mode:
                 incoming = np.copy(self.get_incoming_message(node, neighbour))
-                print("-> Incoming Message from {}: \n----->Most likely Val {} with probability {}\n----->115 has probability {}, difference = {}").format(
+                print "-> Incoming Message from {}: \n----->Most likely Val {} with probability {}\n----->115 has probability {}, difference = {}".format(
                     neighbour, max_index(incoming), max(incoming), incoming[115], max(incoming) - incoming[115])
-                print("--> New Marginal Dist (after mult):\n----->Most likely Val {} with probability {}\n------>115 has probability {}, difference = {}").format(
+                print "--> New Marginal Dist (after mult):\n----->Most likely Val {} with probability {}\n------>115 has probability {}, difference = {}".format(
                     max_index(marginal_dist), max(marginal_dist), marginal_dist[115],
                     max(marginal_dist) - marginal_dist[115])
 
@@ -1468,20 +1468,20 @@ class FactorGraphAES:
     # ************************************ PRINTING FUNCTIONS ************************************
 
     def print_all_messages(self):
-        print("*** Printing All Messages ***")
+        print "*** Printing All Messages ***"
         print_new_line()
         for node in self.G.nodes():
-            print("From", node)
+            print "From", node
             print_new_line()
             neighbours = self.get_neighbours(node)
             for neighbour in neighbours:
-                print("-> to", neighbour, ":", self.get_outgoing_message(node, neighbour))
+                print "-> to", neighbour, ":", self.get_outgoing_message(node, neighbour)
                 print_new_line()
         print_new_line()
 
     def print_all_variables(self):
 
-        print("*** Printing Variables and their Neighbours ***")
+        print "*** Printing Variables and their Neighbours ***"
         print_new_line()
 
         numbers = ['001','017','144','145','160','161']
@@ -1489,33 +1489,33 @@ class FactorGraphAES:
         for v in self.variables:
 
             if string_contains_any(v, numbers):
-                print(v)
+                print v
                 neighbours = sorted(self.get_neighbours(v))
                 for n in neighbours:
-                    print("---->", n)
+                    print "---->", n
                 print_new_line()
 
-        print("***********************************************")
+        print "***********************************************"
 
     def print_all_initial_distributions(self):
-        print("*** Printing All Initial Distributions ***")
+        print "*** Printing All Initial Distributions ***"
         print_new_line()
         for v in self.variables:
-            print(v, ":", self.get_initial_distribution(v))
+            print v, ":", self.get_initial_distribution(v)
             print_new_line()
 
     def print_all_marginal_distributions(self):
-        print("*** Printing All Marginal Distributions ***")
+        print "*** Printing All Marginal Distributions ***"
         print_new_line()
         for v in self.variables:
             if string_ends_with(v, '-K') and string_contains(v, '005'):
-                print(v, ":", self.get_marginal_distribution(v, debug_mode = True))
+                print v, ":", self.get_marginal_distribution(v, debug_mode = True)
                 print_new_line()
                 # print "Prob:", convert_to_probability_distribution(self.get_marginal_distribution(v))
                 # print_new_line()
 
     def print_marginal_distance(self, previous_marginal_distributions, distance_threshold = 0.0015):
-        print("*** Printing All Marginal Distances ***")
+        print "*** Printing All Marginal Distances ***"
         print_new_line()
         current_distributions = self.get_marginal_distributions_of_key_bytes()
 
@@ -1555,41 +1555,41 @@ class FactorGraphAES:
             passed = max < distance_threshold
 
             if i == 4:
-                print("* Key Byte {} ({}):".format(i+1, self.key_nodes[i]))
+                print "* Key Byte {} ({}):".format(i+1, self.key_nodes[i])
                 # print "Previous: {}".format(previous_marginal_distributions[i])
                 # print "Current: {}".format(current_distributions[i])
                 # print "Difference: {}".format(difference)
-                print("Max: {}\nMin: {}\nAvg: {}\nBelow Threshold: {}".format(my_max, my_min, my_avg, passed))
-                print("Correct key 115, value {}".format(current_distributions[i][115]))
-                print("Maximum probability {} (Index {})".format(max(current_distributions[i]),
-                                                                 max_index(current_distributions[i])))
+                print "Max: {}\nMin: {}\nAvg: {}\nBelow Threshold: {}".format(my_max, my_min, my_avg, passed)
+                print "Correct key 115, value {}".format(current_distributions[i][115])
+                print "Maximum probability {} (Index {})".format(max(current_distributions[i]),
+                                                                 max_index(current_distributions[i]))
                 print_new_line()
 
             if not passed:
                 all_pass = False
 
 
-        print("* Over all Key Bytes:")
-        print("Max: {} ({})\nMin: {} ({})\nAvg: {}\n".format(total_max, total_max_i, total_min, total_min_i, total_avg / len(self.key_nodes)))
+        print "* Over all Key Bytes:"
+        print "Max: {} ({})\nMin: {} ({})\nAvg: {}\n".format(total_max, total_max_i, total_min, total_min_i, total_avg / len(self.key_nodes))
 
         if all_pass:
-            print("*** All Values Below Threshold, Can Conclude Exhaustion ***")
+            print "*** All Values Below Threshold, Can Conclude Exhaustion ***"
         else:
-            print("--- Not all Values below Threshold ---")
+            print "--- Not all Values below Threshold ---"
 
     def print_all_possible_values(self):
-        print("*** Printing All Possible Values ***")
+        print "*** Printing All Possible Values ***"
         print_new_line()
         # Print Possible values
         for var in self.variables:
             var_name, var_number, var_trace = split_variable_name(var)
             if var_number < 3:
-                print("{}: {}".format(var, self.get_possible_values(var)))
+                print "{}: {}".format(var, self.get_possible_values(var))
         print_new_line()
 
     def print_key_rank(self, supplied_dist = None, print_line = False, martin=False):
         if print_line:
-            print("*** Printing Key Ranks ***")
+            print "*** Printing Key Ranks ***"
             print_new_line()
 
         rank_product = 1
@@ -1600,21 +1600,21 @@ class FactorGraphAES:
             l = 15
             if value == 0:
                 # print "k{} FAILED - Value 0 (Ranked {} with {} duplicates)".format(index, rank, duplicate)
-                print("k%3s %8s (Ranked %3s with %3s duplicates) [%s]" % (index, 'FAILED', rank, duplicate, value))
+                print "k%3s %8s (Ranked %3s with %3s duplicates) [%s]" % (index, 'FAILED', rank, duplicate, value)
             else:
                 # print "k{} Rank {} (Ranked {} with {} duplicates, value = {})".format(index, rank+duplicate, rank, duplicate, value)
-                print("k%3s Rank %3s (Ranked %3s with %3s duplicates) [%s]" % (index, rank+duplicate, rank, duplicate, value))
+                print "k%3s Rank %3s (Ranked %3s with %3s duplicates) [%s]" % (index, rank+duplicate, rank, duplicate, value)
 
         if martin:
             # Different
             rank_product = self.get_final_key_rank(martin)
-        print("Estimated Whole Key Rank: {} (~2^{})".format(rank_product, bit_length(rank_product)))
+        print "Estimated Whole Key Rank: {} (~2^{})".format(rank_product, bit_length(rank_product))
         print_new_line()
 
     def get_final_key_rank(self, martin=False, supplied_dist = None):
         if martin:
             all_dists = self.get_marginal_distributions_of_key_bytes()
-            print("...computing Martin Key Rank, please wait...")
+            print "...computing Martin Key Rank, please wait..."
             return martin_rank(all_dists)
         else:
             # Container
@@ -1633,7 +1633,7 @@ if __name__ == "__main__":
 
     G = FactorGraphAES(key_scheduling = False)
 
-    print(G)
+    print G
 
     TEST_KEY_SCHEDULING = False
     TEST_REMOVING_NODES = False
@@ -1641,11 +1641,11 @@ if __name__ == "__main__":
     # Test Key Scheduling
     if TEST_KEY_SCHEDULING:
 
-        print("*** Without Key Scheduling ***")
+        print "*** Without Key Scheduling ***"
         print_new_line()
         G_without = FactorGraphAES(key_scheduling = False)
 
-        print("*** With Key Scheduling ***")
+        print "*** With Key Scheduling ***"
         print_new_line()
         G_with = FactorGraphAES(key_scheduling = True)
         print_new_line()
@@ -1655,22 +1655,22 @@ if __name__ == "__main__":
     # Test Removing Nodes
     if TEST_REMOVING_NODES:
 
-        print("*** No Removal (Excluding Key Scheduling) ***")
+        print "*** No Removal (Excluding Key Scheduling) ***"
         print_new_line()
         G = FactorGraphAES()
 
-        print("*** Removing cm node ***")
+        print "*** Removing cm node ***"
         print_new_line()
         G_no_cm = FactorGraphAES(removed_nodes = ['cm'])
 
-        print("*** Removing xa node ***")
+        print "*** Removing xa node ***"
         print_new_line()
         G_no_xa = FactorGraphAES(removed_nodes = ['xa'])
 
-        print("*** Removing xb node ***")
+        print "*** Removing xb node ***"
         print_new_line()
         G_no_xb = FactorGraphAES(removed_nodes = ['xb'])
 
-        print("*** Removing cm, xa, xb nodes ***")
+        print "*** Removing cm, xa, xb nodes ***"
         print_new_line()
         G_no_all = FactorGraphAES(removed_nodes = ['cm','xa','xb'])
