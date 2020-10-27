@@ -1721,7 +1721,7 @@ def load_bpann(variable, load_metadata=True, normalise_traces=True, input_length
     start_window = int(start_window)
     end_window = int(start_window)
     trace_data = load_trace_data(filepath=get_shifted_tracedata_filepath(shifted=jitter))[:, start_window:end_window]
-    print 'This is trace_data :',trace_data
+    print 'This is trace_data :',trace_data.empty
     traces, data_length = trace_data.shape
     type = trace_data.dtype
     real_values = np.load('{}{}.npy'.format(REALVALUES_FOLDER, var_name), allow_pickle=True)[var_number-1,:]
@@ -1780,7 +1780,7 @@ def load_bpann(variable, load_metadata=True, normalise_traces=True, input_length
     else:
         # Load profiling traces
         X_profiling = trace_data[:training_traces, :]
-        print 'This is X :', X_profiling
+        print 'This is X :', X_profiling.empty()
 
         # Load profiling labels
         Y_profiling = real_values[:training_traces]
