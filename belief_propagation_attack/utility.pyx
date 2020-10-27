@@ -1064,7 +1064,7 @@ def save_object(obj, name, output=False, suffix=True):
 
 def load_object(name, output=False, suffix=True):
     with open(('output/' if output else '') + name + ('.pkl' if suffix else ''), 'rb') as f:
-        return pickle.load(f)
+        return pickle.load(f,encoding = 'bytes')
 
 def get_random_byte():
     return random.randint(0,255)
