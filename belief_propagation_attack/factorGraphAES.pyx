@@ -518,13 +518,13 @@ class FactorGraphAES:
     def initialise_edges(self):
         for node in self.G.nodes():
             for neighbour in self.get_neighbours(node):
-                self.G.edge[node][neighbour] = get_no_knowledge_array()
+                self.G.edges[node][neighbour] = get_no_knowledge_array()
 
     def get_incoming_message(self, node, neighbour):
-        return self.G.edge[neighbour][node]
+        return self.G.edges[neighbour][node]
 
     def get_outgoing_message(self, node, neighbour):
-        return self.G.edge[node][neighbour]
+        return self.G.edges[node][neighbour]
 
     def check_factor_nodes(self, print_all = False, simple_xor = True):
         print_length = 20
@@ -578,7 +578,7 @@ class FactorGraphAES:
 
 
     def update_edge(self, src, dst, np.ndarray val):
-        self.G.edge[src][dst] = val
+        self.G.edges[src][dst] = val
 
     def update_edge_list_inner(self, l):
         for a, b, c in l:
